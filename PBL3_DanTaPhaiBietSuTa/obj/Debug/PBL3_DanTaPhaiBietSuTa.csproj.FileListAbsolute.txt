@@ -1,0 +1,10 @@
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.exe.config
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.exe
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.pdb
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csprojAssemblyReference.cache
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Form1.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Properties.Resources.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.GenerateResource.cache
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.CoreCompileInputs.cache
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.exe
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.pdb
