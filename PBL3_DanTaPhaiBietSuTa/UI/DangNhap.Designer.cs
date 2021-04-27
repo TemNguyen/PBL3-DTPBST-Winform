@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace PBL3_DanTaPhaiBietSuTa
 {
-    partial class Form1
+    partial class DangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangNhap));
             this.lbthongbao = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtAccount = new System.Windows.Forms.TextBox();
@@ -80,7 +80,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.txtPass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(138, 132);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(204, 29);
             this.txtPass.TabIndex = 3;
@@ -89,7 +89,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.txtAccount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAccount.Location = new System.Drawing.Point(138, 73);
-            this.txtAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAccount.Margin = new System.Windows.Forms.Padding(2);
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Size = new System.Drawing.Size(204, 29);
             this.txtAccount.TabIndex = 4;
@@ -130,9 +130,9 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbLogin.Controls.Add(this.label1);
             this.gbLogin.Controls.Add(this.txtPass);
             this.gbLogin.Location = new System.Drawing.Point(357, 317);
-            this.gbLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbLogin.Margin = new System.Windows.Forms.Padding(2);
             this.gbLogin.Name = "gbLogin";
-            this.gbLogin.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbLogin.Padding = new System.Windows.Forms.Padding(2);
             this.gbLogin.Size = new System.Drawing.Size(370, 284);
             this.gbLogin.TabIndex = 7;
             this.gbLogin.TabStop = false;
@@ -142,7 +142,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.cbRemember.AutoSize = true;
             this.cbRemember.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRemember.Location = new System.Drawing.Point(138, 168);
-            this.cbRemember.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbRemember.Margin = new System.Windows.Forms.Padding(2);
             this.cbRemember.Name = "cbRemember";
             this.cbRemember.Size = new System.Drawing.Size(115, 23);
             this.cbRemember.TabIndex = 10;
@@ -207,7 +207,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(124, 196);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.btnLogin.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -222,7 +222,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.txtEmailR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailR.Location = new System.Drawing.Point(138, 124);
-            this.txtEmailR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmailR.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmailR.Name = "txtEmailR";
             this.txtEmailR.Size = new System.Drawing.Size(204, 29);
             this.txtEmailR.TabIndex = 3;
@@ -242,7 +242,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.txtAccountR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAccountR.Location = new System.Drawing.Point(138, 73);
-            this.txtAccountR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAccountR.Margin = new System.Windows.Forms.Padding(2);
             this.txtAccountR.Name = "txtAccountR";
             this.txtAccountR.Size = new System.Drawing.Size(204, 29);
             this.txtAccountR.TabIndex = 4;
@@ -325,9 +325,9 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbRegister.Controls.Add(this.label11);
             this.gbRegister.Controls.Add(this.txtEmailR);
             this.gbRegister.Location = new System.Drawing.Point(357, 277);
-            this.gbRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbRegister.Margin = new System.Windows.Forms.Padding(2);
             this.gbRegister.Name = "gbRegister";
-            this.gbRegister.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbRegister.Padding = new System.Windows.Forms.Padding(2);
             this.gbRegister.Size = new System.Drawing.Size(370, 357);
             this.gbRegister.TabIndex = 11;
             this.gbRegister.TabStop = false;
@@ -337,7 +337,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.txtRepassR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepassR.Location = new System.Drawing.Point(138, 226);
-            this.txtRepassR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRepassR.Margin = new System.Windows.Forms.Padding(2);
             this.txtRepassR.Name = "txtRepassR";
             this.txtRepassR.Size = new System.Drawing.Size(204, 29);
             this.txtRepassR.TabIndex = 12;
@@ -357,7 +357,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.txtPassR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassR.Location = new System.Drawing.Point(138, 175);
-            this.txtPassR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassR.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassR.Name = "txtPassR";
             this.txtPassR.Size = new System.Drawing.Size(204, 29);
             this.txtPassR.TabIndex = 10;
@@ -383,7 +383,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnRegisterR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegisterR.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegisterR.Location = new System.Drawing.Point(125, 269);
-            this.btnRegisterR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegisterR.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegisterR.Name = "btnRegisterR";
             this.btnRegisterR.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.btnRegisterR.OnHoverButtonColor = System.Drawing.Color.Yellow;
@@ -400,14 +400,14 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Setting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Setting.Image = ((System.Drawing.Image)(resources.GetObject("Setting.Image")));
             this.Setting.Location = new System.Drawing.Point(987, 713);
-            this.Setting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Setting.Margin = new System.Windows.Forms.Padding(2);
             this.Setting.Name = "Setting";
             this.Setting.Size = new System.Drawing.Size(70, 71);
             this.Setting.TabIndex = 13;
             this.Setting.TabStop = false;
             this.Setting.Click += new System.EventHandler(this.Setting_Click);
             // 
-            // Form1
+            // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -420,9 +420,9 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Controls.Add(this.gbLogin);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.gbLogin.ResumeLayout(false);
