@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace PBL3_DanTaPhaiBietSuTa.DTO
 {
+    [Table("Question")]
     public class Question
     {
         [Key]
