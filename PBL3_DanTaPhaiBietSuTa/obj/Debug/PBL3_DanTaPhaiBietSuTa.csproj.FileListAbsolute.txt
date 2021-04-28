@@ -29,3 +29,11 @@ C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPha
 C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.CopyComplete
 C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.exe
 C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.pdb
+C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Form1.resources
+C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.InitialCreate.resources
+C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._2.resources
+C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._3.resources
+C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._4.resources
+C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._5.resources
+C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._12.resources
+C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._14.resources

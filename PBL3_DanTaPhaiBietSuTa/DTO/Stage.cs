@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace PBL3_DanTaPhaiBietSuTa.DTO
 {
+    [Table("Stage")]
     public class Stage
     {
         [Key]
@@ -16,5 +17,9 @@ namespace PBL3_DanTaPhaiBietSuTa.DTO
         public int VideoID { get; set; }
         [ForeignKey("VideoID")]
         public virtual Video Video { get; set; }
+        public override string ToString()
+        {
+            return StageName;
+        }
     }
 }
