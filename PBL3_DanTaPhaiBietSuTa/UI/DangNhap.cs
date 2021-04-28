@@ -80,6 +80,12 @@ namespace PBL3_DanTaPhaiBietSuTa
                 txtRepassR.Text = "";
                 return;
             }
+            if (BLL.Instance.IsExistUser(txtAccountR.Text))
+            {
+                //Hiện thông báo user đã tồn tại.
+                MessageBox.Show("Tên tài khoản đã tồn tại!");
+                return;
+            }    
             if(txtAccountR.Text == "" || txtEmailR.Text == "" || txtPassR.Text == "" || txtRepassR.Text == "")
             {
                 //UX viền đỏ

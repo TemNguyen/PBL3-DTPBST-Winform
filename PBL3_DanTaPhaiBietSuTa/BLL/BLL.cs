@@ -40,5 +40,10 @@ namespace PBL3_DanTaPhaiBietSuTa
             //gọi DAL add neu user.
             return true;
         }
+        public bool IsExistUser(string userName)
+        {
+            //DAL checkExistUser
+            return true;
+        }
     }
 }
