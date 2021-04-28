@@ -25,6 +25,10 @@ namespace PBL3_DanTaPhaiBietSuTa
             }
         }
         private static BLL _Instance;
+        private BLL()
+        {
+
+        }
         public bool CheckLogin(string userName, string passWord)
         {
             DB db = new DB();

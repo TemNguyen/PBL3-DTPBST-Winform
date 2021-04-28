@@ -66,6 +66,9 @@ namespace PBL3_DanTaPhaiBietSuTa
             else
             {
                 //Hiện Thông báo đăng nhập thất bại
+                MessageBox.Show("Có lỗi xảy ra, vui lòng kiểm tra lại thông tin tài khoản!");
+                txtAccount.Text = "";
+                txtPass.Text = "";
                 return;
             }    
         }
