@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLL.cs" />
     <Compile Include="CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -68,11 +69,11 @@
     <Compile Include="DTO\Stage.cs" />
     <Compile Include="DTO\UserInfo.cs" />
     <Compile Include="DTO\Video.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="GenData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GenData.Designer.cs">
+      <DependentUpon>GenData.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202104280841146_InitialCreate.cs" />
     <Compile Include="Migrations\202104280841146_InitialCreate.Designer.cs">
@@ -132,8 +133,8 @@
     <EmbeddedResource Include="CustomButton.resx">
       <DependentUpon>CustomButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="GenData.resx">
+      <DependentUpon>GenData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104280841146_InitialCreate.resx">
       <DependentUpon>202104280841146_InitialCreate.cs</DependentUpon>
@@ -189,7 +190,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
     <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
