@@ -217,6 +217,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.TextColor = System.Drawing.Color.White;
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtEmailR
             // 
@@ -324,7 +325,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbRegister.Controls.Add(this.txtAccountR);
             this.gbRegister.Controls.Add(this.label11);
             this.gbRegister.Controls.Add(this.txtEmailR);
-            this.gbRegister.Location = new System.Drawing.Point(357, 277);
+            this.gbRegister.Location = new System.Drawing.Point(357, 276);
             this.gbRegister.Margin = new System.Windows.Forms.Padding(2);
             this.gbRegister.Name = "gbRegister";
             this.gbRegister.Padding = new System.Windows.Forms.Padding(2);
@@ -393,6 +394,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnRegisterR.Text = "Đăng ký";
             this.btnRegisterR.TextColor = System.Drawing.Color.White;
             this.btnRegisterR.UseVisualStyleBackColor = true;
+            this.btnRegisterR.Click += new System.EventHandler(this.btnRegisterR_Click);
             // 
             // Setting
             // 

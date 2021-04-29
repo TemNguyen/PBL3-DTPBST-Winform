@@ -8,9 +8,9 @@ namespace PBL3_DanTaPhaiBietSuTa
     {
         private Color _borderColor = Color.Silver;
         private Color _onHoverBorderColor = Color.Gray;
-        private Color _buttonColor = Color.Red;
+        private Color _buttonColor = Color.White;
         private Color _onHoverButtonColor = Color.Yellow;
-        private Color _textColor = Color.White;
+        private Color _textColor = Color.Black;
         private Color _onHoverTextColor = Color.Gray;
 
         private bool _isHovering;

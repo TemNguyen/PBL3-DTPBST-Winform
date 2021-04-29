@@ -40,5 +40,17 @@ namespace PBL3_DanTaPhaiBietSuTa
             gbLogin.Visible = false;
             gbRegister.Visible = true;
         }
+
+        private void btnRegisterR_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            User u = new User();
+            u.ShowDialog();
+            this.Dispose();
+        }
     }
 }
