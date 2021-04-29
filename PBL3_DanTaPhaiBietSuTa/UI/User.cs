@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBL3_DanTaPhaiBietSuTa.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -83,6 +84,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         private void btnExitUser_Click(object sender, EventArgs e)
         {
             gbUser.Visible = false;
+        }
+        private void SetUserInfor()
+        {
+            //var userInfor = BLL.Instance.GetUserInfo()
         }
 
         private void Level1_Click(object sender, EventArgs e)

@@ -37,5 +37,14 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             return DAL.Instance.AddUser(user);
         }
+        public List<UserInfo> GetUserInfos()
+        {
+            return DAL.Instance.GetListUserInfo();
+        }
+        public bool UpdateUserInfor(UserInfo user)
+        {
+            //DAL
+            return true;
+        }
     }
 }

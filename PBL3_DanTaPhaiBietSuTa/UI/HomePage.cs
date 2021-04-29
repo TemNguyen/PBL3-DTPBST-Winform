@@ -22,15 +22,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 
         private void btnPlayNow_Click(object sender, EventArgs e)
         {
-            if (true) //Kiểm tra có tk đã lưu chưa
-            {
-                DangNhap login = new DangNhap();
-                login.ShowDialog();
-            }
-            else
-            {
-                //Nếu đã có tk đã lưu sẵn thì vô luôn form trong
-            }
+            DangNhap login = new DangNhap();
+            login.ShowDialog();
             Dispose();
         }
 
