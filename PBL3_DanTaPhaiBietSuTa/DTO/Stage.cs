@@ -11,6 +11,10 @@ namespace PBL3_DanTaPhaiBietSuTa.DTO
     [Table("Stage")]
     public class Stage
     {
+        public Stage()
+        {
+            this.Questions = new HashSet<Question>();
+        }
         [Key]
         public int StageID { get; set; }
         [Required]
@@ -19,6 +23,7 @@ namespace PBL3_DanTaPhaiBietSuTa.DTO
         public int VideoID { get; set; }
         [ForeignKey("VideoID")]
         public virtual Video Video { get; set; }
+        public virtual ICollection<Question> Questions { get; set; }
         public override string ToString()
         {
             return StageName;

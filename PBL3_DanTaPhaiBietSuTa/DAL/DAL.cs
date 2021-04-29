@@ -91,6 +91,7 @@ namespace PBL3_DanTaPhaiBietSuTa
                     user.Email = usr.Email;
                     user.Name = usr.Name;
                     user.Password = usr.Password;
+                    db.SaveChanges();
                     return true;
                 }
             }    
@@ -112,6 +113,17 @@ namespace PBL3_DanTaPhaiBietSuTa
                 return video;
             }
         }
+        public List<Question> GetListQuestion(int stageID)
+        {
+            using (DB db = new DB())
+            {
+                List<Question> list = db.Stages.Find(stageID).Questions.ToList();
+                
+                return list;
+            }
+        }
+        
+
 
     }
 }
