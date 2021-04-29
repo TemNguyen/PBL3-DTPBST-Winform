@@ -104,6 +104,10 @@
     <Compile Include="Migrations\202104280951120_14.Designer.cs">
       <DependentUpon>202104280951120_14.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104290326117_db.cs" />
+    <Compile Include="Migrations\202104290326117_db.Designer.cs">
+      <DependentUpon>202104290326117_db.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OvalPictureBox.cs">
       <SubType>Component</SubType>
@@ -130,6 +134,12 @@
     </Compile>
     <Compile Include="UI\SettingForm.Designer.cs">
       <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CustomButton.resx">
       <DependentUpon>CustomButton.cs</DependentUpon>
@@ -158,6 +168,9 @@
     <EmbeddedResource Include="Migrations\202104280951120_14.resx">
       <DependentUpon>202104280951120_14.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104290326117_db.resx">
+      <DependentUpon>202104290326117_db.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +190,9 @@
       <DependentUpon>SettingForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <EmbeddedResource Include="UI\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

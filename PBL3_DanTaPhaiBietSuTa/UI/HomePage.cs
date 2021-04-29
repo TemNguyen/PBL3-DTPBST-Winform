@@ -31,7 +31,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             {
                 //Nếu đã có tk đã lưu sẵn thì vô luôn form trong
             }
-            this.Dispose();
+            Dispose();
         }
 
         private void btnSetting_Click(object sender, EventArgs e)

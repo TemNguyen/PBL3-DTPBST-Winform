@@ -95,6 +95,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Size = new System.Drawing.Size(271, 34);
             this.txtAccount.TabIndex = 1;
+            this.txtAccount.TextChanged += new System.EventHandler(this.txtAccount_TextChanged);
             // 
             // label1
             // 
@@ -317,8 +318,8 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbRegister.Controls.Add(this.txtAccountR);
             this.gbRegister.Controls.Add(this.label11);
             this.gbRegister.Controls.Add(this.txtEmailR);
-            this.gbRegister.Location = new System.Drawing.Point(476, 333);
-            this.gbRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbRegister.Location = new System.Drawing.Point(476, 315);
+            this.gbRegister.Margin = new System.Windows.Forms.Padding(2);
             this.gbRegister.Name = "gbRegister";
             this.gbRegister.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbRegister.Size = new System.Drawing.Size(493, 439);

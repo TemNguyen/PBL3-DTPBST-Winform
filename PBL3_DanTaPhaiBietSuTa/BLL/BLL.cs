@@ -31,31 +31,11 @@ namespace PBL3_DanTaPhaiBietSuTa
         }
         public bool CheckLogin(string userName, string passWord)
         {
-            DB db = new DB();
-            var list = db.UserInfos.Select(p => p).ToList(); //linq sẽ viết trong DAL.
-            foreach(var user in list)
-            {
-                if (user.Username == userName && user.Password == passWord) return true;
-            }
-            return false;
+            return DAL.Instance.CheckLogin(userName, passWord);
         }
         public bool AddNewUser(UserInfo user)
         {
-            //gọi DAL add neu user.
-            using (DB db = new DB())
-            {
-                db.UserInfos.Add(user);
-                db.SaveChanges();
-            }    
-            return true;
-        }
-        public bool IsExistUser(string userName)
-        {
-            //DAL checkExistUser
-            DB db = new DB();
-            if (db.UserInfos.Where(p => p.Username == userName).ToList().Count > 0) 
-                return true;
-            return false;
+            return DAL.Instance.AddUser(user);
         }
     }
 }
