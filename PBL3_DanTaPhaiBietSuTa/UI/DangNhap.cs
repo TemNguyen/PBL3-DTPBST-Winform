@@ -89,23 +89,14 @@ namespace PBL3_DanTaPhaiBietSuTa
                 txtRepassR.Text = "";
                 return;
             }
-            if (BLL.Instance.IsExistUser(txtAccountR.Text))
+            if (IsValid() == false) return;
+            UserInfo newUser = new UserInfo()
             {
-                //Hiện thông báo user đã tồn tại.
-                MessageBox.Show("Tên tài khoản đã tồn tại!");
-                return;
-            }    
-            if(txtAccountR.Text == "" || txtEmailR.Text == "" || txtPassR.Text == "" || txtRepassR.Text == "")
-            {
-                //UX viền đỏ
-                MessageBox.Show("Vui lòng nhập đủ thông tin!");
-                return;
-            }
-            UserInfo newUser = new UserInfo();
-            //newUser.Name = txtNameR.Text;
-            newUser.Username = txtAccountR.Text;
-            newUser.Password = txtPassR.Text;
-            newUser.Email = txtEmailR.Text;
+                //newUser.Name = txtNameR.Text,
+                Username = txtAccountR.Text,
+                Password = txtPassR.Text,
+                Email = txtEmailR.Text,
+            };
             if(BLL.Instance.AddNewUser(newUser))
             {
                 //Hiện thông báo đăng ký thành công
@@ -116,6 +107,12 @@ namespace PBL3_DanTaPhaiBietSuTa
                 txtRepassR.Text = "";
                 gbRegister.Visible = false;
                 gbLogin.Visible = true;
+            }   
+            else
+            {
+                //Hiện thông báo đăng ký thất bại
+                MessageBox.Show("Tên tài khoản đã tồn tại!");
+                return;
             }    
         }
         private bool IsRememberUser()
@@ -129,6 +126,21 @@ namespace PBL3_DanTaPhaiBietSuTa
                 txtPass.Text = rememberUser[1];
             }
             return true;
+        }
+        //Kiểm tra đầu vào
+        private bool IsValid()
+        {
+            if (txtAccountR.Text == "" || txtEmailR.Text == "" || txtPassR.Text == "" || txtRepassR.Text == "")
+            {
+                //UX viền đỏ
+                MessageBox.Show("Vui lòng nhập đủ thông tin!");
+                return false;
+            }
+            return true;
+        }
+        private void txtAccount_TextChanged(object sender, EventArgs e)
+        {
+            if (txtAccount.Text == "") txtPass.Text = "";
         }
     }
 }
