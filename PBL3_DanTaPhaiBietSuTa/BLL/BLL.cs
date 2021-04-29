@@ -42,12 +42,20 @@ namespace PBL3_DanTaPhaiBietSuTa
         public bool AddNewUser(UserInfo user)
         {
             //gọi DAL add neu user.
+            using (DB db = new DB())
+            {
+                db.UserInfos.Add(user);
+                db.SaveChanges();
+            }    
             return true;
         }
         public bool IsExistUser(string userName)
         {
             //DAL checkExistUser
-            return true;
+            DB db = new DB();
+            if (db.UserInfos.Where(p => p.Username == userName).ToList().Count > 0) 
+                return true;
+            return false;
         }
     }
 }

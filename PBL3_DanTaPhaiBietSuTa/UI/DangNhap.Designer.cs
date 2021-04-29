@@ -39,7 +39,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label2 = new System.Windows.Forms.Label();
             this.gbLogin = new System.Windows.Forms.GroupBox();
             this.cbRemember = new System.Windows.Forms.CheckBox();
-            this.btnRegister = new System.Windows.Forms.Label();
+            this.txtRegister = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(271, 34);
-            this.txtPass.TabIndex = 3;
+            this.txtPass.TabIndex = 2;
             // 
             // txtAccount
             // 
@@ -94,7 +94,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Size = new System.Drawing.Size(271, 34);
-            this.txtAccount.TabIndex = 4;
+            this.txtAccount.TabIndex = 1;
             // 
             // label1
             // 
@@ -120,7 +120,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.gbLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gbLogin.Controls.Add(this.cbRemember);
-            this.gbLogin.Controls.Add(this.btnRegister);
+            this.gbLogin.Controls.Add(this.txtRegister);
             this.gbLogin.Controls.Add(this.label5);
             this.gbLogin.Controls.Add(this.label4);
             this.gbLogin.Controls.Add(this.label3);
@@ -145,22 +145,22 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.cbRemember.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbRemember.Name = "cbRemember";
             this.cbRemember.Size = new System.Drawing.Size(141, 27);
-            this.cbRemember.TabIndex = 10;
+            this.cbRemember.TabIndex = 3;
             this.cbRemember.Text = "Nhớ tài khoản";
             this.cbRemember.UseVisualStyleBackColor = true;
             // 
-            // btnRegister
+            // txtRegister
             // 
-            this.btnRegister.AutoSize = true;
-            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnRegister.Location = new System.Drawing.Point(288, 309);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(72, 23);
-            this.btnRegister.TabIndex = 9;
-            this.btnRegister.Text = "Đăng ký";
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.txtRegister.AutoSize = true;
+            this.txtRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtRegister.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtRegister.Location = new System.Drawing.Point(288, 309);
+            this.txtRegister.Name = "txtRegister";
+            this.txtRegister.Size = new System.Drawing.Size(72, 23);
+            this.txtRegister.TabIndex = 5;
+            this.txtRegister.Text = "Đăng ký";
+            this.txtRegister.Click += new System.EventHandler(this.txtRegister_Click);
             // 
             // label5
             // 
@@ -209,7 +209,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnLogin.OnHoverButtonColor = System.Drawing.Color.Yellow;
             this.btnLogin.OnHoverTextColor = System.Drawing.Color.Gray;
             this.btnLogin.Size = new System.Drawing.Size(176, 54);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.TextColor = System.Drawing.Color.White;
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -222,7 +222,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtEmailR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmailR.Name = "txtEmailR";
             this.txtEmailR.Size = new System.Drawing.Size(271, 34);
-            this.txtEmailR.TabIndex = 3;
+            this.txtEmailR.TabIndex = 2;
             // 
             // label11
             // 
@@ -241,7 +241,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtAccountR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAccountR.Name = "txtAccountR";
             this.txtAccountR.Size = new System.Drawing.Size(271, 34);
-            this.txtAccountR.TabIndex = 4;
+            this.txtAccountR.TabIndex = 1;
             // 
             // label10
             // 
@@ -296,7 +296,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtLoginR.Location = new System.Drawing.Point(283, 394);
             this.txtLoginR.Name = "txtLoginR";
             this.txtLoginR.Size = new System.Drawing.Size(95, 23);
-            this.txtLoginR.TabIndex = 9;
+            this.txtLoginR.TabIndex = 6;
             this.txtLoginR.Text = "Đăng nhập";
             this.txtLoginR.Click += new System.EventHandler(this.txtLoginR_Click);
             // 
@@ -317,7 +317,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbRegister.Controls.Add(this.txtAccountR);
             this.gbRegister.Controls.Add(this.label11);
             this.gbRegister.Controls.Add(this.txtEmailR);
-            this.gbRegister.Location = new System.Drawing.Point(476, 330);
+            this.gbRegister.Location = new System.Drawing.Point(476, 333);
             this.gbRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbRegister.Name = "gbRegister";
             this.gbRegister.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -334,7 +334,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtRepassR.Name = "txtRepassR";
             this.txtRepassR.PasswordChar = '*';
             this.txtRepassR.Size = new System.Drawing.Size(271, 34);
-            this.txtRepassR.TabIndex = 12;
+            this.txtRepassR.TabIndex = 4;
             // 
             // label13
             // 
@@ -354,7 +354,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtPassR.Name = "txtPassR";
             this.txtPassR.PasswordChar = '*';
             this.txtPassR.Size = new System.Drawing.Size(271, 34);
-            this.txtPassR.TabIndex = 10;
+            this.txtPassR.TabIndex = 3;
             // 
             // label12
             // 
@@ -382,7 +382,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnRegisterR.OnHoverButtonColor = System.Drawing.Color.Yellow;
             this.btnRegisterR.OnHoverTextColor = System.Drawing.Color.Gray;
             this.btnRegisterR.Size = new System.Drawing.Size(176, 54);
-            this.btnRegisterR.TabIndex = 0;
+            this.btnRegisterR.TabIndex = 5;
             this.btnRegisterR.Text = "Đăng ký";
             this.btnRegisterR.TextColor = System.Drawing.Color.White;
             this.btnRegisterR.UseVisualStyleBackColor = true;
@@ -440,7 +440,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         private System.Windows.Forms.GroupBox gbLogin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label btnRegister;
+        private System.Windows.Forms.Label txtRegister;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox cbRemember;
         private System.Windows.Forms.TextBox txtEmailR;

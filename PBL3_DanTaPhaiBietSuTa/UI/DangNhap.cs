@@ -29,12 +29,18 @@ namespace PBL3_DanTaPhaiBietSuTa
 
         private void txtLoginR_Click(object sender, EventArgs e)
         {
+            txtAccountR.Text = "";
+            txtEmailR.Text = "";
+            txtPassR.Text = "";
+            txtRepassR.Text = "";
             gbRegister.Visible = false;
             gbLogin.Visible = true;
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void txtRegister_Click(object sender, EventArgs e)
         {
+            txtAccount.Text = "";
+            txtPass.Text = "";
             gbLogin.Visible = false;
             gbRegister.Visible = true;
         }
@@ -102,8 +108,14 @@ namespace PBL3_DanTaPhaiBietSuTa
             newUser.Email = txtEmailR.Text;
             if(BLL.Instance.AddNewUser(newUser))
             {
-                MessageBox.Show("Đăng ký thành công!");
                 //Hiện thông báo đăng ký thành công
+                MessageBox.Show("Đăng ký thành công!");
+                txtAccountR.Text = "";
+                txtEmailR.Text = "";
+                txtPassR.Text = "";
+                txtRepassR.Text = "";
+                gbRegister.Visible = false;
+                gbLogin.Visible = true;
             }    
         }
         private bool IsRememberUser()
