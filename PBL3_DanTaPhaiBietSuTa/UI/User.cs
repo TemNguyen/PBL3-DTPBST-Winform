@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3_DanTaPhaiBietSuTa.UI
+namespace PBL3_DanTaPhaiBietSuTa
 {
     public partial class User : Form
     {
@@ -124,18 +124,14 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
             List<string> userInfor = new List<string>(File.ReadAllLines(path));
             string oldPass = userInfor[2];
+            if (IsValid() == false) return;
             if (checkBox1.Checked)
             {
-                if (IsValid() == false)
-                {
-                    MessageBox.Show("Có lỗi xảy ra, vui lòng kiểm tra lại thông tin tài khoản!");
-                    return;
-                }
-                else if (String.Compare(txtOldPass.Text, oldPass) > 0)
+                if (String.Compare(txtOldPass.Text, oldPass) != 0)
                 {
                     MessageBox.Show("Mật khẩu hiện tại không đúng!");
                     return;
-                }    
+                }
                 else
                     oldPass = txtNewPass.Text;
             }
@@ -175,8 +171,42 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private bool IsValid()
         {
-            if (txtOldPass.Text == "" || txtNewPass.Text == "" || txtRePass.Text == "") return false;
-            if (String.Compare(txtNewPass.Text, txtRePass.Text) > 0) return false;
+            List<char> list = new List<char>()
+            {
+                '`', '~', '!', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', '=',
+                '{', '[', ']', '}', '|', ';', ':', ',', '<', '>', '/', '?'
+            };
+            if (checkBox1.Checked)
+            {
+                if (txtOldPass.Text == "" || txtNewPass.Text == "" || txtRePass.Text == "")
+                {
+                    MessageBox.Show("Vui lòng điền đủ thông tin!");
+                    return false;
+                }
+                if (String.Compare(txtNewPass.Text, txtRePass.Text) != 0)
+                {
+                    MessageBox.Show("Mật khẩu mới không khớp!");
+                    return false;
+                }
+            }
+            foreach (var l in list)
+            {
+                if (txtEmail.Text.Contains(l))
+                {
+                    MessageBox.Show("Email không thể chứa các ký tự `,~,!,..");
+                    return false;
+                }
+            }
+            if (!txtEmail.Text.Contains("@"))
+            {
+                MessageBox.Show("Địa chỉ Email phải chứa ký tự @");
+                return false;
+            }
+            if (txtEmail.Text.Substring(0, 1) == "@")
+            {
+                MessageBox.Show("Email không thể bắt đầu bằng ký tự @");
+                return false;
+            }
             return true;
         }
     }

@@ -1,5 +1,5 @@
 ﻿
-namespace PBL3_DanTaPhaiBietSuTa.UI
+namespace PBL3_DanTaPhaiBietSuTa
 {
     partial class User
     {

@@ -112,6 +112,11 @@
     <Compile Include="Migrations\202104291501005_newDB2.Designer.cs">
       <DependentUpon>202104291501005_newDB2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104291544574_29\4.cs" />
+    <Compile Include="Migrations\202104291545163_2904.cs" />
+    <Compile Include="Migrations\202104291545163_2904.Designer.cs">
+      <DependentUpon>202104291545163_2904.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OvalPictureBox.cs">
       <SubType>Component</SubType>
@@ -139,10 +144,10 @@
     <Compile Include="UI\SettingForm.Designer.cs">
       <DependentUpon>SettingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="User.cs">
+    <Compile Include="UI\User.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User.Designer.cs">
+    <Compile Include="UI\User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CustomButton.resx">
@@ -178,6 +183,9 @@
     <EmbeddedResource Include="Migrations\202104291501005_newDB2.resx">
       <DependentUpon>202104291501005_newDB2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104291545163_2904.resx">
+      <DependentUpon>202104291545163_2904.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,7 +205,7 @@
       <DependentUpon>SettingForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <EmbeddedResource Include="User.resx">
+    <EmbeddedResource Include="UI\User.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
