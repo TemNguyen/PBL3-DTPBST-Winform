@@ -13,9 +13,9 @@ namespace PBL3_DanTaPhaiBietSuTa.DTO
     {
         [Key]
         public int UserID { get; set; }
-        [Required]
+        [Required][MaxLength(50)]
         public string Username { get; set; }
-        [Required]
+        [Required][MaxLength(50)]
         public string Password { get; set; }
         public string Name { get; set; }
         

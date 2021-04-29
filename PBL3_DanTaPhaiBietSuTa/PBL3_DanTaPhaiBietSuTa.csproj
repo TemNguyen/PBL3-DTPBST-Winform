@@ -104,9 +104,13 @@
     <Compile Include="Migrations\202104280951120_14.Designer.cs">
       <DependentUpon>202104280951120_14.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104290326117_db.cs" />
-    <Compile Include="Migrations\202104290326117_db.Designer.cs">
-      <DependentUpon>202104290326117_db.cs</DependentUpon>
+    <Compile Include="Migrations\202104291459421_newDB.cs" />
+    <Compile Include="Migrations\202104291459421_newDB.Designer.cs">
+      <DependentUpon>202104291459421_newDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104291501005_newDB2.cs" />
+    <Compile Include="Migrations\202104291501005_newDB2.Designer.cs">
+      <DependentUpon>202104291501005_newDB2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OvalPictureBox.cs">
@@ -168,8 +172,11 @@
     <EmbeddedResource Include="Migrations\202104280951120_14.resx">
       <DependentUpon>202104280951120_14.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104290326117_db.resx">
-      <DependentUpon>202104290326117_db.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104291459421_newDB.resx">
+      <DependentUpon>202104291459421_newDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104291501005_newDB2.resx">
+      <DependentUpon>202104291501005_newDB2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>

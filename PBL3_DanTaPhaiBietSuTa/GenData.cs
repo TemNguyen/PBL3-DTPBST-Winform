@@ -21,9 +21,9 @@ namespace PBL3_DanTaPhaiBietSuTa
         private void button1_Click(object sender, EventArgs e)
         {
             
-            DB db = new DB();
             
-            dataGridView1.DataSource = db.Questions.ToList(); 
+
+            dataGridView1.DataSource = DAL.Instance.GetListQuestion(1); 
             
         }
     }
