@@ -16,5 +16,16 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             InitializeComponent();
         }
+
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            SettingForm s = new SettingForm();
+            s.ShowDialog();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

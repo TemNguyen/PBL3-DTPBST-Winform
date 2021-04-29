@@ -29,98 +29,217 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Play));
+            this.gbVideo = new System.Windows.Forms.GroupBox();
+            this.lbUser = new System.Windows.Forms.Label();
+            this.txtQuestion = new PBL3_DanTaPhaiBietSuTa.CustomButton();
+            this.btnA = new PBL3_DanTaPhaiBietSuTa.CustomButton();
+            this.btnB = new PBL3_DanTaPhaiBietSuTa.CustomButton();
+            this.btnD = new PBL3_DanTaPhaiBietSuTa.CustomButton();
+            this.btnC = new PBL3_DanTaPhaiBietSuTa.CustomButton();
+            this.btnSetting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
+            this.btnHome = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
+            this.gbVideo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // gbVideo
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(70, 596);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(424, 77);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.gbVideo.BackColor = System.Drawing.Color.White;
+            this.gbVideo.Controls.Add(this.lbUser);
+            this.gbVideo.Location = new System.Drawing.Point(93, 4);
+            this.gbVideo.Name = "gbVideo";
+            this.gbVideo.Size = new System.Drawing.Size(883, 484);
+            this.gbVideo.TabIndex = 1;
+            this.gbVideo.TabStop = false;
+            this.gbVideo.Text = "groupBox1";
             // 
-            // groupBox1
+            // lbUser
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(69, 34);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(900, 435);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.lbUser.BackColor = System.Drawing.Color.White;
+            this.lbUser.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lbUser.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.lbUser.Location = new System.Drawing.Point(1, 0);
+            this.lbUser.Name = "lbUser";
+            this.lbUser.Size = new System.Drawing.Size(899, 24);
+            this.lbUser.TabIndex = 6;
+            this.lbUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button2
+            // txtQuestion
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(545, 596);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(424, 77);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.txtQuestion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(182)))));
+            this.txtQuestion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.txtQuestion.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.txtQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtQuestion.FlatAppearance.BorderSize = 0;
+            this.txtQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtQuestion.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuestion.Location = new System.Drawing.Point(115, 499);
+            this.txtQuestion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtQuestion.Name = "txtQuestion";
+            this.txtQuestion.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.txtQuestion.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.txtQuestion.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.txtQuestion.Size = new System.Drawing.Size(839, 87);
+            this.txtQuestion.TabIndex = 28;
+            this.txtQuestion.Text = "Câu hỏi";
+            this.txtQuestion.TextColor = System.Drawing.Color.White;
+            this.txtQuestion.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnA
             // 
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(70, 697);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(424, 77);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnA.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(182)))));
+            this.btnA.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnA.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnA.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnA.FlatAppearance.BorderSize = 0;
+            this.btnA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnA.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnA.Location = new System.Drawing.Point(115, 599);
+            this.btnA.Margin = new System.Windows.Forms.Padding(2);
+            this.btnA.Name = "btnA";
+            this.btnA.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnA.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnA.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnA.Size = new System.Drawing.Size(412, 72);
+            this.btnA.TabIndex = 29;
+            this.btnA.Text = "A";
+            this.btnA.TextColor = System.Drawing.Color.White;
+            this.btnA.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnB
             // 
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(545, 697);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(424, 77);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(182)))));
+            this.btnB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnB.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnB.FlatAppearance.BorderSize = 0;
+            this.btnB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnB.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnB.Location = new System.Drawing.Point(542, 599);
+            this.btnB.Margin = new System.Windows.Forms.Padding(2);
+            this.btnB.Name = "btnB";
+            this.btnB.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnB.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnB.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnB.Size = new System.Drawing.Size(412, 72);
+            this.btnB.TabIndex = 30;
+            this.btnB.Text = "B";
+            this.btnB.TextColor = System.Drawing.Color.White;
+            this.btnB.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnD
             // 
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(70, 491);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(899, 77);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnD.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(182)))));
+            this.btnD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnD.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnD.FlatAppearance.BorderSize = 0;
+            this.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnD.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnD.Location = new System.Drawing.Point(542, 680);
+            this.btnD.Margin = new System.Windows.Forms.Padding(2);
+            this.btnD.Name = "btnD";
+            this.btnD.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnD.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnD.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnD.Size = new System.Drawing.Size(412, 72);
+            this.btnD.TabIndex = 32;
+            this.btnD.Text = "D";
+            this.btnD.TextColor = System.Drawing.Color.White;
+            this.btnD.UseVisualStyleBackColor = false;
+            // 
+            // btnC
+            // 
+            this.btnC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(182)))));
+            this.btnC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnC.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnC.FlatAppearance.BorderSize = 0;
+            this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnC.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnC.Location = new System.Drawing.Point(115, 680);
+            this.btnC.Margin = new System.Windows.Forms.Padding(2);
+            this.btnC.Name = "btnC";
+            this.btnC.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnC.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnC.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnC.Size = new System.Drawing.Size(412, 72);
+            this.btnC.TabIndex = 31;
+            this.btnC.Text = "C";
+            this.btnC.TextColor = System.Drawing.Color.White;
+            this.btnC.UseVisualStyleBackColor = false;
+            // 
+            // btnSetting
+            // 
+            this.btnSetting.BackColor = System.Drawing.Color.DarkGray;
+            this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
+            this.btnSetting.Location = new System.Drawing.Point(998, 1);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(70, 71);
+            this.btnSetting.TabIndex = 33;
+            this.btnSetting.TabStop = false;
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.DarkGray;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.Location = new System.Drawing.Point(0, 1);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(70, 71);
+            this.btnHome.TabIndex = 34;
+            this.btnHome.TabStop = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // Play
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 777);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1066, 794);
+            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.btnSetting);
+            this.Controls.Add(this.btnD);
+            this.Controls.Add(this.btnC);
+            this.Controls.Add(this.btnB);
+            this.Controls.Add(this.btnA);
+            this.Controls.Add(this.gbVideo);
+            this.Controls.Add(this.txtQuestion);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Play";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Play";
+            this.gbVideo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.GroupBox gbVideo;
+        private System.Windows.Forms.Label lbUser;
+        private CustomButton txtQuestion;
+        private CustomButton btnA;
+        private CustomButton btnB;
+        private CustomButton btnD;
+        private CustomButton btnC;
+        private OvalPictureBox btnSetting;
+        private OvalPictureBox btnHome;
     }
 }
