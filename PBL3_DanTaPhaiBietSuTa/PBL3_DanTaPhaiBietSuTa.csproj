@@ -62,6 +62,7 @@
     <Compile Include="CustomButton.Designer.cs">
       <DependentUpon>CustomButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAL\DAL.cs" />
     <Compile Include="DTO\CreateDB.cs" />
     <Compile Include="DTO\DB.cs" />
     <Compile Include="DTO\GameProcess.cs" />
@@ -189,8 +190,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

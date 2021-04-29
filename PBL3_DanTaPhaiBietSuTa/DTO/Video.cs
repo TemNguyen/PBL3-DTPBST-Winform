@@ -13,7 +13,9 @@ namespace PBL3_DanTaPhaiBietSuTa.DTO
     {
         [Key]
         public int VideoID { get; set; }
+        [Required]
         public string VideoName { get; set; }
+        [Required]
         public string VideoLink { get; set; }
     }
 }

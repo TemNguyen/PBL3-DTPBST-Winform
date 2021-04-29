@@ -13,10 +13,11 @@ namespace PBL3_DanTaPhaiBietSuTa.DTO
     {
         [Key]
         public int GameProcessID { get; set; }
-
+        [Required]
         public int StageID { get; set; }
-        
+        [Required]
         public int Point { get; set; }
+        [Required]
         public int UserID { get; set; }
         
         [ForeignKey("UserID")]
