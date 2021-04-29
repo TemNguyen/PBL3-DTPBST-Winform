@@ -80,5 +80,38 @@ namespace PBL3_DanTaPhaiBietSuTa
             }
             return list;
         }
+        public bool UpdateUser(UserInfo usr)
+        {
+            using(DB db = new DB())
+            {
+                var user = db.UserInfos.Find(usr.UserID);
+                if (user == null) return false;
+                else
+                {
+                    user.Email = usr.Email;
+                    user.Name = usr.Name;
+                    user.Password = usr.Password;
+                    return true;
+                }
+            }    
+        }
+        public UserInfo GetUserInfoByUsername(string username)
+        {
+            using (DB db = new DB())
+            {
+                UserInfo user = db.UserInfos.Where(s => s.Username == username).FirstOrDefault();
+                return user ;
+            }
+        }
+        public Video GetVideo(int stageID)
+        {
+            using (DB db = new DB())
+            {
+                Stage stage = db.Stages.Where(s => s.StageID == stageID).FirstOrDefault();
+                Video video = stage.Video;
+                return video;
+            }
+        }
+
     }
 }
