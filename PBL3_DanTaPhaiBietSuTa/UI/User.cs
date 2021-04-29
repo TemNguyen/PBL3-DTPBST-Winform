@@ -38,37 +38,13 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
 
             gbUser.Visible = true;
+            gbLevel.Visible = false;
         }
 
-        private void btnExitRanked_Click(object sender, EventArgs e)
+        private void btnExitUser_Click(object sender, EventArgs e)
         {
-            gbRanked.Visible = false;
-        }
-
-        private void btnRank_Click(object sender, EventArgs e)
-        {
-            gbRanked.Visible = true;
-        }
-
-        private void btnExitFeedback_Click(object sender, EventArgs e)
-        {
-            gbFeedback.Visible = false;
-        }
-
-        private void btnFeedback_Click(object sender, EventArgs e)
-        {
-            gbFeedback.Visible = true;
-        }
-
-        private void btnSendFb_Click(object sender, EventArgs e)
-        {
-            //
-        }
-
-        private void txtFeedback_TextChanged(object sender, EventArgs e)
-        {
-            txtFeedback.SelectionStart = txtFeedback.Text.Length;
-            txtFeedback.ScrollToCaret();
+            gbUser.Visible = false;
+            gbLevel.Visible = true;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -87,9 +63,39 @@ namespace PBL3_DanTaPhaiBietSuTa
             }
         }
 
-        private void btnExitUser_Click(object sender, EventArgs e)
+        private void btnRank_Click(object sender, EventArgs e)
         {
-            gbUser.Visible = false;
+            gbRanked.Visible = true;
+            gbLevel.Visible = false;
+        }
+
+        private void btnExitRanked_Click(object sender, EventArgs e)
+        {
+            gbRanked.Visible = false;
+            gbLevel.Visible = true;
+        }
+
+        private void txtFeedback_TextChanged(object sender, EventArgs e)
+        {
+            txtFeedback.SelectionStart = txtFeedback.Text.Length;
+            txtFeedback.ScrollToCaret();
+        }
+
+        private void btnFeedback_Click(object sender, EventArgs e)
+        {
+            gbFeedback.Visible = true;
+            gbLevel.Visible = false;
+        }
+
+        private void btnExitFeedback_Click(object sender, EventArgs e)
+        {
+            gbFeedback.Visible = false;
+            gbLevel.Visible = true;
+        }
+
+        private void btnSendFb_Click(object sender, EventArgs e)
+        {
+            //
         }
         private void SetUserInfor()
         {
@@ -116,7 +122,15 @@ namespace PBL3_DanTaPhaiBietSuTa
 
         private void Level1_Click(object sender, EventArgs e)
         {
+            Play p = new Play();
+            p.Show();
+            //this.Hide();
+        }
 
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            SettingForm s = new SettingForm();
+            s.ShowDialog();
         }
 
         private void btnSaveInfo_Click(object sender, EventArgs e)
