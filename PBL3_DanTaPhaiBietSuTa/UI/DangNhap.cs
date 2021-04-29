@@ -67,7 +67,11 @@ namespace PBL3_DanTaPhaiBietSuTa
                 }    
                 MessageBox.Show("Đăng nhập thành công!");
                 //Hiện Thông báo đăng nhập thành công
+                GetUserLogin(txtAccount.Text);
                 //Hiện MainForm
+                User user = new User();
+                user.Show();
+                Close();
             }
             else
             {
@@ -137,6 +141,19 @@ namespace PBL3_DanTaPhaiBietSuTa
                 return false;
             }
             return true;
+        }
+        private void GetUserLogin(string userName)
+        {
+            UserInfo user = BLL.Instance.GetUserInforByUserName(userName);
+            string userLogin = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
+            using (StreamWriter sw = File.CreateText(userLogin))
+            {
+                sw.WriteLine(user.UserID);
+                sw.WriteLine(user.Username);
+                sw.WriteLine(user.Password);
+                sw.WriteLine(user.Name);
+                sw.WriteLine(user.Email);
+            }
         }
         private void txtAccount_TextChanged(object sender, EventArgs e)
         {

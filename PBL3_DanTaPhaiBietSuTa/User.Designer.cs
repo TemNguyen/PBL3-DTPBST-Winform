@@ -41,38 +41,12 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gbFeedback = new System.Windows.Forms.GroupBox();
-            this.btnSendFb = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.txtFeedback = new System.Windows.Forms.TextBox();
             this.btnExitFeedback = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnFeedback = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
-            this.btnRanked = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
-            this.btnSetting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
-            this.btnUser = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.gbUser = new System.Windows.Forms.GroupBox();
-            this.lbPoint = new System.Windows.Forms.Label();
-            this.lbRanked = new System.Windows.Forms.Label();
-            this.txtRePass = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtNewPass = new System.Windows.Forms.TextBox();
-            this.txtOldPass = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lbAccount = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.btnSaveInfo = new PBL3_DanTaPhaiBietSuTa.CustomButton();
-            this.btnExitUser = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.gbLevel = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Level1 = new System.Windows.Forms.PictureBox();
@@ -92,12 +66,34 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.lbPoint = new System.Windows.Forms.Label();
+            this.lbRanked = new System.Windows.Forms.Label();
+            this.txtRePass = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtNewPass = new System.Windows.Forms.TextBox();
+            this.txtOldPass = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lbAccount = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnExitUser = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnSaveInfo = new PBL3_DanTaPhaiBietSuTa.CustomButton();
+            this.btnSendFb = new PBL3_DanTaPhaiBietSuTa.CustomButton();
+            this.btnFeedback = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
+            this.btnRanked = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
+            this.btnSetting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
+            this.btnUser = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.gbRanked.SuspendLayout();
             this.gbFeedback.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRanked)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUser)).BeginInit();
             this.gbUser.SuspendLayout();
             this.gbLevel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -116,6 +112,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRanked)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUser)).BeginInit();
             this.SuspendLayout();
             // 
             // lbUser
@@ -170,9 +170,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.gbRanked.Controls.Add(this.label2);
             this.gbRanked.Controls.Add(this.label1);
             this.gbRanked.Location = new System.Drawing.Point(365, 244);
-            this.gbRanked.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRanked.Margin = new System.Windows.Forms.Padding(4);
             this.gbRanked.Name = "gbRanked";
-            this.gbRanked.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRanked.Padding = new System.Windows.Forms.Padding(4);
             this.gbRanked.Size = new System.Drawing.Size(680, 549);
             this.gbRanked.TabIndex = 19;
             this.gbRanked.TabStop = false;
@@ -183,7 +183,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.btnExitRanked.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExitRanked.Location = new System.Drawing.Point(620, -1);
-            this.btnExitRanked.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExitRanked.Margin = new System.Windows.Forms.Padding(4);
             this.btnExitRanked.Name = "btnExitRanked";
             this.btnExitRanked.Size = new System.Drawing.Size(60, 55);
             this.btnExitRanked.TabIndex = 25;
@@ -258,42 +258,20 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.gbFeedback.Controls.Add(this.label9);
             this.gbFeedback.Controls.Add(this.label10);
             this.gbFeedback.Location = new System.Drawing.Point(365, 183);
-            this.gbFeedback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbFeedback.Margin = new System.Windows.Forms.Padding(4);
             this.gbFeedback.Name = "gbFeedback";
-            this.gbFeedback.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbFeedback.Padding = new System.Windows.Forms.Padding(4);
             this.gbFeedback.Size = new System.Drawing.Size(680, 431);
             this.gbFeedback.TabIndex = 26;
             this.gbFeedback.TabStop = false;
             this.gbFeedback.Text = "groupBox1";
             this.gbFeedback.Visible = false;
             // 
-            // btnSendFb
-            // 
-            this.btnSendFb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSendFb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnSendFb.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnSendFb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSendFb.FlatAppearance.BorderSize = 0;
-            this.btnSendFb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSendFb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendFb.Location = new System.Drawing.Point(251, 356);
-            this.btnSendFb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSendFb.Name = "btnSendFb";
-            this.btnSendFb.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.btnSendFb.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.btnSendFb.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnSendFb.Size = new System.Drawing.Size(187, 54);
-            this.btnSendFb.TabIndex = 27;
-            this.btnSendFb.Text = "Gửi phản hồi";
-            this.btnSendFb.TextColor = System.Drawing.Color.White;
-            this.btnSendFb.UseVisualStyleBackColor = true;
-            this.btnSendFb.Click += new System.EventHandler(this.btnSendFb_Click);
-            // 
             // txtFeedback
             // 
             this.txtFeedback.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFeedback.Location = new System.Drawing.Point(65, 124);
-            this.txtFeedback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFeedback.Margin = new System.Windows.Forms.Padding(4);
             this.txtFeedback.Multiline = true;
             this.txtFeedback.Name = "txtFeedback";
             this.txtFeedback.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -305,7 +283,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.btnExitFeedback.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExitFeedback.Location = new System.Drawing.Point(620, -1);
-            this.btnExitFeedback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExitFeedback.Margin = new System.Windows.Forms.Padding(4);
             this.btnExitFeedback.Name = "btnExitFeedback";
             this.btnExitFeedback.Size = new System.Drawing.Size(60, 55);
             this.btnExitFeedback.TabIndex = 25;
@@ -348,59 +326,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label10.TabIndex = 20;
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnFeedback
-            // 
-            this.btnFeedback.BackColor = System.Drawing.Color.DarkGray;
-            this.btnFeedback.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFeedback.Image = ((System.Drawing.Image)(resources.GetObject("btnFeedback.Image")));
-            this.btnFeedback.Location = new System.Drawing.Point(1225, 890);
-            this.btnFeedback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(93, 87);
-            this.btnFeedback.TabIndex = 18;
-            this.btnFeedback.TabStop = false;
-            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
-            // 
-            // btnRanked
-            // 
-            this.btnRanked.BackColor = System.Drawing.Color.DarkGray;
-            this.btnRanked.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRanked.Image = ((System.Drawing.Image)(resources.GetObject("btnRanked.Image")));
-            this.btnRanked.Location = new System.Drawing.Point(1124, 890);
-            this.btnRanked.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnRanked.Name = "btnRanked";
-            this.btnRanked.Size = new System.Drawing.Size(93, 87);
-            this.btnRanked.TabIndex = 17;
-            this.btnRanked.TabStop = false;
-            this.btnRanked.Click += new System.EventHandler(this.btnRank_Click);
-            // 
-            // btnSetting
-            // 
-            this.btnSetting.BackColor = System.Drawing.Color.DarkGray;
-            this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.Location = new System.Drawing.Point(1327, 890);
-            this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(93, 87);
-            this.btnSetting.TabIndex = 14;
-            this.btnSetting.TabStop = false;
-            // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.DarkGray;
-            this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
-            this.btnUser.Location = new System.Drawing.Point(9, 9);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(80, 74);
-            this.btnUser.TabIndex = 4;
-            this.btnUser.TabStop = false;
-            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
-            // 
             // gbUser
             // 
             this.gbUser.BackColor = System.Drawing.Color.White;
+            this.gbUser.Controls.Add(this.gbLevel);
             this.gbUser.Controls.Add(this.lbPoint);
             this.gbUser.Controls.Add(this.lbRanked);
             this.gbUser.Controls.Add(this.txtRePass);
@@ -423,14 +352,228 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.gbUser.Controls.Add(this.label8);
             this.gbUser.Controls.Add(this.label11);
             this.gbUser.Location = new System.Drawing.Point(352, 124);
-            this.gbUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbUser.Margin = new System.Windows.Forms.Padding(4);
             this.gbUser.Name = "gbUser";
-            this.gbUser.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbUser.Padding = new System.Windows.Forms.Padding(4);
             this.gbUser.Size = new System.Drawing.Size(767, 695);
             this.gbUser.TabIndex = 28;
             this.gbUser.TabStop = false;
             this.gbUser.Text = "groupBox1";
             this.gbUser.Visible = false;
+            // 
+            // gbLevel
+            // 
+            this.gbLevel.BackColor = System.Drawing.Color.White;
+            this.gbLevel.Controls.Add(this.flowLayoutPanel1);
+            this.gbLevel.Controls.Add(this.label20);
+            this.gbLevel.Controls.Add(this.label13);
+            this.gbLevel.Location = new System.Drawing.Point(514, 291);
+            this.gbLevel.Margin = new System.Windows.Forms.Padding(4);
+            this.gbLevel.Name = "gbLevel";
+            this.gbLevel.Padding = new System.Windows.Forms.Padding(4);
+            this.gbLevel.Size = new System.Drawing.Size(853, 610);
+            this.gbLevel.TabIndex = 29;
+            this.gbLevel.TabStop = false;
+            this.gbLevel.Text = "groupBox1";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.Level1);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox2);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox3);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox4);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox5);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox6);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox7);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox8);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox9);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox10);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox11);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox12);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox13);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox14);
+            this.flowLayoutPanel1.Controls.Add(this.pictureBox15);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(32, 87);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(800, 484);
+            this.flowLayoutPanel1.TabIndex = 33;
+            // 
+            // Level1
+            // 
+            this.Level1.BackColor = System.Drawing.Color.Black;
+            this.Level1.Location = new System.Drawing.Point(4, 4);
+            this.Level1.Margin = new System.Windows.Forms.Padding(4);
+            this.Level1.Name = "Level1";
+            this.Level1.Size = new System.Drawing.Size(247, 127);
+            this.Level1.TabIndex = 0;
+            this.Level1.TabStop = false;
+            this.Level1.Click += new System.EventHandler(this.Level1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Black;
+            this.pictureBox2.Location = new System.Drawing.Point(259, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(245, 127);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Black;
+            this.pictureBox3.Location = new System.Drawing.Point(512, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(245, 127);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Black;
+            this.pictureBox4.Location = new System.Drawing.Point(4, 139);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(245, 127);
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Black;
+            this.pictureBox5.Location = new System.Drawing.Point(257, 139);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(245, 127);
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Black;
+            this.pictureBox6.Location = new System.Drawing.Point(510, 139);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(245, 127);
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Black;
+            this.pictureBox7.Location = new System.Drawing.Point(4, 274);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(245, 127);
+            this.pictureBox7.TabIndex = 6;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Black;
+            this.pictureBox8.Location = new System.Drawing.Point(257, 274);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(245, 127);
+            this.pictureBox8.TabIndex = 7;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Black;
+            this.pictureBox9.Location = new System.Drawing.Point(510, 274);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(245, 127);
+            this.pictureBox9.TabIndex = 8;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Black;
+            this.pictureBox10.Location = new System.Drawing.Point(4, 409);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(245, 127);
+            this.pictureBox10.TabIndex = 9;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Black;
+            this.pictureBox11.Location = new System.Drawing.Point(257, 409);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(245, 127);
+            this.pictureBox11.TabIndex = 10;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Black;
+            this.pictureBox12.Location = new System.Drawing.Point(510, 409);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(245, 127);
+            this.pictureBox12.TabIndex = 11;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Black;
+            this.pictureBox13.Location = new System.Drawing.Point(4, 544);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(245, 127);
+            this.pictureBox13.TabIndex = 12;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Black;
+            this.pictureBox14.Location = new System.Drawing.Point(257, 544);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(245, 127);
+            this.pictureBox14.TabIndex = 13;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackColor = System.Drawing.Color.Black;
+            this.pictureBox15.Location = new System.Drawing.Point(510, 544);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(245, 127);
+            this.pictureBox15.TabIndex = 14;
+            this.pictureBox15.TabStop = false;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(304, 20);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(253, 46);
+            this.label20.TabIndex = 32;
+            this.label20.Text = "Chọn màn chơi";
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label13.Location = new System.Drawing.Point(0, 0);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(960, 37);
+            this.label13.TabIndex = 30;
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbPoint
             // 
@@ -459,8 +602,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.txtRePass.Enabled = false;
             this.txtRePass.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRePass.Location = new System.Drawing.Point(299, 540);
-            this.txtRePass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRePass.Margin = new System.Windows.Forms.Padding(4);
             this.txtRePass.Name = "txtRePass";
+            this.txtRePass.PasswordChar = '*';
             this.txtRePass.Size = new System.Drawing.Size(375, 39);
             this.txtRePass.TabIndex = 48;
             // 
@@ -480,8 +624,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.txtNewPass.Enabled = false;
             this.txtNewPass.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPass.Location = new System.Drawing.Point(300, 464);
-            this.txtNewPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNewPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.PasswordChar = '*';
             this.txtNewPass.Size = new System.Drawing.Size(375, 39);
             this.txtNewPass.TabIndex = 44;
             // 
@@ -490,8 +635,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.txtOldPass.Enabled = false;
             this.txtOldPass.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOldPass.Location = new System.Drawing.Point(299, 402);
-            this.txtOldPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtOldPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtOldPass.Name = "txtOldPass";
+            this.txtOldPass.PasswordChar = '*';
             this.txtOldPass.Size = new System.Drawing.Size(375, 39);
             this.txtOldPass.TabIndex = 43;
             // 
@@ -511,7 +657,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(237, 366);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(181, 36);
             this.checkBox1.TabIndex = 41;
@@ -534,7 +680,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(293, 196);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(375, 39);
             this.txtEmail.TabIndex = 37;
@@ -543,7 +689,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(293, 139);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(375, 39);
             this.txtName.TabIndex = 36;
@@ -603,32 +749,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label12.TabIndex = 28;
             this.label12.Text = "Email";
             // 
-            // btnSaveInfo
-            // 
-            this.btnSaveInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSaveInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnSaveInfo.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnSaveInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveInfo.FlatAppearance.BorderSize = 0;
-            this.btnSaveInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveInfo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveInfo.Location = new System.Drawing.Point(303, 612);
-            this.btnSaveInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSaveInfo.Name = "btnSaveInfo";
-            this.btnSaveInfo.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.btnSaveInfo.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.btnSaveInfo.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnSaveInfo.Size = new System.Drawing.Size(187, 54);
-            this.btnSaveInfo.TabIndex = 27;
-            this.btnSaveInfo.Text = "Lưu thông tin";
-            this.btnSaveInfo.TextColor = System.Drawing.Color.White;
-            this.btnSaveInfo.UseVisualStyleBackColor = true;
-            // 
             // btnExitUser
             // 
             this.btnExitUser.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExitUser.Location = new System.Drawing.Point(708, -1);
-            this.btnExitUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExitUser.Margin = new System.Windows.Forms.Padding(4);
             this.btnExitUser.Name = "btnExitUser";
             this.btnExitUser.Size = new System.Drawing.Size(60, 55);
             this.btnExitUser.TabIndex = 25;
@@ -671,220 +796,100 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label11.TabIndex = 20;
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gbLevel
+            // btnSaveInfo
             // 
-            this.gbLevel.BackColor = System.Drawing.Color.White;
-            this.gbLevel.Controls.Add(this.flowLayoutPanel1);
-            this.gbLevel.Controls.Add(this.label20);
-            this.gbLevel.Controls.Add(this.label13);
-            this.gbLevel.Location = new System.Drawing.Point(304, 160);
-            this.gbLevel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbLevel.Name = "gbLevel";
-            this.gbLevel.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbLevel.Size = new System.Drawing.Size(853, 610);
-            this.gbLevel.TabIndex = 29;
-            this.gbLevel.TabStop = false;
-            this.gbLevel.Text = "groupBox1";
-            this.gbLevel.Visible = false;
+            this.btnSaveInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSaveInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnSaveInfo.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnSaveInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveInfo.FlatAppearance.BorderSize = 0;
+            this.btnSaveInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveInfo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveInfo.Location = new System.Drawing.Point(303, 612);
+            this.btnSaveInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSaveInfo.Name = "btnSaveInfo";
+            this.btnSaveInfo.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnSaveInfo.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnSaveInfo.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnSaveInfo.Size = new System.Drawing.Size(187, 54);
+            this.btnSaveInfo.TabIndex = 27;
+            this.btnSaveInfo.Text = "Lưu thông tin";
+            this.btnSaveInfo.TextColor = System.Drawing.Color.White;
+            this.btnSaveInfo.UseVisualStyleBackColor = true;
+            this.btnSaveInfo.Click += new System.EventHandler(this.btnSaveInfo_Click);
             // 
-            // flowLayoutPanel1
+            // btnSendFb
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.Level1);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox2);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox3);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox4);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox5);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox6);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox7);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox8);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox9);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox10);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox11);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox12);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox13);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox14);
-            this.flowLayoutPanel1.Controls.Add(this.pictureBox15);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(32, 87);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(800, 484);
-            this.flowLayoutPanel1.TabIndex = 33;
+            this.btnSendFb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSendFb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnSendFb.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnSendFb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSendFb.FlatAppearance.BorderSize = 0;
+            this.btnSendFb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendFb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendFb.Location = new System.Drawing.Point(251, 356);
+            this.btnSendFb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSendFb.Name = "btnSendFb";
+            this.btnSendFb.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnSendFb.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnSendFb.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnSendFb.Size = new System.Drawing.Size(187, 54);
+            this.btnSendFb.TabIndex = 27;
+            this.btnSendFb.Text = "Gửi phản hồi";
+            this.btnSendFb.TextColor = System.Drawing.Color.White;
+            this.btnSendFb.UseVisualStyleBackColor = true;
+            this.btnSendFb.Click += new System.EventHandler(this.btnSendFb_Click);
             // 
-            // Level1
+            // btnFeedback
             // 
-            this.Level1.BackColor = System.Drawing.Color.Black;
-            this.Level1.Location = new System.Drawing.Point(4, 4);
-            this.Level1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Level1.Name = "Level1";
-            this.Level1.Size = new System.Drawing.Size(247, 127);
-            this.Level1.TabIndex = 0;
-            this.Level1.TabStop = false;
-            this.Level1.Click += new System.EventHandler(this.Level1_Click);
+            this.btnFeedback.BackColor = System.Drawing.Color.DarkGray;
+            this.btnFeedback.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFeedback.Image = ((System.Drawing.Image)(resources.GetObject("btnFeedback.Image")));
+            this.btnFeedback.Location = new System.Drawing.Point(1225, 890);
+            this.btnFeedback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFeedback.Name = "btnFeedback";
+            this.btnFeedback.Size = new System.Drawing.Size(93, 87);
+            this.btnFeedback.TabIndex = 18;
+            this.btnFeedback.TabStop = false;
+            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
             // 
-            // pictureBox2
+            // btnRanked
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.Location = new System.Drawing.Point(259, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(245, 127);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.btnRanked.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRanked.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRanked.Image = ((System.Drawing.Image)(resources.GetObject("btnRanked.Image")));
+            this.btnRanked.Location = new System.Drawing.Point(1124, 890);
+            this.btnRanked.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRanked.Name = "btnRanked";
+            this.btnRanked.Size = new System.Drawing.Size(93, 87);
+            this.btnRanked.TabIndex = 17;
+            this.btnRanked.TabStop = false;
+            this.btnRanked.Click += new System.EventHandler(this.btnRank_Click);
             // 
-            // pictureBox3
+            // btnSetting
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Black;
-            this.pictureBox3.Location = new System.Drawing.Point(512, 4);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(245, 127);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.btnSetting.BackColor = System.Drawing.Color.DarkGray;
+            this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
+            this.btnSetting.Location = new System.Drawing.Point(1327, 890);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(93, 87);
+            this.btnSetting.TabIndex = 14;
+            this.btnSetting.TabStop = false;
             // 
-            // pictureBox4
+            // btnUser
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Black;
-            this.pictureBox4.Location = new System.Drawing.Point(4, 139);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(245, 127);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Black;
-            this.pictureBox5.Location = new System.Drawing.Point(257, 139);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(245, 127);
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Black;
-            this.pictureBox6.Location = new System.Drawing.Point(510, 139);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(245, 127);
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Black;
-            this.pictureBox7.Location = new System.Drawing.Point(4, 274);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(245, 127);
-            this.pictureBox7.TabIndex = 6;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Black;
-            this.pictureBox8.Location = new System.Drawing.Point(257, 274);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(245, 127);
-            this.pictureBox8.TabIndex = 7;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Black;
-            this.pictureBox9.Location = new System.Drawing.Point(510, 274);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(245, 127);
-            this.pictureBox9.TabIndex = 8;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Black;
-            this.pictureBox10.Location = new System.Drawing.Point(4, 409);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(245, 127);
-            this.pictureBox10.TabIndex = 9;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Black;
-            this.pictureBox11.Location = new System.Drawing.Point(257, 409);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(245, 127);
-            this.pictureBox11.TabIndex = 10;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Black;
-            this.pictureBox12.Location = new System.Drawing.Point(510, 409);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(245, 127);
-            this.pictureBox12.TabIndex = 11;
-            this.pictureBox12.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Black;
-            this.pictureBox13.Location = new System.Drawing.Point(4, 544);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(245, 127);
-            this.pictureBox13.TabIndex = 12;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.Color.Black;
-            this.pictureBox14.Location = new System.Drawing.Point(257, 544);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(245, 127);
-            this.pictureBox14.TabIndex = 13;
-            this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.BackColor = System.Drawing.Color.Black;
-            this.pictureBox15.Location = new System.Drawing.Point(510, 544);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(245, 127);
-            this.pictureBox15.TabIndex = 14;
-            this.pictureBox15.TabStop = false;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(304, 20);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(253, 46);
-            this.label20.TabIndex = 32;
-            this.label20.Text = "Chọn màn chơi";
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label13.Location = new System.Drawing.Point(0, 0);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(960, 37);
-            this.label13.TabIndex = 30;
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUser.BackColor = System.Drawing.Color.DarkGray;
+            this.btnUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
+            this.btnUser.Location = new System.Drawing.Point(9, 9);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(80, 74);
+            this.btnUser.TabIndex = 4;
+            this.btnUser.TabStop = false;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // User
             // 
@@ -893,7 +898,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1421, 977);
-            this.Controls.Add(this.gbLevel);
             this.Controls.Add(this.gbUser);
             this.Controls.Add(this.gbFeedback);
             this.Controls.Add(this.gbRanked);
@@ -906,7 +910,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.Controls.Add(this.lbUser);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "User";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -915,10 +919,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.gbRanked.PerformLayout();
             this.gbFeedback.ResumeLayout(false);
             this.gbFeedback.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRanked)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUser)).EndInit();
             this.gbUser.ResumeLayout(false);
             this.gbUser.PerformLayout();
             this.gbLevel.ResumeLayout(false);
@@ -939,6 +939,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRanked)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

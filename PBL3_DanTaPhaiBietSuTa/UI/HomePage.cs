@@ -23,8 +23,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         private void btnPlayNow_Click(object sender, EventArgs e)
         {
             DangNhap login = new DangNhap();
-            login.ShowDialog();
-            Dispose();
+            login.Show();
+            Hide();
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
