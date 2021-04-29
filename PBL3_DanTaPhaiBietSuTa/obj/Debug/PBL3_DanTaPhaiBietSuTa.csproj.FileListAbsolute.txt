@@ -92,3 +92,5 @@ C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debu
 D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.db.resources
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.User.resources
 D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.User.resources
+C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.db.resources
+C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.User.resources
