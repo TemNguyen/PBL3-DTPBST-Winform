@@ -13,7 +13,9 @@ namespace PBL3_DanTaPhaiBietSuTa.DTO
     {
         [Key]
         public int StageID { get; set; }
+        [Required]
         public string StageName { get; set; }
+        [Required]
         public int VideoID { get; set; }
         [ForeignKey("VideoID")]
         public virtual Video Video { get; set; }

@@ -39,12 +39,12 @@ namespace PBL3_DanTaPhaiBietSuTa
                 new UserInfo
                 {
                     Username = "gnol5498",Password = "123456",Name = "Lê Thanh Long",
-                    Email = "thanhlong9654147@gmail.com",Gender = true
+                    Email = "thanhlong9654147@gmail.com"
                 },
                 new UserInfo
                 {
                     Username = "temnguyen",Password = "123456",Name = "Nguyễn Duy Thịnh",
-                    Email = "temnguyen@gmail.com",Gender = true
+                    Email = "temnguyen@gmail.com"
                 }
             });
             context.GameProcesses.AddRange(new GameProcess[] {

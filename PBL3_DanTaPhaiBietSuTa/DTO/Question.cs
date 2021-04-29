@@ -13,8 +13,11 @@ namespace PBL3_DanTaPhaiBietSuTa.DTO
     {
         [Key]
         public int QuestionID { get; set; }
+        [Required]
         public int StageID { get; set; }
+        [Required]
         public string QuestionContent { get; set; }
+        [Required]
         public int TimeStop { get; set; }
         [ForeignKey("StageID")]
         public virtual Stage Stage { get; set; }
