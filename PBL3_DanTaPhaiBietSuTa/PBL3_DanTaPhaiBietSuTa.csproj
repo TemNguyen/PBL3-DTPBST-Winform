@@ -72,6 +72,12 @@
     <Compile Include="UI\HomePage.Designer.cs">
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Play.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </Compile>
     <EmbeddedResource Include="UI\HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Play.resx">
       <DependentUpon>Play.cs</DependentUpon>
