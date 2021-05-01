@@ -11,9 +11,9 @@ using PBL3_DanTaPhaiBietSuTa.UI;
 
 namespace PBL3_DanTaPhaiBietSuTa
 {
-    public partial class Form1 : Form
+    public partial class DangNhap : Form
     {
-        public Form1()
+        public DangNhap()
         {
             InitializeComponent();
             //Rectangle r = new Rectangle(0, 0, Setting.Width, Setting.Height);
