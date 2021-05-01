@@ -13,10 +13,12 @@ namespace PBL3_DanTaPhaiBietSuTa.DTO
     {
         [Key]
         public int UserID { get; set; }
+        [Required][MaxLength(50)]
         public string Username { get; set; }
+        [Required][MaxLength(50)]
         public string Password { get; set; }
         public string Name { get; set; }
-        public bool Gender { get; set; }
+        
         public string Email { get; set; }
         public override string ToString()
         {

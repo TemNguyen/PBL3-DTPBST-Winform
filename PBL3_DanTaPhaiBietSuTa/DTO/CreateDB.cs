@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PBL3_DanTaPhaiBietSuTa
 {
-    public class CreateDB : DropCreateDatabaseAlways<DB>
+    public class CreateDB : CreateDatabaseIfNotExists<DB>
     {
         protected override void Seed(PBL3_DanTaPhaiBietSuTa.DB context)
         {
@@ -39,12 +39,20 @@ namespace PBL3_DanTaPhaiBietSuTa
                 new UserInfo
                 {
                     Username = "gnol5498",Password = "123456",Name = "Lê Thanh Long",
+<<<<<<< HEAD
                     Email = "thanhlong9654147@gmail.com",Gender = true
+=======
+                    Email = "thanhlong9654147@gmail.com"
+>>>>>>> fc10f7a1196f208290806d0ad4092ceaa9bccf56
                 },
                 new UserInfo
                 {
                     Username = "temnguyen",Password = "123456",Name = "Nguyễn Duy Thịnh",
+<<<<<<< HEAD
                     Email = "temnguyen@gmail.com",Gender = true
+=======
+                    Email = "temnguyen@gmail.com"
+>>>>>>> fc10f7a1196f208290806d0ad4092ceaa9bccf56
                 }
             });
             context.GameProcesses.AddRange(new GameProcess[] {

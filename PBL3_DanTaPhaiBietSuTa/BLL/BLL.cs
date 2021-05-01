@@ -31,23 +31,39 @@ namespace PBL3_DanTaPhaiBietSuTa
         }
         public bool CheckLogin(string userName, string passWord)
         {
-            DB db = new DB();
-            var list = db.UserInfos.Select(p => p).ToList(); //linq sẽ viết trong DAL.
-            foreach(var user in list)
-            {
-                if (user.Username == userName && user.Password == passWord) return true;
-            }
-            return false;
+            return DAL.Instance.CheckLogin(userName, passWord);
         }
         public bool AddNewUser(UserInfo user)
         {
-            //gọi DAL add neu user.
-            return true;
+            return DAL.Instance.AddUser(user);
         }
-        public bool IsExistUser(string userName)
+        public List<UserInfo> GetUserInfos()
         {
-            //DAL checkExistUser
-            return true;
+            return DAL.Instance.GetListUserInfo();
+        }
+        public bool UpdateUserInfor(UserInfo user)
+        {
+            return DAL.Instance.UpdateUser(user);
+        }
+        public UserInfo GetUserInforByUserName(string userName)
+        {
+            return DAL.Instance.GetUserInfoByUsername(userName);
+        }
+        public Video GetVideo(int stageID)
+        {
+            return DAL.Instance.GetVideo(stageID);
+        }
+        public List<Question> GetQuestionsByStage(int stageID)
+        {
+            return DAL.Instance.GetListQuestion(stageID);
+        }
+        public Question GetRandomQuestionByTimeStop(int stageID, int timeStop)
+        {
+            //DAL
+            var listQuestion = new List<Question>();
+            Random rd = new Random();
+            int idQuestion = rd.Next(0, listQuestion.Count - 1);
+            return listQuestion[idQuestion];
         }
     }
 }
