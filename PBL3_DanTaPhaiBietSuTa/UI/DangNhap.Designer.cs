@@ -163,7 +163,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnRegister.Size = new System.Drawing.Size(60, 19);
             this.btnRegister.TabIndex = 9;
             this.btnRegister.Text = "Đăng ký";
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            //this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // label5
             // 

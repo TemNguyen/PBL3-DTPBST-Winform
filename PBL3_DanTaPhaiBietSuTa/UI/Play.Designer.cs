@@ -1,4 +1,6 @@
-﻿
+﻿using AxWMPLib;
+using System.Windows.Forms;
+
 namespace PBL3_DanTaPhaiBietSuTa.UI
 {
     partial class Play
@@ -32,7 +34,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Play));
             this.gbVideo = new System.Windows.Forms.GroupBox();
-            this.Video = new AxWMPLib.AxWindowsMediaPlayer();
             this.lbUser = new System.Windows.Forms.Label();
             this.txtQuestion = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.btnA = new PBL3_DanTaPhaiBietSuTa.CustomButton();
@@ -44,7 +45,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.videoTime = new System.Windows.Forms.Timer(this.components);
             this.questionTime = new System.Windows.Forms.Timer(this.components);
             this.gbVideo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Video)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +52,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // gbVideo
             // 
             this.gbVideo.BackColor = System.Drawing.Color.White;
-            this.gbVideo.Controls.Add(this.Video);
             this.gbVideo.Controls.Add(this.lbUser);
             this.gbVideo.Location = new System.Drawing.Point(93, 4);
             this.gbVideo.Margin = new System.Windows.Forms.Padding(4);
@@ -62,15 +61,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.gbVideo.TabIndex = 1;
             this.gbVideo.TabStop = false;
             this.gbVideo.Text = "groupBox1";
-            // 
-            // Video
-            // 
-            this.Video.Enabled = true;
-            this.Video.Location = new System.Drawing.Point(-112, 0);
-            this.Video.Name = "Video";
-            this.Video.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Video.OcxState")));
-            this.Video.Size = new System.Drawing.Size(1109, 549);
-            this.Video.TabIndex = 7;
             // 
             // lbUser
             // 
@@ -96,7 +86,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.txtQuestion.FlatAppearance.BorderSize = 0;
             this.txtQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtQuestion.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuestion.Location = new System.Drawing.Point(115, 499);
+            this.txtQuestion.Location = new System.Drawing.Point(114, 495);
             this.txtQuestion.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuestion.Name = "txtQuestion";
             this.txtQuestion.OnHoverBorderColor = System.Drawing.Color.Gray;
@@ -118,7 +108,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnA.FlatAppearance.BorderSize = 0;
             this.btnA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnA.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnA.Location = new System.Drawing.Point(115, 599);
+            this.btnA.Location = new System.Drawing.Point(114, 597);
             this.btnA.Margin = new System.Windows.Forms.Padding(2);
             this.btnA.Name = "btnA";
             this.btnA.OnHoverBorderColor = System.Drawing.Color.Gray;
@@ -140,7 +130,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnB.FlatAppearance.BorderSize = 0;
             this.btnB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnB.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnB.Location = new System.Drawing.Point(542, 599);
+            this.btnB.Location = new System.Drawing.Point(541, 597);
             this.btnB.Margin = new System.Windows.Forms.Padding(2);
             this.btnB.Name = "btnB";
             this.btnB.OnHoverBorderColor = System.Drawing.Color.Gray;
@@ -162,7 +152,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnD.FlatAppearance.BorderSize = 0;
             this.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnD.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnD.Location = new System.Drawing.Point(542, 680);
+            this.btnD.Location = new System.Drawing.Point(541, 678);
             this.btnD.Margin = new System.Windows.Forms.Padding(2);
             this.btnD.Name = "btnD";
             this.btnD.OnHoverBorderColor = System.Drawing.Color.Gray;
@@ -184,7 +174,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnC.FlatAppearance.BorderSize = 0;
             this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnC.Location = new System.Drawing.Point(115, 680);
+            this.btnC.Location = new System.Drawing.Point(114, 678);
             this.btnC.Margin = new System.Windows.Forms.Padding(2);
             this.btnC.Name = "btnC";
             this.btnC.OnHoverBorderColor = System.Drawing.Color.Gray;
@@ -236,7 +226,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1421, 977);
+            this.ClientSize = new System.Drawing.Size(1066, 794);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnSetting);
             this.Controls.Add(this.btnD);
@@ -253,7 +243,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Play";
             this.gbVideo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Video)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.ResumeLayout(false);
@@ -262,6 +251,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 
         #endregion
         private System.Windows.Forms.GroupBox gbVideo;
+
+        public AxWindowsMediaPlayer Video { get; private set; }
+
         private System.Windows.Forms.Label lbUser;
         private CustomButton txtQuestion;
         private CustomButton btnA;
@@ -270,5 +262,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         private CustomButton btnC;
         private OvalPictureBox btnSetting;
         private OvalPictureBox btnHome;
+        private Timer videoTime;
+        private Timer questionTime;
     }
 }

@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLL.cs" />
     <Compile Include="CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
