@@ -1,5 +1,5 @@
 ﻿
-namespace PBL3_DanTaPhaiBietSuTa.UI
+namespace PBL3_DanTaPhaiBietSuTa
 {
     partial class User
     {
@@ -382,6 +382,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // gbUser
             // 
             this.gbUser.BackColor = System.Drawing.Color.White;
+            this.gbUser.Controls.Add(this.gbLevel);//here
             this.gbUser.Controls.Add(this.lbPoint);
             this.gbUser.Controls.Add(this.lbRanked);
             this.gbUser.Controls.Add(this.txtRePass);
@@ -589,6 +590,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnSaveInfo.Text = "Lưu thông tin";
             this.btnSaveInfo.TextColor = System.Drawing.Color.White;
             this.btnSaveInfo.UseVisualStyleBackColor = true;
+            this.btnSaveInfo.Click += new System.EventHandler(this.btnSaveInfo_Click);
             // 
             // btnExitUser
             // 

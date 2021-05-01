@@ -94,6 +94,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Size = new System.Drawing.Size(204, 29);
             this.txtAccount.TabIndex = 0;
+            this.txtAccount.TextChanged += new System.EventHandler(this.txtAccount_TextChanged);
             // 
             // label1
             // 

@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +61,62 @@
     <Compile Include="CustomButton.Designer.cs">
       <DependentUpon>CustomButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAL\DAL.cs" />
+    <Compile Include="DTO\CreateDB.cs" />
+    <Compile Include="DTO\DB.cs" />
+    <Compile Include="DTO\GameProcess.cs" />
+    <Compile Include="DTO\Question.cs" />
+    <Compile Include="DTO\Stage.cs" />
+    <Compile Include="DTO\UserInfo.cs" />
+    <Compile Include="DTO\Video.cs" />
+    <Compile Include="GenData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenData.Designer.cs">
+      <DependentUpon>GenData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104280841146_InitialCreate.cs" />
+    <Compile Include="Migrations\202104280841146_InitialCreate.Designer.cs">
+      <DependentUpon>202104280841146_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104280844391_2.cs" />
+    <Compile Include="Migrations\202104280844391_2.Designer.cs">
+      <DependentUpon>202104280844391_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104280845133_3.cs" />
+    <Compile Include="Migrations\202104280845133_3.Designer.cs">
+      <DependentUpon>202104280845133_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104280847213_4.cs" />
+    <Compile Include="Migrations\202104280847213_4.Designer.cs">
+      <DependentUpon>202104280847213_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104280854155_5.cs" />
+    <Compile Include="Migrations\202104280854155_5.Designer.cs">
+      <DependentUpon>202104280854155_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104280924495_12.cs" />
+    <Compile Include="Migrations\202104280924495_12.Designer.cs">
+      <DependentUpon>202104280924495_12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104280951120_14.cs" />
+    <Compile Include="Migrations\202104280951120_14.Designer.cs">
+      <DependentUpon>202104280951120_14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104291459421_newDB.cs" />
+    <Compile Include="Migrations\202104291459421_newDB.Designer.cs">
+      <DependentUpon>202104291459421_newDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104291501005_newDB2.cs" />
+    <Compile Include="Migrations\202104291501005_newDB2.Designer.cs">
+      <DependentUpon>202104291501005_newDB2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104291544574_29\4.cs" />
+    <Compile Include="Migrations\202104291545163_2904.cs" />
+    <Compile Include="Migrations\202104291545163_2904.Designer.cs">
+      <DependentUpon>202104291545163_2904.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OvalPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -99,6 +164,39 @@
     <EmbeddedResource Include="CustomButton.resx">
       <DependentUpon>CustomButton.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GenData.resx">
+      <DependentUpon>GenData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104280841146_InitialCreate.resx">
+      <DependentUpon>202104280841146_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104280844391_2.resx">
+      <DependentUpon>202104280844391_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104280845133_3.resx">
+      <DependentUpon>202104280845133_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104280847213_4.resx">
+      <DependentUpon>202104280847213_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104280854155_5.resx">
+      <DependentUpon>202104280854155_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104280924495_12.resx">
+      <DependentUpon>202104280924495_12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104280951120_14.resx">
+      <DependentUpon>202104280951120_14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104291459421_newDB.resx">
+      <DependentUpon>202104291459421_newDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104291501005_newDB2.resx">
+      <DependentUpon>202104291501005_newDB2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104291545163_2904.resx">
+      <DependentUpon>202104291545163_2904.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +221,7 @@
     <EmbeddedResource Include="UI\SettingForm.resx">
       <DependentUpon>SettingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <EmbeddedResource Include="UI\User.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,7 +239,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
