@@ -39,20 +39,12 @@ namespace PBL3_DanTaPhaiBietSuTa
                 new UserInfo
                 {
                     Username = "gnol5498",Password = "123456",Name = "Lê Thanh Long",
-<<<<<<< HEAD
-                    Email = "thanhlong9654147@gmail.com",Gender = true
-=======
-                    Email = "thanhlong9654147@gmail.com"
->>>>>>> fc10f7a1196f208290806d0ad4092ceaa9bccf56
+                    Email = "thanhlong9654147@gmail.com",
                 },
                 new UserInfo
                 {
                     Username = "temnguyen",Password = "123456",Name = "Nguyễn Duy Thịnh",
-<<<<<<< HEAD
-                    Email = "temnguyen@gmail.com",Gender = true
-=======
                     Email = "temnguyen@gmail.com"
->>>>>>> fc10f7a1196f208290806d0ad4092ceaa9bccf56
                 }
             });
             context.GameProcesses.AddRange(new GameProcess[] {
