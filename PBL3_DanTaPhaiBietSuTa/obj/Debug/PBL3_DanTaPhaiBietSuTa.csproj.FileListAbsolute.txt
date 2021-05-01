@@ -11,96 +11,27 @@ D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaP
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.SettingForm.resources
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.HomePage.resources
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.DangNhap.resources
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.exe.config
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.exe
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.pdb
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.dll
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.xml
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csprojAssemblyReference.cache
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.CustomButton.resources
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.DangNhap.resources
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Properties.Resources.resources
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.HomePage.resources
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.SettingForm.resources
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.GenerateResource.cache
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.CopyComplete
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.exe
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.pdb
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Form1.resources
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.InitialCreate.resources
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._2.resources
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._3.resources
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._4.resources
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._5.resources
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._12.resources
-C:\Users\Admin\Desktop\New folder (3)\GitClone\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._14.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.exe.config
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.exe
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.pdb
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.dll
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.xml
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csprojAssemblyReference.cache
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.CustomButton.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.GenData.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.InitialCreate.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._2.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._3.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._4.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._5.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._12.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._14.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.DangNhap.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Properties.Resources.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.HomePage.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.SettingForm.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.GenerateResource.cache
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.CopyComplete
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.exe
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.pdb
-D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.User.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.User.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.newDB.resources
-C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.newDB2.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.exe.config
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.exe
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.pdb
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.dll
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.SqlServer.dll
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.xml
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.SqlServer.xml
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.CustomButton.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.GenData.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.InitialCreate.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._2.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._3.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._4.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._5.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._12.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._14.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.newDB.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.newDB2.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._2904.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.DangNhap.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Properties.Resources.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.HomePage.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.SettingForm.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.User.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.GenerateResource.cache
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.CoreCompileInputs.cache
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.CopyComplete
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.exe
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.pdb
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csprojAssemblyReference.cache
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.Play.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.Play.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\Interop.WMPLib.dll
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\AxInterop.WMPLib.dll
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\Interop.WMPLib.dll
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\AxInterop.WMPLib.dll
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.ResolveComReference.cache
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.Notification.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\Interop.WMPLib.dll
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\AxInterop.WMPLib.dll
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.ResolveComReference.cache
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.GenData.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.InitialCreate.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._2.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._3.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._4.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._5.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._12.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._14.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.newDB.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.newDB2.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._2904.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.User.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.dll
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.SqlServer.dll
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.xml
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\EntityFramework.SqlServer.xml
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\Interop.WMPLib.dll
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\AxInterop.WMPLib.dll
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.CopyComplete

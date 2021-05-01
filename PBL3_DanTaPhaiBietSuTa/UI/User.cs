@@ -1,4 +1,4 @@
-﻿using PBL3_DanTaPhaiBietSuTa.DTO;
+using PBL3_DanTaPhaiBietSuTa.DTO;
 using PBL3_DanTaPhaiBietSuTa.UI;
 using System;
 using System.Collections.Generic;
@@ -37,7 +37,6 @@ namespace PBL3_DanTaPhaiBietSuTa
 
         private void btnAccountInfo_Click(object sender, EventArgs e)
         {
-
             gbUser.Visible = true;
             gbLevel.Visible = false;
         }
