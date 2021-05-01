@@ -1,4 +1,4 @@
-﻿using PBL3_DanTaPhaiBietSuTa.DTO;
+using PBL3_DanTaPhaiBietSuTa.DTO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -40,7 +40,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             var video = BLL.Instance.GetVideo(stageID);
             Video.URL = @Application.StartupPath + @"\Assets\Video\" + video.VideoID + ".mp4";
-            Video.Ctlenabled = false;
+           //Video.Ctlenabled = false;
         }
         private void SetTimeStop()
         {
