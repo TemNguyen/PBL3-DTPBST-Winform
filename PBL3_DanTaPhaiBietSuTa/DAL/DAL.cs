@@ -183,6 +183,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         public List<Standing> GetListStanding()
         {
             List<Standing> list = new List<Standing>();
+            //123
             using(DB db = new DB())
             {
                 foreach(var user in db.UserInfos)
