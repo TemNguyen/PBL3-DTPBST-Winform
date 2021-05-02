@@ -1,4 +1,4 @@
-using PBL3_DanTaPhaiBietSuTa.DTO;
+﻿using PBL3_DanTaPhaiBietSuTa.DTO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -36,7 +36,25 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-
+            if (TVideo < listTimeStop[listTimeStop.Count - 1])
+            {
+                //Hiện thông báo kh lưu proccess
+                DialogResult d = MessageBox.Show("Tiến trình hiện tại sẽ không được lưu, Tiêp tục?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                switch(d)
+                {
+                    case DialogResult.Yes:
+                        new User().Show();
+                        this.Hide();
+                        break;
+                    case DialogResult.No:
+                        return;
+                }    
+            }
+            else
+            {
+                new User().Show();
+                this.Hide();
+            }    
         }
         private void SetVideoStage()
         {
@@ -105,7 +123,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 DisplayQuestion();
                 questionTime.Start();
             }
-    }
+        }
 
         private void questionTime_Tick(object sender, EventArgs e)
         {
