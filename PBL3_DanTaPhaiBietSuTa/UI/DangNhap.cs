@@ -134,10 +134,33 @@ namespace PBL3_DanTaPhaiBietSuTa
         //Kiểm tra đầu vào
         private bool IsValid()
         {
+            List<char> list = new List<char>()
+            {
+                '`', '~', '!', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', '=',
+                '{', '[', ']', '}', '|', ';', ':', ',', '<', '>', '/', '?' 
+            };
             if (txtAccountR.Text == "" || txtEmailR.Text == "" || txtPassR.Text == "" || txtRepassR.Text == "")
             {
                 //UX viền đỏ
                 MessageBox.Show("Vui lòng nhập đủ thông tin!");
+                return false;
+            }
+            foreach(var l in list)
+            {
+                if(txtEmailR.Text.Contains(l))
+                {
+                    MessageBox.Show("Email không thể chứa các ký tự `,~,!,..");
+                    return false;
+                }
+            }
+            if (!txtEmailR.Text.Contains("@"))
+            {
+                MessageBox.Show("Địa chỉ Email phải chứa ký tự @");
+                return false;
+            }    
+            if (txtEmailR.Text.Substring(0, 1) == "@")
+            {
+                MessageBox.Show("Email không thể bắt đầu bằng ký tự @");
                 return false;
             }
             return true;

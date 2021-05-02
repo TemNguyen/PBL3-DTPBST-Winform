@@ -49,5 +49,21 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             return DAL.Instance.GetUserInfoByUsername(userName);
         }
+        public Video GetVideo(int stageID)
+        {
+            return DAL.Instance.GetVideo(stageID);
+        }
+        public List<Question> GetQuestionsByStage(int stageID)
+        {
+            return DAL.Instance.GetListQuestion(stageID);
+        }
+        public Question GetRandomQuestionByTimeStop(int stageID, int timeStop)
+        {
+            //DAL
+            var listQuestion = new List<Question>();
+            Random rd = new Random();
+            int idQuestion = rd.Next(0, listQuestion.Count - 1);
+            return listQuestion[idQuestion];
+        }
     }
 }

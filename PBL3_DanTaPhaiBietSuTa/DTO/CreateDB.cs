@@ -39,7 +39,7 @@ namespace PBL3_DanTaPhaiBietSuTa
                 new UserInfo
                 {
                     Username = "gnol5498",Password = "123456",Name = "Lê Thanh Long",
-                    Email = "thanhlong9654147@gmail.com"
+                    Email = "thanhlong9654147@gmail.com",
                 },
                 new UserInfo
                 {
