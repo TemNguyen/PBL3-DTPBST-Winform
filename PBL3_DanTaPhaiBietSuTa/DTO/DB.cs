@@ -27,6 +27,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         public virtual DbSet<Stage> Stages { get; set; }
         public virtual DbSet<GameProcess> GameProcesses { get; set; }
         public virtual DbSet<Question> Questions { get; set; }
+        public virtual DbSet<Point> Points { get; set; }
     }
 
     //public class MyEntity

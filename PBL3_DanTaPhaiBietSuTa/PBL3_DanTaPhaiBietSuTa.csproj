@@ -66,8 +66,10 @@
     <Compile Include="DTO\CreateDB.cs" />
     <Compile Include="DTO\DB.cs" />
     <Compile Include="DTO\GameProcess.cs" />
+    <Compile Include="DTO\Point.cs" />
     <Compile Include="DTO\Question.cs" />
     <Compile Include="DTO\Stage.cs" />
+    <Compile Include="DTO\Standing.cs" />
     <Compile Include="DTO\UserInfo.cs" />
     <Compile Include="DTO\Video.cs" />
     <Compile Include="GenData.cs">
@@ -116,6 +118,10 @@
     <Compile Include="Migrations\202104291545163_2904.cs" />
     <Compile Include="Migrations\202104291545163_2904.Designer.cs">
       <DependentUpon>202104291545163_2904.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105021451383_point.cs" />
+    <Compile Include="Migrations\202105021451383_point.Designer.cs">
+      <DependentUpon>202105021451383_point.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OvalPictureBox.cs">
@@ -197,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104291545163_2904.resx">
       <DependentUpon>202104291545163_2904.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105021451383_point.resx">
+      <DependentUpon>202105021451383_point.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
