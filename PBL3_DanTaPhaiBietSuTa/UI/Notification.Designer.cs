@@ -77,6 +77,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.Name = "Notification";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Notification";
+            this.Load += new System.EventHandler(this.Notification_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

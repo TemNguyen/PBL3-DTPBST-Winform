@@ -64,11 +64,9 @@ namespace PBL3_DanTaPhaiBietSuTa
                 {
                     string rememberUserPath = @Application.StartupPath + @"\Assets\SavedUser\rememberUser.txt";
                     File.Delete(rememberUserPath);
-                }    
-                MessageBox.Show("Đăng nhập thành công!");
-                //Hiện Thông báo đăng nhập thành công
+                }
+                ShowMessage("Đăng nhập thành công!");
                 GetUserLogin(txtAccount.Text);
-                //Hiện MainForm
                 User user = new User();
                 user.Show();
                 Close();
@@ -76,7 +74,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             else
             {
                 //Hiện Thông báo đăng nhập thất bại
-                MessageBox.Show("Có lỗi xảy ra, vui lòng kiểm tra lại thông tin tài khoản!");
+                ShowMessage("Có lỗi xảy ra, vui lòng kiểm tra lại thông tin tài khoản!");
                 txtAccount.Text = "";
                 txtPass.Text = "";
                 return;
@@ -87,8 +85,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             if (txtPassR.Text != txtRepassR.Text)
             {
-                //Hiện thông báo pass và repass không giống nhau!
-                MessageBox.Show("Pass và Repass không giống nhau!");
+                ShowMessage("Pass và Repass không giống nhau!");
                 txtPassR.Text = "";
                 txtRepassR.Text = "";
                 return;
@@ -104,7 +101,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             if(BLL.Instance.AddNewUser(newUser))
             {
                 //Hiện thông báo đăng ký thành công
-                MessageBox.Show("Đăng ký thành công!");
+                ShowMessage("Đăng ký thành công!");
                 txtAccountR.Text = "";
                 txtEmailR.Text = "";
                 txtPassR.Text = "";
@@ -115,7 +112,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             else
             {
                 //Hiện thông báo đăng ký thất bại
-                MessageBox.Show("Tên tài khoản đã tồn tại!");
+                ShowMessage("Tên tài khoản đã tồn tại!");
                 return;
             }    
         }
@@ -142,25 +139,25 @@ namespace PBL3_DanTaPhaiBietSuTa
             if (txtAccountR.Text == "" || txtEmailR.Text == "" || txtPassR.Text == "" || txtRepassR.Text == "")
             {
                 //UX viền đỏ
-                MessageBox.Show("Vui lòng nhập đủ thông tin!");
+                ShowMessage("Vui lòng nhập đủ thông tin!");
                 return false;
             }
             foreach(var l in list)
             {
                 if(txtEmailR.Text.Contains(l))
                 {
-                    MessageBox.Show("Email không thể chứa các ký tự `,~,!,..");
+                    ShowMessage("Email không thể chứa các ký tự `,~,!,..");
                     return false;
                 }
             }
             if (!txtEmailR.Text.Contains("@"))
             {
-                MessageBox.Show("Địa chỉ Email phải chứa ký tự @");
+                ShowMessage("Địa chỉ Email phải chứa ký tự @!");
                 return false;
             }    
             if (txtEmailR.Text.Substring(0, 1) == "@")
             {
-                MessageBox.Show("Email không thể bắt đầu bằng ký tự @");
+                ShowMessage("Email không thể bắt đầu bằng ký tự @!");
                 return false;
             }
             return true;
@@ -181,6 +178,12 @@ namespace PBL3_DanTaPhaiBietSuTa
         private void txtAccount_TextChanged(object sender, EventArgs e)
         {
             if (txtAccount.Text == "") txtPass.Text = "";
+        }
+        private void ShowMessage(string message)
+        {
+            Notification notification = new Notification();
+            notification.Get(message);
+            notification.ShowDialog();
         }
     }
 }

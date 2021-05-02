@@ -143,7 +143,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             {
                 if (String.Compare(txtOldPass.Text, oldPass) != 0)
                 {
-                    MessageBox.Show("Mật khẩu hiện tại không đúng!");
+                    ShowMessage("Mật khẩu hiện tại không đúng!");
                     return;
                 }
                 else
@@ -160,7 +160,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             if (BLL.Instance.UpdateUserInfor(user))
             {
                 //Hiện Form thông báo.
-                MessageBox.Show("Cập nhập thông tin thành công");
+                ShowMessage("Cập nhập thông tin thành công");
                 //Cập nhập lại txtAccount
                 string userLogin = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
                 using (StreamWriter sw = File.CreateText(userLogin))
@@ -179,7 +179,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             else
             {
                 //Hiện Form thông báo.
-                MessageBox.Show("Có lỗi xảy ra, vui lòng thử lại sau");
+                ShowMessage("Có lỗi xảy ra, vui lòng thử lại sau!");
             }
             SetUserInfor();
         }
@@ -194,12 +194,12 @@ namespace PBL3_DanTaPhaiBietSuTa
             {
                 if (txtOldPass.Text == "" || txtNewPass.Text == "" || txtRePass.Text == "")
                 {
-                    MessageBox.Show("Vui lòng điền đủ thông tin!");
+                    ShowMessage("Vui lòng điền đủ thông tin!");
                     return false;
                 }
                 if (String.Compare(txtNewPass.Text, txtRePass.Text) != 0)
                 {
-                    MessageBox.Show("Mật khẩu mới không khớp!");
+                    ShowMessage("Mật khẩu mới không khớp!");
                     return false;
                 }
             }
@@ -207,21 +207,27 @@ namespace PBL3_DanTaPhaiBietSuTa
             {
                 if (txtEmail.Text.Contains(l))
                 {
-                    MessageBox.Show("Email không thể chứa các ký tự `,~,!,..");
+                    ShowMessage("Email không thể chứa các ký tự `,~,!,..");
                     return false;
                 }
             }
             if (!txtEmail.Text.Contains("@"))
             {
-                MessageBox.Show("Địa chỉ Email phải chứa ký tự @");
+                ShowMessage("Địa chỉ Email phải chứa ký tự @");
                 return false;
             }
             if (txtEmail.Text.Substring(0, 1) == "@")
             {
-                MessageBox.Show("Email không thể bắt đầu bằng ký tự @");
+                ShowMessage("Email không thể bắt đầu bằng ký tự @");
                 return false;
             }
             return true;
+        }
+        private void ShowMessage(string message)
+        {
+            Notification notification = new Notification();
+            notification.Get(message);
+            notification.ShowDialog();
         }
     }
 }
