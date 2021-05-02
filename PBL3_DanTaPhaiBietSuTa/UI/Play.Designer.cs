@@ -142,6 +142,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnD.Text = "D.";
             this.btnD.TextColor = System.Drawing.Color.White;
             this.btnD.UseVisualStyleBackColor = false;
+            this.btnD.Click += new System.EventHandler(this.SelectAnswer);
             // 
             // btnC
             // 
@@ -164,6 +165,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnC.Text = "C.";
             this.btnC.TextColor = System.Drawing.Color.White;
             this.btnC.UseVisualStyleBackColor = false;
+            this.btnC.Click += new System.EventHandler(this.SelectAnswer);
             // 
             // btnB
             // 
@@ -186,6 +188,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnB.Text = "B.";
             this.btnB.TextColor = System.Drawing.Color.White;
             this.btnB.UseVisualStyleBackColor = false;
+            this.btnB.Click += new System.EventHandler(this.SelectAnswer);
             // 
             // btnA
             // 
@@ -208,6 +211,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnA.Text = "A.";
             this.btnA.TextColor = System.Drawing.Color.White;
             this.btnA.UseVisualStyleBackColor = false;
+            this.btnA.Click += new System.EventHandler(this.SelectAnswer);
             // 
             // txtQuestion
             // 

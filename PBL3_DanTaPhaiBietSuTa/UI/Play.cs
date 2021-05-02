@@ -24,6 +24,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             InitializeComponent();
             stageID = 1;
             SetVideoStage();
+            videoTime.Start();
+            //ResetQuestion();
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
@@ -56,6 +58,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             selectedQuestion = BLL.Instance.GetRandomQuestionByTimeStop(stageID, listTimeStop[questionID]);
             //Display question
+            //txtQuestion = selectedQuestion.
             List<string> listAnswer = new List<string>();
             //add answer to list
             Random rd = new Random();
@@ -77,7 +80,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             //answer == selectedQuestion.Answer => true
             //answer != selectedQuestion.Answer => true
-            //questionTime > 30 => false
+            //countdown > 30 => false
             return true;
         }
         private void CaculationPoint(int timeUsed)
@@ -93,12 +96,52 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 
         private void videoTime_Tick(object sender, EventArgs e)
         {
-
-        }
+            TVideo++;
+            int t = 500;
+            //listTimeStop[questionID]
+            if (TVideo == t)
+            {
+                Video.Ctlcontrols.pause();
+                DisplayQuestion();
+                questionTime.Start();
+            }
+    }
 
         private void questionTime_Tick(object sender, EventArgs e)
         {
-
+            if(TVideo == listTimeStop[questionID])
+            {
+                countDown--;
+            }    
+        }
+        private void SelectAnswer(object sender, EventArgs e)
+        {
+            string answer = ((Button)sender).ToString().Remove(0, 3);
+            //UX Show correct Answer
+            if (CheckAnswer(answer))
+            {
+                //Caculation Point
+                //Display Point
+            }
+            else
+            {
+                //
+            }
+            //Delay t(s)
+            Task.Delay(10000);
+            //reset countDown
+            countDown = 30;
+            //Delete question
+            ResetQuestion();
+            videoTime.Start();
+        }
+        private void ResetQuestion()
+        {
+            txtQuestion.Text = "";
+            btnA.Text = "";
+            btnB.Text = "";
+            btnC.Text = "";
+            btnD.Text = "";
         }
     }
 }
