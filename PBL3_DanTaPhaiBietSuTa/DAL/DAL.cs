@@ -122,7 +122,81 @@ namespace PBL3_DanTaPhaiBietSuTa
                 return list;
             }
         }
-        
+        public List<Question> GetListQuestionByTimeStop(int stageID,int TimeStop)
+        {
+            using (DB db = new DB())
+            {
+                List<Question> list = new List<Question>();
+                List<Question> list1 = db.Stages.Find(stageID).Questions.ToList();
+                foreach (var question in list1)
+                {
+                    if(question.TimeStop == TimeStop)
+                    list.Add(question);
+                }    
+                return list;
+            }
+        }
+        public void UpdatePointTable(GameProcess gameProcess)
+        {
+            using (DB db = new DB())
+            {
+                bool kt = true;
+                foreach(var point in db.Points)
+                {
+                    if(point.StageID == gameProcess.StageID && point.UserID == gameProcess.UserID)
+                    {
+                        if (point.point < gameProcess.Point) point.point = gameProcess.Point;
+                        
+                        kt = false;
+                        break;
+                    }    
+                }
+                if (kt) db.Points.Add(new Point
+                {
+                    StageID = gameProcess.StageID,
+                    UserID = gameProcess.UserID,
+                    point = gameProcess.Point
+                });
+                db.SaveChanges();
+                
+            }    
+        }
+        public Standing GetStandingByUserID(int UserID)
+        {
+            using(DB db = new DB())
+            {
+                Standing standing = new Standing();
+                standing.UserID = UserID;
+                standing.Point = 0;
+                standing.StageID = 0;
+                foreach (var point in db.Points)
+                {
+                    if(point.UserID == UserID)
+                    {
+                        standing.Point += point.point;
+                        if (point.StageID > standing.StageID) standing.StageID = point.StageID;
+                    }    
+                }    
+                return standing;
+            }    
+        }
+        public List<Standing> GetListStanding()
+        {
+            List<Standing> list = new List<Standing>();
+            //123
+            using(DB db = new DB())
+            {
+                foreach(var user in db.UserInfos)
+                {
+                    var standing = GetStandingByUserID(user.UserID);
+                    if(standing.StageID != 0) list.Add(standing);
+                }    
+            }    
+            return list;
+        }
+
+
+
 
 
     }

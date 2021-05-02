@@ -20,10 +20,15 @@ namespace PBL3_DanTaPhaiBietSuTa
 
         private void button1_Click(object sender, EventArgs e)
         {
+            using(DB db = new DB())
+            {
+                foreach(var game in db.GameProcesses)
+                {
+                    DAL.Instance.UpdatePointTable(game);
+                }
+                dataGridView1.DataSource = DAL.Instance.GetListStanding();
+            }    
             
-            
-
-            dataGridView1.DataSource = DAL.Instance.GetListQuestion(1); 
             
         }
     }
