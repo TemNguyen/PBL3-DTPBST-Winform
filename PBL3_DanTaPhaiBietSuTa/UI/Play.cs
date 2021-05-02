@@ -23,9 +23,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             InitializeComponent();
             stageID = 1;
+            SetTimeStop();
             SetVideoStage();
             videoTime.Start();
-            //ResetQuestion();
+            ResetQuestion();
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
@@ -60,7 +61,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             var video = BLL.Instance.GetVideo(stageID);
             Video.URL = @Application.StartupPath + @"\Assets\Video\" + video.VideoID + ".mp4";
-           //Video.Ctlenabled = false;
+            Video.Ctlenabled = false;
         }
         private void SetTimeStop()
         {
@@ -115,12 +116,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         private void videoTime_Tick(object sender, EventArgs e)
         {
             TVideo++;
-            int t = 500;
-            //listTimeStop[questionID]
-            if (TVideo == t)
+            if (TVideo == listTimeStop[questionID])
             {
                 Video.Ctlcontrols.pause();
-                DisplayQuestion();
+                //DisplayQuestion();
+                videoTime.Stop();
                 questionTime.Start();
             }
         }
@@ -152,6 +152,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             //Delete question
             ResetQuestion();
             videoTime.Start();
+            Video.Ctlcontrols.play();
         }
         private void ResetQuestion()
         {

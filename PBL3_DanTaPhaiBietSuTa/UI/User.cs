@@ -65,6 +65,8 @@ namespace PBL3_DanTaPhaiBietSuTa
 
         private void btnRank_Click(object sender, EventArgs e)
         {
+            List<Standing> BXH = BLL.Instance.SortListStandings();
+            //add label 
             gbRanked.Visible = true;
             gbLevel.Visible = false;
         }
@@ -101,11 +103,14 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
             List<string> userInfor = new List<string>(File.ReadAllLines(path));
+            Standing userStand = BLL.Instance.GetStandingByUserID(Convert.ToInt32(userInfor[0]));
             if (userInfor[3] != "") btnAccountInfo.Text = userInfor[3];
             else btnAccountInfo.Text = userInfor[1];
             lbAccount.Text = userInfor[1];
             txtName.Text = userInfor[3];
             txtEmail.Text = userInfor[4];
+            //lbRanked.Text = userStand.StageID.ToString();
+            lbPoint.Text = userStand.Point.ToString();
             if (checkBox1.Checked)
             {
                 txtOldPass.Enabled = true;

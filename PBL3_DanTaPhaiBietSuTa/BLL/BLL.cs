@@ -59,11 +59,21 @@ namespace PBL3_DanTaPhaiBietSuTa
         }
         public Question GetRandomQuestionByTimeStop(int stageID, int timeStop)
         {
-            //DAL
-            var listQuestion = new List<Question>();
+            var listQuestion = DAL.Instance.GetListQuestionByTimeStop(stageID, timeStop);
             Random rd = new Random();
             int idQuestion = rd.Next(0, listQuestion.Count - 1);
             return listQuestion[idQuestion];
         }
+        public Standing GetStandingByUserID(int userID)
+        {
+            return DAL.Instance.GetStandingByUserID(userID);
+        }
+        public List<Standing> SortListStandings()
+        {
+            List<Standing> standings = DAL.Instance.GetListStanding();
+            //hmm, sort?
+            return standings;
+        }
+        
     }
 }

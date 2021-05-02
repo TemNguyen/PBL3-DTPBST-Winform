@@ -56,11 +56,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.gbVideo.BackColor = System.Drawing.Color.White;
             this.gbVideo.Controls.Add(this.Video);
             this.gbVideo.Controls.Add(this.lbUser);
-            this.gbVideo.Location = new System.Drawing.Point(93, 4);
-            this.gbVideo.Margin = new System.Windows.Forms.Padding(4);
+            this.gbVideo.Location = new System.Drawing.Point(70, 3);
             this.gbVideo.Name = "gbVideo";
-            this.gbVideo.Padding = new System.Windows.Forms.Padding(4);
-            this.gbVideo.Size = new System.Drawing.Size(883, 484);
+            this.gbVideo.Size = new System.Drawing.Size(662, 393);
             this.gbVideo.TabIndex = 1;
             this.gbVideo.TabStop = false;
             this.gbVideo.Text = "groupBox1";
@@ -68,10 +66,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // Video
             // 
             this.Video.Enabled = true;
-            this.Video.Location = new System.Drawing.Point(0, -3);
+            this.Video.Location = new System.Drawing.Point(0, 0);
+            this.Video.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Video.Name = "Video";
             this.Video.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Video.OcxState")));
-            this.Video.Size = new System.Drawing.Size(681, 461);
+            this.Video.Size = new System.Drawing.Size(662, 456);
             this.Video.TabIndex = 7;
             // 
             // lbUser
@@ -81,9 +80,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.lbUser.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.lbUser.Location = new System.Drawing.Point(1, 0);
-            this.lbUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(1199, 30);
+            this.lbUser.Size = new System.Drawing.Size(899, 24);
             this.lbUser.TabIndex = 6;
             this.lbUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -103,7 +101,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnHome.Location = new System.Drawing.Point(0, 1);
             this.btnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(70, 71);
+            this.btnHome.Size = new System.Drawing.Size(52, 58);
             this.btnHome.TabIndex = 34;
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
@@ -113,10 +111,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnSetting.BackColor = System.Drawing.Color.DarkGray;
             this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.Location = new System.Drawing.Point(998, 1);
+            this.btnSetting.Location = new System.Drawing.Point(748, 1);
             this.btnSetting.Margin = new System.Windows.Forms.Padding(2);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(70, 71);
+            this.btnSetting.Size = new System.Drawing.Size(52, 58);
             this.btnSetting.TabIndex = 33;
             this.btnSetting.TabStop = false;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
@@ -131,13 +129,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnD.FlatAppearance.BorderSize = 0;
             this.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnD.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnD.Location = new System.Drawing.Point(541, 678);
+            this.btnD.Location = new System.Drawing.Point(406, 551);
             this.btnD.Margin = new System.Windows.Forms.Padding(2);
             this.btnD.Name = "btnD";
             this.btnD.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.btnD.OnHoverButtonColor = System.Drawing.Color.Yellow;
             this.btnD.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnD.Size = new System.Drawing.Size(412, 72);
+            this.btnD.Size = new System.Drawing.Size(309, 58);
             this.btnD.TabIndex = 32;
             this.btnD.Text = "D.";
             this.btnD.TextColor = System.Drawing.Color.White;
@@ -154,13 +152,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnC.FlatAppearance.BorderSize = 0;
             this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnC.Location = new System.Drawing.Point(114, 678);
+            this.btnC.Location = new System.Drawing.Point(86, 551);
             this.btnC.Margin = new System.Windows.Forms.Padding(2);
             this.btnC.Name = "btnC";
             this.btnC.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.btnC.OnHoverButtonColor = System.Drawing.Color.Yellow;
             this.btnC.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnC.Size = new System.Drawing.Size(412, 72);
+            this.btnC.Size = new System.Drawing.Size(309, 58);
             this.btnC.TabIndex = 31;
             this.btnC.Text = "C.";
             this.btnC.TextColor = System.Drawing.Color.White;
@@ -177,13 +175,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnB.FlatAppearance.BorderSize = 0;
             this.btnB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnB.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnB.Location = new System.Drawing.Point(541, 597);
+            this.btnB.Location = new System.Drawing.Point(406, 485);
             this.btnB.Margin = new System.Windows.Forms.Padding(2);
             this.btnB.Name = "btnB";
             this.btnB.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.btnB.OnHoverButtonColor = System.Drawing.Color.Yellow;
             this.btnB.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnB.Size = new System.Drawing.Size(412, 72);
+            this.btnB.Size = new System.Drawing.Size(309, 58);
             this.btnB.TabIndex = 30;
             this.btnB.Text = "B.";
             this.btnB.TextColor = System.Drawing.Color.White;
@@ -200,13 +198,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnA.FlatAppearance.BorderSize = 0;
             this.btnA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnA.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnA.Location = new System.Drawing.Point(114, 597);
+            this.btnA.Location = new System.Drawing.Point(86, 485);
             this.btnA.Margin = new System.Windows.Forms.Padding(2);
             this.btnA.Name = "btnA";
             this.btnA.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.btnA.OnHoverButtonColor = System.Drawing.Color.Yellow;
             this.btnA.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnA.Size = new System.Drawing.Size(412, 72);
+            this.btnA.Size = new System.Drawing.Size(309, 58);
             this.btnA.TabIndex = 29;
             this.btnA.Text = "A.";
             this.btnA.TextColor = System.Drawing.Color.White;
@@ -224,13 +222,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.txtQuestion.FlatAppearance.BorderSize = 0;
             this.txtQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.txtQuestion.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuestion.Location = new System.Drawing.Point(114, 495);
+            this.txtQuestion.Location = new System.Drawing.Point(86, 402);
             this.txtQuestion.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuestion.Name = "txtQuestion";
             this.txtQuestion.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.txtQuestion.OnHoverButtonColor = System.Drawing.Color.Yellow;
             this.txtQuestion.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.txtQuestion.Size = new System.Drawing.Size(839, 87);
+            this.txtQuestion.Size = new System.Drawing.Size(629, 71);
             this.txtQuestion.TabIndex = 0;
             this.txtQuestion.Text = "Câu hỏi";
             this.txtQuestion.TextColor = System.Drawing.Color.White;
@@ -238,11 +236,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             // Play
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1066, 794);
+            this.ClientSize = new System.Drawing.Size(800, 645);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnSetting);
             this.Controls.Add(this.btnD);
@@ -253,7 +251,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.Controls.Add(this.txtQuestion);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Play";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
