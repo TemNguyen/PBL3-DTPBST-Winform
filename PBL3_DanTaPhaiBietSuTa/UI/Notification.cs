@@ -45,7 +45,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 
         private void Notification_Load(object sender, EventArgs e)
         {
+            //label1.Text = mess + Environment.NewLine + "abc";
             label1.Text = mess;
+            label1.Location = new Point((this.Size.Width - label1.Size.Width) / 2, 40);
         }
     }
 }

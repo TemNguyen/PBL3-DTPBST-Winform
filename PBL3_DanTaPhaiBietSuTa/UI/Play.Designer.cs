@@ -47,6 +47,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.txtQuestion = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.customButton1 = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.customButton2 = new PBL3_DanTaPhaiBietSuTa.CustomButton();
+            this.lbTime = new System.Windows.Forms.Label();
+            this.lbPoint = new System.Windows.Forms.Label();
             this.gbVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Video)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -56,6 +58,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // gbVideo
             // 
             this.gbVideo.BackColor = System.Drawing.Color.White;
+            this.gbVideo.Controls.Add(this.lbPoint);
+            this.gbVideo.Controls.Add(this.lbTime);
             this.gbVideo.Controls.Add(this.Video);
             this.gbVideo.Controls.Add(this.lbUser);
             this.gbVideo.Location = new System.Drawing.Point(93, 4);
@@ -74,7 +78,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.Video.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Video.Name = "Video";
             this.Video.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Video.OcxState")));
-            this.Video.Size = new System.Drawing.Size(662, 456);
+            this.Video.Size = new System.Drawing.Size(883, 478);
             this.Video.TabIndex = 7;
             // 
             // lbUser
@@ -103,7 +107,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnHome.BackColor = System.Drawing.Color.DarkGray;
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
-            this.btnHome.Location = new System.Drawing.Point(0, 1);
+            this.btnHome.Location = new System.Drawing.Point(1, 1);
             this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(69, 71);
@@ -285,6 +289,27 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.customButton2.UseVisualStyleBackColor = false;
             this.customButton2.Click += new System.EventHandler(this.SelectAnswer);
             // 
+            // lbTime
+            // 
+            this.lbTime.AutoSize = true;
+            this.lbTime.BackColor = System.Drawing.Color.White;
+            this.lbTime.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.Location = new System.Drawing.Point(3, 5);
+            this.lbTime.Name = "lbTime";
+            this.lbTime.Size = new System.Drawing.Size(78, 38);
+            this.lbTime.TabIndex = 8;
+            this.lbTime.Text = "Time";
+            // 
+            // lbPoint
+            // 
+            this.lbPoint.AutoSize = true;
+            this.lbPoint.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPoint.Location = new System.Drawing.Point(807, 5);
+            this.lbPoint.Name = "lbPoint";
+            this.lbPoint.Size = new System.Drawing.Size(69, 32);
+            this.lbPoint.TabIndex = 9;
+            this.lbPoint.Text = "Point";
+            // 
             // Play
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -310,6 +335,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Play";
             this.gbVideo.ResumeLayout(false);
+            this.gbVideo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Video)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
@@ -332,5 +358,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         private AxWindowsMediaPlayer Video;
         private CustomButton customButton1;
         private CustomButton customButton2;
+        private Label lbPoint;
+        private Label lbTime;
     }
 }
