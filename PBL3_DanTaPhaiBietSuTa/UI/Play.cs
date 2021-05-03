@@ -119,7 +119,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             if (TVideo == listTimeStop[questionID])
             {
                 Video.Ctlcontrols.pause();
-                //DisplayQuestion();
+                DisplayQuestion();
                 videoTime.Stop();
                 questionTime.Start();
             }
