@@ -30,7 +30,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnA = new PBL3_DanTaPhaiBietSuTa.CustomButton();
+            this.btn1 = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.SuspendLayout();
             // 
             // label1
@@ -43,35 +43,35 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label1.TabIndex = 0;
             this.label1.Text = "text here";
             // 
-            // btnA
+            // btn1
             // 
-            this.btnA.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnA.BackColor = System.Drawing.SystemColors.Control;
-            this.btnA.BorderColor = System.Drawing.Color.Black;
-            this.btnA.ButtonColor = System.Drawing.Color.White;
-            this.btnA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnA.FlatAppearance.BorderSize = 0;
-            this.btnA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnA.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnA.Location = new System.Drawing.Point(133, 109);
-            this.btnA.Margin = new System.Windows.Forms.Padding(2);
-            this.btnA.Name = "btnA";
-            this.btnA.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.btnA.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.btnA.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnA.Size = new System.Drawing.Size(120, 38);
-            this.btnA.TabIndex = 30;
-            this.btnA.Text = "OK";
-            this.btnA.TextColor = System.Drawing.Color.Black;
-            this.btnA.UseVisualStyleBackColor = false;
-            this.btnA.Click += new System.EventHandler(this.btnA_Click);
+            this.btn1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn1.BackColor = System.Drawing.SystemColors.Control;
+            this.btn1.BorderColor = System.Drawing.Color.Black;
+            this.btn1.ButtonColor = System.Drawing.Color.White;
+            this.btn1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn1.FlatAppearance.BorderSize = 0;
+            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1.Location = new System.Drawing.Point(133, 109);
+            this.btn1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn1.Name = "btn1";
+            this.btn1.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btn1.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btn1.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btn1.Size = new System.Drawing.Size(120, 38);
+            this.btn1.TabIndex = 30;
+            this.btn1.Text = "OK";
+            this.btn1.TextColor = System.Drawing.Color.Black;
+            this.btn1.UseVisualStyleBackColor = false;
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // Notification
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(384, 170);
-            this.Controls.Add(this.btnA);
+            this.Controls.Add(this.btn1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Notification";
@@ -86,6 +86,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private CustomButton btnA;
+        private CustomButton btn1;
     }
 }

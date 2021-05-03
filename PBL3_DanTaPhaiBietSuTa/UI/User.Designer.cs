@@ -36,10 +36,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbRanked = new System.Windows.Forms.GroupBox();
             this.btnExitRanked = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.gbFeedback = new System.Windows.Forms.GroupBox();
             this.btnSendFb = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.txtFeedback = new System.Windows.Forms.TextBox();
@@ -47,6 +43,10 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnFeedback = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnRanked = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnSetting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
@@ -166,7 +166,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbRanked.Controls.Add(this.label3);
             this.gbRanked.Controls.Add(this.label2);
             this.gbRanked.Controls.Add(this.label1);
-            this.gbRanked.Location = new System.Drawing.Point(274, 198);
+            this.gbRanked.Location = new System.Drawing.Point(275, 166);
             this.gbRanked.Name = "gbRanked";
             this.gbRanked.Size = new System.Drawing.Size(510, 446);
             this.gbRanked.TabIndex = 19;
@@ -176,8 +176,8 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             // btnExitRanked
             // 
-            this.btnExitRanked.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitRanked.Location = new System.Drawing.Point(465, -1);
+            this.btnExitRanked.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitRanked.Location = new System.Drawing.Point(465, 0);
             this.btnExitRanked.Name = "btnExitRanked";
             this.btnExitRanked.Size = new System.Drawing.Size(45, 45);
             this.btnExitRanked.TabIndex = 25;
@@ -189,17 +189,110 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(362, 70);
+            this.label5.Location = new System.Drawing.Point(326, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(163, 32);
             this.label5.TabIndex = 24;
             this.label5.Text = "Mốc đạt được";
             // 
+            // gbFeedback
+            // 
+            this.gbFeedback.BackColor = System.Drawing.Color.White;
+            this.gbFeedback.Controls.Add(this.btnSendFb);
+            this.gbFeedback.Controls.Add(this.txtFeedback);
+            this.gbFeedback.Controls.Add(this.btnExitFeedback);
+            this.gbFeedback.Controls.Add(this.label6);
+            this.gbFeedback.Controls.Add(this.label9);
+            this.gbFeedback.Controls.Add(this.label10);
+            this.gbFeedback.Location = new System.Drawing.Point(249, 217);
+            this.gbFeedback.Name = "gbFeedback";
+            this.gbFeedback.Size = new System.Drawing.Size(554, 375);
+            this.gbFeedback.TabIndex = 26;
+            this.gbFeedback.TabStop = false;
+            this.gbFeedback.Text = "groupBox1";
+            this.gbFeedback.Visible = false;
+            // 
+            // btnSendFb
+            // 
+            this.btnSendFb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSendFb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnSendFb.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnSendFb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSendFb.FlatAppearance.BorderSize = 0;
+            this.btnSendFb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendFb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendFb.Location = new System.Drawing.Point(205, 307);
+            this.btnSendFb.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSendFb.Name = "btnSendFb";
+            this.btnSendFb.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnSendFb.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnSendFb.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnSendFb.Size = new System.Drawing.Size(140, 44);
+            this.btnSendFb.TabIndex = 27;
+            this.btnSendFb.Text = "Gửi phản hồi";
+            this.btnSendFb.TextColor = System.Drawing.Color.White;
+            this.btnSendFb.UseVisualStyleBackColor = true;
+            this.btnSendFb.Click += new System.EventHandler(this.btnSendFb_Click);
+            // 
+            // txtFeedback
+            // 
+            this.txtFeedback.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFeedback.Location = new System.Drawing.Point(50, 113);
+            this.txtFeedback.Multiline = true;
+            this.txtFeedback.Name = "txtFeedback";
+            this.txtFeedback.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtFeedback.Size = new System.Drawing.Size(461, 178);
+            this.txtFeedback.TabIndex = 26;
+            this.txtFeedback.TextChanged += new System.EventHandler(this.txtFeedback_TextChanged);
+            // 
+            // btnExitFeedback
+            // 
+            this.btnExitFeedback.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitFeedback.Location = new System.Drawing.Point(509, -1);
+            this.btnExitFeedback.Name = "btnExitFeedback";
+            this.btnExitFeedback.Size = new System.Drawing.Size(45, 45);
+            this.btnExitFeedback.TabIndex = 25;
+            this.btnExitFeedback.Text = "X";
+            this.btnExitFeedback.UseVisualStyleBackColor = true;
+            this.btnExitFeedback.Click += new System.EventHandler(this.btnExitFeedback_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(44, 74);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(182, 32);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Ý kiến phản hồi";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(184, 18);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(202, 60);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Phản hồi";
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(552, 25);
+            this.label10.TabIndex = 20;
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(233, 70);
+            this.label4.Location = new System.Drawing.Point(227, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 32);
             this.label4.TabIndex = 23;
@@ -209,7 +302,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(38, 70);
+            this.label3.Location = new System.Drawing.Point(32, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(159, 32);
             this.label3.TabIndex = 22;
@@ -219,7 +312,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(130, 8);
+            this.label2.Location = new System.Drawing.Point(111, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(326, 60);
             this.label2.TabIndex = 21;
@@ -236,99 +329,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label1.Size = new System.Drawing.Size(510, 25);
             this.label1.TabIndex = 20;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // gbFeedback
-            // 
-            this.gbFeedback.BackColor = System.Drawing.Color.White;
-            this.gbFeedback.Controls.Add(this.btnSendFb);
-            this.gbFeedback.Controls.Add(this.txtFeedback);
-            this.gbFeedback.Controls.Add(this.btnExitFeedback);
-            this.gbFeedback.Controls.Add(this.label6);
-            this.gbFeedback.Controls.Add(this.label9);
-            this.gbFeedback.Controls.Add(this.label10);
-            this.gbFeedback.Location = new System.Drawing.Point(274, 149);
-            this.gbFeedback.Name = "gbFeedback";
-            this.gbFeedback.Size = new System.Drawing.Size(510, 350);
-            this.gbFeedback.TabIndex = 26;
-            this.gbFeedback.TabStop = false;
-            this.gbFeedback.Text = "groupBox1";
-            this.gbFeedback.Visible = false;
-            // 
-            // btnSendFb
-            // 
-            this.btnSendFb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSendFb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnSendFb.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnSendFb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSendFb.FlatAppearance.BorderSize = 0;
-            this.btnSendFb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSendFb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendFb.Location = new System.Drawing.Point(188, 289);
-            this.btnSendFb.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSendFb.Name = "btnSendFb";
-            this.btnSendFb.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.btnSendFb.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.btnSendFb.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnSendFb.Size = new System.Drawing.Size(140, 44);
-            this.btnSendFb.TabIndex = 27;
-            this.btnSendFb.Text = "Gửi phản hồi";
-            this.btnSendFb.TextColor = System.Drawing.Color.White;
-            this.btnSendFb.UseVisualStyleBackColor = true;
-            this.btnSendFb.Click += new System.EventHandler(this.btnSendFb_Click);
-            // 
-            // txtFeedback
-            // 
-            this.txtFeedback.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFeedback.Location = new System.Drawing.Point(49, 101);
-            this.txtFeedback.Multiline = true;
-            this.txtFeedback.Name = "txtFeedback";
-            this.txtFeedback.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtFeedback.Size = new System.Drawing.Size(421, 178);
-            this.txtFeedback.TabIndex = 26;
-            this.txtFeedback.TextChanged += new System.EventHandler(this.txtFeedback_TextChanged);
-            // 
-            // btnExitFeedback
-            // 
-            this.btnExitFeedback.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitFeedback.Location = new System.Drawing.Point(465, -1);
-            this.btnExitFeedback.Name = "btnExitFeedback";
-            this.btnExitFeedback.Size = new System.Drawing.Size(45, 45);
-            this.btnExitFeedback.TabIndex = 25;
-            this.btnExitFeedback.Text = "X";
-            this.btnExitFeedback.UseVisualStyleBackColor = true;
-            this.btnExitFeedback.Click += new System.EventHandler(this.btnExitFeedback_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(44, 63);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 32);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Ý kiến phản hồi";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(181, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(202, 60);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Phản hồi";
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(510, 25);
-            this.label10.TabIndex = 20;
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnFeedback
             // 
@@ -403,7 +403,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbUser.Controls.Add(this.label7);
             this.gbUser.Controls.Add(this.label8);
             this.gbUser.Controls.Add(this.label11);
-            this.gbUser.Location = new System.Drawing.Point(264, 101);
+            this.gbUser.Location = new System.Drawing.Point(238, 107);
             this.gbUser.Name = "gbUser";
             this.gbUser.Size = new System.Drawing.Size(575, 565);
             this.gbUser.TabIndex = 28;
@@ -415,7 +415,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.lbPoint.AutoSize = true;
             this.lbPoint.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPoint.Location = new System.Drawing.Point(222, 208);
+            this.lbPoint.Location = new System.Drawing.Point(243, 208);
             this.lbPoint.Name = "lbPoint";
             this.lbPoint.Size = new System.Drawing.Size(126, 32);
             this.lbPoint.TabIndex = 50;
@@ -425,7 +425,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.lbRanked.AutoSize = true;
             this.lbRanked.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRanked.Location = new System.Drawing.Point(224, 256);
+            this.lbRanked.Location = new System.Drawing.Point(243, 254);
             this.lbRanked.Name = "lbRanked";
             this.lbRanked.Size = new System.Drawing.Size(28, 32);
             this.lbRanked.TabIndex = 49;
@@ -435,7 +435,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.txtRePass.Enabled = false;
             this.txtRePass.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRePass.Location = new System.Drawing.Point(220, 439);
+            this.txtRePass.Location = new System.Drawing.Point(243, 439);
             this.txtRePass.Name = "txtRePass";
             this.txtRePass.PasswordChar = '*';
             this.txtRePass.Size = new System.Drawing.Size(282, 39);
@@ -445,7 +445,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(22, 439);
+            this.label19.Location = new System.Drawing.Point(19, 442);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(211, 32);
             this.label19.TabIndex = 47;
@@ -455,7 +455,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.txtNewPass.Enabled = false;
             this.txtNewPass.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewPass.Location = new System.Drawing.Point(220, 380);
+            this.txtNewPass.Location = new System.Drawing.Point(243, 381);
             this.txtNewPass.Name = "txtNewPass";
             this.txtNewPass.PasswordChar = '*';
             this.txtNewPass.Size = new System.Drawing.Size(282, 39);
@@ -465,7 +465,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.txtOldPass.Enabled = false;
             this.txtOldPass.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOldPass.Location = new System.Drawing.Point(220, 327);
+            this.txtOldPass.Location = new System.Drawing.Point(243, 327);
             this.txtOldPass.Name = "txtOldPass";
             this.txtOldPass.PasswordChar = '*';
             this.txtOldPass.Size = new System.Drawing.Size(282, 39);
@@ -475,7 +475,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(56, 388);
+            this.label16.Location = new System.Drawing.Point(66, 384);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(164, 32);
             this.label16.TabIndex = 42;
@@ -485,7 +485,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(178, 297);
+            this.checkBox1.Location = new System.Drawing.Point(201, 289);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(181, 36);
             this.checkBox1.TabIndex = 41;
@@ -497,7 +497,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(70, 330);
+            this.label15.Location = new System.Drawing.Point(82, 330);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(148, 32);
             this.label15.TabIndex = 40;
@@ -506,7 +506,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(220, 159);
+            this.txtEmail.Location = new System.Drawing.Point(243, 161);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(282, 39);
             this.txtEmail.TabIndex = 37;
@@ -514,7 +514,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(220, 113);
+            this.txtName.Location = new System.Drawing.Point(243, 111);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(282, 39);
             this.txtName.TabIndex = 36;
@@ -523,7 +523,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(92, 256);
+            this.label18.Location = new System.Drawing.Point(113, 254);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(117, 32);
             this.label18.TabIndex = 35;
@@ -533,7 +533,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(86, 208);
+            this.label17.Location = new System.Drawing.Point(99, 208);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(131, 32);
             this.label17.TabIndex = 34;
@@ -543,7 +543,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(145, 117);
+            this.label14.Location = new System.Drawing.Point(177, 116);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(53, 32);
             this.label14.TabIndex = 30;
@@ -553,7 +553,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.lbAccount.AutoSize = true;
             this.lbAccount.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAccount.Location = new System.Drawing.Point(224, 71);
+            this.lbAccount.Location = new System.Drawing.Point(240, 68);
             this.lbAccount.Name = "lbAccount";
             this.lbAccount.Size = new System.Drawing.Size(181, 32);
             this.lbAccount.TabIndex = 29;
@@ -563,7 +563,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(128, 160);
+            this.label12.Location = new System.Drawing.Point(158, 164);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(72, 32);
             this.label12.TabIndex = 28;
@@ -593,8 +593,8 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             // btnExitUser
             // 
-            this.btnExitUser.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitUser.Location = new System.Drawing.Point(531, -1);
+            this.btnExitUser.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitUser.Location = new System.Drawing.Point(531, -2);
             this.btnExitUser.Name = "btnExitUser";
             this.btnExitUser.Size = new System.Drawing.Size(45, 45);
             this.btnExitUser.TabIndex = 25;
@@ -606,7 +606,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(51, 71);
+            this.label7.Location = new System.Drawing.Point(55, 68);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(175, 32);
             this.label7.TabIndex = 24;
@@ -615,10 +615,10 @@ namespace PBL3_DanTaPhaiBietSuTa
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(125, 13);
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(103, 13);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(449, 60);
+            this.label8.Size = new System.Drawing.Size(384, 51);
             this.label8.TabIndex = 21;
             this.label8.Text = "Thông tin người chơi";
             // 
@@ -640,7 +640,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbLevel.Controls.Add(this.flowLayoutPanel1);
             this.gbLevel.Controls.Add(this.label20);
             this.gbLevel.Controls.Add(this.label13);
-            this.gbLevel.Location = new System.Drawing.Point(235, 142);
+            this.gbLevel.Location = new System.Drawing.Point(201, 152);
             this.gbLevel.Name = "gbLevel";
             this.gbLevel.Size = new System.Drawing.Size(640, 496);
             this.gbLevel.TabIndex = 29;
@@ -810,7 +810,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(228, 16);
+            this.label20.Location = new System.Drawing.Point(213, 16);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(253, 46);
             this.label20.TabIndex = 32;
