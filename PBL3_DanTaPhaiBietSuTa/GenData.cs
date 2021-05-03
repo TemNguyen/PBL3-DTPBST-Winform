@@ -1,0 +1,35 @@
+﻿using PBL3_DanTaPhaiBietSuTa.DTO;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PBL3_DanTaPhaiBietSuTa
+{
+    public partial class GenData : Form
+    {
+        public GenData()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using(DB db = new DB())
+            {
+                foreach(var game in db.GameProcesses)
+                {
+                    DAL.Instance.UpdatePointTable(game);
+                }
+                dataGridView1.DataSource = DAL.Instance.GetListStanding();
+            }    
+            
+            
+        }
+    }
+}

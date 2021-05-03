@@ -83,7 +83,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtPass.Margin = new System.Windows.Forms.Padding(2);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(204, 29);
+            this.txtPass.Size = new System.Drawing.Size(204, 34);
             this.txtPass.TabIndex = 3;
             // 
             // txtAccount
@@ -92,8 +92,9 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtAccount.Location = new System.Drawing.Point(138, 73);
             this.txtAccount.Margin = new System.Windows.Forms.Padding(2);
             this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(204, 29);
+            this.txtAccount.Size = new System.Drawing.Size(204, 34);
             this.txtAccount.TabIndex = 0;
+            this.txtAccount.TextChanged += new System.EventHandler(this.txtAccount_TextChanged);
             // 
             // label1
             // 

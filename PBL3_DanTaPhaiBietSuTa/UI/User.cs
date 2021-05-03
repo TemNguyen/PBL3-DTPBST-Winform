@@ -1,14 +1,17 @@
-﻿using System;
+using PBL3_DanTaPhaiBietSuTa.DTO;
+using PBL3_DanTaPhaiBietSuTa.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBL3_DanTaPhaiBietSuTa.UI
+namespace PBL3_DanTaPhaiBietSuTa
 {
     public partial class User : Form
     {
@@ -17,11 +20,19 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         public User()
         {
             InitializeComponent();
+            SetUserInfor();
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            gbUser.Visible = true;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-
+            DangNhap dangNhap = new DangNhap();
+            dangNhap.Show();
+            Close();
         }
 
         private void btnAccountInfo_Click(object sender, EventArgs e)
@@ -54,6 +65,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 
         private void btnRank_Click(object sender, EventArgs e)
         {
+            List<Standing> BXH = BLL.Instance.SortListStandings();
+            //add label 
             gbRanked.Visible = true;
             gbLevel.Visible = false;
         }
@@ -84,7 +97,48 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 
         private void btnSendFb_Click(object sender, EventArgs e)
         {
-            //
+            if (txtFeedback.Text == "")
+            {
+                ShowMessage("Vui lòng nhập feedback!");
+                return;
+            }    
+            else
+            {
+                DateTime d = DateTime.Now;
+                string path = @Application.StartupPath + @"\Assets\FeedBack\" + d.ToString("dddd, dd MMMM yyyy HH-mm-ss") + ".txt";
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.WriteLine(btnAccountInfo.Text + "   " + d.ToString());
+                    sw.Write(txtFeedback.Text);
+                }
+                ShowMessage("Cảm ơn bạn đã gửi FeedBack!");
+            }
+            txtFeedback.Text = "";
+        }
+        private void SetUserInfor()
+        {
+            string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
+            List<string> userInfor = new List<string>(File.ReadAllLines(path));
+            Standing userStand = BLL.Instance.GetStandingByUserID(Convert.ToInt32(userInfor[0]));
+            if (userInfor[3] != "") btnAccountInfo.Text = userInfor[3];
+            else btnAccountInfo.Text = userInfor[1];
+            lbAccount.Text = userInfor[1];
+            txtName.Text = userInfor[3];
+            txtEmail.Text = userInfor[4];
+            //lbRanked.Text = userStand.StageID.ToString();
+            lbPoint.Text = userStand.Point.ToString();
+            if (checkBox1.Checked)
+            {
+                txtOldPass.Enabled = true;
+                txtNewPass.Enabled = true;
+                txtRePass.Enabled = true;
+            }
+            else
+            {
+                txtOldPass.Enabled = false;
+                txtNewPass.Enabled = false;
+                txtRePass.Enabled = false;
+            }
         }
 
         private void Level1_Click(object sender, EventArgs e)
@@ -98,6 +152,103 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             SettingForm s = new SettingForm();
             s.ShowDialog();
+        }
+
+        private void btnSaveInfo_Click(object sender, EventArgs e)
+        {   
+            string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
+            List<string> userInfor = new List<string>(File.ReadAllLines(path));
+            string oldPass = userInfor[2];
+            if (IsValid() == false) return;
+            if (checkBox1.Checked)
+            {
+                if (String.Compare(txtOldPass.Text, oldPass) != 0)
+                {
+                    ShowMessage("Mật khẩu hiện tại không đúng!");
+                    return;
+                }
+                else
+                    oldPass = txtNewPass.Text;
+            }
+            UserInfo user = new UserInfo()
+            {
+                UserID = Convert.ToInt32(userInfor[0]),
+                Username = userInfor[1],
+                Password = oldPass,
+                Name = txtName.Text,
+                Email = txtEmail.Text
+            };
+            if (BLL.Instance.UpdateUserInfor(user))
+            {
+                //Hiện Form thông báo.
+                ShowMessage("Cập nhập thông tin thành công");
+                //Cập nhập lại txtAccount
+                string userLogin = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
+                using (StreamWriter sw = File.CreateText(userLogin))
+                {
+                    sw.WriteLine(user.UserID);
+                    sw.WriteLine(user.Username);
+                    sw.WriteLine(user.Password);
+                    sw.WriteLine(user.Name);
+                    sw.WriteLine(user.Email);
+                }
+                txtOldPass.Text = "";
+                txtNewPass.Text = "";
+                txtRePass.Text = "";
+                checkBox1.Checked = false;
+            }
+            else
+            {
+                //Hiện Form thông báo.
+                ShowMessage("Có lỗi xảy ra, vui lòng thử lại sau!");
+            }
+            SetUserInfor();
+        }
+        private bool IsValid()
+        {
+            List<char> list = new List<char>()
+            {
+                '`', '~', '!', '#', '$', '%', '^', '&', '*', '(', ')', '-', '+', '=',
+                '{', '[', ']', '}', '|', ';', ':', ',', '<', '>', '/', '?'
+            };
+            if (checkBox1.Checked)
+            {
+                if (txtOldPass.Text == "" || txtNewPass.Text == "" || txtRePass.Text == "")
+                {
+                    ShowMessage("Vui lòng điền đủ thông tin!");
+                    return false;
+                }
+                if (String.Compare(txtNewPass.Text, txtRePass.Text) != 0)
+                {
+                    ShowMessage("Mật khẩu mới không khớp!");
+                    return false;
+                }
+            }
+            foreach (var l in list)
+            {
+                if (txtEmail.Text.Contains(l))
+                {
+                    ShowMessage("Email không thể chứa các ký tự `,~,!,..");
+                    return false;
+                }
+            }
+            if (!txtEmail.Text.Contains("@"))
+            {
+                ShowMessage("Địa chỉ Email phải chứa ký tự @");
+                return false;
+            }
+            if (txtEmail.Text.Substring(0, 1) == "@")
+            {
+                ShowMessage("Email không thể bắt đầu bằng ký tự @");
+                return false;
+            }
+            return true;
+        }
+        private void ShowMessage(string message)
+        {
+            Notification notification = new Notification();
+            notification.Get(message);
+            notification.ShowDialog();
         }
     }
 }

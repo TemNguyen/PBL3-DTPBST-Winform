@@ -1,5 +1,5 @@
 ﻿
-namespace PBL3_DanTaPhaiBietSuTa.UI
+namespace PBL3_DanTaPhaiBietSuTa
 {
     partial class User
     {
@@ -589,6 +589,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnSaveInfo.Text = "Lưu thông tin";
             this.btnSaveInfo.TextColor = System.Drawing.Color.White;
             this.btnSaveInfo.UseVisualStyleBackColor = true;
+            this.btnSaveInfo.Click += new System.EventHandler(this.btnSaveInfo_Click);
             // 
             // btnExitUser
             // 

@@ -13,6 +13,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 {
     public partial class Notification : Form
     {
+        public delegate void GetMessage(string message);
+        public GetMessage Get;
+        string mess = "";
+        private void getMessage(string s)
+        {
+            mess = s;
+        }
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -27,12 +34,18 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         public Notification()
         {
             InitializeComponent();
+            Get = new GetMessage(getMessage);
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         private void btn1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Notification_Load(object sender, EventArgs e)
+        {
+            label1.Text = mess;
         }
     }
 }

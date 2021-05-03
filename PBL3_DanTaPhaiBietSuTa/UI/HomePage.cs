@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,24 +15,23 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
     public partial class HomePage : Form
     {
         private static bool sttSetting = false;
-
         public HomePage()
         {
             InitializeComponent();
+            PlaySound();
+        }
+        private void PlaySound()
+        {
+            SoundPlayer player = new SoundPlayer();
+            player.SoundLocation = @Application.StartupPath + @"\Assets\Sound\Sound.wav";
+            player.PlayLooping();
         }
 
         private void btnPlayNow_Click(object sender, EventArgs e)
         {
-            if (true) //Kiểm tra có tk đã lưu chưa
-            {
-                DangNhap login = new DangNhap();
-                login.ShowDialog();
-            }
-            else
-            {
-                //Nếu đã có tk đã lưu sẵn thì vô luôn form trong
-            }
-            Dispose();
+            DangNhap login = new DangNhap();
+            login.Show();
+            Hide();
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
