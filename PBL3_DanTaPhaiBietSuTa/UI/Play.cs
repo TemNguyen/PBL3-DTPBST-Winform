@@ -1,4 +1,4 @@
-﻿using PBL3_DanTaPhaiBietSuTa.DTO;
+using PBL3_DanTaPhaiBietSuTa.DTO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -23,7 +23,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             InitializeComponent();
             stageID = 1;
-            SetTimeStop();
+            //SetTimeStop();
             SetVideoStage();
             videoTime.Start();
             ResetQuestion();
@@ -119,7 +119,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             if (TVideo == listTimeStop[questionID])
             {
                 Video.Ctlcontrols.pause();
-                //DisplayQuestion();
+                DisplayQuestion();
                 videoTime.Stop();
                 questionTime.Start();
             }

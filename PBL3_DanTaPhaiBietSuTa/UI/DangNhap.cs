@@ -37,10 +37,8 @@ namespace PBL3_DanTaPhaiBietSuTa
             gbLogin.Visible = true;
         }
 
-        private void txtRegister_Click(object sender, EventArgs e)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
-            txtAccount.Text = "";
-            txtPass.Text = "";
             gbLogin.Visible = false;
             gbRegister.Visible = true;
         }

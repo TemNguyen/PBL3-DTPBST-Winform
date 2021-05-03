@@ -38,14 +38,16 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
-        private void btnA_Click(object sender, EventArgs e)
+        private void btn1_Click(object sender, EventArgs e)
         {
             Close();
         }
 
         private void Notification_Load(object sender, EventArgs e)
         {
+            //label1.Text = mess + Environment.NewLine + "abc";
             label1.Text = mess;
+            label1.Location = new Point((this.Size.Width - label1.Size.Width) / 2, 40);
         }
     }
 }

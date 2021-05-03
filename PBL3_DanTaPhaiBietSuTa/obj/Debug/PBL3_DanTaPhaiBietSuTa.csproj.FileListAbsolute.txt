@@ -1,7 +1,6 @@
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.exe.config
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.exe
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\bin\Debug\PBL3_DanTaPhaiBietSuTa.pdb
-D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csprojAssemblyReference.cache
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Properties.Resources.resources
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.GenerateResource.cache
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csproj.CoreCompileInputs.cache
@@ -11,6 +10,7 @@ D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaP
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.SettingForm.resources
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.HomePage.resources
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.DangNhap.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.User.resources
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.Play.resources
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.Notification.resources
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\Interop.WMPLib.dll
@@ -110,4 +110,7 @@ C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debu
 C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.pdb
 C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.point.resources
 D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.point.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csprojAssemblyReference.cache
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.point.resources
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csprojAssemblyReference.cache
+D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.thanh123.resources
+D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.thanh123.resources
