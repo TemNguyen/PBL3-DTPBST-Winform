@@ -17,6 +17,12 @@ namespace PBL3_DanTaPhaiBietSuTa.DTO
         public int StageID { get; set; }
         [Required]
         public string QuestionContent { get; set; }
+        public string KeyA { get; set; }
+
+        public string KeyB { get; set; }
+        public string KeyC { get; set; }
+        public string KeyD { get; set; }
+
         [Required]
         public int TimeStop { get; set; }
         [ForeignKey("StageID")]
