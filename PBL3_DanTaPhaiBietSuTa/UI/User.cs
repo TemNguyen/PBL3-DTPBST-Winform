@@ -97,7 +97,23 @@ namespace PBL3_DanTaPhaiBietSuTa
 
         private void btnSendFb_Click(object sender, EventArgs e)
         {
-            //
+            if (txtFeedback.Text == "")
+            {
+                ShowMessage("Vui lòng nhập feedback!");
+                return;
+            }    
+            else
+            {
+                DateTime d = DateTime.Now;
+                string path = @Application.StartupPath + @"\Assets\FeedBack\" + d.ToString("dddd, dd MMMM yyyy HH-mm-ss") + ".txt";
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.WriteLine(btnAccountInfo.Text + "   " + d.ToString());
+                    sw.Write(txtFeedback.Text);
+                }
+                ShowMessage("Cảm ơn bạn đã gửi FeedBack!");
+            }
+            txtFeedback.Text = "";
         }
         private void SetUserInfor()
         {
