@@ -162,7 +162,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbRanked.BackColor = System.Drawing.Color.White;
             this.gbRanked.Controls.Add(this.btnExitRanked);
             this.gbRanked.Controls.Add(this.label5);
-            this.gbRanked.Controls.Add(this.gbFeedback);
             this.gbRanked.Controls.Add(this.label4);
             this.gbRanked.Controls.Add(this.label3);
             this.gbRanked.Controls.Add(this.label2);
@@ -641,7 +640,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbLevel.Controls.Add(this.flowLayoutPanel1);
             this.gbLevel.Controls.Add(this.label20);
             this.gbLevel.Controls.Add(this.label13);
-            this.gbLevel.Location = new System.Drawing.Point(199, 149);
+            this.gbLevel.Location = new System.Drawing.Point(202, 149);
             this.gbLevel.Name = "gbLevel";
             this.gbLevel.Size = new System.Drawing.Size(640, 496);
             this.gbLevel.TabIndex = 29;
@@ -811,7 +810,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(228, 16);
+            this.label20.Location = new System.Drawing.Point(213, 16);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(253, 46);
             this.label20.TabIndex = 32;
