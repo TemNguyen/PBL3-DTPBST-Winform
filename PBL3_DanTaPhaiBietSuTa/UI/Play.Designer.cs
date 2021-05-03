@@ -78,7 +78,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.Video.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Video.Name = "Video";
             this.Video.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Video.OcxState")));
-            this.Video.Size = new System.Drawing.Size(883, 478);
+            this.Video.Size = new System.Drawing.Size(883, 529);
             this.Video.TabIndex = 7;
             // 
             // lbUser
@@ -293,10 +293,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.lbTime.AutoSize = true;
             this.lbTime.BackColor = System.Drawing.Color.White;
-            this.lbTime.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTime.Location = new System.Drawing.Point(3, 5);
+            this.lbTime.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.Location = new System.Drawing.Point(3, 4);
             this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(78, 38);
+            this.lbTime.Size = new System.Drawing.Size(68, 32);
             this.lbTime.TabIndex = 8;
             this.lbTime.Text = "Time";
             // 

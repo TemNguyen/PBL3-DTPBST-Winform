@@ -36,10 +36,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbRanked = new System.Windows.Forms.GroupBox();
             this.btnExitRanked = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.gbFeedback = new System.Windows.Forms.GroupBox();
             this.btnSendFb = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.txtFeedback = new System.Windows.Forms.TextBox();
@@ -47,6 +43,10 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnFeedback = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnRanked = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnSetting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
@@ -195,6 +195,99 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label5.TabIndex = 24;
             this.label5.Text = "Mốc đạt được";
             // 
+            // gbFeedback
+            // 
+            this.gbFeedback.BackColor = System.Drawing.Color.White;
+            this.gbFeedback.Controls.Add(this.btnSendFb);
+            this.gbFeedback.Controls.Add(this.txtFeedback);
+            this.gbFeedback.Controls.Add(this.btnExitFeedback);
+            this.gbFeedback.Controls.Add(this.label6);
+            this.gbFeedback.Controls.Add(this.label9);
+            this.gbFeedback.Controls.Add(this.label10);
+            this.gbFeedback.Location = new System.Drawing.Point(249, 217);
+            this.gbFeedback.Name = "gbFeedback";
+            this.gbFeedback.Size = new System.Drawing.Size(554, 375);
+            this.gbFeedback.TabIndex = 26;
+            this.gbFeedback.TabStop = false;
+            this.gbFeedback.Text = "groupBox1";
+            this.gbFeedback.Visible = false;
+            // 
+            // btnSendFb
+            // 
+            this.btnSendFb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSendFb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnSendFb.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnSendFb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSendFb.FlatAppearance.BorderSize = 0;
+            this.btnSendFb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendFb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendFb.Location = new System.Drawing.Point(205, 307);
+            this.btnSendFb.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSendFb.Name = "btnSendFb";
+            this.btnSendFb.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnSendFb.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnSendFb.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnSendFb.Size = new System.Drawing.Size(140, 44);
+            this.btnSendFb.TabIndex = 27;
+            this.btnSendFb.Text = "Gửi phản hồi";
+            this.btnSendFb.TextColor = System.Drawing.Color.White;
+            this.btnSendFb.UseVisualStyleBackColor = true;
+            this.btnSendFb.Click += new System.EventHandler(this.btnSendFb_Click);
+            // 
+            // txtFeedback
+            // 
+            this.txtFeedback.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFeedback.Location = new System.Drawing.Point(50, 113);
+            this.txtFeedback.Multiline = true;
+            this.txtFeedback.Name = "txtFeedback";
+            this.txtFeedback.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtFeedback.Size = new System.Drawing.Size(461, 178);
+            this.txtFeedback.TabIndex = 26;
+            this.txtFeedback.TextChanged += new System.EventHandler(this.txtFeedback_TextChanged);
+            // 
+            // btnExitFeedback
+            // 
+            this.btnExitFeedback.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitFeedback.Location = new System.Drawing.Point(509, -1);
+            this.btnExitFeedback.Name = "btnExitFeedback";
+            this.btnExitFeedback.Size = new System.Drawing.Size(45, 45);
+            this.btnExitFeedback.TabIndex = 25;
+            this.btnExitFeedback.Text = "X";
+            this.btnExitFeedback.UseVisualStyleBackColor = true;
+            this.btnExitFeedback.Click += new System.EventHandler(this.btnExitFeedback_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(44, 74);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(182, 32);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Ý kiến phản hồi";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(184, 18);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(202, 60);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Phản hồi";
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(552, 25);
+            this.label10.TabIndex = 20;
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -236,99 +329,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label1.Size = new System.Drawing.Size(510, 25);
             this.label1.TabIndex = 20;
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // gbFeedback
-            // 
-            this.gbFeedback.BackColor = System.Drawing.Color.White;
-            this.gbFeedback.Controls.Add(this.btnSendFb);
-            this.gbFeedback.Controls.Add(this.txtFeedback);
-            this.gbFeedback.Controls.Add(this.btnExitFeedback);
-            this.gbFeedback.Controls.Add(this.label6);
-            this.gbFeedback.Controls.Add(this.label9);
-            this.gbFeedback.Controls.Add(this.label10);
-            this.gbFeedback.Location = new System.Drawing.Point(0, 40);
-            this.gbFeedback.Name = "gbFeedback";
-            this.gbFeedback.Size = new System.Drawing.Size(510, 350);
-            this.gbFeedback.TabIndex = 26;
-            this.gbFeedback.TabStop = false;
-            this.gbFeedback.Text = "groupBox1";
-            this.gbFeedback.Visible = false;
-            // 
-            // btnSendFb
-            // 
-            this.btnSendFb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSendFb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnSendFb.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnSendFb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSendFb.FlatAppearance.BorderSize = 0;
-            this.btnSendFb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSendFb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendFb.Location = new System.Drawing.Point(188, 289);
-            this.btnSendFb.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSendFb.Name = "btnSendFb";
-            this.btnSendFb.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.btnSendFb.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.btnSendFb.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnSendFb.Size = new System.Drawing.Size(140, 44);
-            this.btnSendFb.TabIndex = 27;
-            this.btnSendFb.Text = "Gửi phản hồi";
-            this.btnSendFb.TextColor = System.Drawing.Color.White;
-            this.btnSendFb.UseVisualStyleBackColor = true;
-            this.btnSendFb.Click += new System.EventHandler(this.btnSendFb_Click);
-            // 
-            // txtFeedback
-            // 
-            this.txtFeedback.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFeedback.Location = new System.Drawing.Point(49, 101);
-            this.txtFeedback.Multiline = true;
-            this.txtFeedback.Name = "txtFeedback";
-            this.txtFeedback.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtFeedback.Size = new System.Drawing.Size(421, 178);
-            this.txtFeedback.TabIndex = 26;
-            this.txtFeedback.TextChanged += new System.EventHandler(this.txtFeedback_TextChanged);
-            // 
-            // btnExitFeedback
-            // 
-            this.btnExitFeedback.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitFeedback.Location = new System.Drawing.Point(465, -1);
-            this.btnExitFeedback.Name = "btnExitFeedback";
-            this.btnExitFeedback.Size = new System.Drawing.Size(45, 45);
-            this.btnExitFeedback.TabIndex = 25;
-            this.btnExitFeedback.Text = "X";
-            this.btnExitFeedback.UseVisualStyleBackColor = true;
-            this.btnExitFeedback.Click += new System.EventHandler(this.btnExitFeedback_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(44, 63);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 32);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Ý kiến phản hồi";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(181, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(202, 60);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Phản hồi";
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(510, 25);
-            this.label10.TabIndex = 20;
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnFeedback
             // 
@@ -403,7 +403,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbUser.Controls.Add(this.label7);
             this.gbUser.Controls.Add(this.label8);
             this.gbUser.Controls.Add(this.label11);
-            this.gbUser.Location = new System.Drawing.Point(237, 104);
+            this.gbUser.Location = new System.Drawing.Point(238, 107);
             this.gbUser.Name = "gbUser";
             this.gbUser.Size = new System.Drawing.Size(575, 565);
             this.gbUser.TabIndex = 28;
@@ -425,7 +425,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.lbRanked.AutoSize = true;
             this.lbRanked.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRanked.Location = new System.Drawing.Point(354, 254);
+            this.lbRanked.Location = new System.Drawing.Point(243, 254);
             this.lbRanked.Name = "lbRanked";
             this.lbRanked.Size = new System.Drawing.Size(28, 32);
             this.lbRanked.TabIndex = 49;
@@ -640,7 +640,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbLevel.Controls.Add(this.flowLayoutPanel1);
             this.gbLevel.Controls.Add(this.label20);
             this.gbLevel.Controls.Add(this.label13);
-            this.gbLevel.Location = new System.Drawing.Point(202, 149);
+            this.gbLevel.Location = new System.Drawing.Point(201, 152);
             this.gbLevel.Name = "gbLevel";
             this.gbLevel.Size = new System.Drawing.Size(640, 496);
             this.gbLevel.TabIndex = 29;
@@ -836,6 +836,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.ClientSize = new System.Drawing.Size(1066, 794);
             this.Controls.Add(this.gbLevel);
             this.Controls.Add(this.gbUser);
+            this.Controls.Add(this.gbFeedback);
             this.Controls.Add(this.gbRanked);
             this.Controls.Add(this.btnFeedback);
             this.Controls.Add(this.btnRanked);

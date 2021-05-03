@@ -123,6 +123,10 @@
     <Compile Include="Migrations\202105021451383_point.Designer.cs">
       <DependentUpon>202105021451383_point.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105031005532_thanh123.cs" />
+    <Compile Include="Migrations\202105031005532_thanh123.Designer.cs">
+      <DependentUpon>202105031005532_thanh123.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OvalPictureBox.cs">
       <SubType>Component</SubType>
@@ -206,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105021451383_point.resx">
       <DependentUpon>202105021451383_point.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031005532_thanh123.resx">
+      <DependentUpon>202105031005532_thanh123.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>

@@ -23,7 +23,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             InitializeComponent();
             stageID = 1;
-            SetTimeStop();
+            //SetTimeStop();
             SetVideoStage();
             videoTime.Start();
             ResetQuestion();
