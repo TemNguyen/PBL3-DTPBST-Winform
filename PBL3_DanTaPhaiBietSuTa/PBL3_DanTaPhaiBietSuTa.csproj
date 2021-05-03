@@ -78,54 +78,81 @@
     <Compile Include="GenData.Designer.cs">
       <DependentUpon>GenData.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104280841146_InitialCreate.cs" />
-    <Compile Include="Migrations\202104280841146_InitialCreate.Designer.cs">
-      <DependentUpon>202104280841146_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202105031323409_InitialCreate.cs" />
+    <Compile Include="Migrations\202105031323409_InitialCreate.Designer.cs">
+      <DependentUpon>202105031323409_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104280844391_2.cs" />
-    <Compile Include="Migrations\202104280844391_2.Designer.cs">
-      <DependentUpon>202104280844391_2.cs</DependentUpon>
+    <Compile Include="Migrations\202105031339261_long123.cs" />
+    <Compile Include="Migrations\202105031339261_long123.Designer.cs">
+      <DependentUpon>202105031339261_long123.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104280845133_3.cs" />
-    <Compile Include="Migrations\202104280845133_3.Designer.cs">
-      <DependentUpon>202104280845133_3.cs</DependentUpon>
+    <Compile Include="Migrations\202105031341038_longlong.cs" />
+    <Compile Include="Migrations\202105031341038_longlong.Designer.cs">
+      <DependentUpon>202105031341038_longlong.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104280847213_4.cs" />
-    <Compile Include="Migrations\202104280847213_4.Designer.cs">
-      <DependentUpon>202104280847213_4.cs</DependentUpon>
+    <Compile Include="Migrations\202105031342474_longlonglong.cs" />
+    <Compile Include="Migrations\202105031342474_longlonglong.Designer.cs">
+      <DependentUpon>202105031342474_longlonglong.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104280854155_5.cs" />
-    <Compile Include="Migrations\202104280854155_5.Designer.cs">
-      <DependentUpon>202104280854155_5.cs</DependentUpon>
+    <Compile Include="Migrations\202105031344452_21121.cs" />
+    <Compile Include="Migrations\202105031344452_21121.Designer.cs">
+      <DependentUpon>202105031344452_21121.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104280924495_12.cs" />
-    <Compile Include="Migrations\202104280924495_12.Designer.cs">
-      <DependentUpon>202104280924495_12.cs</DependentUpon>
+    <Compile Include="Migrations\202105031351127_long1231.cs" />
+    <Compile Include="Migrations\202105031351127_long1231.Designer.cs">
+      <DependentUpon>202105031351127_long1231.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104280951120_14.cs" />
-    <Compile Include="Migrations\202104280951120_14.Designer.cs">
-      <DependentUpon>202104280951120_14.cs</DependentUpon>
+    <Compile Include="Migrations\202105031358525_0213.cs" />
+    <Compile Include="Migrations\202105031358525_0213.Designer.cs">
+      <DependentUpon>202105031358525_0213.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104291459421_newDB.cs" />
-    <Compile Include="Migrations\202104291459421_newDB.Designer.cs">
-      <DependentUpon>202104291459421_newDB.cs</DependentUpon>
+    <Compile Include="Migrations\202105031411295_db1.cs" />
+    <Compile Include="Migrations\202105031411295_db1.Designer.cs">
+      <DependentUpon>202105031411295_db1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104291501005_newDB2.cs" />
-    <Compile Include="Migrations\202104291501005_newDB2.Designer.cs">
-      <DependentUpon>202104291501005_newDB2.cs</DependentUpon>
+    <Compile Include="Migrations\202105031440521_21123.cs" />
+    <Compile Include="Migrations\202105031440521_21123.Designer.cs">
+      <DependentUpon>202105031440521_21123.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202104291544574_29\4.cs" />
-    <Compile Include="Migrations\202104291545163_2904.cs" />
-    <Compile Include="Migrations\202104291545163_2904.Designer.cs">
-      <DependentUpon>202104291545163_2904.cs</DependentUpon>
+    <Compile Include="Migrations\202105031443434_231.cs" />
+    <Compile Include="Migrations\202105031443434_231.Designer.cs">
+      <DependentUpon>202105031443434_231.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105021451383_point.cs" />
-    <Compile Include="Migrations\202105021451383_point.Designer.cs">
-      <DependentUpon>202105021451383_point.cs</DependentUpon>
+    <Compile Include="Migrations\202105031446044_2312.cs" />
+    <Compile Include="Migrations\202105031446044_2312.Designer.cs">
+      <DependentUpon>202105031446044_2312.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202105031005532_thanh123.cs" />
-    <Compile Include="Migrations\202105031005532_thanh123.Designer.cs">
-      <DependentUpon>202105031005532_thanh123.cs</DependentUpon>
+    <Compile Include="Migrations\202105031447322_23121.cs" />
+    <Compile Include="Migrations\202105031447322_23121.Designer.cs">
+      <DependentUpon>202105031447322_23121.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031503172_1211.cs" />
+    <Compile Include="Migrations\202105031503172_1211.Designer.cs">
+      <DependentUpon>202105031503172_1211.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031505516_12111.cs" />
+    <Compile Include="Migrations\202105031505516_12111.Designer.cs">
+      <DependentUpon>202105031505516_12111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031515586_1211111.cs" />
+    <Compile Include="Migrations\202105031515586_1211111.Designer.cs">
+      <DependentUpon>202105031515586_1211111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031517099_12111111.cs" />
+    <Compile Include="Migrations\202105031517099_12111111.Designer.cs">
+      <DependentUpon>202105031517099_12111111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031545392_121111111.cs" />
+    <Compile Include="Migrations\202105031545392_121111111.Designer.cs">
+      <DependentUpon>202105031545392_121111111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031630109_1211111111.cs" />
+    <Compile Include="Migrations\202105031630109_1211111111.Designer.cs">
+      <DependentUpon>202105031630109_1211111111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105031636135_12111111111.cs" />
+    <Compile Include="Migrations\202105031636135_12111111111.Designer.cs">
+      <DependentUpon>202105031636135_12111111111.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OvalPictureBox.cs">
@@ -178,41 +205,62 @@
     <EmbeddedResource Include="GenData.resx">
       <DependentUpon>GenData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104280841146_InitialCreate.resx">
-      <DependentUpon>202104280841146_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105031323409_InitialCreate.resx">
+      <DependentUpon>202105031323409_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104280844391_2.resx">
-      <DependentUpon>202104280844391_2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105031339261_long123.resx">
+      <DependentUpon>202105031339261_long123.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104280845133_3.resx">
-      <DependentUpon>202104280845133_3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105031341038_longlong.resx">
+      <DependentUpon>202105031341038_longlong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104280847213_4.resx">
-      <DependentUpon>202104280847213_4.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105031342474_longlonglong.resx">
+      <DependentUpon>202105031342474_longlonglong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104280854155_5.resx">
-      <DependentUpon>202104280854155_5.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105031344452_21121.resx">
+      <DependentUpon>202105031344452_21121.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104280924495_12.resx">
-      <DependentUpon>202104280924495_12.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105031351127_long1231.resx">
+      <DependentUpon>202105031351127_long1231.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104280951120_14.resx">
-      <DependentUpon>202104280951120_14.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105031358525_0213.resx">
+      <DependentUpon>202105031358525_0213.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104291459421_newDB.resx">
-      <DependentUpon>202104291459421_newDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105031411295_db1.resx">
+      <DependentUpon>202105031411295_db1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104291501005_newDB2.resx">
-      <DependentUpon>202104291501005_newDB2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105031440521_21123.resx">
+      <DependentUpon>202105031440521_21123.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202104291545163_2904.resx">
-      <DependentUpon>202104291545163_2904.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105031443434_231.resx">
+      <DependentUpon>202105031443434_231.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105021451383_point.resx">
-      <DependentUpon>202105021451383_point.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105031446044_2312.resx">
+      <DependentUpon>202105031446044_2312.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105031005532_thanh123.resx">
-      <DependentUpon>202105031005532_thanh123.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202105031447322_23121.resx">
+      <DependentUpon>202105031447322_23121.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031503172_1211.resx">
+      <DependentUpon>202105031503172_1211.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031505516_12111.resx">
+      <DependentUpon>202105031505516_12111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031515586_1211111.resx">
+      <DependentUpon>202105031515586_1211111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031517099_12111111.resx">
+      <DependentUpon>202105031517099_12111111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031545392_121111111.resx">
+      <DependentUpon>202105031545392_121111111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031630109_1211111111.resx">
+      <DependentUpon>202105031630109_1211111111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031636135_12111111111.resx">
+      <DependentUpon>202105031636135_12111111111.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
