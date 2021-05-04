@@ -165,10 +165,13 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             using(DB db = new DB())
             {
-                Standing standing = new Standing();
-                standing.UserID = UserID;
-                standing.Point = 0;
-                standing.StageID = 0;
+                Standing standing = new Standing()
+                {
+                    UserID = UserID,
+                    Point = 0,
+                    StageID = 0
+                };
+                
                 foreach (var point in db.Points)
                 {
                     if(point.UserID == UserID)

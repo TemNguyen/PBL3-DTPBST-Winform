@@ -34,10 +34,14 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Play));
             this.gbVideo = new System.Windows.Forms.GroupBox();
+            this.lbPoint = new System.Windows.Forms.Label();
+            this.lbTime = new System.Windows.Forms.Label();
             this.Video = new AxWMPLib.AxWindowsMediaPlayer();
             this.lbUser = new System.Windows.Forms.Label();
             this.videoTime = new System.Windows.Forms.Timer(this.components);
             this.questionTime = new System.Windows.Forms.Timer(this.components);
+            this.customButton2 = new PBL3_DanTaPhaiBietSuTa.CustomButton();
+            this.customButton1 = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.btnHome = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnSetting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnD = new PBL3_DanTaPhaiBietSuTa.CustomButton();
@@ -45,10 +49,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnB = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.btnA = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.txtQuestion = new PBL3_DanTaPhaiBietSuTa.CustomButton();
-            this.customButton1 = new PBL3_DanTaPhaiBietSuTa.CustomButton();
-            this.customButton2 = new PBL3_DanTaPhaiBietSuTa.CustomButton();
-            this.lbTime = new System.Windows.Forms.Label();
-            this.lbPoint = new System.Windows.Forms.Label();
             this.gbVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Video)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -71,6 +71,27 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.gbVideo.TabStop = false;
             this.gbVideo.Text = "groupBox1";
             // 
+            // lbPoint
+            // 
+            this.lbPoint.AutoSize = true;
+            this.lbPoint.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPoint.Location = new System.Drawing.Point(807, 5);
+            this.lbPoint.Name = "lbPoint";
+            this.lbPoint.Size = new System.Drawing.Size(69, 32);
+            this.lbPoint.TabIndex = 9;
+            this.lbPoint.Text = "Point";
+            // 
+            // lbTime
+            // 
+            this.lbTime.AutoSize = true;
+            this.lbTime.BackColor = System.Drawing.Color.White;
+            this.lbTime.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.Location = new System.Drawing.Point(3, 4);
+            this.lbTime.Name = "lbTime";
+            this.lbTime.Size = new System.Drawing.Size(68, 32);
+            this.lbTime.TabIndex = 8;
+            this.lbTime.Text = "Time";
+            // 
             // Video
             // 
             this.Video.Enabled = true;
@@ -78,7 +99,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.Video.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Video.Name = "Video";
             this.Video.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Video.OcxState")));
-            this.Video.Size = new System.Drawing.Size(883, 529);
+            this.Video.Size = new System.Drawing.Size(678, 462);
             this.Video.TabIndex = 7;
             // 
             // lbUser
@@ -101,6 +122,52 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // questionTime
             // 
             this.questionTime.Tick += new System.EventHandler(this.questionTime_Tick);
+            // 
+            // customButton2
+            // 
+            this.customButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.customButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(182)))));
+            this.customButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.customButton2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.customButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.customButton2.FlatAppearance.BorderSize = 0;
+            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customButton2.Location = new System.Drawing.Point(115, 680);
+            this.customButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customButton2.Name = "customButton2";
+            this.customButton2.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.customButton2.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.customButton2.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.customButton2.Size = new System.Drawing.Size(412, 71);
+            this.customButton2.TabIndex = 36;
+            this.customButton2.Text = "C.";
+            this.customButton2.TextColor = System.Drawing.Color.White;
+            this.customButton2.UseVisualStyleBackColor = false;
+            this.customButton2.Click += new System.EventHandler(this.SelectAnswer);
+            // 
+            // customButton1
+            // 
+            this.customButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(182)))));
+            this.customButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.customButton1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.customButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customButton1.Location = new System.Drawing.Point(541, 680);
+            this.customButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.customButton1.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.customButton1.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.customButton1.Size = new System.Drawing.Size(412, 71);
+            this.customButton1.TabIndex = 35;
+            this.customButton1.Text = "D.";
+            this.customButton1.TextColor = System.Drawing.Color.White;
+            this.customButton1.UseVisualStyleBackColor = false;
+            this.customButton1.Click += new System.EventHandler(this.SelectAnswer);
             // 
             // btnHome
             // 
@@ -242,73 +309,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.txtQuestion.Text = "Câu hỏi";
             this.txtQuestion.TextColor = System.Drawing.Color.White;
             this.txtQuestion.UseVisualStyleBackColor = false;
-            // 
-            // customButton1
-            // 
-            this.customButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(182)))));
-            this.customButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.customButton1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.customButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButton1.Location = new System.Drawing.Point(541, 680);
-            this.customButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.customButton1.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.customButton1.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.customButton1.Size = new System.Drawing.Size(412, 71);
-            this.customButton1.TabIndex = 35;
-            this.customButton1.Text = "D.";
-            this.customButton1.TextColor = System.Drawing.Color.White;
-            this.customButton1.UseVisualStyleBackColor = false;
-            this.customButton1.Click += new System.EventHandler(this.SelectAnswer);
-            // 
-            // customButton2
-            // 
-            this.customButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.customButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(182)))));
-            this.customButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.customButton2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.customButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.customButton2.FlatAppearance.BorderSize = 0;
-            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButton2.Location = new System.Drawing.Point(115, 680);
-            this.customButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.customButton2.Name = "customButton2";
-            this.customButton2.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.customButton2.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.customButton2.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.customButton2.Size = new System.Drawing.Size(412, 71);
-            this.customButton2.TabIndex = 36;
-            this.customButton2.Text = "C.";
-            this.customButton2.TextColor = System.Drawing.Color.White;
-            this.customButton2.UseVisualStyleBackColor = false;
-            this.customButton2.Click += new System.EventHandler(this.SelectAnswer);
-            // 
-            // lbTime
-            // 
-            this.lbTime.AutoSize = true;
-            this.lbTime.BackColor = System.Drawing.Color.White;
-            this.lbTime.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTime.Location = new System.Drawing.Point(3, 4);
-            this.lbTime.Name = "lbTime";
-            this.lbTime.Size = new System.Drawing.Size(68, 32);
-            this.lbTime.TabIndex = 8;
-            this.lbTime.Text = "Time";
-            // 
-            // lbPoint
-            // 
-            this.lbPoint.AutoSize = true;
-            this.lbPoint.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPoint.Location = new System.Drawing.Point(807, 5);
-            this.lbPoint.Name = "lbPoint";
-            this.lbPoint.Size = new System.Drawing.Size(69, 32);
-            this.lbPoint.TabIndex = 9;
-            this.lbPoint.Text = "Point";
             // 
             // Play
             // 

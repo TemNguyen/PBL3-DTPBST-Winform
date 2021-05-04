@@ -71,8 +71,24 @@ namespace PBL3_DanTaPhaiBietSuTa
         public List<Standing> SortListStandings()
         {
             List<Standing> standings = DAL.Instance.GetListStanding();
-            //hmm, sort?
+            standings = standings.OrderByDescending(p => p.Point).ToList();
             return standings;
+        }
+        public int GetRankByUserID(int userID)
+        {
+            int pos = 1;
+            List<Standing> standings = SortListStandings();
+            foreach(var i in standings)
+            {
+                if (i.UserID == userID)
+                    return pos;
+                pos++;
+            }
+            return -1;
+        }
+        public void UpdatePoint(GameProcess gameProcess)
+        {
+            DAL.Instance.UpdatePointTable(gameProcess);
         }
         
     }

@@ -1,5 +1,5 @@
-14
-temthinh
-123456
+3
+admin
+admin
 
-thinh@gmail.com
+admin@admin
