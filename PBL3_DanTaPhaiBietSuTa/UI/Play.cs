@@ -18,12 +18,12 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         static int stageID;
         Question selectedQuestion;
         int point = 0, questionID = 0;
-        int TVideo = 0, countDown = 60;
+        int TVideo = 0, countDown = 30;
         public Play()
         {
             InitializeComponent();
             stageID = 1;
-            //SetTimeStop();
+            SetTimeStop();
             SetVideoStage();
             videoTime.Start();
             ResetQuestion();
@@ -119,7 +119,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             if (TVideo == listTimeStop[questionID])
             {
                 Video.Ctlcontrols.pause();
-                DisplayQuestion();
+                //DisplayQuestion();
                 videoTime.Stop();
                 questionTime.Start();
             }
@@ -130,7 +130,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             if(TVideo == listTimeStop[questionID])
             {
                 countDown--;
-            }    
+            }
+            lbTime.Text = "Time: " + countDown.ToString();
         }
         private void SelectAnswer(object sender, EventArgs e)
         {
@@ -149,6 +150,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             Task.Delay(10000);
             //reset countDown
             countDown = 30;
+            lbTime.Text = "Time: ";
             //Delete question
             ResetQuestion();
             videoTime.Start();
