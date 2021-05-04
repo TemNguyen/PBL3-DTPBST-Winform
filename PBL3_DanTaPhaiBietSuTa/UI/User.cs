@@ -125,7 +125,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             lbAccount.Text = userInfor[1];
             txtName.Text = userInfor[3];
             txtEmail.Text = userInfor[4];
-            //lbRanked.Text = userStand.StageID.ToString();
+            lbRanked.Text = BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor[0])).ToString();
             lbPoint.Text = userStand.Point.ToString();
             if (checkBox1.Checked)
             {

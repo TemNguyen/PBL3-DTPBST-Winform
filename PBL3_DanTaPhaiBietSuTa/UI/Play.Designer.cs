@@ -99,7 +99,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.Video.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Video.Name = "Video";
             this.Video.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Video.OcxState")));
-            this.Video.Size = new System.Drawing.Size(591, 395);
+            this.Video.Size = new System.Drawing.Size(678, 462);
             this.Video.TabIndex = 7;
             // 
             // lbUser
@@ -117,12 +117,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             // videoTime
             // 
-            this.videoTime.Interval = 1000;
             this.videoTime.Tick += new System.EventHandler(this.videoTime_Tick);
             // 
             // questionTime
             // 
-            this.questionTime.Interval = 1000;
             this.questionTime.Tick += new System.EventHandler(this.questionTime_Tick);
             // 
             // customButton2

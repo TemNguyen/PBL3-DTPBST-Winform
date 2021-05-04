@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PBL3_DanTaPhaiBietSuTa
 {
-    public class CreateDB : DropCreateDatabaseAlways<DB>
+    public class CreateDB : CreateDatabaseIfNotExists<DB>
     {
         protected override void Seed(PBL3_DanTaPhaiBietSuTa.DB context)
         {
