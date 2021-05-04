@@ -38,6 +38,8 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gbLogin = new System.Windows.Forms.GroupBox();
+            this.lbAccError = new System.Windows.Forms.Label();
+            this.lbPassError = new System.Windows.Forms.Label();
             this.cbRemember = new System.Windows.Forms.CheckBox();
             this.btnRegister = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,16 +55,14 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label7 = new System.Windows.Forms.Label();
             this.txtLoginR = new System.Windows.Forms.Label();
             this.gbRegister = new System.Windows.Forms.GroupBox();
+            this.txtNameR = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtRepassR = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtPassR = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnRegisterR = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.Setting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
-            this.txtNameR = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbPassError = new System.Windows.Forms.Label();
-            this.lbAccError = new System.Windows.Forms.Label();
             this.gbLogin.SuspendLayout();
             this.gbRegister.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Setting)).BeginInit();
@@ -88,7 +88,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(213, 34);
-            this.txtPass.TabIndex = 3;
+            this.txtPass.TabIndex = 1;
             // 
             // txtAccount
             // 
@@ -145,6 +145,30 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbLogin.TabIndex = 7;
             this.gbLogin.TabStop = false;
             // 
+            // lbAccError
+            // 
+            this.lbAccError.AutoSize = true;
+            this.lbAccError.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAccError.ForeColor = System.Drawing.Color.Red;
+            this.lbAccError.Location = new System.Drawing.Point(164, 58);
+            this.lbAccError.Name = "lbAccError";
+            this.lbAccError.Size = new System.Drawing.Size(120, 19);
+            this.lbAccError.TabIndex = 12;
+            this.lbAccError.Text = "Sai tên đăng nhập";
+            this.lbAccError.Visible = false;
+            // 
+            // lbPassError
+            // 
+            this.lbPassError.AutoSize = true;
+            this.lbPassError.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPassError.ForeColor = System.Drawing.Color.Red;
+            this.lbPassError.Location = new System.Drawing.Point(161, 126);
+            this.lbPassError.Name = "lbPassError";
+            this.lbPassError.Size = new System.Drawing.Size(88, 19);
+            this.lbPassError.TabIndex = 11;
+            this.lbPassError.Text = "Sai mật khẩu";
+            this.lbPassError.Visible = false;
+            // 
             // cbRemember
             // 
             this.cbRemember.AutoSize = true;
@@ -153,7 +177,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.cbRemember.Margin = new System.Windows.Forms.Padding(2);
             this.cbRemember.Name = "cbRemember";
             this.cbRemember.Size = new System.Drawing.Size(141, 27);
-            this.cbRemember.TabIndex = 10;
+            this.cbRemember.TabIndex = 2;
             this.cbRemember.Text = "Nhớ tài khoản";
             this.cbRemember.UseVisualStyleBackColor = true;
             // 
@@ -167,7 +191,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(72, 23);
-            this.btnRegister.TabIndex = 9;
+            this.btnRegister.TabIndex = 4;
             this.btnRegister.Text = "Đăng ký";
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
@@ -221,7 +245,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnLogin.OnHoverButtonColor = System.Drawing.Color.Yellow;
             this.btnLogin.OnHoverTextColor = System.Drawing.Color.Gray;
             this.btnLogin.Size = new System.Drawing.Size(143, 47);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.TextColor = System.Drawing.Color.White;
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -234,7 +258,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtEmailR.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmailR.Name = "txtEmailR";
             this.txtEmailR.Size = new System.Drawing.Size(204, 34);
-            this.txtEmailR.TabIndex = 3;
+            this.txtEmailR.TabIndex = 7;
             // 
             // label11
             // 
@@ -254,7 +278,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtAccountR.Margin = new System.Windows.Forms.Padding(2);
             this.txtAccountR.Name = "txtAccountR";
             this.txtAccountR.Size = new System.Drawing.Size(204, 34);
-            this.txtAccountR.TabIndex = 1;
+            this.txtAccountR.TabIndex = 5;
             // 
             // label10
             // 
@@ -312,7 +336,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtLoginR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtLoginR.Name = "txtLoginR";
             this.txtLoginR.Size = new System.Drawing.Size(95, 23);
-            this.txtLoginR.TabIndex = 9;
+            this.txtLoginR.TabIndex = 11;
             this.txtLoginR.Text = "Đăng nhập";
             this.txtLoginR.Click += new System.EventHandler(this.txtLoginR_Click);
             // 
@@ -335,7 +359,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbRegister.Controls.Add(this.txtAccountR);
             this.gbRegister.Controls.Add(this.label11);
             this.gbRegister.Controls.Add(this.txtEmailR);
-            this.gbRegister.Location = new System.Drawing.Point(331, 246);
+            this.gbRegister.Location = new System.Drawing.Point(325, 231);
             this.gbRegister.Margin = new System.Windows.Forms.Padding(2);
             this.gbRegister.Name = "gbRegister";
             this.gbRegister.Padding = new System.Windows.Forms.Padding(2);
@@ -343,6 +367,26 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbRegister.TabIndex = 11;
             this.gbRegister.TabStop = false;
             this.gbRegister.Visible = false;
+            // 
+            // txtNameR
+            // 
+            this.txtNameR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameR.Location = new System.Drawing.Point(187, 120);
+            this.txtNameR.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNameR.Name = "txtNameR";
+            this.txtNameR.Size = new System.Drawing.Size(204, 34);
+            this.txtNameR.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(22, 127);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 23);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Họ tên";
             // 
             // txtRepassR
             // 
@@ -352,7 +396,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtRepassR.Name = "txtRepassR";
             this.txtRepassR.PasswordChar = '*';
             this.txtRepassR.Size = new System.Drawing.Size(204, 34);
-            this.txtRepassR.TabIndex = 12;
+            this.txtRepassR.TabIndex = 9;
             // 
             // label13
             // 
@@ -373,7 +417,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtPassR.Name = "txtPassR";
             this.txtPassR.PasswordChar = '*';
             this.txtPassR.Size = new System.Drawing.Size(204, 34);
-            this.txtPassR.TabIndex = 10;
+            this.txtPassR.TabIndex = 8;
             // 
             // label12
             // 
@@ -402,7 +446,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnRegisterR.OnHoverButtonColor = System.Drawing.Color.Yellow;
             this.btnRegisterR.OnHoverTextColor = System.Drawing.Color.Gray;
             this.btnRegisterR.Size = new System.Drawing.Size(132, 44);
-            this.btnRegisterR.TabIndex = 0;
+            this.btnRegisterR.TabIndex = 10;
             this.btnRegisterR.Text = "Đăng ký";
             this.btnRegisterR.TextColor = System.Drawing.Color.White;
             this.btnRegisterR.UseVisualStyleBackColor = true;
@@ -420,50 +464,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Setting.TabIndex = 13;
             this.Setting.TabStop = false;
             this.Setting.Click += new System.EventHandler(this.Setting_Click);
-            // 
-            // txtNameR
-            // 
-            this.txtNameR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameR.Location = new System.Drawing.Point(187, 120);
-            this.txtNameR.Margin = new System.Windows.Forms.Padding(2);
-            this.txtNameR.Name = "txtNameR";
-            this.txtNameR.Size = new System.Drawing.Size(204, 34);
-            this.txtNameR.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 127);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 23);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Họ tên";
-            // 
-            // lbPassError
-            // 
-            this.lbPassError.AutoSize = true;
-            this.lbPassError.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPassError.ForeColor = System.Drawing.Color.Red;
-            this.lbPassError.Location = new System.Drawing.Point(161, 126);
-            this.lbPassError.Name = "lbPassError";
-            this.lbPassError.Size = new System.Drawing.Size(88, 19);
-            this.lbPassError.TabIndex = 11;
-            this.lbPassError.Text = "Sai mật khẩu";
-            this.lbPassError.Visible = false;
-            // 
-            // lbAccError
-            // 
-            this.lbAccError.AutoSize = true;
-            this.lbAccError.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAccError.ForeColor = System.Drawing.Color.Red;
-            this.lbAccError.Location = new System.Drawing.Point(164, 58);
-            this.lbAccError.Name = "lbAccError";
-            this.lbAccError.Size = new System.Drawing.Size(120, 19);
-            this.lbAccError.TabIndex = 12;
-            this.lbAccError.Text = "Sai tên đăng nhập";
-            this.lbAccError.Visible = false;
             // 
             // DangNhap
             // 
