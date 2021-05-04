@@ -22,11 +22,8 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             using(DB db = new DB())
             {
-                foreach(var game in db.GameProcesses)
-                {
-                    DAL.Instance.UpdatePointTable(game);
-                }
-                dataGridView1.DataSource = DAL.Instance.GetListStanding();
+                
+                dataGridView1.DataSource = db.Questions.ToList();
             }    
             
             
