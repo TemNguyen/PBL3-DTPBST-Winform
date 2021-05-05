@@ -40,8 +40,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.lbUser = new System.Windows.Forms.Label();
             this.videoTime = new System.Windows.Forms.Timer(this.components);
             this.questionTime = new System.Windows.Forms.Timer(this.components);
-            this.customButton2 = new PBL3_DanTaPhaiBietSuTa.CustomButton();
-            this.customButton1 = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.btnHome = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnSetting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnB = new PBL3_DanTaPhaiBietSuTa.CustomButton();

@@ -108,10 +108,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             btnB.Text += "B. " + listAnswer[questionrd];
             listAnswer.RemoveAt(questionrd);
             questionrd = rd.Next(0, listAnswer.Count - 1);
-            customButton2.Text += "C. " + listAnswer[questionrd];
             listAnswer.RemoveAt(questionrd);
             questionrd = rd.Next(0, listAnswer.Count - 1);
-            customButton1.Text += "D. " + listAnswer[questionrd];
             listAnswer.RemoveAt(questionrd);
         }
         private bool CheckAnswer(string answer)
@@ -210,8 +208,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             txtQuestion.Text = "";
             btnA.Text = "";
             btnB.Text = "";
-            customButton1.Text = "";
-            customButton2.Text = "";
+            btnC.Text = "";
+            btnD.Text = "";
         }
         private void ShowCorrectAnswer(Color border, Color button)
         {
