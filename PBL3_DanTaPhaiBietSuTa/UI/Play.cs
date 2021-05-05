@@ -29,12 +29,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             InitializeComponent();
             stageID = 1;
             lbPoint.Text = point.ToString();
-            lbTime.Text = "Time: " + (countDown/10).ToString();
+            lbTime.Text = "Time: " + (countDown / 10).ToString();
             SetTimeStop();
             SetVideoStage();
             videoTime.Start();
             ResetQuestion();
-
         }
         private void SetVideoStage()
         {
@@ -259,6 +258,17 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 Video.Ctlcontrols.play();
             }
         }
+
+        private void lbPoint_TextChanged(object sender, EventArgs e)
+        {
+            lbPoint.Left = pictureBox2.Location.X + ((pictureBox2.Size.Width - lbPoint.Size.Width) / 2);
+        }
+
+        private void lbTime_TextChanged(object sender, EventArgs e)
+        {
+            lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
+        }
+
         private bool IsSavePoint()
         {
             string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
