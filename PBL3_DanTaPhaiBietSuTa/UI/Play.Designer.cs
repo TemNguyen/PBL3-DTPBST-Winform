@@ -40,13 +40,15 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.lbUser = new System.Windows.Forms.Label();
             this.videoTime = new System.Windows.Forms.Timer(this.components);
             this.questionTime = new System.Windows.Forms.Timer(this.components);
+            this.changeColor = new System.Windows.Forms.Timer(this.components);
+            this.nextQuestionTime = new System.Windows.Forms.Timer(this.components);
+            this.btnC = new PBL3_DanTaPhaiBietSuTa.CustomButton();
+            this.btnD = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.btnHome = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnSetting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnB = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.btnA = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.txtQuestion = new PBL3_DanTaPhaiBietSuTa.CustomButton();
-            this.btnD = new PBL3_DanTaPhaiBietSuTa.CustomButton();
-            this.btnC = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.gbVideo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Video)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -93,11 +95,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // Video
             // 
             this.Video.Enabled = true;
-            this.Video.Location = new System.Drawing.Point(57, 4);
+            this.Video.Location = new System.Drawing.Point(0, 0);
             this.Video.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Video.Name = "Video";
             this.Video.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Video.OcxState")));
-            this.Video.Size = new System.Drawing.Size(678, 462);
+            this.Video.Size = new System.Drawing.Size(883, 549);
             this.Video.TabIndex = 7;
             // 
             // lbUser
@@ -120,6 +122,60 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // questionTime
             // 
             this.questionTime.Tick += new System.EventHandler(this.questionTime_Tick);
+            // 
+            // changeColor
+            // 
+            this.changeColor.Tick += new System.EventHandler(this.changeColor_Tick);
+            // 
+            // nextQuestionTime
+            // 
+            this.nextQuestionTime.Tick += new System.EventHandler(this.nextQuestionTime_Tick);
+            // 
+            // btnC
+            // 
+            this.btnC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(182)))));
+            this.btnC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnC.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnC.FlatAppearance.BorderSize = 0;
+            this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnC.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnC.Location = new System.Drawing.Point(115, 680);
+            this.btnC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnC.Name = "btnC";
+            this.btnC.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnC.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnC.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnC.Size = new System.Drawing.Size(412, 71);
+            this.btnC.TabIndex = 36;
+            this.btnC.Text = "C.";
+            this.btnC.TextColor = System.Drawing.Color.White;
+            this.btnC.UseVisualStyleBackColor = false;
+            this.btnC.Click += new System.EventHandler(this.SelectAnswer);
+            // 
+            // btnD
+            // 
+            this.btnD.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(182)))));
+            this.btnD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnD.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnD.FlatAppearance.BorderSize = 0;
+            this.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnD.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnD.Location = new System.Drawing.Point(541, 680);
+            this.btnD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnD.Name = "btnD";
+            this.btnD.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnD.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnD.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnD.Size = new System.Drawing.Size(412, 71);
+            this.btnD.TabIndex = 35;
+            this.btnD.Text = "D.";
+            this.btnD.TextColor = System.Drawing.Color.White;
+            this.btnD.UseVisualStyleBackColor = false;
+            this.btnD.Click += new System.EventHandler(this.SelectAnswer);
             // 
             // btnHome
             // 
@@ -216,52 +272,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.txtQuestion.TextColor = System.Drawing.Color.White;
             this.txtQuestion.UseVisualStyleBackColor = false;
             // 
-            // btnD
-            // 
-            this.btnD.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(182)))));
-            this.btnD.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnD.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnD.FlatAppearance.BorderSize = 0;
-            this.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnD.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnD.Location = new System.Drawing.Point(541, 680);
-            this.btnD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnD.Name = "btnD";
-            this.btnD.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.btnD.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.btnD.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnD.Size = new System.Drawing.Size(412, 71);
-            this.btnD.TabIndex = 35;
-            this.btnD.Text = "D.";
-            this.btnD.TextColor = System.Drawing.Color.White;
-            this.btnD.UseVisualStyleBackColor = false;
-            this.btnD.Click += new System.EventHandler(this.SelectAnswer);
-            // 
-            // btnC
-            // 
-            this.btnC.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(232)))), ((int)(((byte)(182)))));
-            this.btnC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnC.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnC.FlatAppearance.BorderSize = 0;
-            this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnC.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnC.Location = new System.Drawing.Point(115, 680);
-            this.btnC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnC.Name = "btnC";
-            this.btnC.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.btnC.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.btnC.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnC.Size = new System.Drawing.Size(412, 71);
-            this.btnC.TabIndex = 36;
-            this.btnC.Text = "C.";
-            this.btnC.TextColor = System.Drawing.Color.White;
-            this.btnC.UseVisualStyleBackColor = false;
-            this.btnC.Click += new System.EventHandler(this.SelectAnswer);
-            // 
             // Play
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -307,5 +317,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         private CustomButton btnC;
         private Label lbPoint;
         private Label lbTime;
+        private Timer changeColor;
+        private Timer nextQuestionTime;
     }
 }
