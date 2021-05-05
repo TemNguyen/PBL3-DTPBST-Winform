@@ -97,7 +97,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.Video.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Video.Name = "Video";
             this.Video.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("Video.OcxState")));
-            this.Video.Size = new System.Drawing.Size(775, 457);
+            this.Video.Size = new System.Drawing.Size(678, 462);
             this.Video.TabIndex = 7;
             // 
             // lbUser

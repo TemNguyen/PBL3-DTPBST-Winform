@@ -34,6 +34,26 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnAccountInfo = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Label();
             this.gbRanked = new System.Windows.Forms.GroupBox();
+            this.gbPoint = new System.Windows.Forms.GroupBox();
+            this.lb5Level = new System.Windows.Forms.Label();
+            this.lb5Point = new System.Windows.Forms.Label();
+            this.lb5Acc = new System.Windows.Forms.Label();
+            this.lb4Level = new System.Windows.Forms.Label();
+            this.lb4Point = new System.Windows.Forms.Label();
+            this.lb4Acc = new System.Windows.Forms.Label();
+            this.lb3Level = new System.Windows.Forms.Label();
+            this.lb3Point = new System.Windows.Forms.Label();
+            this.lb3Acc = new System.Windows.Forms.Label();
+            this.lb2Level = new System.Windows.Forms.Label();
+            this.lb2Point = new System.Windows.Forms.Label();
+            this.lb2Acc = new System.Windows.Forms.Label();
+            this.lb1Level = new System.Windows.Forms.Label();
+            this.lb1Point = new System.Windows.Forms.Label();
+            this.lb1Acc = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.btnExitRanked = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -92,27 +112,8 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.gbPoint = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.lb1Acc = new System.Windows.Forms.Label();
-            this.lb1Point = new System.Windows.Forms.Label();
-            this.lb1Level = new System.Windows.Forms.Label();
-            this.lb2Level = new System.Windows.Forms.Label();
-            this.lb2Point = new System.Windows.Forms.Label();
-            this.lb2Acc = new System.Windows.Forms.Label();
-            this.lb3Level = new System.Windows.Forms.Label();
-            this.lb3Point = new System.Windows.Forms.Label();
-            this.lb3Acc = new System.Windows.Forms.Label();
-            this.lb4Level = new System.Windows.Forms.Label();
-            this.lb4Point = new System.Windows.Forms.Label();
-            this.lb4Acc = new System.Windows.Forms.Label();
-            this.lb5Level = new System.Windows.Forms.Label();
-            this.lb5Point = new System.Windows.Forms.Label();
-            this.lb5Acc = new System.Windows.Forms.Label();
             this.gbRanked.SuspendLayout();
+            this.gbPoint.SuspendLayout();
             this.gbFeedback.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRanked)).BeginInit();
@@ -136,7 +137,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            this.gbPoint.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbUser
@@ -195,6 +195,232 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbRanked.TabStop = false;
             this.gbRanked.Text = "groupBox1";
             this.gbRanked.Visible = false;
+            // 
+            // gbPoint
+            // 
+            this.gbPoint.Controls.Add(this.lb5Level);
+            this.gbPoint.Controls.Add(this.lb5Point);
+            this.gbPoint.Controls.Add(this.lb5Acc);
+            this.gbPoint.Controls.Add(this.lb4Level);
+            this.gbPoint.Controls.Add(this.lb4Point);
+            this.gbPoint.Controls.Add(this.lb4Acc);
+            this.gbPoint.Controls.Add(this.lb3Level);
+            this.gbPoint.Controls.Add(this.lb3Point);
+            this.gbPoint.Controls.Add(this.lb3Acc);
+            this.gbPoint.Controls.Add(this.lb2Level);
+            this.gbPoint.Controls.Add(this.lb2Point);
+            this.gbPoint.Controls.Add(this.lb2Acc);
+            this.gbPoint.Controls.Add(this.lb1Level);
+            this.gbPoint.Controls.Add(this.lb1Point);
+            this.gbPoint.Controls.Add(this.lb1Acc);
+            this.gbPoint.Controls.Add(this.label24);
+            this.gbPoint.Controls.Add(this.label23);
+            this.gbPoint.Controls.Add(this.label22);
+            this.gbPoint.Controls.Add(this.label21);
+            this.gbPoint.Location = new System.Drawing.Point(24, 105);
+            this.gbPoint.Name = "gbPoint";
+            this.gbPoint.Size = new System.Drawing.Size(463, 313);
+            this.gbPoint.TabIndex = 26;
+            this.gbPoint.TabStop = false;
+            this.gbPoint.Text = "groupBox1";
+            // 
+            // lb5Level
+            // 
+            this.lb5Level.AutoSize = true;
+            this.lb5Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb5Level.Location = new System.Drawing.Point(303, 224);
+            this.lb5Level.Name = "lb5Level";
+            this.lb5Level.Size = new System.Drawing.Size(60, 28);
+            this.lb5Level.TabIndex = 45;
+            this.lb5Level.Text = "Top 5";
+            // 
+            // lb5Point
+            // 
+            this.lb5Point.AutoSize = true;
+            this.lb5Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb5Point.Location = new System.Drawing.Point(207, 224);
+            this.lb5Point.Name = "lb5Point";
+            this.lb5Point.Size = new System.Drawing.Size(60, 28);
+            this.lb5Point.TabIndex = 44;
+            this.lb5Point.Text = "Top 5";
+            // 
+            // lb5Acc
+            // 
+            this.lb5Acc.AutoSize = true;
+            this.lb5Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb5Acc.Location = new System.Drawing.Point(9, 224);
+            this.lb5Acc.Name = "lb5Acc";
+            this.lb5Acc.Size = new System.Drawing.Size(60, 28);
+            this.lb5Acc.TabIndex = 43;
+            this.lb5Acc.Text = "Top 5";
+            // 
+            // lb4Level
+            // 
+            this.lb4Level.AutoSize = true;
+            this.lb4Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb4Level.Location = new System.Drawing.Point(303, 171);
+            this.lb4Level.Name = "lb4Level";
+            this.lb4Level.Size = new System.Drawing.Size(60, 28);
+            this.lb4Level.TabIndex = 42;
+            this.lb4Level.Text = "Top 4";
+            // 
+            // lb4Point
+            // 
+            this.lb4Point.AutoSize = true;
+            this.lb4Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb4Point.Location = new System.Drawing.Point(207, 171);
+            this.lb4Point.Name = "lb4Point";
+            this.lb4Point.Size = new System.Drawing.Size(60, 28);
+            this.lb4Point.TabIndex = 41;
+            this.lb4Point.Text = "Top 4";
+            // 
+            // lb4Acc
+            // 
+            this.lb4Acc.AutoSize = true;
+            this.lb4Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb4Acc.Location = new System.Drawing.Point(9, 171);
+            this.lb4Acc.Name = "lb4Acc";
+            this.lb4Acc.Size = new System.Drawing.Size(60, 28);
+            this.lb4Acc.TabIndex = 40;
+            this.lb4Acc.Text = "Top 4";
+            // 
+            // lb3Level
+            // 
+            this.lb3Level.AutoSize = true;
+            this.lb3Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb3Level.Location = new System.Drawing.Point(303, 121);
+            this.lb3Level.Name = "lb3Level";
+            this.lb3Level.Size = new System.Drawing.Size(60, 28);
+            this.lb3Level.TabIndex = 39;
+            this.lb3Level.Text = "Top 3";
+            // 
+            // lb3Point
+            // 
+            this.lb3Point.AutoSize = true;
+            this.lb3Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb3Point.Location = new System.Drawing.Point(207, 121);
+            this.lb3Point.Name = "lb3Point";
+            this.lb3Point.Size = new System.Drawing.Size(60, 28);
+            this.lb3Point.TabIndex = 38;
+            this.lb3Point.Text = "Top 3";
+            // 
+            // lb3Acc
+            // 
+            this.lb3Acc.AutoSize = true;
+            this.lb3Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb3Acc.Location = new System.Drawing.Point(9, 121);
+            this.lb3Acc.Name = "lb3Acc";
+            this.lb3Acc.Size = new System.Drawing.Size(60, 28);
+            this.lb3Acc.TabIndex = 37;
+            this.lb3Acc.Text = "Top 3";
+            // 
+            // lb2Level
+            // 
+            this.lb2Level.AutoSize = true;
+            this.lb2Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb2Level.Location = new System.Drawing.Point(303, 66);
+            this.lb2Level.Name = "lb2Level";
+            this.lb2Level.Size = new System.Drawing.Size(60, 28);
+            this.lb2Level.TabIndex = 36;
+            this.lb2Level.Text = "Top 2";
+            // 
+            // lb2Point
+            // 
+            this.lb2Point.AutoSize = true;
+            this.lb2Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb2Point.Location = new System.Drawing.Point(207, 66);
+            this.lb2Point.Name = "lb2Point";
+            this.lb2Point.Size = new System.Drawing.Size(60, 28);
+            this.lb2Point.TabIndex = 35;
+            this.lb2Point.Text = "Top 2";
+            // 
+            // lb2Acc
+            // 
+            this.lb2Acc.AutoSize = true;
+            this.lb2Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb2Acc.Location = new System.Drawing.Point(9, 66);
+            this.lb2Acc.Name = "lb2Acc";
+            this.lb2Acc.Size = new System.Drawing.Size(60, 28);
+            this.lb2Acc.TabIndex = 34;
+            this.lb2Acc.Text = "Top 2";
+            // 
+            // lb1Level
+            // 
+            this.lb1Level.AutoSize = true;
+            this.lb1Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb1Level.Location = new System.Drawing.Point(303, 14);
+            this.lb1Level.Name = "lb1Level";
+            this.lb1Level.Size = new System.Drawing.Size(60, 28);
+            this.lb1Level.TabIndex = 33;
+            this.lb1Level.Text = "Top 1";
+            // 
+            // lb1Point
+            // 
+            this.lb1Point.AutoSize = true;
+            this.lb1Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb1Point.Location = new System.Drawing.Point(207, 14);
+            this.lb1Point.Name = "lb1Point";
+            this.lb1Point.Size = new System.Drawing.Size(60, 28);
+            this.lb1Point.TabIndex = 32;
+            this.lb1Point.Text = "Top 1";
+            // 
+            // lb1Acc
+            // 
+            this.lb1Acc.AutoSize = true;
+            this.lb1Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb1Acc.Location = new System.Drawing.Point(9, 14);
+            this.lb1Acc.Name = "lb1Acc";
+            this.lb1Acc.Size = new System.Drawing.Size(60, 28);
+            this.lb1Acc.TabIndex = 31;
+            this.lb1Acc.Text = "Top 1";
+            // 
+            // label24
+            // 
+            this.label24.BackColor = System.Drawing.Color.White;
+            this.label24.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label24.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label24.Location = new System.Drawing.Point(441, 18);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(24, 282);
+            this.label24.TabIndex = 30;
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label23
+            // 
+            this.label23.BackColor = System.Drawing.Color.White;
+            this.label23.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label23.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label23.Location = new System.Drawing.Point(-8, 18);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(24, 282);
+            this.label23.TabIndex = 29;
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.Color.White;
+            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label22.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label22.Location = new System.Drawing.Point(0, 300);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(463, 25);
+            this.label22.TabIndex = 28;
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.BackColor = System.Drawing.Color.White;
+            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label21.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label21.Location = new System.Drawing.Point(0, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(463, 25);
+            this.label21.TabIndex = 27;
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnExitRanked
             // 
@@ -268,7 +494,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbFeedback.Controls.Add(this.label6);
             this.gbFeedback.Controls.Add(this.label9);
             this.gbFeedback.Controls.Add(this.label10);
-            this.gbFeedback.Location = new System.Drawing.Point(248, 189);
+            this.gbFeedback.Location = new System.Drawing.Point(44, 575);
             this.gbFeedback.Name = "gbFeedback";
             this.gbFeedback.Size = new System.Drawing.Size(554, 375);
             this.gbFeedback.TabIndex = 26;
@@ -425,7 +651,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbUser.Controls.Add(this.label7);
             this.gbUser.Controls.Add(this.label8);
             this.gbUser.Controls.Add(this.label11);
-            this.gbUser.Location = new System.Drawing.Point(248, 101);
+            this.gbUser.Location = new System.Drawing.Point(135, 629);
             this.gbUser.Name = "gbUser";
             this.gbUser.Size = new System.Drawing.Size(575, 565);
             this.gbUser.TabIndex = 28;
@@ -662,7 +888,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbLevel.Controls.Add(this.flowLayoutPanel1);
             this.gbLevel.Controls.Add(this.label20);
             this.gbLevel.Controls.Add(this.label13);
-            this.gbLevel.Location = new System.Drawing.Point(213, 146);
+            this.gbLevel.Location = new System.Drawing.Point(879, 169);
             this.gbLevel.Name = "gbLevel";
             this.gbLevel.Size = new System.Drawing.Size(640, 496);
             this.gbLevel.TabIndex = 29;
@@ -850,232 +1076,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label13.TabIndex = 30;
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gbPoint
-            // 
-            this.gbPoint.Controls.Add(this.lb5Level);
-            this.gbPoint.Controls.Add(this.lb5Point);
-            this.gbPoint.Controls.Add(this.lb5Acc);
-            this.gbPoint.Controls.Add(this.lb4Level);
-            this.gbPoint.Controls.Add(this.lb4Point);
-            this.gbPoint.Controls.Add(this.lb4Acc);
-            this.gbPoint.Controls.Add(this.lb3Level);
-            this.gbPoint.Controls.Add(this.lb3Point);
-            this.gbPoint.Controls.Add(this.lb3Acc);
-            this.gbPoint.Controls.Add(this.lb2Level);
-            this.gbPoint.Controls.Add(this.lb2Point);
-            this.gbPoint.Controls.Add(this.lb2Acc);
-            this.gbPoint.Controls.Add(this.lb1Level);
-            this.gbPoint.Controls.Add(this.lb1Point);
-            this.gbPoint.Controls.Add(this.lb1Acc);
-            this.gbPoint.Controls.Add(this.label24);
-            this.gbPoint.Controls.Add(this.label23);
-            this.gbPoint.Controls.Add(this.label22);
-            this.gbPoint.Controls.Add(this.label21);
-            this.gbPoint.Location = new System.Drawing.Point(24, 105);
-            this.gbPoint.Name = "gbPoint";
-            this.gbPoint.Size = new System.Drawing.Size(463, 313);
-            this.gbPoint.TabIndex = 26;
-            this.gbPoint.TabStop = false;
-            this.gbPoint.Text = "groupBox1";
-            // 
-            // label21
-            // 
-            this.label21.BackColor = System.Drawing.Color.White;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label21.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label21.Location = new System.Drawing.Point(0, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(463, 25);
-            this.label21.TabIndex = 27;
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label22
-            // 
-            this.label22.BackColor = System.Drawing.Color.White;
-            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label22.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label22.Location = new System.Drawing.Point(0, 300);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(463, 25);
-            this.label22.TabIndex = 28;
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            this.label23.BackColor = System.Drawing.Color.White;
-            this.label23.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label23.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label23.Location = new System.Drawing.Point(-8, 18);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(24, 282);
-            this.label23.TabIndex = 29;
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label24
-            // 
-            this.label24.BackColor = System.Drawing.Color.White;
-            this.label24.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label24.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label24.Location = new System.Drawing.Point(441, 18);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(24, 282);
-            this.label24.TabIndex = 30;
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lb1Acc
-            // 
-            this.lb1Acc.AutoSize = true;
-            this.lb1Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb1Acc.Location = new System.Drawing.Point(9, 14);
-            this.lb1Acc.Name = "lb1Acc";
-            this.lb1Acc.Size = new System.Drawing.Size(60, 28);
-            this.lb1Acc.TabIndex = 31;
-            this.lb1Acc.Text = "Top 1";
-            // 
-            // lb1Point
-            // 
-            this.lb1Point.AutoSize = true;
-            this.lb1Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb1Point.Location = new System.Drawing.Point(207, 14);
-            this.lb1Point.Name = "lb1Point";
-            this.lb1Point.Size = new System.Drawing.Size(60, 28);
-            this.lb1Point.TabIndex = 32;
-            this.lb1Point.Text = "Top 1";
-            // 
-            // lb1Level
-            // 
-            this.lb1Level.AutoSize = true;
-            this.lb1Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb1Level.Location = new System.Drawing.Point(303, 14);
-            this.lb1Level.Name = "lb1Level";
-            this.lb1Level.Size = new System.Drawing.Size(60, 28);
-            this.lb1Level.TabIndex = 33;
-            this.lb1Level.Text = "Top 1";
-            // 
-            // lb2Level
-            // 
-            this.lb2Level.AutoSize = true;
-            this.lb2Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb2Level.Location = new System.Drawing.Point(303, 66);
-            this.lb2Level.Name = "lb2Level";
-            this.lb2Level.Size = new System.Drawing.Size(60, 28);
-            this.lb2Level.TabIndex = 36;
-            this.lb2Level.Text = "Top 2";
-            // 
-            // lb2Point
-            // 
-            this.lb2Point.AutoSize = true;
-            this.lb2Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb2Point.Location = new System.Drawing.Point(207, 66);
-            this.lb2Point.Name = "lb2Point";
-            this.lb2Point.Size = new System.Drawing.Size(60, 28);
-            this.lb2Point.TabIndex = 35;
-            this.lb2Point.Text = "Top 2";
-            // 
-            // lb2Acc
-            // 
-            this.lb2Acc.AutoSize = true;
-            this.lb2Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb2Acc.Location = new System.Drawing.Point(9, 66);
-            this.lb2Acc.Name = "lb2Acc";
-            this.lb2Acc.Size = new System.Drawing.Size(60, 28);
-            this.lb2Acc.TabIndex = 34;
-            this.lb2Acc.Text = "Top 2";
-            // 
-            // lb3Level
-            // 
-            this.lb3Level.AutoSize = true;
-            this.lb3Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb3Level.Location = new System.Drawing.Point(303, 121);
-            this.lb3Level.Name = "lb3Level";
-            this.lb3Level.Size = new System.Drawing.Size(60, 28);
-            this.lb3Level.TabIndex = 39;
-            this.lb3Level.Text = "Top 3";
-            // 
-            // lb3Point
-            // 
-            this.lb3Point.AutoSize = true;
-            this.lb3Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb3Point.Location = new System.Drawing.Point(207, 121);
-            this.lb3Point.Name = "lb3Point";
-            this.lb3Point.Size = new System.Drawing.Size(60, 28);
-            this.lb3Point.TabIndex = 38;
-            this.lb3Point.Text = "Top 3";
-            // 
-            // lb3Acc
-            // 
-            this.lb3Acc.AutoSize = true;
-            this.lb3Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb3Acc.Location = new System.Drawing.Point(9, 121);
-            this.lb3Acc.Name = "lb3Acc";
-            this.lb3Acc.Size = new System.Drawing.Size(60, 28);
-            this.lb3Acc.TabIndex = 37;
-            this.lb3Acc.Text = "Top 3";
-            // 
-            // lb4Level
-            // 
-            this.lb4Level.AutoSize = true;
-            this.lb4Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb4Level.Location = new System.Drawing.Point(303, 171);
-            this.lb4Level.Name = "lb4Level";
-            this.lb4Level.Size = new System.Drawing.Size(60, 28);
-            this.lb4Level.TabIndex = 42;
-            this.lb4Level.Text = "Top 4";
-            // 
-            // lb4Point
-            // 
-            this.lb4Point.AutoSize = true;
-            this.lb4Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb4Point.Location = new System.Drawing.Point(207, 171);
-            this.lb4Point.Name = "lb4Point";
-            this.lb4Point.Size = new System.Drawing.Size(60, 28);
-            this.lb4Point.TabIndex = 41;
-            this.lb4Point.Text = "Top 4";
-            // 
-            // lb4Acc
-            // 
-            this.lb4Acc.AutoSize = true;
-            this.lb4Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb4Acc.Location = new System.Drawing.Point(9, 171);
-            this.lb4Acc.Name = "lb4Acc";
-            this.lb4Acc.Size = new System.Drawing.Size(60, 28);
-            this.lb4Acc.TabIndex = 40;
-            this.lb4Acc.Text = "Top 4";
-            // 
-            // lb5Level
-            // 
-            this.lb5Level.AutoSize = true;
-            this.lb5Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb5Level.Location = new System.Drawing.Point(303, 224);
-            this.lb5Level.Name = "lb5Level";
-            this.lb5Level.Size = new System.Drawing.Size(60, 28);
-            this.lb5Level.TabIndex = 45;
-            this.lb5Level.Text = "Top 5";
-            // 
-            // lb5Point
-            // 
-            this.lb5Point.AutoSize = true;
-            this.lb5Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb5Point.Location = new System.Drawing.Point(207, 224);
-            this.lb5Point.Name = "lb5Point";
-            this.lb5Point.Size = new System.Drawing.Size(60, 28);
-            this.lb5Point.TabIndex = 44;
-            this.lb5Point.Text = "Top 5";
-            // 
-            // lb5Acc
-            // 
-            this.lb5Acc.AutoSize = true;
-            this.lb5Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb5Acc.Location = new System.Drawing.Point(9, 224);
-            this.lb5Acc.Name = "lb5Acc";
-            this.lb5Acc.Size = new System.Drawing.Size(60, 28);
-            this.lb5Acc.TabIndex = 43;
-            this.lb5Acc.Text = "Top 5";
-            // 
             // User
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1101,6 +1101,8 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Text = "User";
             this.gbRanked.ResumeLayout(false);
             this.gbRanked.PerformLayout();
+            this.gbPoint.ResumeLayout(false);
+            this.gbPoint.PerformLayout();
             this.gbFeedback.ResumeLayout(false);
             this.gbFeedback.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).EndInit();
@@ -1127,8 +1129,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            this.gbPoint.ResumeLayout(false);
-            this.gbPoint.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
