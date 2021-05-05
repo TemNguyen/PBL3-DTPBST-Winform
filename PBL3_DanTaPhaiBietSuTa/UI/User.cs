@@ -155,6 +155,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             Play p = new Play();
             p.Show();
+            HomePage.StopSound();
             Close();
         }
         private void btnSetting_Click(object sender, EventArgs e)

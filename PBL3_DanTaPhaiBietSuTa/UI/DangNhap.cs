@@ -15,6 +15,7 @@ namespace PBL3_DanTaPhaiBietSuTa
 {
     public partial class DangNhap : Form
     {
+        SettingForm settingForm;
         public DangNhap()
         {
             InitializeComponent();
@@ -23,8 +24,9 @@ namespace PBL3_DanTaPhaiBietSuTa
 
         private void Setting_Click(object sender, EventArgs e)
         {
-            SettingForm s = new SettingForm();
-            s.ShowDialog();
+            if (settingForm == null)
+                settingForm = new SettingForm();
+            settingForm.ShowDialog();
         }
 
         private void txtLoginR_Click(object sender, EventArgs e)
