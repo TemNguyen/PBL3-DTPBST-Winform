@@ -90,6 +90,13 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             DAL.Instance.UpdatePointTable(gameProcess);
         }
-        
+        public UserInfo GetUserInfoByUserID(int userID)
+        {
+            using (DB db = new DB())
+            {
+                UserInfo user = db.UserInfos.Where(s => s.UserID == userID).FirstOrDefault();
+                return user;
+            }
+        }
     }
 }
