@@ -40,11 +40,12 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             var video = BLL.Instance.GetVideo(stageID);
             Video.URL = @Application.StartupPath + @"\Assets\Video\" + video.VideoID + ".mp4";
-           // Video.Ctlenabled = false;
+            Video.Ctlenabled = false;
             Video.settings.volume = 100;
         }
         private void SetTimeStop()
         {
+            listTimeStop.Clear();
             List<int> list = new List<int>();
             foreach (var i in BLL.Instance.GetQuestionsByStage(stageID))
             {
@@ -110,11 +111,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             string answer = ((Button)sender).Text.Remove(0, 3);
             //UX Show correct Answer
+            ShowCorrectAnswer();
             if (CheckAnswer(answer))
             {
                 CaculationPoint(countDown);
             }
-            ShowCorrectAnswer();
         }
         private bool CheckAnswer(string answer)
         {
@@ -128,6 +129,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private void ShowCorrectAnswer()
         {
+            questionTime.Stop();
+            btnA.Enabled = false;
+            btnB.Enabled = false;
+            btnC.Enabled = false;
+            btnD.Enabled = false;
             changeColor.Start();
         }
         private void CaculationPoint(int timeUsed)
@@ -147,6 +153,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private void videoTime_Tick(object sender, EventArgs e)
         {
+            btnA.Enabled = false;
+            btnB.Enabled = false;
+            btnC.Enabled = false;
+            btnD.Enabled = false;
             TVideo = Convert.ToInt32(Video.Ctlcontrols.currentPosition * 10);
             try
             {
@@ -166,6 +176,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private void questionTime_Tick(object sender, EventArgs e)
         {
+            btnA.Enabled = true;
+            btnB.Enabled = true;
+            btnC.Enabled = true;
+            btnD.Enabled = true;
             try
             {
                 if (TVideo >= listTimeStop[questionID])
@@ -178,22 +192,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             if (countDown == 0)
             {
                 ShowCorrectAnswer();
-                countDown = 300;
-                lbTime.Text = "Time: ";
-                ResetQuestion();
-                questionID++;
-                videoTime.Start();
-                Video.Ctlcontrols.play();
             }
         }
         private void changeColor_Tick(object sender, EventArgs e)
         {
-            questionTime.Stop();
             showAnswer--;
-            btnA.Enabled = false;
-            btnB.Enabled = false;
-            btnC.Enabled = false;
-            btnD.Enabled = false;
             if (String.Compare(btnA.Text.Remove(0, 3), selectedQuestion.Answer) == 0)
             {
                 if (showAnswer % 3 == 1)
@@ -234,10 +237,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             {
                 showAnswer = 10;
                 changeColor.Stop();
-                btnA.Enabled = true;
-                btnB.Enabled = true;
-                btnC.Enabled = true;
-                btnD.Enabled = true;
                 //Delay t(s)
                 nextQuestionTime.Start();
             }
@@ -283,8 +282,17 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 {
                     case DialogResult.Yes:
                         //reset form
-                        new Play().Show();
-                        Dispose();
+                        List<int> listTimeStop = new List<int>();
+                        point = 0; 
+                        questionID = 0;
+                        TVideo = 0;
+                        countDown = 300;
+                        lbPoint.Text = point.ToString();
+                        lbTime.Text = "Time: " + (countDown / 10).ToString();
+                        SetTimeStop();
+                        SetVideoStage();
+                        videoTime.Start();
+                        ResetQuestion();
                         break;
                     case DialogResult.No:
                         new User().Show();
