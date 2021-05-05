@@ -14,6 +14,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 {
     public partial class Play : Form
     {
+        Color cBtn = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+
         List<int> listTimeStop = new List<int>();
         static int stageID;
         Question selectedQuestion;
@@ -27,6 +29,14 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             SetVideoStage();
             videoTime.Start();
             ResetQuestion();
+
+        }
+
+        private void changeBtnColor(CustomButton btn, Color c)
+        {
+            btn.ButtonColor = c;
+            btn.BorderColor = c;
+            // cách dùng (Color.Red): changeBtnColor(btnA, Color.Green); 
         }
 
         private void btnSetting_Click(object sender, EventArgs e)

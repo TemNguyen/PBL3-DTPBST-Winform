@@ -92,6 +92,26 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.gbPoint = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.lb1Acc = new System.Windows.Forms.Label();
+            this.lb1Point = new System.Windows.Forms.Label();
+            this.lb1Level = new System.Windows.Forms.Label();
+            this.lb2Level = new System.Windows.Forms.Label();
+            this.lb2Point = new System.Windows.Forms.Label();
+            this.lb2Acc = new System.Windows.Forms.Label();
+            this.lb3Level = new System.Windows.Forms.Label();
+            this.lb3Point = new System.Windows.Forms.Label();
+            this.lb3Acc = new System.Windows.Forms.Label();
+            this.lb4Level = new System.Windows.Forms.Label();
+            this.lb4Point = new System.Windows.Forms.Label();
+            this.lb4Acc = new System.Windows.Forms.Label();
+            this.lb5Level = new System.Windows.Forms.Label();
+            this.lb5Point = new System.Windows.Forms.Label();
+            this.lb5Acc = new System.Windows.Forms.Label();
             this.gbRanked.SuspendLayout();
             this.gbFeedback.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).BeginInit();
@@ -116,6 +136,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            this.gbPoint.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbUser
@@ -160,14 +181,14 @@ namespace PBL3_DanTaPhaiBietSuTa
             // gbRanked
             // 
             this.gbRanked.BackColor = System.Drawing.Color.White;
+            this.gbRanked.Controls.Add(this.gbPoint);
             this.gbRanked.Controls.Add(this.btnExitRanked);
             this.gbRanked.Controls.Add(this.label5);
-            this.gbRanked.Controls.Add(this.gbFeedback);
             this.gbRanked.Controls.Add(this.label4);
             this.gbRanked.Controls.Add(this.label3);
             this.gbRanked.Controls.Add(this.label2);
             this.gbRanked.Controls.Add(this.label1);
-            this.gbRanked.Location = new System.Drawing.Point(275, 166);
+            this.gbRanked.Location = new System.Drawing.Point(273, 152);
             this.gbRanked.Name = "gbRanked";
             this.gbRanked.Size = new System.Drawing.Size(510, 446);
             this.gbRanked.TabIndex = 19;
@@ -247,9 +268,9 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbFeedback.Controls.Add(this.label6);
             this.gbFeedback.Controls.Add(this.label9);
             this.gbFeedback.Controls.Add(this.label10);
-            this.gbFeedback.Location = new System.Drawing.Point(0, 40);
+            this.gbFeedback.Location = new System.Drawing.Point(248, 189);
             this.gbFeedback.Name = "gbFeedback";
-            this.gbFeedback.Size = new System.Drawing.Size(510, 350);
+            this.gbFeedback.Size = new System.Drawing.Size(554, 375);
             this.gbFeedback.TabIndex = 26;
             this.gbFeedback.TabStop = false;
             this.gbFeedback.Text = "groupBox1";
@@ -264,14 +285,14 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnSendFb.FlatAppearance.BorderSize = 0;
             this.btnSendFb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSendFb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendFb.Location = new System.Drawing.Point(188, 289);
+            this.btnSendFb.Location = new System.Drawing.Point(205, 307);
             this.btnSendFb.Margin = new System.Windows.Forms.Padding(2);
             this.btnSendFb.Name = "btnSendFb";
             this.btnSendFb.OnHoverBorderColor = System.Drawing.Color.Gray;
             this.btnSendFb.OnHoverButtonColor = System.Drawing.Color.Yellow;
             this.btnSendFb.OnHoverTextColor = System.Drawing.Color.Gray;
             this.btnSendFb.Size = new System.Drawing.Size(140, 44);
-            this.btnSendFb.TabIndex = 27;
+            this.btnSendFb.TabIndex = 8;
             this.btnSendFb.Text = "Gửi phản hồi";
             this.btnSendFb.TextColor = System.Drawing.Color.White;
             this.btnSendFb.UseVisualStyleBackColor = true;
@@ -280,18 +301,18 @@ namespace PBL3_DanTaPhaiBietSuTa
             // txtFeedback
             // 
             this.txtFeedback.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFeedback.Location = new System.Drawing.Point(49, 101);
+            this.txtFeedback.Location = new System.Drawing.Point(50, 113);
             this.txtFeedback.Multiline = true;
             this.txtFeedback.Name = "txtFeedback";
             this.txtFeedback.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtFeedback.Size = new System.Drawing.Size(421, 178);
-            this.txtFeedback.TabIndex = 26;
+            this.txtFeedback.Size = new System.Drawing.Size(461, 178);
+            this.txtFeedback.TabIndex = 7;
             this.txtFeedback.TextChanged += new System.EventHandler(this.txtFeedback_TextChanged);
             // 
             // btnExitFeedback
             // 
-            this.btnExitFeedback.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitFeedback.Location = new System.Drawing.Point(465, -1);
+            this.btnExitFeedback.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExitFeedback.Location = new System.Drawing.Point(509, -1);
             this.btnExitFeedback.Name = "btnExitFeedback";
             this.btnExitFeedback.Size = new System.Drawing.Size(45, 45);
             this.btnExitFeedback.TabIndex = 25;
@@ -303,7 +324,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(44, 63);
+            this.label6.Location = new System.Drawing.Point(44, 74);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(182, 32);
             this.label6.TabIndex = 24;
@@ -313,7 +334,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(181, 16);
+            this.label9.Location = new System.Drawing.Point(184, 18);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(202, 60);
             this.label9.TabIndex = 21;
@@ -327,7 +348,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.label10.Location = new System.Drawing.Point(0, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(510, 25);
+            this.label10.Size = new System.Drawing.Size(552, 25);
             this.label10.TabIndex = 20;
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -404,7 +425,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbUser.Controls.Add(this.label7);
             this.gbUser.Controls.Add(this.label8);
             this.gbUser.Controls.Add(this.label11);
-            this.gbUser.Location = new System.Drawing.Point(237, 104);
+            this.gbUser.Location = new System.Drawing.Point(248, 101);
             this.gbUser.Name = "gbUser";
             this.gbUser.Size = new System.Drawing.Size(575, 565);
             this.gbUser.TabIndex = 28;
@@ -426,7 +447,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.lbRanked.AutoSize = true;
             this.lbRanked.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRanked.Location = new System.Drawing.Point(354, 254);
+            this.lbRanked.Location = new System.Drawing.Point(243, 254);
             this.lbRanked.Name = "lbRanked";
             this.lbRanked.Size = new System.Drawing.Size(28, 32);
             this.lbRanked.TabIndex = 49;
@@ -440,7 +461,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtRePass.Name = "txtRePass";
             this.txtRePass.PasswordChar = '*';
             this.txtRePass.Size = new System.Drawing.Size(282, 39);
-            this.txtRePass.TabIndex = 48;
+            this.txtRePass.TabIndex = 5;
             // 
             // label19
             // 
@@ -460,7 +481,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtNewPass.Name = "txtNewPass";
             this.txtNewPass.PasswordChar = '*';
             this.txtNewPass.Size = new System.Drawing.Size(282, 39);
-            this.txtNewPass.TabIndex = 44;
+            this.txtNewPass.TabIndex = 4;
             // 
             // txtOldPass
             // 
@@ -470,7 +491,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtOldPass.Name = "txtOldPass";
             this.txtOldPass.PasswordChar = '*';
             this.txtOldPass.Size = new System.Drawing.Size(282, 39);
-            this.txtOldPass.TabIndex = 43;
+            this.txtOldPass.TabIndex = 3;
             // 
             // label16
             // 
@@ -489,7 +510,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.checkBox1.Location = new System.Drawing.Point(201, 289);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(181, 36);
-            this.checkBox1.TabIndex = 41;
+            this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "Đổi mật khẩu";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -510,7 +531,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtEmail.Location = new System.Drawing.Point(243, 161);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(282, 39);
-            this.txtEmail.TabIndex = 37;
+            this.txtEmail.TabIndex = 1;
             // 
             // txtName
             // 
@@ -518,7 +539,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtName.Location = new System.Drawing.Point(243, 111);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(282, 39);
-            this.txtName.TabIndex = 36;
+            this.txtName.TabIndex = 0;
             // 
             // label18
             // 
@@ -586,7 +607,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnSaveInfo.OnHoverButtonColor = System.Drawing.Color.Yellow;
             this.btnSaveInfo.OnHoverTextColor = System.Drawing.Color.Gray;
             this.btnSaveInfo.Size = new System.Drawing.Size(140, 44);
-            this.btnSaveInfo.TabIndex = 27;
+            this.btnSaveInfo.TabIndex = 6;
             this.btnSaveInfo.Text = "Lưu thông tin";
             this.btnSaveInfo.TextColor = System.Drawing.Color.White;
             this.btnSaveInfo.UseVisualStyleBackColor = true;
@@ -641,7 +662,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbLevel.Controls.Add(this.flowLayoutPanel1);
             this.gbLevel.Controls.Add(this.label20);
             this.gbLevel.Controls.Add(this.label13);
-            this.gbLevel.Location = new System.Drawing.Point(199, 149);
+            this.gbLevel.Location = new System.Drawing.Point(213, 146);
             this.gbLevel.Name = "gbLevel";
             this.gbLevel.Size = new System.Drawing.Size(640, 496);
             this.gbLevel.TabIndex = 29;
@@ -811,7 +832,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(228, 16);
+            this.label20.Location = new System.Drawing.Point(213, 16);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(253, 46);
             this.label20.TabIndex = 32;
@@ -829,6 +850,232 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label13.TabIndex = 30;
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // gbPoint
+            // 
+            this.gbPoint.Controls.Add(this.lb5Level);
+            this.gbPoint.Controls.Add(this.lb5Point);
+            this.gbPoint.Controls.Add(this.lb5Acc);
+            this.gbPoint.Controls.Add(this.lb4Level);
+            this.gbPoint.Controls.Add(this.lb4Point);
+            this.gbPoint.Controls.Add(this.lb4Acc);
+            this.gbPoint.Controls.Add(this.lb3Level);
+            this.gbPoint.Controls.Add(this.lb3Point);
+            this.gbPoint.Controls.Add(this.lb3Acc);
+            this.gbPoint.Controls.Add(this.lb2Level);
+            this.gbPoint.Controls.Add(this.lb2Point);
+            this.gbPoint.Controls.Add(this.lb2Acc);
+            this.gbPoint.Controls.Add(this.lb1Level);
+            this.gbPoint.Controls.Add(this.lb1Point);
+            this.gbPoint.Controls.Add(this.lb1Acc);
+            this.gbPoint.Controls.Add(this.label24);
+            this.gbPoint.Controls.Add(this.label23);
+            this.gbPoint.Controls.Add(this.label22);
+            this.gbPoint.Controls.Add(this.label21);
+            this.gbPoint.Location = new System.Drawing.Point(24, 105);
+            this.gbPoint.Name = "gbPoint";
+            this.gbPoint.Size = new System.Drawing.Size(463, 313);
+            this.gbPoint.TabIndex = 26;
+            this.gbPoint.TabStop = false;
+            this.gbPoint.Text = "groupBox1";
+            // 
+            // label21
+            // 
+            this.label21.BackColor = System.Drawing.Color.White;
+            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label21.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label21.Location = new System.Drawing.Point(0, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(463, 25);
+            this.label21.TabIndex = 27;
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.Color.White;
+            this.label22.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label22.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label22.Location = new System.Drawing.Point(0, 300);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(463, 25);
+            this.label22.TabIndex = 28;
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label23
+            // 
+            this.label23.BackColor = System.Drawing.Color.White;
+            this.label23.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label23.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label23.Location = new System.Drawing.Point(-8, 18);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(24, 282);
+            this.label23.TabIndex = 29;
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label24
+            // 
+            this.label24.BackColor = System.Drawing.Color.White;
+            this.label24.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label24.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label24.Location = new System.Drawing.Point(441, 18);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(24, 282);
+            this.label24.TabIndex = 30;
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lb1Acc
+            // 
+            this.lb1Acc.AutoSize = true;
+            this.lb1Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb1Acc.Location = new System.Drawing.Point(9, 14);
+            this.lb1Acc.Name = "lb1Acc";
+            this.lb1Acc.Size = new System.Drawing.Size(60, 28);
+            this.lb1Acc.TabIndex = 31;
+            this.lb1Acc.Text = "Top 1";
+            // 
+            // lb1Point
+            // 
+            this.lb1Point.AutoSize = true;
+            this.lb1Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb1Point.Location = new System.Drawing.Point(207, 14);
+            this.lb1Point.Name = "lb1Point";
+            this.lb1Point.Size = new System.Drawing.Size(60, 28);
+            this.lb1Point.TabIndex = 32;
+            this.lb1Point.Text = "Top 1";
+            // 
+            // lb1Level
+            // 
+            this.lb1Level.AutoSize = true;
+            this.lb1Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb1Level.Location = new System.Drawing.Point(303, 14);
+            this.lb1Level.Name = "lb1Level";
+            this.lb1Level.Size = new System.Drawing.Size(60, 28);
+            this.lb1Level.TabIndex = 33;
+            this.lb1Level.Text = "Top 1";
+            // 
+            // lb2Level
+            // 
+            this.lb2Level.AutoSize = true;
+            this.lb2Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb2Level.Location = new System.Drawing.Point(303, 66);
+            this.lb2Level.Name = "lb2Level";
+            this.lb2Level.Size = new System.Drawing.Size(60, 28);
+            this.lb2Level.TabIndex = 36;
+            this.lb2Level.Text = "Top 2";
+            // 
+            // lb2Point
+            // 
+            this.lb2Point.AutoSize = true;
+            this.lb2Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb2Point.Location = new System.Drawing.Point(207, 66);
+            this.lb2Point.Name = "lb2Point";
+            this.lb2Point.Size = new System.Drawing.Size(60, 28);
+            this.lb2Point.TabIndex = 35;
+            this.lb2Point.Text = "Top 2";
+            // 
+            // lb2Acc
+            // 
+            this.lb2Acc.AutoSize = true;
+            this.lb2Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb2Acc.Location = new System.Drawing.Point(9, 66);
+            this.lb2Acc.Name = "lb2Acc";
+            this.lb2Acc.Size = new System.Drawing.Size(60, 28);
+            this.lb2Acc.TabIndex = 34;
+            this.lb2Acc.Text = "Top 2";
+            // 
+            // lb3Level
+            // 
+            this.lb3Level.AutoSize = true;
+            this.lb3Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb3Level.Location = new System.Drawing.Point(303, 121);
+            this.lb3Level.Name = "lb3Level";
+            this.lb3Level.Size = new System.Drawing.Size(60, 28);
+            this.lb3Level.TabIndex = 39;
+            this.lb3Level.Text = "Top 3";
+            // 
+            // lb3Point
+            // 
+            this.lb3Point.AutoSize = true;
+            this.lb3Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb3Point.Location = new System.Drawing.Point(207, 121);
+            this.lb3Point.Name = "lb3Point";
+            this.lb3Point.Size = new System.Drawing.Size(60, 28);
+            this.lb3Point.TabIndex = 38;
+            this.lb3Point.Text = "Top 3";
+            // 
+            // lb3Acc
+            // 
+            this.lb3Acc.AutoSize = true;
+            this.lb3Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb3Acc.Location = new System.Drawing.Point(9, 121);
+            this.lb3Acc.Name = "lb3Acc";
+            this.lb3Acc.Size = new System.Drawing.Size(60, 28);
+            this.lb3Acc.TabIndex = 37;
+            this.lb3Acc.Text = "Top 3";
+            // 
+            // lb4Level
+            // 
+            this.lb4Level.AutoSize = true;
+            this.lb4Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb4Level.Location = new System.Drawing.Point(303, 171);
+            this.lb4Level.Name = "lb4Level";
+            this.lb4Level.Size = new System.Drawing.Size(60, 28);
+            this.lb4Level.TabIndex = 42;
+            this.lb4Level.Text = "Top 4";
+            // 
+            // lb4Point
+            // 
+            this.lb4Point.AutoSize = true;
+            this.lb4Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb4Point.Location = new System.Drawing.Point(207, 171);
+            this.lb4Point.Name = "lb4Point";
+            this.lb4Point.Size = new System.Drawing.Size(60, 28);
+            this.lb4Point.TabIndex = 41;
+            this.lb4Point.Text = "Top 4";
+            // 
+            // lb4Acc
+            // 
+            this.lb4Acc.AutoSize = true;
+            this.lb4Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb4Acc.Location = new System.Drawing.Point(9, 171);
+            this.lb4Acc.Name = "lb4Acc";
+            this.lb4Acc.Size = new System.Drawing.Size(60, 28);
+            this.lb4Acc.TabIndex = 40;
+            this.lb4Acc.Text = "Top 4";
+            // 
+            // lb5Level
+            // 
+            this.lb5Level.AutoSize = true;
+            this.lb5Level.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb5Level.Location = new System.Drawing.Point(303, 224);
+            this.lb5Level.Name = "lb5Level";
+            this.lb5Level.Size = new System.Drawing.Size(60, 28);
+            this.lb5Level.TabIndex = 45;
+            this.lb5Level.Text = "Top 5";
+            // 
+            // lb5Point
+            // 
+            this.lb5Point.AutoSize = true;
+            this.lb5Point.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb5Point.Location = new System.Drawing.Point(207, 224);
+            this.lb5Point.Name = "lb5Point";
+            this.lb5Point.Size = new System.Drawing.Size(60, 28);
+            this.lb5Point.TabIndex = 44;
+            this.lb5Point.Text = "Top 5";
+            // 
+            // lb5Acc
+            // 
+            this.lb5Acc.AutoSize = true;
+            this.lb5Acc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb5Acc.Location = new System.Drawing.Point(9, 224);
+            this.lb5Acc.Name = "lb5Acc";
+            this.lb5Acc.Size = new System.Drawing.Size(60, 28);
+            this.lb5Acc.TabIndex = 43;
+            this.lb5Acc.Text = "Top 5";
+            // 
             // User
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -837,6 +1084,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.ClientSize = new System.Drawing.Size(1066, 794);
             this.Controls.Add(this.gbLevel);
             this.Controls.Add(this.gbUser);
+            this.Controls.Add(this.gbFeedback);
             this.Controls.Add(this.gbRanked);
             this.Controls.Add(this.btnFeedback);
             this.Controls.Add(this.btnRanked);
@@ -879,6 +1127,8 @@ namespace PBL3_DanTaPhaiBietSuTa
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            this.gbPoint.ResumeLayout(false);
+            this.gbPoint.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -948,5 +1198,25 @@ namespace PBL3_DanTaPhaiBietSuTa
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox15;
+        private System.Windows.Forms.GroupBox gbPoint;
+        private System.Windows.Forms.Label lb5Level;
+        private System.Windows.Forms.Label lb5Point;
+        private System.Windows.Forms.Label lb5Acc;
+        private System.Windows.Forms.Label lb4Level;
+        private System.Windows.Forms.Label lb4Point;
+        private System.Windows.Forms.Label lb4Acc;
+        private System.Windows.Forms.Label lb3Level;
+        private System.Windows.Forms.Label lb3Point;
+        private System.Windows.Forms.Label lb3Acc;
+        private System.Windows.Forms.Label lb2Level;
+        private System.Windows.Forms.Label lb2Point;
+        private System.Windows.Forms.Label lb2Acc;
+        private System.Windows.Forms.Label lb1Level;
+        private System.Windows.Forms.Label lb1Point;
+        private System.Windows.Forms.Label lb1Acc;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
     }
 }

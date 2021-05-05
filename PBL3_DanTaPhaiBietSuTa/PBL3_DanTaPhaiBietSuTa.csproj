@@ -123,6 +123,10 @@
     <Compile Include="Migrations\202105021451383_point.Designer.cs">
       <DependentUpon>202105021451383_point.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105031005532_thanh123.cs" />
+    <Compile Include="Migrations\202105031005532_thanh123.Designer.cs">
+      <DependentUpon>202105031005532_thanh123.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OvalPictureBox.cs">
       <SubType>Component</SubType>
@@ -155,6 +159,12 @@
     </Compile>
     <Compile Include="UI\Play.Designer.cs">
       <DependentUpon>Play.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ReplayNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ReplayNotification.Designer.cs">
+      <DependentUpon>ReplayNotification.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SettingForm.cs">
       <SubType>Form</SubType>
@@ -207,6 +217,9 @@
     <EmbeddedResource Include="Migrations\202105021451383_point.resx">
       <DependentUpon>202105021451383_point.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105031005532_thanh123.resx">
+      <DependentUpon>202105031005532_thanh123.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Play.resx">
       <DependentUpon>Play.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ReplayNotification.resx">
+      <DependentUpon>ReplayNotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SettingForm.resx">
       <DependentUpon>SettingForm.cs</DependentUpon>
