@@ -55,9 +55,9 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.btnExitRanked = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbLevelRanked = new System.Windows.Forms.Label();
+            this.lbPointRanked = new System.Windows.Forms.Label();
+            this.lbAccRanked = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gbFeedback = new System.Windows.Forms.GroupBox();
@@ -183,9 +183,9 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbRanked.BackColor = System.Drawing.Color.White;
             this.gbRanked.Controls.Add(this.gbPoint);
             this.gbRanked.Controls.Add(this.btnExitRanked);
-            this.gbRanked.Controls.Add(this.label5);
-            this.gbRanked.Controls.Add(this.label4);
-            this.gbRanked.Controls.Add(this.label3);
+            this.gbRanked.Controls.Add(this.lbLevelRanked);
+            this.gbRanked.Controls.Add(this.lbPointRanked);
+            this.gbRanked.Controls.Add(this.lbAccRanked);
             this.gbRanked.Controls.Add(this.label2);
             this.gbRanked.Controls.Add(this.label1);
             this.gbRanked.Location = new System.Drawing.Point(273, 152);
@@ -433,35 +433,35 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnExitRanked.UseVisualStyleBackColor = true;
             this.btnExitRanked.Click += new System.EventHandler(this.btnExitRanked_Click);
             // 
-            // label5
+            // lbLevelRanked
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(326, 70);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 32);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Mốc đạt được";
+            this.lbLevelRanked.AutoSize = true;
+            this.lbLevelRanked.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLevelRanked.Location = new System.Drawing.Point(326, 70);
+            this.lbLevelRanked.Name = "lbLevelRanked";
+            this.lbLevelRanked.Size = new System.Drawing.Size(163, 32);
+            this.lbLevelRanked.TabIndex = 24;
+            this.lbLevelRanked.Text = "Mốc đạt được";
             // 
-            // label4
+            // lbPointRanked
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(227, 70);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 32);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Điểm";
+            this.lbPointRanked.AutoSize = true;
+            this.lbPointRanked.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPointRanked.Location = new System.Drawing.Point(227, 70);
+            this.lbPointRanked.Name = "lbPointRanked";
+            this.lbPointRanked.Size = new System.Drawing.Size(72, 32);
+            this.lbPointRanked.TabIndex = 23;
+            this.lbPointRanked.Text = "Điểm";
             // 
-            // label3
+            // lbAccRanked
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(159, 32);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Tên tài khoản";
+            this.lbAccRanked.AutoSize = true;
+            this.lbAccRanked.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAccRanked.Location = new System.Drawing.Point(32, 70);
+            this.lbAccRanked.Name = "lbAccRanked";
+            this.lbAccRanked.Size = new System.Drawing.Size(159, 32);
+            this.lbAccRanked.TabIndex = 22;
+            this.lbAccRanked.Text = "Tên tài khoản";
             // 
             // label2
             // 
@@ -494,7 +494,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbFeedback.Controls.Add(this.label6);
             this.gbFeedback.Controls.Add(this.label9);
             this.gbFeedback.Controls.Add(this.label10);
-            this.gbFeedback.Location = new System.Drawing.Point(248, 189);
+            this.gbFeedback.Location = new System.Drawing.Point(247, 195);
             this.gbFeedback.Name = "gbFeedback";
             this.gbFeedback.Size = new System.Drawing.Size(554, 375);
             this.gbFeedback.TabIndex = 26;
@@ -651,7 +651,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbUser.Controls.Add(this.label7);
             this.gbUser.Controls.Add(this.label8);
             this.gbUser.Controls.Add(this.label11);
-            this.gbUser.Location = new System.Drawing.Point(248, 101);
+            this.gbUser.Location = new System.Drawing.Point(247, 100);
             this.gbUser.Name = "gbUser";
             this.gbUser.Size = new System.Drawing.Size(575, 565);
             this.gbUser.TabIndex = 28;
@@ -888,7 +888,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbLevel.Controls.Add(this.flowLayoutPanel1);
             this.gbLevel.Controls.Add(this.label20);
             this.gbLevel.Controls.Add(this.label13);
-            this.gbLevel.Location = new System.Drawing.Point(213, 146);
+            this.gbLevel.Location = new System.Drawing.Point(215, 145);
             this.gbLevel.Name = "gbLevel";
             this.gbLevel.Size = new System.Drawing.Size(640, 496);
             this.gbLevel.TabIndex = 29;
@@ -1146,9 +1146,9 @@ namespace PBL3_DanTaPhaiBietSuTa
         private System.Windows.Forms.GroupBox gbRanked;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExitRanked;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbLevelRanked;
+        private System.Windows.Forms.Label lbPointRanked;
+        private System.Windows.Forms.Label lbAccRanked;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox gbFeedback;
         private System.Windows.Forms.TextBox txtFeedback;
