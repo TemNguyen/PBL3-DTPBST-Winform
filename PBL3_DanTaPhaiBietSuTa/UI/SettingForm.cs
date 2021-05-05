@@ -36,18 +36,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             btnSoundOn.Visible = true;
         }
 
-        private void btnMusicOn_Click(object sender, EventArgs e)
-        {
-            btnMusicOn.Visible = false;
-            btnMusicOff.Visible = true;
-        }
-
-        private void btnMusicOff_Click(object sender, EventArgs e)
-        {
-            btnMusicOn.Visible = true;
-            btnMusicOff.Visible = false;
-        }
-
         private void btnHelp_Click(object sender, EventArgs e)
         {
 

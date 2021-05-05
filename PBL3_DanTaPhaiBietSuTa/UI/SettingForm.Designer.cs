@@ -33,15 +33,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnSoundOn = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnHelp = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnExit = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
-            this.btnMusicOn = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnSoundOff = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
-            this.btnMusicOff = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSoundOn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMusicOn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSoundOff)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMusicOff)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSoundOn
@@ -59,7 +55,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.btnHelp.BackColor = System.Drawing.Color.DarkGray;
             this.btnHelp.Image = ((System.Drawing.Image)(resources.GetObject("btnHelp.Image")));
-            this.btnHelp.Location = new System.Drawing.Point(153, -1);
+            this.btnHelp.Location = new System.Drawing.Point(76, -1);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(71, 71);
             this.btnHelp.TabIndex = 2;
@@ -70,23 +66,12 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.btnExit.BackColor = System.Drawing.Color.DarkGray;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(230, -1);
+            this.btnExit.Location = new System.Drawing.Point(153, -1);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(71, 71);
             this.btnExit.TabIndex = 3;
             this.btnExit.TabStop = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnMusicOn
-            // 
-            this.btnMusicOn.BackColor = System.Drawing.Color.DarkGray;
-            this.btnMusicOn.Image = ((System.Drawing.Image)(resources.GetObject("btnMusicOn.Image")));
-            this.btnMusicOn.Location = new System.Drawing.Point(76, -1);
-            this.btnMusicOn.Name = "btnMusicOn";
-            this.btnMusicOn.Size = new System.Drawing.Size(71, 71);
-            this.btnMusicOn.TabIndex = 4;
-            this.btnMusicOn.TabStop = false;
-            this.btnMusicOn.Click += new System.EventHandler(this.btnMusicOn_Click);
             // 
             // btnSoundOff
             // 
@@ -100,24 +85,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnSoundOff.Visible = false;
             this.btnSoundOff.Click += new System.EventHandler(this.btnSoundOff_Click);
             // 
-            // btnMusicOff
-            // 
-            this.btnMusicOff.BackColor = System.Drawing.Color.DarkGray;
-            this.btnMusicOff.Image = ((System.Drawing.Image)(resources.GetObject("btnMusicOff.Image")));
-            this.btnMusicOff.Location = new System.Drawing.Point(76, -1);
-            this.btnMusicOff.Name = "btnMusicOff";
-            this.btnMusicOff.Size = new System.Drawing.Size(71, 71);
-            this.btnMusicOff.TabIndex = 6;
-            this.btnMusicOff.TabStop = false;
-            this.btnMusicOff.Click += new System.EventHandler(this.btnMusicOff_Click);
-            // 
             // SettingForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(302, 72);
-            this.Controls.Add(this.btnMusicOff);
+            this.ClientSize = new System.Drawing.Size(229, 72);
             this.Controls.Add(this.btnSoundOff);
-            this.Controls.Add(this.btnMusicOn);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnSoundOn);
@@ -129,9 +101,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             ((System.ComponentModel.ISupportInitialize)(this.btnSoundOn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHelp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMusicOn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSoundOff)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMusicOff)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -140,8 +110,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         private OvalPictureBox btnSoundOn;
         private OvalPictureBox btnHelp;
         private OvalPictureBox btnExit;
-        private OvalPictureBox btnMusicOn;
         private OvalPictureBox btnSoundOff;
-        private OvalPictureBox btnMusicOff;
     }
 }

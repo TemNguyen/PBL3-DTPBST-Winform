@@ -35,7 +35,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Play));
             this.gbVideo = new System.Windows.Forms.GroupBox();
             this.lbPoint = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbTime = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Video = new AxWMPLib.AxWindowsMediaPlayer();
             this.lbUser = new System.Windows.Forms.Label();
             this.videoTime = new System.Windows.Forms.Timer(this.components);
@@ -50,6 +52,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnA = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.txtQuestion = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.gbVideo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Video)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
@@ -59,7 +63,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.gbVideo.BackColor = System.Drawing.Color.White;
             this.gbVideo.Controls.Add(this.lbPoint);
+            this.gbVideo.Controls.Add(this.pictureBox2);
             this.gbVideo.Controls.Add(this.lbTime);
+            this.gbVideo.Controls.Add(this.pictureBox1);
             this.gbVideo.Controls.Add(this.Video);
             this.gbVideo.Controls.Add(this.lbUser);
             this.gbVideo.Location = new System.Drawing.Point(93, 4);
@@ -75,22 +81,43 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.lbPoint.AutoSize = true;
             this.lbPoint.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPoint.Location = new System.Drawing.Point(807, 5);
+            this.lbPoint.Location = new System.Drawing.Point(798, 19);
             this.lbPoint.Name = "lbPoint";
             this.lbPoint.Size = new System.Drawing.Size(69, 32);
-            this.lbPoint.TabIndex = 9;
+            this.lbPoint.TabIndex = 15;
             this.lbPoint.Text = "Point";
+            this.lbPoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbPoint.TextChanged += new System.EventHandler(this.lbPoint_TextChanged);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(783, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 64);
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
             // 
             // lbTime
             // 
             this.lbTime.AutoSize = true;
-            this.lbTime.BackColor = System.Drawing.Color.White;
             this.lbTime.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTime.Location = new System.Drawing.Point(3, 4);
+            this.lbTime.Location = new System.Drawing.Point(16, 19);
             this.lbTime.Name = "lbTime";
             this.lbTime.Size = new System.Drawing.Size(68, 32);
-            this.lbTime.TabIndex = 8;
+            this.lbTime.TabIndex = 13;
             this.lbTime.Text = "Time";
+            this.lbTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTime.TextChanged += new System.EventHandler(this.lbTime_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 64);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // Video
             // 
@@ -295,6 +322,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.Text = "Play";
             this.gbVideo.ResumeLayout(false);
             this.gbVideo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Video)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
@@ -315,9 +344,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         private AxWindowsMediaPlayer Video;
         private CustomButton btnD;
         private CustomButton btnC;
-        private Label lbPoint;
-        private Label lbTime;
         private Timer changeColor;
         private Timer nextQuestionTime;
+        private Label lbTime;
+        private PictureBox pictureBox1;
+        private Label lbPoint;
+        private PictureBox pictureBox2;
     }
 }
