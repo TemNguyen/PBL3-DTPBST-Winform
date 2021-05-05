@@ -21,6 +21,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             InitializeComponent();
             SetUserInfor();
+            ShowBXH();
         }
 
         private void btnUser_Click(object sender, EventArgs e)
@@ -125,7 +126,12 @@ namespace PBL3_DanTaPhaiBietSuTa
             lbAccount.Text = userInfor[1];
             txtName.Text = userInfor[3];
             txtEmail.Text = userInfor[4];
-            lbRanked.Text = BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor[0])).ToString();
+            if (BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor[0])) == -1)
+            {
+                lbRanked.Text = "Chưa có xếp hạng!";
+            }    
+            else
+                lbRanked.Text = BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor[0])).ToString();
             lbPoint.Text = userStand.Point.ToString();
             if (checkBox1.Checked)
             {
@@ -249,6 +255,38 @@ namespace PBL3_DanTaPhaiBietSuTa
             Notification notification = new Notification();
             notification.Get(message);
             notification.ShowDialog();
+        }
+        private void ShowBXH()
+        {
+            try
+            {
+                List<Standing> standings = BLL.Instance.SortListStandings();
+                lb1Acc.Text = GetUserByUserID(standings[0].UserID);
+                lb1Level.Text = standings[0].StageID.ToString();
+                lb1Point.Text = standings[0].Point.ToString();
+
+                lb2Acc.Text = GetUserByUserID(standings[1].UserID);
+                lb2Level.Text = standings[1].StageID.ToString();
+                lb2Point.Text = standings[1].Point.ToString();
+
+                lb3Acc.Text = GetUserByUserID(standings[2].UserID);
+                lb3Level.Text = standings[2].StageID.ToString();
+                lb3Point.Text = standings[2].Point.ToString();
+
+                lb4Acc.Text = GetUserByUserID(standings[3].UserID);
+                lb4Level.Text = standings[3].StageID.ToString();
+                lb4Point.Text = standings[3].Point.ToString();
+
+                lb5Acc.Text = GetUserByUserID(standings[4].UserID);
+                lb5Level.Text = standings[4].StageID.ToString();
+                lb5Point.Text = standings[4].Point.ToString();
+            }
+            catch(Exception) { };
+        }
+        private string GetUserByUserID(int userID)
+        {
+            UserInfo user = BLL.Instance.GetUserInfoByUserID(userID);
+            return user.Username;
         }
     }
 }
