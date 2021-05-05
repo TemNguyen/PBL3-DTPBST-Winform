@@ -75,8 +75,6 @@ namespace PBL3_DanTaPhaiBietSuTa
 
         private void btnRank_Click(object sender, EventArgs e)
         {
-            List<Standing> BXH = BLL.Instance.SortListStandings();
-            //add label 
             gbRanked.Visible = true;
             gbLevel.Visible = false;
         }

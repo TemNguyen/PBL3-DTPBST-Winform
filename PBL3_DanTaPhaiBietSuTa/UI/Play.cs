@@ -16,8 +16,21 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 {
     public partial class Play : Form
     {
+        public delegate void d1(bool b1);
+        public delegate void d2(bool b2);
+        d1 exitStage;
+        d2 playAgain;
+        bool isExitStage = false;
+        bool isPlayAgain = false;
+        private void setExitStage(bool b)
+        {
+            isExitStage = b;
+        }
+        private void setPlayAgain(bool b)
+        {
+            isPlayAgain = b;
+        }
         Color cBtn = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-
         List<int> listTimeStop = new List<int>();
         static int stageID;
         Question selectedQuestion;
@@ -27,6 +40,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         public Play()
         {
             InitializeComponent();
+            exitStage = new d1(setExitStage);
+            playAgain = new d2(setPlayAgain);
             stageID = 1;
             lbPoint.Text = point.ToString();
             lbTime.Text = "Time: " + (countDown / 10).ToString();
@@ -286,14 +301,16 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 videoTime.Stop();
                 IsSavePoint();
                 //Hiện UI chơi lại
-                MessageBox.Show("Chúc mừng bạn đã hoàn thành xong màn, số điểm của bạn là: " + point, "Congratulation", MessageBoxButtons.OK);
+                ShowMessage("Chúc mừng bạn đã hoàn thành xong màn, số điểm của bạn là: " + point);
+                ShowReplayNoti("");
+
                 DialogResult d = MessageBox.Show("Bạn có muốn chơi lại không?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                switch(d)
+                switch (d)
                 {
                     case DialogResult.Yes:
                         //reset form
                         List<int> listTimeStop = new List<int>();
-                        point = 0; 
+                        point = 0;
                         questionID = 0;
                         TVideo = 0;
                         countDown = 300;
@@ -318,6 +335,18 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             btn.ButtonColor = c;
             btn.BorderColor = c;
             // cách dùng (Color.Red): changeBtnColor(btnA, Color.Green); 
+        }
+        private void ShowMessage(string message)
+        {
+            Notification notification = new Notification();
+            notification.Get(message);
+            notification.ShowDialog();
+        }
+        private void ShowReplayNoti(string message)
+        {
+            ReplayNotification replayNotification = new ReplayNotification();
+            replayNotification.Get(message);
+            replayNotification.ShowDialog();
         }
     }
 }

@@ -13,6 +13,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 {
     public partial class ReplayNotification : Form
     {
+        public delegate void GetMessage(string message);
+        public GetMessage Get;
+        string mess = "";
+        private void getMessage(string s)
+        {
+            mess = s;
+        }
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -27,12 +34,19 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         public ReplayNotification()
         {
             InitializeComponent();
+            Get = new GetMessage(getMessage);
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         private void ReplayNotification_Load(object sender, EventArgs e)
         {
+            label1.Text = mess;
             label1.Location = new Point((this.Size.Width - label1.Size.Width) / 2, 40);
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
