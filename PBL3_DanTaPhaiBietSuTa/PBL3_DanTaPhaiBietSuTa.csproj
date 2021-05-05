@@ -187,6 +187,12 @@
     <Compile Include="UI\Play.Designer.cs">
       <DependentUpon>Play.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ReplayNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ReplayNotification.Designer.cs">
+      <DependentUpon>ReplayNotification.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\SettingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Play.resx">
       <DependentUpon>Play.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ReplayNotification.resx">
+      <DependentUpon>ReplayNotification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SettingForm.resx">
       <DependentUpon>SettingForm.cs</DependentUpon>
