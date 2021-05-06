@@ -17,6 +17,7 @@ namespace PBL3_DanTaPhaiBietSuTa
 {
     public partial class DangNhap : Form
     {
+        SettingForm settingForm;
         Thread th;
         public DangNhap()
         {
@@ -82,7 +83,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             else
             {
                 //Hiện Thông báo đăng nhập thất bại
-                ShowMessage("Có lỗi xảy ra, vui lòng kiểm tra lại thông tin tài khoản!");
+                ShowMessage("Vui lòng kiểm tra lại thông tin tài khoản!");
                 txtAccount.Text = "";
                 txtPass.Text = "";
                 return;

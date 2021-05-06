@@ -163,18 +163,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             gbFeedback.Visible = false;
             gbLevel.Visible = true;
         }
-        private void Level1_Click(object sender, EventArgs e)
-        {
-            Play p = new Play();
-            p.Show();
-            HomePage.StopSound();
-            Close();
-        }
-        private void btnSetting_Click(object sender, EventArgs e)
-        {
-            SettingForm s = new SettingForm();
-            s.ShowDialog();
-        }
         private void ShowUserInfor()
         {
             string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
@@ -223,57 +211,6 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             SettingForm s = new SettingForm();
             s.ShowDialog();
-        }
-
-        private void btnSaveInfo_Click(object sender, EventArgs e)
-        {   
-            string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
-            List<string> userInfor = new List<string>(File.ReadAllLines(path));
-            string oldPass = userInfor[2];
-            if (IsValid() == false) return;
-            if (checkBox1.Checked)
-            {
-                if (String.Compare(txtOldPass.Text, oldPass) != 0)
-                {
-                    ShowMessage("Mật khẩu hiện tại không đúng!");
-                    return;
-                }
-                else
-                    oldPass = txtNewPass.Text;
-            }
-            UserInfo user = new UserInfo()
-            {
-                UserID = Convert.ToInt32(userInfor[0]),
-                Username = userInfor[1],
-                Password = oldPass,
-                Name = txtName.Text,
-                Email = txtEmail.Text
-            };
-            if (BLL.Instance.UpdateUserInfor(user))
-            {
-                //Hiện Form thông báo.
-                ShowMessage("Cập nhập thông tin thành công");
-                //Cập nhập lại txtAccount
-                string userLogin = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
-                using (StreamWriter sw = File.CreateText(userLogin))
-                {
-                    sw.WriteLine(user.UserID);
-                    sw.WriteLine(user.Username);
-                    sw.WriteLine(user.Password);
-                    sw.WriteLine(user.Name);
-                    sw.WriteLine(user.Email);
-                }
-                txtOldPass.Text = "";
-                txtNewPass.Text = "";
-                txtRePass.Text = "";
-                checkBox1.Checked = false;
-            }
-            else
-            {
-                //Hiện Form thông báo.
-                ShowMessage("Có lỗi xảy ra, vui lòng thử lại sau!");
-            }
-            SetUserInfor();
         }
         private bool IsValid()
         {
