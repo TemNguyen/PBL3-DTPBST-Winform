@@ -43,5 +43,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             label1.Text = message;
             label1.Location = new Point((this.Size.Width - label1.Size.Width) / 2, 40);
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

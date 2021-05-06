@@ -27,6 +27,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         public Play()
         {
             InitializeComponent();
+            exitStage = new d1(setExitStage);
+            playAgain = new d2(setPlayAgain);
             stageID = 1;
             lbPoint.Text = point.ToString();
             lbTime.Text = "Time: " + (countDown / 10).ToString();
@@ -297,12 +299,12 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 else
                     ShowMessage("Cha mẹ thất vọng về em!");
                 DialogResult d = MessageBox.Show("Bạn có muốn chơi lại không?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                switch(d)
+                switch (d)
                 {
                     case DialogResult.Yes:
                         //reset form
                         List<int> listTimeStop = new List<int>();
-                        point = 0; 
+                        point = 0;
                         questionID = 0;
                         TVideo = 0;
                         countDown = 300;
