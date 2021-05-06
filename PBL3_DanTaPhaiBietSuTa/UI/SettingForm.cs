@@ -19,31 +19,21 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Hide();
         }
 
         private void btnSoundOn_Click(object sender, EventArgs e)
         {
+            HomePage.StopSound();
             btnSoundOff.Visible = true;
             btnSoundOn.Visible = false;
         }
 
         private void btnSoundOff_Click(object sender, EventArgs e)
         {
+            HomePage.PlaySound();
             btnSoundOff.Visible = false;
             btnSoundOn.Visible = true;
-        }
-
-        private void btnMusicOn_Click(object sender, EventArgs e)
-        {
-            btnMusicOn.Visible = false;
-            btnMusicOff.Visible = true;
-        }
-
-        private void btnMusicOff_Click(object sender, EventArgs e)
-        {
-            btnMusicOn.Visible = true;
-            btnMusicOff.Visible = false;
         }
 
         private void btnHelp_Click(object sender, EventArgs e)

@@ -6,15 +6,19 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PBL3_DanTaPhaiBietSuTa.DTO;
 using PBL3_DanTaPhaiBietSuTa.UI;
 
+
 namespace PBL3_DanTaPhaiBietSuTa
 {
     public partial class DangNhap : Form
     {
+        public static SettingForm settingForm;
+        Thread th;
         public DangNhap()
         {
             InitializeComponent();
@@ -23,8 +27,9 @@ namespace PBL3_DanTaPhaiBietSuTa
 
         private void Setting_Click(object sender, EventArgs e)
         {
-            SettingForm s = new SettingForm();
-            s.ShowDialog();
+            if (settingForm == null)
+                settingForm = new SettingForm();
+            settingForm.ShowDialog();
         }
 
         private void txtLoginR_Click(object sender, EventArgs e)
@@ -41,6 +46,11 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             gbLogin.Visible = false;
             gbRegister.Visible = true;
+        }
+
+        private void OpenUserForm(object sender)
+        {
+            Application.Run(new User());
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -65,14 +75,15 @@ namespace PBL3_DanTaPhaiBietSuTa
                 }
                 ShowMessage("Đăng nhập thành công!");
                 GetUserLogin(txtAccount.Text);
-                User user = new User();
-                user.Show();
-                Close();
+                this.Dispose();
+                th = new Thread(OpenUserForm);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
             }
             else
             {
                 //Hiện Thông báo đăng nhập thất bại
-                ShowMessage("Có lỗi xảy ra, vui lòng kiểm tra lại thông tin tài khoản!");
+                ShowMessage("Vui lòng kiểm tra lại thông tin tài khoản!");
                 txtAccount.Text = "";
                 txtPass.Text = "";
                 return;
@@ -182,6 +193,14 @@ namespace PBL3_DanTaPhaiBietSuTa
             Notification notification = new Notification();
             notification.Get(message);
             notification.ShowDialog();
+        }
+
+        private void DangNhap_Load(object sender, EventArgs e)
+        {
+            gbLogin.Location = new System.Drawing.Point((this.Size.Width - gbLogin.Size.Width) / 2, 
+                (this.Size.Height - gbLogin.Size.Height) / 2);
+            gbRegister.Location = new System.Drawing.Point((this.Size.Width - gbRegister.Size.Width) / 2,
+                (this.Size.Height - gbRegister.Size.Height) / 2);
         }
     }
 }
