@@ -15,11 +15,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
     {
         public delegate void MyDel(string message);
         MyDel Get;
-        string message;
+        string message = "";
         private void getMessage(string _message)
         {
             message = _message;
         }
+        public delegate bool PlayAgain();
+        PlayAgain playAgain;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -46,7 +48,14 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
+            Play.isPlayAgain = false;
+            Dispose();
+        }
 
+        private void btnReplay_Click(object sender, EventArgs e)
+        {
+            Play.isPlayAgain = true;
+            Dispose();
         }
     }
 }

@@ -203,6 +203,7 @@ namespace PBL3_DanTaPhaiBietSuTa
 
         private void Level1_Click(object sender, EventArgs e)
         {
+            HomePage.StopSound();
             this.Dispose();
             thPlay = new Thread(OpenPlayForm);
             thPlay.SetApartmentState(ApartmentState.STA);
@@ -211,8 +212,9 @@ namespace PBL3_DanTaPhaiBietSuTa
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
-            SettingForm s = new SettingForm();
-            s.ShowDialog();
+            if (DangNhap.settingForm == null)
+                DangNhap.settingForm = new SettingForm();
+            DangNhap.settingForm.ShowDialog();
         }
         private bool IsValid()
         {

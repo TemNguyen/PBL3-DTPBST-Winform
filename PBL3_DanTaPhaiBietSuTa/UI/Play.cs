@@ -16,6 +16,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 {
     public partial class Play : Form
     {
+        public static bool isPlayAgain;
         Thread thUser;
         Color cBtn = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
         List<int> listTimeStop = new List<int>();
@@ -27,8 +28,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         public Play()
         {
             InitializeComponent();
-            exitStage = new d1(setExitStage);
-            playAgain = new d2(setPlayAgain);
             stageID = 1;
             lbPoint.Text = point.ToString();
             lbTime.Text = "Time: " + (countDown / 10).ToString();
@@ -58,8 +57,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private void btnSetting_Click(object sender, EventArgs e)
         {
-            SettingForm s = new SettingForm();
-            s.ShowDialog();
+            if (DangNhap.settingForm == null)
+                DangNhap.settingForm = new SettingForm();
+            DangNhap.settingForm.ShowDialog();
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -81,8 +81,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             }
             else
             {
-                new User().Show();
-                this.Hide();
+                this.Dispose();
+                thUser = new Thread(OpenUserForm);
+                thUser.SetApartmentState(ApartmentState.STA);
+                thUser.Start();
             }    
         }
         private void DisplayQuestion()
@@ -298,33 +300,60 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 }
                 else
                     ShowMessage("Cha mẹ thất vọng về em!");
-                DialogResult d = MessageBox.Show("Bạn có muốn chơi lại không?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                switch (d)
-                {
-                    case DialogResult.Yes:
-                        //reset form
-                        List<int> listTimeStop = new List<int>();
-                        point = 0;
-                        questionID = 0;
-                        TVideo = 0;
-                        countDown = 300;
-                        lbPoint.Text = point.ToString();
-                        lbTime.Text = "Time: " + (countDown / 10).ToString();
-                        SetTimeStop();
-                        SetVideoStage();
-                        videoTime.Start();
-                        ResetQuestion();
-                        break;
-                    case DialogResult.No:
-                        this.Dispose();
-                        thUser = new Thread(OpenUserForm);
-                        thUser.SetApartmentState(ApartmentState.STA);
-                        thUser.Start();
-                        break;
-                }
+                ReplayNotification replay = new ReplayNotification();
+                replay.ShowDialog();
+                PlayAgain();
+                //DialogResult d = MessageBox.Show("Bạn có muốn chơi lại không?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                //switch (d)
+                //{
+                //    case DialogResult.Yes:
+                //        //reset form
+                //        List<int> listTimeStop = new List<int>();
+                //        point = 0;
+                //        questionID = 0;
+                //        TVideo = 0;
+                //        countDown = 300;
+                //        lbPoint.Text = point.ToString();
+                //        lbTime.Text = "Time: " + (countDown / 10).ToString();
+                //        SetTimeStop();
+                //        SetVideoStage();
+                //        videoTime.Start();
+                //        ResetQuestion();
+                //        break;
+                //    case DialogResult.No:
+                //        this.Dispose();
+                //        thUser = new Thread(OpenUserForm);
+                //        thUser.SetApartmentState(ApartmentState.STA);
+                //        thUser.Start();
+                //        break;
+                //}
                 return true;
             }
             return false;
+        }
+        public void PlayAgain()
+        {
+            if(isPlayAgain)
+            {
+                List<int> listTimeStop = new List<int>();
+                point = 0;
+                questionID = 0;
+                TVideo = 0;
+                countDown = 300;
+                lbPoint.Text = point.ToString();
+                lbTime.Text = "Time: " + (countDown / 10).ToString();
+                SetTimeStop();
+                SetVideoStage();
+                videoTime.Start();
+                ResetQuestion();
+            }    
+            else
+            {
+                this.Dispose();
+                thUser = new Thread(OpenUserForm);
+                thUser.SetApartmentState(ApartmentState.STA);
+                thUser.Start();
+            }    
         }
         private void changeBtnColor(CustomButton btn, Color c)
         {

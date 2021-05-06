@@ -58,6 +58,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnReplay.Size = new System.Drawing.Size(70, 70);
             this.btnReplay.TabIndex = 3;
             this.btnReplay.TabStop = false;
+            this.btnReplay.Click += new System.EventHandler(this.btnReplay_Click);
             // 
             // btnInfo
             // 

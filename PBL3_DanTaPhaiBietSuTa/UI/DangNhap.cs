@@ -17,7 +17,7 @@ namespace PBL3_DanTaPhaiBietSuTa
 {
     public partial class DangNhap : Form
     {
-        SettingForm settingForm;
+        public static SettingForm settingForm;
         Thread th;
         public DangNhap()
         {
