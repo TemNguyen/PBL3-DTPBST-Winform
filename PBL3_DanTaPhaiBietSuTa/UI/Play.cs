@@ -303,30 +303,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 ReplayNotification replay = new ReplayNotification();
                 replay.ShowDialog();
                 PlayAgain();
-                //DialogResult d = MessageBox.Show("Bạn có muốn chơi lại không?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                //switch (d)
-                //{
-                //    case DialogResult.Yes:
-                //        //reset form
-                //        List<int> listTimeStop = new List<int>();
-                //        point = 0;
-                //        questionID = 0;
-                //        TVideo = 0;
-                //        countDown = 300;
-                //        lbPoint.Text = point.ToString();
-                //        lbTime.Text = "Time: " + (countDown / 10).ToString();
-                //        SetTimeStop();
-                //        SetVideoStage();
-                //        videoTime.Start();
-                //        ResetQuestion();
-                //        break;
-                //    case DialogResult.No:
-                //        this.Dispose();
-                //        thUser = new Thread(OpenUserForm);
-                //        thUser.SetApartmentState(ApartmentState.STA);
-                //        thUser.Start();
-                //        break;
-                //}
                 return true;
             }
             return false;

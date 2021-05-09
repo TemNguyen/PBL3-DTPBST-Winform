@@ -102,7 +102,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             if (IsValid() == false) return;
             UserInfo newUser = new UserInfo()
             {
-                //newUser.Name = txtNameR.Text,
+                Name = txtNameR.Text,
                 Username = txtAccountR.Text,
                 Password = txtPassR.Text,
                 Email = txtEmailR.Text,
