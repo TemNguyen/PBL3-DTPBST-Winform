@@ -197,6 +197,14 @@ namespace PBL3_DanTaPhaiBietSuTa
             }    
             return list;
         }
+        public UserInfo GetUserInfoByUserID(int userID)
+        {
+            using (DB db = new DB())
+            {
+                UserInfo user = db.UserInfos.Where(s => s.UserID == userID).FirstOrDefault();
+                return user;
+            }
+        }
 
 
 
