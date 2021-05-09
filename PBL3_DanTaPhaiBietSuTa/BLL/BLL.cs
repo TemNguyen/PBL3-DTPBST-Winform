@@ -92,11 +92,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         }
         public UserInfo GetUserInfoByUserID(int userID)
         {
-            using (DB db = new DB())
-            {
-                UserInfo user = db.UserInfos.Where(s => s.UserID == userID).FirstOrDefault();
-                return user;
-            }
+            return DAL.Instance.GetUserInfoByUserID(userID);
         }
     }
 }

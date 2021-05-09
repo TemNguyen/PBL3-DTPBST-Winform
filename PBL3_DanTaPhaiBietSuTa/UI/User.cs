@@ -270,7 +270,6 @@ namespace PBL3_DanTaPhaiBietSuTa
                 lb1Point.Text = standings[0].Point.ToString();
                 lb1Point.Location = new System.Drawing.Point(lbPointRanked.Location.X + 
                     (lbPointRanked.Size.Width - lb1Point.Size.Width) / 2, 14);
-
                 lb2Acc.Text = GetUserByUserID(standings[1].UserID);
                 lb2Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X + 
                     (lbAccRanked.Size.Width - lb2Acc.Size.Width) / 2, 66);
@@ -280,7 +279,6 @@ namespace PBL3_DanTaPhaiBietSuTa
                 lb2Point.Text = standings[1].Point.ToString();
                 lb2Point.Location = new System.Drawing.Point(lbPointRanked.Location.X + 
                     (lbPointRanked.Size.Width - lb2Point.Size.Width) / 2, 66);
-
                 lb3Acc.Text = GetUserByUserID(standings[2].UserID);
                 lb3Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X + 
                     (lbAccRanked.Size.Width - lb3Acc.Size.Width) / 2, 121);
@@ -290,7 +288,6 @@ namespace PBL3_DanTaPhaiBietSuTa
                 lb3Point.Text = standings[2].Point.ToString();
                 lb3Point.Location = new System.Drawing.Point(lbPointRanked.Location.X + 
                     (lbPointRanked.Size.Width - lb3Point.Size.Width) / 2, 121);
-
                 lb4Acc.Text = GetUserByUserID(standings[3].UserID);
                 lb4Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X + 
                     (lbAccRanked.Size.Width - lb4Acc.Size.Width) / 2, 171);
@@ -300,7 +297,6 @@ namespace PBL3_DanTaPhaiBietSuTa
                 lb4Point.Text = standings[3].Point.ToString();
                 lb4Point.Location = new System.Drawing.Point(lbPointRanked.Location.X + 
                     (lbPointRanked.Size.Width - lb4Point.Size.Width) / 2, 171);
-
                 lb5Acc.Text = GetUserByUserID(standings[4].UserID);
                 lb5Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X + 
                     (lbAccRanked.Size.Width - lb5Acc.Size.Width) / 2, 244);
