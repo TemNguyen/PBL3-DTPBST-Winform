@@ -16,18 +16,18 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 {
     public partial class Play : Form
     {
+        public static bool isPlayAgain;
+        Thread thUser;
         Color cBtn = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-
         List<int> listTimeStop = new List<int>();
-        static int stageID;
+        public static int stageID;
         Question selectedQuestion;
-        int point = 0, questionID = 0;
+        int point = 0, questionID = 0, numCorrect = 0;
         int TVideo = 0, countDown = 300;
         int delay = 10, showAnswer = 10;
         public Play()
         {
             InitializeComponent();
-            stageID = 1;
             lbPoint.Text = point.ToString();
             lbTime.Text = "Time: " + (countDown / 10).ToString();
             SetTimeStop();
@@ -56,8 +56,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private void btnSetting_Click(object sender, EventArgs e)
         {
-            SettingForm s = new SettingForm();
-            s.ShowDialog();
+            if (DangNhap.settingForm == null)
+                DangNhap.settingForm = new SettingForm();
+            DangNhap.settingForm.ShowDialog();
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -68,8 +69,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 switch(d)
                 {
                     case DialogResult.Yes:
-                        new User().Show();
-                        this.Hide();
+                        this.Dispose();
+                        thUser = new Thread(OpenUserForm);
+                        thUser.SetApartmentState(ApartmentState.STA);
+                        thUser.Start();
                         break;
                     case DialogResult.No:
                         return;
@@ -77,8 +80,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             }
             else
             {
-                new User().Show();
-                this.Hide();
+                this.Dispose();
+                thUser = new Thread(OpenUserForm);
+                thUser.SetApartmentState(ApartmentState.STA);
+                thUser.Start();
             }    
         }
         private void DisplayQuestion()
@@ -114,6 +119,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             if (CheckAnswer(answer))
             {
                 CaculationPoint(countDown);
+                numCorrect++;
             }
         }
         private bool CheckAnswer(string answer)
@@ -201,7 +207,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 if (showAnswer % 3 == 1)
                     changeBtnColor(btnA, Color.Green);
                 if (showAnswer % 3 == 2)
-                    changeBtnColor(btnA, Color.Red);
+                    changeBtnColor(btnA, Color.Pink);
                 if (showAnswer % 3 == 0)
                     changeBtnColor(btnA, cBtn);
             }
@@ -210,7 +216,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 if (showAnswer % 3 == 1)
                     changeBtnColor(btnB, Color.Green);
                 if (showAnswer % 3 == 2)
-                    changeBtnColor(btnB, Color.Red);
+                    changeBtnColor(btnB, Color.Pink);
                 if (showAnswer % 3 == 0)
                     changeBtnColor(btnB, cBtn);
             }
@@ -219,7 +225,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 if (showAnswer % 3 == 1)
                     changeBtnColor(btnC, Color.Green);
                 if (showAnswer % 3 == 2)
-                    changeBtnColor(btnC, Color.Red);
+                    changeBtnColor(btnC, Color.Pink);
                 if (showAnswer % 3 == 0)
                     changeBtnColor(btnC, cBtn);
             }
@@ -228,7 +234,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 if (showAnswer % 3 == 1)
                     changeBtnColor(btnD, Color.Green);
                 if (showAnswer % 3 == 2)
-                    changeBtnColor(btnD, Color.Red);
+                    changeBtnColor(btnD, Color.Pink);
                 if (showAnswer % 3 == 0)
                     changeBtnColor(btnD, cBtn);
             }
@@ -286,38 +292,59 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 videoTime.Stop();
                 IsSavePoint();
                 //Hiện UI chơi lại
-                MessageBox.Show("Chúc mừng bạn đã hoàn thành xong màn, số điểm của bạn là: " + point, "Congratulation", MessageBoxButtons.OK);
-                DialogResult d = MessageBox.Show("Bạn có muốn chơi lại không?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                switch(d)
+                ShowMessage("Chúc mừng bạn đã hoàn thành xong màn. \nSố điểm của bạn là: " + point);
+                if (numCorrect >= listTimeStop.Count / 2)
                 {
-                    case DialogResult.Yes:
-                        //reset form
-                        List<int> listTimeStop = new List<int>();
-                        point = 0; 
-                        questionID = 0;
-                        TVideo = 0;
-                        countDown = 300;
-                        lbPoint.Text = point.ToString();
-                        lbTime.Text = "Time: " + (countDown / 10).ToString();
-                        SetTimeStop();
-                        SetVideoStage();
-                        videoTime.Start();
-                        ResetQuestion();
-                        break;
-                    case DialogResult.No:
-                        new User().Show();
-                        Dispose();
-                        break;
+                    ShowMessage("Chúc mừng bạn đã qua được màn!");
                 }
+                else
+                    ShowMessage("Cha mẹ thất vọng về em!");
+                ReplayNotification replay = new ReplayNotification();
+                replay.ShowDialog();
+                PlayAgain();
                 return true;
             }
             return false;
+        }
+        public void PlayAgain()
+        {
+            if(isPlayAgain)
+            {
+                List<int> listTimeStop = new List<int>();
+                point = 0;
+                questionID = 0;
+                TVideo = 0;
+                countDown = 300;
+                lbPoint.Text = point.ToString();
+                lbTime.Text = "Time: " + (countDown / 10).ToString();
+                SetTimeStop();
+                SetVideoStage();
+                videoTime.Start();
+                ResetQuestion();
+            }    
+            else
+            {
+                this.Dispose();
+                thUser = new Thread(OpenUserForm);
+                thUser.SetApartmentState(ApartmentState.STA);
+                thUser.Start();
+            }    
         }
         private void changeBtnColor(CustomButton btn, Color c)
         {
             btn.ButtonColor = c;
             btn.BorderColor = c;
             // cách dùng (Color.Red): changeBtnColor(btnA, Color.Green); 
+        }
+        private void ShowMessage(string message)
+        {
+            Notification notification = new Notification();
+            notification.Get(message);
+            notification.ShowDialog();
+        }
+        private void OpenUserForm(object sender)
+        {
+            Application.Run(new User());
         }
     }
 }
