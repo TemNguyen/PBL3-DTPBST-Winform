@@ -17,16 +17,20 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
     {
         Thread th;
         private static bool sttSetting = false;
+        static SoundPlayer player = new SoundPlayer();
         public HomePage()
         {
             InitializeComponent();
             PlaySound();
         }
-        private void PlaySound()
+        public static void PlaySound()
         {
-            SoundPlayer player = new SoundPlayer();
             player.SoundLocation = @Application.StartupPath + @"\Assets\Sound\Sound.wav";
             player.PlayLooping();
+        }
+        public static void StopSound()
+        {
+            player.Stop();
         }
 
         private void OpenLoginForm(object sender)

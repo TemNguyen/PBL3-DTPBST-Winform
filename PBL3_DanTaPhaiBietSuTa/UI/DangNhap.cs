@@ -17,6 +17,7 @@ namespace PBL3_DanTaPhaiBietSuTa
 {
     public partial class DangNhap : Form
     {
+        public static SettingForm settingForm;
         Thread th;
         public DangNhap()
         {
@@ -26,8 +27,9 @@ namespace PBL3_DanTaPhaiBietSuTa
 
         private void Setting_Click(object sender, EventArgs e)
         {
-            SettingForm s = new SettingForm();
-            s.ShowDialog();
+            if (settingForm == null)
+                settingForm = new SettingForm();
+            settingForm.ShowDialog();
         }
 
         private void txtLoginR_Click(object sender, EventArgs e)
@@ -73,9 +75,6 @@ namespace PBL3_DanTaPhaiBietSuTa
                 }
                 ShowMessage("Đăng nhập thành công!");
                 GetUserLogin(txtAccount.Text);
-                //User user = new User();
-                //user.Show();
-                //Close();
                 this.Dispose();
                 th = new Thread(OpenUserForm);
                 th.SetApartmentState(ApartmentState.STA);
@@ -84,7 +83,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             else
             {
                 //Hiện Thông báo đăng nhập thất bại
-                ShowMessage("Có lỗi xảy ra, vui lòng kiểm tra lại thông tin tài khoản!");
+                ShowMessage("Vui lòng kiểm tra lại thông tin tài khoản!");
                 txtAccount.Text = "";
                 txtPass.Text = "";
                 return;
@@ -103,7 +102,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             if (IsValid() == false) return;
             UserInfo newUser = new UserInfo()
             {
-                //newUser.Name = txtNameR.Text,
+                Name = txtNameR.Text,
                 Username = txtAccountR.Text,
                 Password = txtPassR.Text,
                 Email = txtEmailR.Text,

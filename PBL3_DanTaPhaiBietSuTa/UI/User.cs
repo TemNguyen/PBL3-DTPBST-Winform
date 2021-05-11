@@ -23,10 +23,9 @@ namespace PBL3_DanTaPhaiBietSuTa
         public User()
         {
             InitializeComponent();
-            SetUserInfor();
+            ShowUserInfor();
             ShowBXH();
         }
-
         private void btnUser_Click(object sender, EventArgs e)
         {
             gbUser.Visible = true;
@@ -44,19 +43,11 @@ namespace PBL3_DanTaPhaiBietSuTa
             thLogout.SetApartmentState(ApartmentState.STA);
             thLogout.Start();
         }
-
         private void btnAccountInfo_Click(object sender, EventArgs e)
         {
             gbUser.Visible = true;
             gbLevel.Visible = false;
         }
-
-        private void btnExitUser_Click(object sender, EventArgs e)
-        {
-            gbUser.Visible = false;
-            gbLevel.Visible = true;
-        }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked == true)
@@ -72,113 +63,8 @@ namespace PBL3_DanTaPhaiBietSuTa
                 txtRePass.Enabled = false;
             }
         }
-
-        private void btnRank_Click(object sender, EventArgs e)
-        {
-            List<Standing> BXH = BLL.Instance.SortListStandings();
-            //add label 
-            gbRanked.Visible = true;
-            gbLevel.Visible = false;
-            gbFeedback.Visible = false;
-        }
-
-        private void btnExitRanked_Click(object sender, EventArgs e)
-        {
-            gbRanked.Visible = false;
-            gbLevel.Visible = true;
-        }
-
-        private void txtFeedback_TextChanged(object sender, EventArgs e)
-        {
-            txtFeedback.SelectionStart = txtFeedback.Text.Length;
-            txtFeedback.ScrollToCaret();
-        }
-
-        private void btnFeedback_Click(object sender, EventArgs e)
-        {
-            gbFeedback.Visible = true;
-            gbLevel.Visible = false;
-            gbRanked.Visible = false;
-        }
-
-        private void btnExitFeedback_Click(object sender, EventArgs e)
-        {
-            gbFeedback.Visible = false;
-            gbLevel.Visible = true;
-        }
-
-        private void btnSendFb_Click(object sender, EventArgs e)
-        {
-            if (txtFeedback.Text == "")
-            {
-                ShowMessage("Vui lòng nhập feedback!");
-                return;
-            }    
-            else
-            {
-                DateTime d = DateTime.Now;
-                string path = @Application.StartupPath + @"\Assets\FeedBack\" + d.ToString("dddd, dd MMMM yyyy HH-mm-ss") + ".txt";
-                using (StreamWriter sw = File.CreateText(path))
-                {
-                    sw.WriteLine(btnAccountInfo.Text + "   " + d.ToString());
-                    sw.Write(txtFeedback.Text);
-                }
-                ShowMessage("Cảm ơn bạn đã gửi FeedBack!");
-            }
-            txtFeedback.Text = "";
-        }
-        private void SetUserInfor()
-        {
-            string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
-            List<string> userInfor = new List<string>(File.ReadAllLines(path));
-            Standing userStand = BLL.Instance.GetStandingByUserID(Convert.ToInt32(userInfor[0]));
-            if (userInfor[3] != "") btnAccountInfo.Text = userInfor[3];
-            else btnAccountInfo.Text = userInfor[1];
-            lbAccount.Text = userInfor[1];
-            txtName.Text = userInfor[3];
-            txtEmail.Text = userInfor[4];
-            if (BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor[0])) == -1)
-            {
-                lbRanked.Text = "Chưa có xếp hạng!";
-            }    
-            else
-                lbRanked.Text = BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor[0])).ToString();
-            lbPoint.Text = userStand.Point.ToString();
-            if (checkBox1.Checked)
-            {
-                txtOldPass.Enabled = true;
-                txtNewPass.Enabled = true;
-                txtRePass.Enabled = true;
-            }
-            else
-            {
-                txtOldPass.Enabled = false;
-                txtNewPass.Enabled = false;
-                txtRePass.Enabled = false;
-            }
-        }
-
-        private void OpenPlayForm(object sender)
-        {
-            Application.Run(new Play());
-        }
-
-        private void Level1_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-            thPlay = new Thread(OpenPlayForm);
-            thPlay.SetApartmentState(ApartmentState.STA);
-            thPlay.Start();
-        }
-
-        private void btnSetting_Click(object sender, EventArgs e)
-        {
-            SettingForm s = new SettingForm();
-            s.ShowDialog();
-        }
-
         private void btnSaveInfo_Click(object sender, EventArgs e)
-        {   
+        {
             string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
             List<string> userInfor = new List<string>(File.ReadAllLines(path));
             string oldPass = userInfor[2];
@@ -225,7 +111,121 @@ namespace PBL3_DanTaPhaiBietSuTa
                 //Hiện Form thông báo.
                 ShowMessage("Có lỗi xảy ra, vui lòng thử lại sau!");
             }
-            SetUserInfor();
+            ShowUserInfor();
+        }
+        private void btnExitUser_Click(object sender, EventArgs e)
+        {
+            gbUser.Visible = false;
+            gbLevel.Visible = true;
+        }
+        private void btnRank_Click(object sender, EventArgs e)
+        {
+            gbRanked.Visible = true;
+            gbLevel.Visible = false;
+            gbFeedback.Visible = false;
+        }
+        private void btnExitRanked_Click(object sender, EventArgs e)
+        {
+            gbRanked.Visible = false;
+            gbLevel.Visible = true;
+        }
+        private void btnFeedback_Click(object sender, EventArgs e)
+        {
+            gbFeedback.Visible = true;
+            gbLevel.Visible = false;
+            gbRanked.Visible = false;
+        }
+        private void txtFeedback_TextChanged(object sender, EventArgs e)
+        {
+            txtFeedback.SelectionStart = txtFeedback.Text.Length;
+            txtFeedback.ScrollToCaret();
+        }
+        private void btnSendFb_Click(object sender, EventArgs e)
+        {
+            if (txtFeedback.Text == "")
+            {
+                ShowMessage("Vui lòng nhập feedback!");
+                return;
+            }
+            else
+            {
+                DateTime d = DateTime.Now;
+                string path = @Application.StartupPath + @"\Assets\FeedBack\" + d.ToString("dddd, dd MMMM yyyy HH-mm-ss") + ".txt";
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.WriteLine(btnAccountInfo.Text + "   " + d.ToString());
+                    sw.Write(txtFeedback.Text);
+                }
+                ShowMessage("Cảm ơn bạn đã gửi FeedBack!");
+            }
+            txtFeedback.Text = "";
+        }
+        private void btnExitFeedback_Click(object sender, EventArgs e)
+        {
+            gbFeedback.Visible = false;
+            gbLevel.Visible = true;
+        }
+        private void ShowUserInfor()
+        {
+            string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
+            List<string> userInfor = new List<string>(File.ReadAllLines(path));
+            Standing userStand = BLL.Instance.GetStandingByUserID(Convert.ToInt32(userInfor[0]));
+            if (userInfor[3] != "") btnAccountInfo.Text = userInfor[3];
+            else btnAccountInfo.Text = userInfor[1];
+            lbAccount.Text = userInfor[1];
+            txtName.Text = userInfor[3];
+            txtEmail.Text = userInfor[4];
+            if (BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor[0])) == -1)
+            {
+                lbRanked.Text = "Chưa có xếp hạng!";
+            }
+            else
+                lbRanked.Text = BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor[0])).ToString();
+            lbPoint.Text = userStand.Point.ToString();
+            if (checkBox1.Checked)
+            {
+                txtOldPass.Enabled = true;
+                txtNewPass.Enabled = true;
+                txtRePass.Enabled = true;
+            }
+            else
+            {
+                txtOldPass.Enabled = false;
+                txtNewPass.Enabled = false;
+                txtRePass.Enabled = false;
+            }
+        }
+
+        private void OpenPlayForm(object sender)
+        {
+            Play play = new Play();
+            Application.Run(play);
+        }
+
+        private void Level1_Click(object sender, EventArgs e)
+        {
+            Play.stageID = 1;
+            HomePage.StopSound();
+            this.Dispose();
+            thPlay = new Thread(OpenPlayForm);
+            thPlay.SetApartmentState(ApartmentState.STA);
+            thPlay.Start();
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Play.stageID = 2;
+            HomePage.StopSound();
+            this.Dispose();
+            thPlay = new Thread(OpenPlayForm);
+            thPlay.SetApartmentState(ApartmentState.STA);
+            thPlay.Start();
+        }
+
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            if (DangNhap.settingForm == null)
+                DangNhap.settingForm = new SettingForm();
+            DangNhap.settingForm.ShowDialog();
         }
         private bool IsValid()
         {
@@ -267,12 +267,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             }
             return true;
         }
-        private void ShowMessage(string message)
-        {
-            Notification notification = new Notification();
-            notification.Get(message);
-            notification.ShowDialog();
-        }
         private void ShowBXH()
         {
             try
@@ -287,7 +281,6 @@ namespace PBL3_DanTaPhaiBietSuTa
                 lb1Point.Text = standings[0].Point.ToString();
                 lb1Point.Location = new System.Drawing.Point(lbPointRanked.Location.X + 
                     (lbPointRanked.Size.Width - lb1Point.Size.Width) / 2, 14);
-
                 lb2Acc.Text = GetUserByUserID(standings[1].UserID);
                 lb2Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X + 
                     (lbAccRanked.Size.Width - lb2Acc.Size.Width) / 2, 66);
@@ -297,7 +290,6 @@ namespace PBL3_DanTaPhaiBietSuTa
                 lb2Point.Text = standings[1].Point.ToString();
                 lb2Point.Location = new System.Drawing.Point(lbPointRanked.Location.X + 
                     (lbPointRanked.Size.Width - lb2Point.Size.Width) / 2, 66);
-
                 lb3Acc.Text = GetUserByUserID(standings[2].UserID);
                 lb3Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X + 
                     (lbAccRanked.Size.Width - lb3Acc.Size.Width) / 2, 121);
@@ -307,7 +299,6 @@ namespace PBL3_DanTaPhaiBietSuTa
                 lb3Point.Text = standings[2].Point.ToString();
                 lb3Point.Location = new System.Drawing.Point(lbPointRanked.Location.X + 
                     (lbPointRanked.Size.Width - lb3Point.Size.Width) / 2, 121);
-
                 lb4Acc.Text = GetUserByUserID(standings[3].UserID);
                 lb4Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X + 
                     (lbAccRanked.Size.Width - lb4Acc.Size.Width) / 2, 171);
@@ -317,7 +308,6 @@ namespace PBL3_DanTaPhaiBietSuTa
                 lb4Point.Text = standings[3].Point.ToString();
                 lb4Point.Location = new System.Drawing.Point(lbPointRanked.Location.X + 
                     (lbPointRanked.Size.Width - lb4Point.Size.Width) / 2, 171);
-
                 lb5Acc.Text = GetUserByUserID(standings[4].UserID);
                 lb5Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X + 
                     (lbAccRanked.Size.Width - lb5Acc.Size.Width) / 2, 244);
@@ -334,6 +324,12 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             UserInfo user = BLL.Instance.GetUserInfoByUserID(userID);
             return user.Username;
+        }
+        private void ShowMessage(string message)
+        {
+            Notification notification = new Notification();
+            notification.Get(message);
+            notification.ShowDialog();
         }
     }
 }
