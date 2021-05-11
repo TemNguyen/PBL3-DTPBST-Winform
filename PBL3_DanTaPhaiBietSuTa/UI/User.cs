@@ -273,50 +273,54 @@ namespace PBL3_DanTaPhaiBietSuTa
             {
                 List<Standing> standings = BLL.Instance.SortListStandings();
                 lb1Acc.Text = GetUserByUserID(standings[0].UserID);
-                lb1Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X + 
-                    (lbAccRanked.Size.Width - lb1Acc.Size.Width) / 2, 14);
+                lb1Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X +
+                   (lbAccRanked.Size.Width - lb1Acc.Size.Width) / 2, 60);
                 lb1Level.Text = standings[0].StageID.ToString();
-                lb1Level.Location = new System.Drawing.Point(lbLevelRanked.Location.X + 
-                    (lbLevelRanked.Size.Width - lb1Level.Size.Width) / 2, 14);
+                lb1Level.Location = new System.Drawing.Point(lbLevelRanked.Location.X +
+                    (lbLevelRanked.Size.Width - lb1Level.Size.Width) / 2, 60);
                 lb1Point.Text = standings[0].Point.ToString();
-                lb1Point.Location = new System.Drawing.Point(lbPointRanked.Location.X + 
-                    (lbPointRanked.Size.Width - lb1Point.Size.Width) / 2, 14);
+                lb1Point.Location = new System.Drawing.Point(lbPointRanked.Location.X +
+                    (lbPointRanked.Size.Width - lb1Point.Size.Width) / 2, 60);
+
                 lb2Acc.Text = GetUserByUserID(standings[1].UserID);
                 lb2Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X + 
-                    (lbAccRanked.Size.Width - lb2Acc.Size.Width) / 2, 66);
+                    (lbAccRanked.Size.Width - lb2Acc.Size.Width) / 2, 112);
                 lb2Level.Text = standings[1].StageID.ToString();
                 lb2Level.Location = new System.Drawing.Point(lbLevelRanked.Location.X + 
-                    (lbLevelRanked.Size.Width - lb2Level.Size.Width) / 2, 66);
+                    (lbLevelRanked.Size.Width - lb2Level.Size.Width) / 2, 112);
                 lb2Point.Text = standings[1].Point.ToString();
                 lb2Point.Location = new System.Drawing.Point(lbPointRanked.Location.X + 
-                    (lbPointRanked.Size.Width - lb2Point.Size.Width) / 2, 66);
+                    (lbPointRanked.Size.Width - lb2Point.Size.Width) / 2, 112);
+
                 lb3Acc.Text = GetUserByUserID(standings[2].UserID);
                 lb3Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X + 
-                    (lbAccRanked.Size.Width - lb3Acc.Size.Width) / 2, 121);
+                    (lbAccRanked.Size.Width - lb3Acc.Size.Width) / 2, 167);
                 lb3Level.Text = standings[2].StageID.ToString();
                 lb3Level.Location = new System.Drawing.Point(lbLevelRanked.Location.X + 
-                    (lbLevelRanked.Size.Width - lb3Level.Size.Width) / 2, 121);
+                    (lbLevelRanked.Size.Width - lb3Level.Size.Width) / 2, 167);
                 lb3Point.Text = standings[2].Point.ToString();
                 lb3Point.Location = new System.Drawing.Point(lbPointRanked.Location.X + 
-                    (lbPointRanked.Size.Width - lb3Point.Size.Width) / 2, 121);
+                    (lbPointRanked.Size.Width - lb3Point.Size.Width) / 2, 167);
+
                 lb4Acc.Text = GetUserByUserID(standings[3].UserID);
                 lb4Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X + 
-                    (lbAccRanked.Size.Width - lb4Acc.Size.Width) / 2, 171);
+                    (lbAccRanked.Size.Width - lb4Acc.Size.Width) / 2, 217);
                 lb4Level.Text = standings[3].StageID.ToString();
                 lb4Level.Location = new System.Drawing.Point(lbLevelRanked.Location.X +
-                    (lbLevelRanked.Size.Width - lb4Level.Size.Width) / 2, 171);
+                    (lbLevelRanked.Size.Width - lb4Level.Size.Width) / 2, 217);
                 lb4Point.Text = standings[3].Point.ToString();
                 lb4Point.Location = new System.Drawing.Point(lbPointRanked.Location.X + 
-                    (lbPointRanked.Size.Width - lb4Point.Size.Width) / 2, 171);
+                    (lbPointRanked.Size.Width - lb4Point.Size.Width) / 2, 217);
+
                 lb5Acc.Text = GetUserByUserID(standings[4].UserID);
                 lb5Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X + 
-                    (lbAccRanked.Size.Width - lb5Acc.Size.Width) / 2, 244);
+                    (lbAccRanked.Size.Width - lb5Acc.Size.Width) / 2, 270);
                 lb5Level.Text = standings[4].StageID.ToString();
                 lb5Level.Location = new System.Drawing.Point(lbLevelRanked.Location.X + 
-                    (lbLevelRanked.Size.Width - lb5Level.Size.Width) / 2, 244);
+                    (lbLevelRanked.Size.Width - lb5Level.Size.Width) / 2, 270);
                 lb5Point.Text = standings[4].Point.ToString();
                 lb5Point.Location = new System.Drawing.Point(lbPointRanked.Location.X + 
-                    (lbPointRanked.Size.Width - lb5Point.Size.Width) / 2, 244);
+                    (lbPointRanked.Size.Width - lb5Point.Size.Width) / 2, 270);
             }
             catch(Exception) { };
         }

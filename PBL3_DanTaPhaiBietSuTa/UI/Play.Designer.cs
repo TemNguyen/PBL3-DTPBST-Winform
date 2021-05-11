@@ -320,6 +320,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.Name = "Play";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Play";
+            this.Load += new System.EventHandler(this.Play_Load);
             this.gbVideo.ResumeLayout(false);
             this.gbVideo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
