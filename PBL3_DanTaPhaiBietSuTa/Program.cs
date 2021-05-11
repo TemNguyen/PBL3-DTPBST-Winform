@@ -17,15 +17,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-
-            //Application.Run(new HomePage());
-
-            Application.Run(new Play());
-
-=======
             Application.Run(new HomePage());
->>>>>>> a04f820961096cb5419b0271edd1a5d3bce799de
         }
     }
 }
