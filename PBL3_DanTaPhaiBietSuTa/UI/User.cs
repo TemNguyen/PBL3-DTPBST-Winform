@@ -198,11 +198,22 @@ namespace PBL3_DanTaPhaiBietSuTa
 
         private void OpenPlayForm(object sender)
         {
-            Application.Run(new Play());
+            Play play = new Play();
+            Application.Run(play);
         }
 
         private void Level1_Click(object sender, EventArgs e)
         {
+            Play.stageID = 1;
+            HomePage.StopSound();
+            this.Dispose();
+            thPlay = new Thread(OpenPlayForm);
+            thPlay.SetApartmentState(ApartmentState.STA);
+            thPlay.Start();
+        }
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Play.stageID = 2;
             HomePage.StopSound();
             this.Dispose();
             thPlay = new Thread(OpenPlayForm);

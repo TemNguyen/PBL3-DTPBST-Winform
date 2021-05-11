@@ -20,7 +20,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         Thread thUser;
         Color cBtn = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
         List<int> listTimeStop = new List<int>();
-        static int stageID;
+        public static int stageID;
         Question selectedQuestion;
         int point = 0, questionID = 0, numCorrect = 0;
         int TVideo = 0, countDown = 300;
@@ -28,7 +28,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         public Play()
         {
             InitializeComponent();
-            stageID = 1;
             lbPoint.Text = point.ToString();
             lbTime.Text = "Time: " + (countDown / 10).ToString();
             SetTimeStop();
