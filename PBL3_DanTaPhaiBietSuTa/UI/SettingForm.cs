@@ -19,7 +19,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Dispose();
         }
 
         private void btnSoundOn_Click(object sender, EventArgs e)
@@ -38,7 +38,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-
+            Help h = new Help();
+            h.ShowDialog();
         }
     }
 }

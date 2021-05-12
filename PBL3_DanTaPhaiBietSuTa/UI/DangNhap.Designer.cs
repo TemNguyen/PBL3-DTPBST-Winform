@@ -36,7 +36,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtAccount = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.gbLogin = new System.Windows.Forms.GroupBox();
             this.lbAccError = new System.Windows.Forms.Label();
             this.lbPassError = new System.Windows.Forms.Label();
@@ -110,16 +109,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label1.Size = new System.Drawing.Size(124, 23);
             this.label1.TabIndex = 5;
             this.label1.Text = "Tên đăng nhập";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(461, 100);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 17);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Minh họa logo here :3";
             // 
             // gbLogin
             // 
@@ -475,8 +464,9 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Controls.Add(this.Setting);
             this.Controls.Add(this.gbRegister);
             this.Controls.Add(this.gbLogin);
-            this.Controls.Add(this.label2);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "DangNhap";
@@ -489,7 +479,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbRegister.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Setting)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -500,7 +489,6 @@ namespace PBL3_DanTaPhaiBietSuTa
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtAccount;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox gbLogin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
