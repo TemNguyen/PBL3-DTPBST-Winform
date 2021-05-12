@@ -61,7 +61,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gbFeedback = new System.Windows.Forms.GroupBox();
-            this.btnSendFb = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.txtFeedback = new System.Windows.Forms.TextBox();
             this.btnExitFeedback = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -84,7 +83,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label14 = new System.Windows.Forms.Label();
             this.lbAccount = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnSaveInfo = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.btnExitUser = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -99,12 +97,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Level6 = new System.Windows.Forms.PictureBox();
             this.Level7 = new System.Windows.Forms.PictureBox();
             this.Level8 = new System.Windows.Forms.PictureBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btnFeedback = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
-            this.btnRanked = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
-            this.btnSetting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
-            this.btnUser = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.Level9 = new System.Windows.Forms.PictureBox();
             this.Level10 = new System.Windows.Forms.PictureBox();
             this.Level11 = new System.Windows.Forms.PictureBox();
@@ -112,6 +104,14 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Level13 = new System.Windows.Forms.PictureBox();
             this.Level14 = new System.Windows.Forms.PictureBox();
             this.Level15 = new System.Windows.Forms.PictureBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnSaveInfo = new PBL3_DanTaPhaiBietSuTa.CustomButton();
+            this.btnSendFb = new PBL3_DanTaPhaiBietSuTa.CustomButton();
+            this.btnFeedback = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
+            this.btnRanked = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
+            this.btnSetting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
+            this.btnUser = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.gbRanked.SuspendLayout();
             this.gbPoint.SuspendLayout();
             this.gbFeedback.SuspendLayout();
@@ -126,10 +126,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             ((System.ComponentModel.ISupportInitialize)(this.Level6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRanked)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level11)).BeginInit();
@@ -137,6 +133,10 @@ namespace PBL3_DanTaPhaiBietSuTa
             ((System.ComponentModel.ISupportInitialize)(this.Level13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRanked)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUser)).BeginInit();
             this.SuspendLayout();
             // 
             // lbUser
@@ -502,28 +502,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbFeedback.Text = "groupBox1";
             this.gbFeedback.Visible = false;
             // 
-            // btnSendFb
-            // 
-            this.btnSendFb.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSendFb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnSendFb.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnSendFb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSendFb.FlatAppearance.BorderSize = 0;
-            this.btnSendFb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSendFb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendFb.Location = new System.Drawing.Point(205, 307);
-            this.btnSendFb.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSendFb.Name = "btnSendFb";
-            this.btnSendFb.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.btnSendFb.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.btnSendFb.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnSendFb.Size = new System.Drawing.Size(140, 44);
-            this.btnSendFb.TabIndex = 8;
-            this.btnSendFb.Text = "Gửi phản hồi";
-            this.btnSendFb.TextColor = System.Drawing.Color.White;
-            this.btnSendFb.UseVisualStyleBackColor = true;
-            this.btnSendFb.Click += new System.EventHandler(this.btnSendFb_Click);
-            // 
             // txtFeedback
             // 
             this.txtFeedback.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -768,28 +746,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.label12.TabIndex = 28;
             this.label12.Text = "Email";
             // 
-            // btnSaveInfo
-            // 
-            this.btnSaveInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSaveInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnSaveInfo.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
-            this.btnSaveInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveInfo.FlatAppearance.BorderSize = 0;
-            this.btnSaveInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveInfo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveInfo.Location = new System.Drawing.Point(227, 497);
-            this.btnSaveInfo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSaveInfo.Name = "btnSaveInfo";
-            this.btnSaveInfo.OnHoverBorderColor = System.Drawing.Color.Gray;
-            this.btnSaveInfo.OnHoverButtonColor = System.Drawing.Color.Yellow;
-            this.btnSaveInfo.OnHoverTextColor = System.Drawing.Color.Gray;
-            this.btnSaveInfo.Size = new System.Drawing.Size(140, 44);
-            this.btnSaveInfo.TabIndex = 6;
-            this.btnSaveInfo.Text = "Lưu thông tin";
-            this.btnSaveInfo.TextColor = System.Drawing.Color.White;
-            this.btnSaveInfo.UseVisualStyleBackColor = true;
-            this.btnSaveInfo.Click += new System.EventHandler(this.btnSaveInfo_Click);
-            // 
             // btnExitUser
             // 
             this.btnExitUser.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -951,77 +907,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Level8.TabIndex = 7;
             this.Level8.TabStop = false;
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(213, 16);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(253, 46);
-            this.label20.TabIndex = 32;
-            this.label20.Text = "Chọn màn chơi";
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.label13.Location = new System.Drawing.Point(0, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(720, 30);
-            this.label13.TabIndex = 30;
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnFeedback
-            // 
-            this.btnFeedback.BackColor = System.Drawing.Color.DarkGray;
-            this.btnFeedback.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFeedback.Image = ((System.Drawing.Image)(resources.GetObject("btnFeedback.Image")));
-            this.btnFeedback.Location = new System.Drawing.Point(919, 723);
-            this.btnFeedback.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFeedback.Name = "btnFeedback";
-            this.btnFeedback.Size = new System.Drawing.Size(70, 71);
-            this.btnFeedback.TabIndex = 18;
-            this.btnFeedback.TabStop = false;
-            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
-            // 
-            // btnRanked
-            // 
-            this.btnRanked.BackColor = System.Drawing.Color.DarkGray;
-            this.btnRanked.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRanked.Image = ((System.Drawing.Image)(resources.GetObject("btnRanked.Image")));
-            this.btnRanked.Location = new System.Drawing.Point(843, 723);
-            this.btnRanked.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRanked.Name = "btnRanked";
-            this.btnRanked.Size = new System.Drawing.Size(70, 71);
-            this.btnRanked.TabIndex = 17;
-            this.btnRanked.TabStop = false;
-            this.btnRanked.Click += new System.EventHandler(this.btnRank_Click);
-            // 
-            // btnSetting
-            // 
-            this.btnSetting.BackColor = System.Drawing.Color.DarkGray;
-            this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
-            this.btnSetting.Location = new System.Drawing.Point(995, 723);
-            this.btnSetting.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Size = new System.Drawing.Size(70, 71);
-            this.btnSetting.TabIndex = 14;
-            this.btnSetting.TabStop = false;
-            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
-            // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.DarkGray;
-            this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
-            this.btnUser.Location = new System.Drawing.Point(7, 7);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(60, 60);
-            this.btnUser.TabIndex = 4;
-            this.btnUser.TabStop = false;
-            // 
             // Level9
             // 
             this.Level9.BackColor = System.Drawing.Color.Black;
@@ -1092,6 +977,121 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Level15.TabIndex = 14;
             this.Level15.TabStop = false;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(213, 16);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(253, 46);
+            this.label20.TabIndex = 32;
+            this.label20.Text = "Chọn màn chơi";
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label13.Location = new System.Drawing.Point(0, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(720, 30);
+            this.label13.TabIndex = 30;
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnSaveInfo
+            // 
+            this.btnSaveInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSaveInfo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnSaveInfo.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnSaveInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveInfo.FlatAppearance.BorderSize = 0;
+            this.btnSaveInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveInfo.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveInfo.Location = new System.Drawing.Point(227, 497);
+            this.btnSaveInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveInfo.Name = "btnSaveInfo";
+            this.btnSaveInfo.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnSaveInfo.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnSaveInfo.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnSaveInfo.Size = new System.Drawing.Size(140, 44);
+            this.btnSaveInfo.TabIndex = 6;
+            this.btnSaveInfo.Text = "Lưu thông tin";
+            this.btnSaveInfo.TextColor = System.Drawing.Color.White;
+            this.btnSaveInfo.UseVisualStyleBackColor = true;
+            this.btnSaveInfo.Click += new System.EventHandler(this.btnSaveInfo_Click);
+            // 
+            // btnSendFb
+            // 
+            this.btnSendFb.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSendFb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnSendFb.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+            this.btnSendFb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSendFb.FlatAppearance.BorderSize = 0;
+            this.btnSendFb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendFb.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendFb.Location = new System.Drawing.Point(205, 307);
+            this.btnSendFb.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSendFb.Name = "btnSendFb";
+            this.btnSendFb.OnHoverBorderColor = System.Drawing.Color.Gray;
+            this.btnSendFb.OnHoverButtonColor = System.Drawing.Color.Yellow;
+            this.btnSendFb.OnHoverTextColor = System.Drawing.Color.Gray;
+            this.btnSendFb.Size = new System.Drawing.Size(140, 44);
+            this.btnSendFb.TabIndex = 8;
+            this.btnSendFb.Text = "Gửi phản hồi";
+            this.btnSendFb.TextColor = System.Drawing.Color.White;
+            this.btnSendFb.UseVisualStyleBackColor = true;
+            this.btnSendFb.Click += new System.EventHandler(this.btnSendFb_Click);
+            // 
+            // btnFeedback
+            // 
+            this.btnFeedback.BackColor = System.Drawing.Color.DarkGray;
+            this.btnFeedback.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFeedback.Image = ((System.Drawing.Image)(resources.GetObject("btnFeedback.Image")));
+            this.btnFeedback.Location = new System.Drawing.Point(919, 723);
+            this.btnFeedback.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFeedback.Name = "btnFeedback";
+            this.btnFeedback.Size = new System.Drawing.Size(70, 71);
+            this.btnFeedback.TabIndex = 18;
+            this.btnFeedback.TabStop = false;
+            this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
+            // 
+            // btnRanked
+            // 
+            this.btnRanked.BackColor = System.Drawing.Color.DarkGray;
+            this.btnRanked.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRanked.Image = ((System.Drawing.Image)(resources.GetObject("btnRanked.Image")));
+            this.btnRanked.Location = new System.Drawing.Point(843, 723);
+            this.btnRanked.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRanked.Name = "btnRanked";
+            this.btnRanked.Size = new System.Drawing.Size(70, 71);
+            this.btnRanked.TabIndex = 17;
+            this.btnRanked.TabStop = false;
+            this.btnRanked.Click += new System.EventHandler(this.btnRank_Click);
+            // 
+            // btnSetting
+            // 
+            this.btnSetting.BackColor = System.Drawing.Color.DarkGray;
+            this.btnSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSetting.Image")));
+            this.btnSetting.Location = new System.Drawing.Point(995, 723);
+            this.btnSetting.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSetting.Name = "btnSetting";
+            this.btnSetting.Size = new System.Drawing.Size(70, 71);
+            this.btnSetting.TabIndex = 14;
+            this.btnSetting.TabStop = false;
+            this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
+            // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.DarkGray;
+            this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
+            this.btnUser.Location = new System.Drawing.Point(7, 7);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(60, 60);
+            this.btnUser.TabIndex = 4;
+            this.btnUser.TabStop = false;
+            // 
             // User
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1135,10 +1135,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             ((System.ComponentModel.ISupportInitialize)(this.Level6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRanked)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level11)).EndInit();
@@ -1146,6 +1142,10 @@ namespace PBL3_DanTaPhaiBietSuTa
             ((System.ComponentModel.ISupportInitialize)(this.Level13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRanked)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
