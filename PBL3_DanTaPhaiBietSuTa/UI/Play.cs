@@ -20,7 +20,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         Thread thUser;
         Color cBtn = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
         List<int> listTimeStop = new List<int>();
-        static int stageID;
+        public static int stageID;
         Question selectedQuestion;
         int point = 0, questionID = 0, numCorrect = 0;
         int TVideo = 0, countDown = 300;
@@ -28,7 +28,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         public Play()
         {
             InitializeComponent();
-            stageID = 1;
             lbPoint.Text = point.ToString();
             lbTime.Text = "Time: " + (countDown / 10).ToString();
             SetTimeStop();
@@ -87,6 +86,30 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 thUser.Start();
             }    
         }
+
+        private string CheckQuestion(string q)
+        {
+
+            int i;
+            string temp = q;
+            if (q.Length > 60)
+            {
+                temp = q.Substring(0, q.Length / 2);
+                for (i = q.Length / 2; i < q.Length; i++)
+                {
+                    if (q[i] == ' ')
+                    {
+                        temp += "\n";
+                        for (int j = 0; j < (i - q.Length / 2); j++) temp += " ";
+                        break;
+                    }
+                    else temp += q[i];
+                }
+                for (int j = i; j < q.Length; j++) temp += q[j];
+            }
+            return temp;
+        }
+
         private void DisplayQuestion()
         {
             selectedQuestion = BLL.Instance.GetRandomQuestionByTimeStop(stageID, listTimeStop[questionID]);
@@ -100,16 +123,16 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             Random rd = new Random();
             int questionrd;
             questionrd = rd.Next(0, listAnswer.Count - 1);
-            btnA.Text = "A. " + listAnswer[questionrd];
+            btnA.Text = CheckQuestion("A. " + listAnswer[questionrd]);
             listAnswer.RemoveAt(questionrd);
             questionrd = rd.Next(0, listAnswer.Count - 1);
-            btnB.Text += "B. " + listAnswer[questionrd];
+            btnB.Text = CheckQuestion("B. " + listAnswer[questionrd]);
             listAnswer.RemoveAt(questionrd);
             questionrd = rd.Next(0, listAnswer.Count - 1);
-            btnC.Text = "C. " + listAnswer[questionrd];
+            btnC.Text = CheckQuestion("C. " + listAnswer[questionrd]);
             listAnswer.RemoveAt(questionrd);
             questionrd = rd.Next(0, listAnswer.Count - 1);
-            btnD.Text = "D. " + listAnswer[questionrd];
+            btnD.Text = CheckQuestion("D. " + listAnswer[questionrd]);
             listAnswer.RemoveAt(questionrd);
         }
         private void SelectAnswer(object sender, EventArgs e)
@@ -307,6 +330,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             }
             return false;
         }
+
+        private void Play_Load(object sender, EventArgs e)
+        {
+            lbPoint.Left = pictureBox2.Location.X + ((pictureBox2.Size.Width - lbPoint.Size.Width) / 2);
+            lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
+        }
+
         public void PlayAgain()
         {
             if(isPlayAgain)
