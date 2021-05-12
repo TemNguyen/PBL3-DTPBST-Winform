@@ -94,13 +94,16 @@
                 }
             );
 
-            context.GameProcesses.AddOrUpdate (
+            context.GameProcesses.AddOrUpdate(
                 new GameProcess
                 {
                     GameProcessID = 1,
-                     Point = 100, StageID = 1, UserID = 1
+                    Point = 100,
+                    StageID = 1,
+                    UserID = 1,
+                    IsPass = true
                 }
-            );
+            ) ;
             
             
             
