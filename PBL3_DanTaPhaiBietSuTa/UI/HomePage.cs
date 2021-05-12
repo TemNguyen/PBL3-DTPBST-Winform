@@ -65,7 +65,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         private void btnInfo_Click(object sender, EventArgs e)
         {
             gbIntro.Visible = true;
-            gbHelp.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -73,15 +72,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             gbIntro.Visible = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            gbHelp.Visible = false;
-        }
-
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            gbHelp.Visible = true;
             gbIntro.Visible = false;
+            Help h = new Help();
+            h.ShowDialog();
         }
 
         private void HomePage_Load(object sender, EventArgs e)
@@ -95,8 +90,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             label8.Location = new Point((gbIntro.Size.Width - label8.Size.Width) / 2, 233);
             gbIntro.Location = new Point((this.Size.Width - gbIntro.Size.Width) / 2,
                 (this.Size.Height - gbIntro.Size.Height) / 2);
-            gbHelp.Location = new Point((this.Size.Width - gbHelp.Size.Width) / 2,
-                (this.Size.Height - gbHelp.Size.Height) / 2);
         }
     }
 }
