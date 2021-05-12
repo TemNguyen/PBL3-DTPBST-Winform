@@ -145,13 +145,14 @@ namespace PBL3_DanTaPhaiBietSuTa
                 {
                     if(point.StageID == gameProcess.StageID && point.UserID == gameProcess.UserID)
                     {
-                        if (point.point < gameProcess.Point) point.point = gameProcess.Point;
-                        
+                        if (point.point < gameProcess.Point && gameProcess.IsPass==true) point.point = gameProcess.Point;
+  
                         kt = false;
                         break;
                     }    
                 }
-                if (kt) db.Points.Add(new Point
+    
+                if (kt && gameProcess.IsPass == true) db.Points.Add(new Point
                 {
                     StageID = gameProcess.StageID,
                     UserID = gameProcess.UserID,
