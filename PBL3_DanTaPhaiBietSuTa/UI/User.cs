@@ -211,7 +211,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             thPlay.SetApartmentState(ApartmentState.STA);
             thPlay.Start();
         }
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void Level2_Click(object sender, EventArgs e)
         {
             Play.stageID = 2;
             HomePage.StopSound();
@@ -334,6 +334,32 @@ namespace PBL3_DanTaPhaiBietSuTa
             Notification notification = new Notification();
             notification.Get(message);
             notification.ShowDialog();
+        }
+
+        private void User_Load(object sender, EventArgs e)
+        {
+            // Align the groubox in the middle of the screen
+            gbRanked.Location = new System.Drawing.Point((this.Size.Width - gbRanked.Size.Width) / 2,
+                (this.Size.Height - gbRanked.Size.Height) / 2);
+            gbFeedback.Location = new System.Drawing.Point((this.Size.Width - gbFeedback.Size.Width) / 2,
+                (this.Size.Height - gbFeedback.Size.Height) / 2);
+            gbUser.Location = new System.Drawing.Point((this.Size.Width - gbUser.Size.Width) / 2,
+                (this.Size.Height - gbUser.Size.Height) / 2);
+            gbLevel.Location = new System.Drawing.Point((this.Size.Width - gbLevel.Size.Width) / 2,
+                (this.Size.Height - gbLevel.Size.Height) / 2);
+
+            // Align the gbUser
+            label8.Location = new System.Drawing.Point((gbUser.Size.Width - label8.Size.Width) / 2, label8.Location.Y);
+            int PosRight = label7.Location.X + label7.Size.Width;
+            label14.Location = new System.Drawing.Point(PosRight - label14.Size.Width, label14.Location.Y);
+            label12.Location = new System.Drawing.Point(PosRight - label12.Size.Width, label12.Location.Y);
+            label17.Location = new System.Drawing.Point(PosRight - label17.Size.Width, label17.Location.Y);
+            label18.Location = new System.Drawing.Point(PosRight - label18.Size.Width, label18.Location.Y);
+            label15.Location = new System.Drawing.Point(PosRight - label15.Size.Width, label15.Location.Y);
+            label16.Location = new System.Drawing.Point(PosRight - label16.Size.Width, label16.Location.Y);
+            label19.Location = new System.Drawing.Point(PosRight - label19.Size.Width, label19.Location.Y);
+            btnSaveInfo.Location = new System.Drawing.Point((gbUser.Size.Width - btnSaveInfo.Size.Width) / 2,
+                btnSaveInfo.Location.Y);
         }
     }
 }
