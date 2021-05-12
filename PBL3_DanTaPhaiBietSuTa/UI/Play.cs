@@ -86,7 +86,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 thUser.Start();
             }    
         }
-
         private string CheckQuestion(string q)
         {
 
@@ -109,7 +108,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             }
             return temp;
         }
-
         private void DisplayQuestion()
         {
             selectedQuestion = BLL.Instance.GetRandomQuestionByTimeStop(stageID, listTimeStop[questionID]);
@@ -167,8 +165,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private void CaculationPoint(int timeUsed)
         {
-            //Caculation Point
-            //Display Point
             point += Convert.ToInt32((countDown*1.0/300) * 100);
             lbPoint.Text = point.ToString();
         }
@@ -288,26 +284,27 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 Video.Ctlcontrols.play();
             }
         }
-
         private void lbPoint_TextChanged(object sender, EventArgs e)
         {
             lbPoint.Left = pictureBox2.Location.X + ((pictureBox2.Size.Width - lbPoint.Size.Width) / 2);
         }
-
         private void lbTime_TextChanged(object sender, EventArgs e)
         {
             lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
         }
-
         private bool IsSavePoint()
         {
-            string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
-            GameProcess userProcess = new GameProcess();
-            userProcess.StageID = stageID;
-            userProcess.UserID = Convert.ToInt32(File.ReadLines(path).First());
-            userProcess.Point = point;
-            BLL.Instance.UpdatePoint(userProcess);
-            return true;
+            if (numCorrect >= listTimeStop.Count / 2)
+            {
+                string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
+                GameProcess userProcess = new GameProcess();
+                userProcess.StageID = stageID;
+                userProcess.UserID = Convert.ToInt32(File.ReadLines(path).First());
+                userProcess.Point = point;
+                BLL.Instance.UpdatePoint(userProcess);
+                return true;
+            }
+            return false;
         }
         private bool IsFinish()
         {
@@ -322,7 +319,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                     ShowMessage("Chúc mừng bạn đã qua được màn!");
                 }
                 else
-                    ShowMessage("Cha mẹ thất vọng về em!");
+                    ShowMessage("Bạn trả lời đúng " + numCorrect + "/" + listTimeStop.Count + ". Bạn không thể qua được màn này!");
                 ReplayNotification replay = new ReplayNotification();
                 replay.ShowDialog();
                 PlayAgain();
@@ -330,13 +327,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             }
             return false;
         }
-
         private void Play_Load(object sender, EventArgs e)
         {
             lbPoint.Left = pictureBox2.Location.X + ((pictureBox2.Size.Width - lbPoint.Size.Width) / 2);
             lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
         }
-
         public void PlayAgain()
         {
             if(isPlayAgain)

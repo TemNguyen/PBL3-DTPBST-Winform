@@ -845,7 +845,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Level2.Size = new System.Drawing.Size(184, 103);
             this.Level2.TabIndex = 1;
             this.Level2.TabStop = false;
-            this.Level2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.Level2.Click += new System.EventHandler(this.Level2_Click);
             // 
             // Level3
             // 
@@ -856,6 +856,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Level3.Size = new System.Drawing.Size(184, 103);
             this.Level3.TabIndex = 2;
             this.Level3.TabStop = false;
+            this.Level3.Click += new System.EventHandler(this.Level3_Click);
             // 
             // Level4
             // 
@@ -866,6 +867,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Level4.Size = new System.Drawing.Size(184, 103);
             this.Level4.TabIndex = 3;
             this.Level4.TabStop = false;
+            this.Level4.Click += new System.EventHandler(this.Level4_Click);
             // 
             // Level5
             // 
@@ -876,6 +878,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Level5.Size = new System.Drawing.Size(184, 103);
             this.Level5.TabIndex = 4;
             this.Level5.TabStop = false;
+            this.Level5.Click += new System.EventHandler(this.Level5_Click);
             // 
             // Level6
             // 

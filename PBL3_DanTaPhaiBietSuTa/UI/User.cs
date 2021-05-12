@@ -1,4 +1,5 @@
 using PBL3_DanTaPhaiBietSuTa.DTO;
+using PBL3_DanTaPhaiBietSuTa.Properties;
 using PBL3_DanTaPhaiBietSuTa.UI;
 using System;
 using System.Collections.Generic;
@@ -19,10 +20,10 @@ namespace PBL3_DanTaPhaiBietSuTa
         Thread thLogout;
         Thread thPlay;
         private static bool sttRanked = false;
-
         public User()
         {
             InitializeComponent();
+            DisplayLevel();
             ShowUserInfor();
             ShowBXH();
         }
@@ -30,12 +31,10 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             gbUser.Visible = true;
         }
-
         private void OpenLoginForm(object sender)
         {
             Application.Run(new DangNhap());
         }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -168,19 +167,20 @@ namespace PBL3_DanTaPhaiBietSuTa
         private void ShowUserInfor()
         {
             string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
-            List<string> userInfor = new List<string>(File.ReadAllLines(path));
-            Standing userStand = BLL.Instance.GetStandingByUserID(Convert.ToInt32(userInfor[0]));
-            if (userInfor[3] != "") btnAccountInfo.Text = userInfor[3];
-            else btnAccountInfo.Text = userInfor[1];
-            lbAccount.Text = userInfor[1];
-            txtName.Text = userInfor[3];
-            txtEmail.Text = userInfor[4];
-            if (BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor[0])) == -1)
+            int userID = Convert.ToInt32(File.ReadLines(path).First());
+            UserInfo userInfor = BLL.Instance.GetUserInfoByUserID(userID);
+            Standing userStand = BLL.Instance.GetStandingByUserID(Convert.ToInt32(userInfor.UserID));
+            if (userInfor.Name != "") btnAccountInfo.Text = userInfor.Name;
+            else btnAccountInfo.Text = userInfor.Username;
+            lbAccount.Text = userInfor.Username;
+            txtName.Text = userInfor.Name;
+            txtEmail.Text = userInfor.Email;
+            if (BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor.UserID)) == -1)
             {
                 lbRanked.Text = "Chưa có xếp hạng!";
             }
             else
-                lbRanked.Text = BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor[0])).ToString();
+                lbRanked.Text = BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor.UserID)).ToString();
             lbPoint.Text = userStand.Point.ToString();
             if (checkBox1.Checked)
             {
@@ -195,37 +195,76 @@ namespace PBL3_DanTaPhaiBietSuTa
                 txtRePass.Enabled = false;
             }
         }
-
         private void OpenPlayForm(object sender)
         {
             Play play = new Play();
             Application.Run(play);
         }
-
         private void Level1_Click(object sender, EventArgs e)
         {
-            Play.stageID = 1;
-            HomePage.StopSound();
-            this.Dispose();
-            thPlay = new Thread(OpenPlayForm);
-            thPlay.SetApartmentState(ApartmentState.STA);
-            thPlay.Start();
+            ChooseLevel(1);
         }
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void Level2_Click(object sender, EventArgs e)
         {
-            Play.stageID = 2;
+            ChooseLevel(2);
+        }
+        private void Level3_Click(object sender, EventArgs e)
+        {
+            ChooseLevel(3);
+        }
+        private void Level4_Click(object sender, EventArgs e)
+        {
+            ChooseLevel(4);
+        }
+        private void Level5_Click(object sender, EventArgs e)
+        {
+            ChooseLevel(5);
+        }
+        private void ChooseLevel(int stageID)
+        {
+            Play.stageID = stageID;
             HomePage.StopSound();
             this.Dispose();
             thPlay = new Thread(OpenPlayForm);
             thPlay.SetApartmentState(ApartmentState.STA);
             thPlay.Start();
         }
-
         private void btnSetting_Click(object sender, EventArgs e)
         {
             if (DangNhap.settingForm == null)
                 DangNhap.settingForm = new SettingForm();
             DangNhap.settingForm.ShowDialog();
+        }
+        private void DisplayLevel()
+        {
+            string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
+            string picPath = @Application.StartupPath + @"\Assets\Image\";
+            int userID = Convert.ToInt32(File.ReadLines(path).First());
+            Standing userStand = BLL.Instance.GetStandingByUserID(userID);
+            int currentStage = userStand.StageID + 1;
+            List<PictureBox> levels = new List<PictureBox>();
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                if (c is PictureBox)
+                {
+                    levels.Add((PictureBox)c);
+                }
+            }
+            try
+            {
+                //set default img
+                foreach (var i in levels)
+                {
+                    i.Image = Image.FromFile(picPath + i.Name + ".png");
+                }
+            }
+            catch(Exception e) { };
+            //set lock levels
+            for (int i = currentStage; i < levels.Count; i++)
+            {
+                levels[i].Image = Image.FromFile(picPath + "LockLevel.png");
+                levels[i].Enabled = false;
+            }
         }
         private bool IsValid()
         {

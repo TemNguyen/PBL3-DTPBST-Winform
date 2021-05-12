@@ -24,14 +24,12 @@ namespace PBL3_DanTaPhaiBietSuTa
             InitializeComponent();
             IsRememberUser();
         }
-
         private void Setting_Click(object sender, EventArgs e)
         {
             if (settingForm == null)
                 settingForm = new SettingForm();
             settingForm.ShowDialog();
         }
-
         private void txtLoginR_Click(object sender, EventArgs e)
         {
             txtAccountR.Text = "";
@@ -41,18 +39,15 @@ namespace PBL3_DanTaPhaiBietSuTa
             gbRegister.Visible = false;
             gbLogin.Visible = true;
         }
-
         private void btnRegister_Click(object sender, EventArgs e)
         {
             gbLogin.Visible = false;
             gbRegister.Visible = true;
         }
-
         private void OpenUserForm(object sender)
         {
             Application.Run(new User());
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string userName = txtAccount.Text;
@@ -89,7 +84,6 @@ namespace PBL3_DanTaPhaiBietSuTa
                 return;
             }    
         }
-
         private void btnRegisterR_Click(object sender, EventArgs e)
         {
             if (txtPassR.Text != txtRepassR.Text)
@@ -137,7 +131,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             }
             return true;
         }
-        //Kiểm tra đầu vào
         private bool IsValid()
         {
             List<char> list = new List<char>()
@@ -178,10 +171,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             using (StreamWriter sw = File.CreateText(userLogin))
             {
                 sw.WriteLine(user.UserID);
-                sw.WriteLine(user.Username);
-                sw.WriteLine(user.Password);
-                sw.WriteLine(user.Name);
-                sw.WriteLine(user.Email);
             }
         }
         private void txtAccount_TextChanged(object sender, EventArgs e)
@@ -194,7 +183,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             notification.Get(message);
             notification.ShowDialog();
         }
-
         private void DangNhap_Load(object sender, EventArgs e)
         {
             gbLogin.Location = new System.Drawing.Point((this.Size.Width - gbLogin.Size.Width) / 2, 
