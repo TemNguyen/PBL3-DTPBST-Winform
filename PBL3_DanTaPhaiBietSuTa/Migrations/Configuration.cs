@@ -21,15 +21,29 @@
             context.Videos.AddOrUpdate(x =>x.VideoID,     
                 new Video()
                 {
-                    VideoID = 1,VideoName = "Đại chiến Bạch Đằng",VideoLink = "C:/123.txt"
+                    VideoID = 1,VideoName = "Khởi nghĩa Hai Bà Trưng",
+                    VideoLink = "C:/123.txt"
                 },
                 new Video()
                 {
-                    VideoID = 2,VideoName = "Khởi nghĩa Hai Bà Trưng",VideoLink = "C:/1234.txt"
+                    VideoID = 2,VideoName = "Đại chiến Bạch Đằng",
+                    VideoLink = "C:/1234.txt"
                 },
                 new Video()
                 {
                     VideoID = 3,VideoName = "Quang Trung Đại Phá Quân Thanh",VideoLink = "C:/1234.txt"
+                },
+                new Video()
+                {
+                    VideoID = 4,
+                    VideoName = "Khởi nghĩa Lam Sơn",
+                    VideoLink = "C:/1234.txt"
+                },
+                new Video()
+                {
+                    VideoID = 5,
+                    VideoName = "Quang Trung Đại Phá Quân Thanh",
+                    VideoLink = "C:/1234.txt"
                 }
             );
 
@@ -48,7 +62,19 @@
                 {
                     StageID = 3,
                     VideoID = 3, StageName = "Màn 3"
+                }, new Stage
+                {
+                    StageID = 4,
+                    VideoID = 4,
+                    StageName = "Màn 4"
+                },
+                new Stage
+                {
+                    StageID = 5,
+                    VideoID = 5,
+                    StageName = "Màn 5"
                 }
+
             );
 
 
@@ -88,7 +114,7 @@
                     KeyC = "Ra gần quê",
                     KeyD = "Trừng trị Kiều Công Tiễn làm phản",
                     Answer = "Trừng trị Kiều Công Tiễn làm phản",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 910
                 },
                 new Question
@@ -100,7 +126,7 @@
                     KeyC = "Trả thù rửa hận",
                     KeyD = "A, B, C đúng",
                     Answer = "A, B, C đúng",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 1170
                 },
                 new Question
@@ -112,7 +138,7 @@
                     KeyC = "939",
                     KeyD = "940",
                     Answer = "938",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 1170
                 },
                 new Question
@@ -124,7 +150,7 @@
                     KeyC = "Thành Bạch Mã",
                     KeyD = "Tất cả đều sai",
                     Answer = "Thành Đại La",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 910
                 },
                 new Question
@@ -136,7 +162,7 @@
                     KeyC = "Chia rẽ lực lượng",
                     KeyD = "Hạn chế sức mạnh kẻ thù",
                     Answer = "Trừ khử kẻ thù sau lưng trước khi quân Nam Hán vào",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 1760
                 },
                 new Question
@@ -148,7 +174,7 @@
                     KeyC = "Lợi dụng thủy triều lên xuống làm trận địa cọc ngầm",
                     KeyD = "Biết trước được kế giặc.",
                     Answer = "Lợi dụng thủy triều lên xuống làm trận địa cọc ngầm",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 1760
                 },
                 new Question
@@ -160,7 +186,7 @@
                     KeyC = "không phân thắng bại.",
                     KeyD = "thắng lợi một phần.",
                     Answer = "kết thúc hoàn toàn thắng lợi.",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 3360
                 },
                 new Question
@@ -172,7 +198,7 @@
                     KeyC = "được lấy từ gỗ cây bạch đàn",
                     KeyD = "được lấy từ gỗ cây lim",
                     Answer = "đầu cọc gỗ được đẽo nhọn và bịt sắt",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 1760
                 },
                 new Question
@@ -184,7 +210,7 @@
                     KeyC = "quân ta chưa đóng xong cọc ngầm",
                     KeyD = "quân ta mới đóng xong một nửa trận địa cọc ngầm",
                     Answer = "thủy triều đang lên",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 2740
                 },
                 new Question
@@ -196,7 +222,7 @@
                     KeyC = "bị quân ta bắt sống",
                     KeyD = "chui vào ống cống trở về nước",
                     Answer = "bị tử trận",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 3360
                 },
                 new Question
@@ -208,7 +234,7 @@
                     KeyC = "khi địch chưa vào bãi cọc",
                     KeyD = "khi quân ta chưa đóng xong cọc ngầm",
                     Answer = "khi địch đã vào sâu bãi cọc và thủy triều đang xuống",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 2740
                 },
                 new Question
@@ -220,7 +246,7 @@
                     KeyC = "Do sự anh dũng của quân ta",
                     KeyD = "Tất cả đều sai",
                     Answer = "Do thuyền chiến lớn của Nam Hán bị mắc cạn và lần lượt bị cọc đâm thủng gần hết",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 3360
                 },
                 new Question
@@ -232,7 +258,7 @@
                     KeyC = "Năm 897",
                     KeyD = "Năm 899",
                     Answer = "Năm 898",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 710
                 },
                 new Question
@@ -244,7 +270,7 @@
                     KeyC = "Năm 945",
                     KeyD = "Năm 947",
                     Answer = "Năm 944",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 710
                 },
                 new Question
@@ -256,7 +282,7 @@
                     KeyC = "Tiền Ngô Vương",
                     KeyD = "Tất cả đều đúng",
                     Answer = "Tất cả đều đúng",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 3510
                 },
                 new Question
@@ -268,7 +294,7 @@
                     KeyC = "Pháo binh",
                     KeyD = "Kỵ binh",
                     Answer = "Thuỷ binh",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 910
                 },
                 new Question
@@ -280,7 +306,7 @@
                     KeyC = "Một vạn kỵ binh",
                     KeyD = "Ba vạn thuỷ binh",
                     Answer = "Hai vạn thuỷ binh",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 1170
                 },
                 new Question
@@ -292,7 +318,7 @@
                     KeyC = "Trước sảnh đại tướng quân",
                     KeyD = "Tất cả đều sai",
                     Answer = "Trước cổng thành",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 1760
                 },
                 new Question
@@ -304,7 +330,7 @@
                     KeyC = "Tể tướng của nước Nam Hán",
                     KeyD = "Đại tướng quân của nước Nam Hán",
                     Answer = "Thái tử của nước Nam Hán",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 1170
                 },
                 new Question
@@ -316,7 +342,7 @@
                     KeyC = "Giao vương",
                     KeyD = "Tất cả đều đúng",
                     Answer = "Tất cả đều đúng",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 1170
                 },
                 new Question
@@ -328,7 +354,7 @@
                     KeyC = "Kiều Công Tiễn muốn giảng hòa với nhà Nam Hán",
                     KeyD = "Kiều Công Tiễn muốn vua Nam Hán công nhận mình là Tiết độ sứ",
                     Answer = "Kiều Công Tiễn biết mình không thể đối phó với Ngô Quyền",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 1170
                 },
                 new Question
@@ -340,7 +366,7 @@
                     KeyC = "Ba Vì, Hà Nội",
                     KeyD = "Gia Lâm, Hà Nội",
                     Answer = "Đông Anh, Hà Nội",
-                    StageID = 1,
+                    StageID = 2,
                     TimeStop = 3510
                 },
                 new Question
@@ -352,7 +378,7 @@
                     KeyC = "Năm 981",
                     KeyD = "Năm 938",
                     Answer = "Mùa xuân năm 40 ",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 250
                 },
                 new Question
@@ -364,7 +390,7 @@
                     KeyC = "Hai Bà Trưng xây dựng chính quyền tự chủ",
                     KeyD = "Hai Bà Trưng tập trung chuẩn bị lực lượng kháng chiến",
                     Answer = "Hai Bà Trưng dựng cờ khởi nghĩa ở Hát Môn (Hà Nội)",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 250
                 },
                 new Question
@@ -376,7 +402,7 @@
                     KeyC = "Trần Bá Tiên",
                     KeyD = "Đoàn Chí",
                     Answer = "Mã Viện",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 250
                 },
                 new Question
@@ -388,7 +414,7 @@
                     KeyC = "Năm 42 trước công nguyên",
                     KeyD = "Năm 42 sau công nguyên",
                     Answer = "Năm 42 sau công nguyên",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 250
                 },
                 new Question
@@ -400,7 +426,7 @@
                     KeyC = "Cả Hai Bà Trưng",
                     KeyD = "Tất cả đều sai",
                     Answer = "Trưng Nhị",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 600
                 },
                 new Question
@@ -412,7 +438,7 @@
                     KeyC = "Ba vạn quân, hai nghìn xe thuyền các loại",
                     KeyD = "Bốn vạn quân, hai nghìn xe thuyền các loại",
                     Answer = "Hai vạn quân, hai nghìn xe thuyền các loại",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 600
                 },
                 new Question
@@ -424,7 +450,7 @@
                     KeyC = "Nghênh chiến quyết liệt của quân Hai Bà với quân xâm lược",
                     KeyD = "Cả A, B, C đúng",
                     Answer = "Cả A, B, C đúng",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 600
                 },
                 new Question
@@ -436,7 +462,7 @@
                     KeyC = "Hai Bà Trưng kéo quân đến Lãng Bạc để nghênh chiến",
                     KeyD = "Hai Bà Trưng kéo quân đến Quỷ Môn Quan để nghênh chiến",
                     Answer = "Hai Bà Trưng kéo quân đến Lãng Bạc để nghênh chiến",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 250
                 },
                 new Question
@@ -448,7 +474,7 @@
                     KeyC = "Tinh thần quân sĩ rệu rã",
                     KeyD = "Cả A,B,C đúng",
                     Answer = "Cả A,B,C đúng",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 1910
                 },
                 new Question
@@ -460,7 +486,7 @@
                     KeyC = "Quân ta có nội gián do Mã Viện cử sang",
                     KeyD = "Tinh thần chiến đấu của quân ta quá yếu kém nên thất bại",
                     Answer = "Giao chiến lâu ngày, quân Hai Bà Trưng thiếu trang bị và kinh nghiệm, không địch nổi đạo quân thiện chiến của Mã Viện",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 1910
                 },
                 new Question
@@ -472,7 +498,7 @@
                     KeyC = "Mê Linh",
                     KeyD = "Cấm Khê",
                     Answer = "Cổ Loa",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 1910
                 },
                 new Question
@@ -484,7 +510,7 @@
                     KeyC = "Cho một lực lượng mỏng sang khiêu chiến địch",
                     KeyD = "Cả A,B,C đúng",
                     Answer = "Cả A,B,C đúng",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 3720
                 },
                 new Question
@@ -496,7 +522,7 @@
                     KeyC = "Đợi quân Mã Viện toả ra vây bắt thì cánh quân Hùng Lệ Nương kết hợp với quân ở phía trước đánh mạnh cả 2 phía",
                     KeyD = "Cả A,B,C đúng",
                     Answer = "Cả A,B,C đúng",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 3720
                 },
                 new Question
@@ -508,7 +534,7 @@
                     KeyC = "Xin thêm viện binh từ nhà Hán",
                     KeyD = "Tất cả đều sai",
                     Answer = "Xin thêm viện binh từ nhà Hán",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 3720
                 },
                 new Question
@@ -520,7 +546,7 @@
                     KeyC = "Kết hợp quân từ 3 phía nhằm đánh tan quân địch",
                     KeyD = "Cả A,B,C đúng",
                     Answer = "Cả A,B,C đúng",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 4850
                 },
                 new Question
@@ -532,7 +558,7 @@
                     KeyC = "Xin hàng quân địch",
                     KeyD = "Rút quân về Hát Môn",
                     Answer = "Rút quân về Cấm Khê để trấn thủ",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 6810
                 },
                 new Question
@@ -544,7 +570,7 @@
                     KeyC = "Quân ta thiếu nguồn tiếp tế lương thực",
                     KeyD = "A,B,C đều đúng",
                     Answer = "A,B,C đều đúng",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 1910
                 },
                 new Question
@@ -556,7 +582,7 @@
                     KeyC = "Thể hiện tinh thần đoàn kết, ý chí chống giặc của nhân dân ta",
                     KeyD = "Để lại nhiều bại học kinh nghiệm quý báu",
                     Answer = "Củng cố vững mạnh chính quyền tự chủ của nhân dân ta",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 7130
                 },
                 new Question
@@ -568,7 +594,7 @@
                     KeyC = "Chưa có đường lối kháng chiến đúng",
                     KeyD = "Người lãnh đạo không có tài năng",
                     Answer = "So sánh lực lượng chênh lệch giữa ta và địch",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 7130
                 },
                 new Question
@@ -580,7 +606,7 @@
                     KeyC = "Hát Môn",
                     KeyD = "Mê Linh",
                     Answer = "Cẩm Khê",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 7130
                 },
                 new Question
@@ -592,7 +618,7 @@
                     KeyC = "Sông Hương",
                     KeyD = "Sông Tô Lịch",
                     Answer = "Sông Đáy",
-                    StageID = 2,
+                    StageID = 1,
                     TimeStop = 7130
                 }
                 
