@@ -30,6 +30,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             InitializeComponent();
             lbPoint.Text = point.ToString();
             lbTime.Text = "Time: " + (countDown / 10).ToString();
+            lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
             SetTimeStop();
             SetVideoStage();
             videoTime.Start();
@@ -319,9 +320,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 if (IsSavePoint())
                 {
                     ShowMessage("Chúc mừng bạn đã qua được màn!");
+                    ReplayNotification.isPass = true;
                 }
                 else
+                {
                     ShowMessage("Bạn trả lời đúng " + numCorrect + "/" + listTimeStop.Count + ". \nBạn không thể qua được màn này!");
+                    ReplayNotification.isPass = false;
+                }  
                 ReplayNotification replay = new ReplayNotification();
                 replay.ShowDialog();
                 PlayAgain();

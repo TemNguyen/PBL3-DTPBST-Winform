@@ -106,6 +106,8 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Level15 = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.btnSaveInfo = new PBL3_DanTaPhaiBietSuTa.CustomButton();
+            this.btnSendFb = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.btnFeedback = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnRanked = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnSetting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
