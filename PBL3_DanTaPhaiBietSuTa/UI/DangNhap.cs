@@ -54,11 +54,11 @@ namespace PBL3_DanTaPhaiBietSuTa
             {
                 if(cbRemember.Checked) //lưu userName và passWord vào file.
                 {
+                    UserInfo user = BLL.Instance.GetUserInforByUserName(userName);
                     string rememberUserPath = @Application.StartupPath + @"\Assets\SavedUser\rememberUser.txt";
                     using (StreamWriter sw = File.CreateText(rememberUserPath))
                     {
-                        sw.WriteLine(txtAccount.Text);
-                        sw.WriteLine(txtPass.Text);
+                        sw.WriteLine(user.UserID);
                     }
                 }
                 else
@@ -67,7 +67,7 @@ namespace PBL3_DanTaPhaiBietSuTa
                     File.Delete(rememberUserPath);
                 }
                 ShowMessage("Đăng nhập thành công!");
-                GetUserLogin(txtAccount.Text);
+                GetUserLogin(userName);
                 this.Dispose();
                 th = new Thread(OpenUserForm);
                 th.SetApartmentState(ApartmentState.STA);
@@ -123,9 +123,10 @@ namespace PBL3_DanTaPhaiBietSuTa
             if (File.Exists(rememberUserPath))
             {
                 cbRemember.Checked = true;
-                List<string> rememberUser = new List<string>(File.ReadAllLines(rememberUserPath));
-                txtAccount.Text = rememberUser[0];
-                txtPass.Text = rememberUser[1];
+                int rememberUserID = Convert.ToInt32(File.ReadLines(rememberUserPath).First());
+                UserInfo rememberUser = BLL.Instance.GetUserInfoByUserID(rememberUserID);
+                txtAccount.Text = rememberUser.Username;
+                txtPass.Text = rememberUser.Password;
             }
             return true;
         }

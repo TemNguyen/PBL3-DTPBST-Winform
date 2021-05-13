@@ -19,7 +19,6 @@ namespace PBL3_DanTaPhaiBietSuTa
     {
         Thread thLogout;
         Thread thPlay;
-        private static bool sttRanked = false;
         public User()
         {
             InitializeComponent();
@@ -65,8 +64,9 @@ namespace PBL3_DanTaPhaiBietSuTa
         private void btnSaveInfo_Click(object sender, EventArgs e)
         {
             string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
-            List<string> userInfor = new List<string>(File.ReadAllLines(path));
-            string oldPass = userInfor[2];
+            int userID = Convert.ToInt32(File.ReadLines(path).First());
+            UserInfo userInfor = BLL.Instance.GetUserInfoByUserID(userID);
+            string oldPass = userInfor.Password;
             if (IsValid() == false) return;
             if (checkBox1.Checked)
             {
@@ -75,31 +75,25 @@ namespace PBL3_DanTaPhaiBietSuTa
                     ShowMessage("Mật khẩu hiện tại không đúng!");
                     return;
                 }
+                else if (String.Compare(txtOldPass.Text, txtNewPass.Text) == 0)
+                {
+                    ShowMessage("Mật khẩu mới trùng với mật khẩu cũ!");
+                    return;
+                }    
                 else
                     oldPass = txtNewPass.Text;
             }
             UserInfo user = new UserInfo()
             {
-                UserID = Convert.ToInt32(userInfor[0]),
-                Username = userInfor[1],
+                UserID = Convert.ToInt32(userInfor.UserID),
+                Username = userInfor.Username,
                 Password = oldPass,
                 Name = txtName.Text,
                 Email = txtEmail.Text
             };
             if (BLL.Instance.UpdateUserInfor(user))
             {
-                //Hiện Form thông báo.
                 ShowMessage("Cập nhập thông tin thành công");
-                //Cập nhập lại txtAccount
-                string userLogin = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
-                using (StreamWriter sw = File.CreateText(userLogin))
-                {
-                    sw.WriteLine(user.UserID);
-                    sw.WriteLine(user.Username);
-                    sw.WriteLine(user.Password);
-                    sw.WriteLine(user.Name);
-                    sw.WriteLine(user.Email);
-                }
                 txtOldPass.Text = "";
                 txtNewPass.Text = "";
                 txtRePass.Text = "";
@@ -107,7 +101,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             }
             else
             {
-                //Hiện Form thông báo.
                 ShowMessage("Có lỗi xảy ra, vui lòng thử lại sau!");
             }
             ShowUserInfor();
