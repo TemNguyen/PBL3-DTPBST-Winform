@@ -27,10 +27,12 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             player.SoundLocation = @Application.StartupPath + @"\Assets\Sound\Sound.wav";
             player.PlayLooping();
+            SettingForm.isPlaySound = true;
         }
         public static void StopSound()
         {
             player.Stop();
+            SettingForm.isPlaySound = false;
         }
 
         private void OpenLoginForm(object sender)

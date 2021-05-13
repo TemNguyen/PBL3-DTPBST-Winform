@@ -231,9 +231,8 @@ namespace PBL3_DanTaPhaiBietSuTa
         }
         private void btnSetting_Click(object sender, EventArgs e)
         {
-            if (DangNhap.settingForm == null)
-                DangNhap.settingForm = new SettingForm();
-            DangNhap.settingForm.ShowDialog();
+            SettingForm setting = new SettingForm();
+            setting.ShowDialog();
         }
         private void DisplayLevel()
         {

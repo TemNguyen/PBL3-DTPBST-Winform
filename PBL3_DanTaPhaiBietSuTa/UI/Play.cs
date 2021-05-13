@@ -57,9 +57,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private void btnSetting_Click(object sender, EventArgs e)
         {
-            if (DangNhap.settingForm == null)
-                DangNhap.settingForm = new SettingForm();
-            DangNhap.settingForm.ShowDialog();
+            SettingForm setting = new SettingForm();
+            setting.ShowDialog();
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -70,6 +69,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 switch(d)
                 {
                     case DialogResult.Yes:
+                        HomePage.PlaySound();
                         this.Dispose();
                         thUser = new Thread(OpenUserForm);
                         thUser.SetApartmentState(ApartmentState.STA);
@@ -81,6 +81,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             }
             else
             {
+                HomePage.PlaySound();
                 this.Dispose();
                 thUser = new Thread(OpenUserForm);
                 thUser.SetApartmentState(ApartmentState.STA);
@@ -357,6 +358,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             }    
             else
             {
+                SettingForm.isPlaySound = true;
                 this.Dispose();
                 thUser = new Thread(OpenUserForm);
                 thUser.SetApartmentState(ApartmentState.STA);
