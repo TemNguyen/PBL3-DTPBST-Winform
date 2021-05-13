@@ -99,12 +99,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Level6 = new System.Windows.Forms.PictureBox();
             this.Level7 = new System.Windows.Forms.PictureBox();
             this.Level8 = new System.Windows.Forms.PictureBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btnFeedback = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
-            this.btnRanked = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
-            this.btnSetting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
-            this.btnUser = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.Level9 = new System.Windows.Forms.PictureBox();
             this.Level10 = new System.Windows.Forms.PictureBox();
             this.Level11 = new System.Windows.Forms.PictureBox();
@@ -112,6 +106,12 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Level13 = new System.Windows.Forms.PictureBox();
             this.Level14 = new System.Windows.Forms.PictureBox();
             this.Level15 = new System.Windows.Forms.PictureBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnFeedback = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
+            this.btnRanked = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
+            this.btnSetting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
+            this.btnUser = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.gbRanked.SuspendLayout();
             this.gbPoint.SuspendLayout();
             this.gbFeedback.SuspendLayout();
@@ -126,10 +126,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             ((System.ComponentModel.ISupportInitialize)(this.Level6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRanked)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level11)).BeginInit();
@@ -137,6 +133,10 @@ namespace PBL3_DanTaPhaiBietSuTa
             ((System.ComponentModel.ISupportInitialize)(this.Level13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRanked)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUser)).BeginInit();
             this.SuspendLayout();
             // 
             // lbUser
@@ -839,7 +839,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbLevel.Controls.Add(this.flowLayoutPanel1);
             this.gbLevel.Controls.Add(this.label20);
             this.gbLevel.Controls.Add(this.label13);
-            this.gbLevel.Location = new System.Drawing.Point(203, 147);
+            this.gbLevel.Location = new System.Drawing.Point(900, 162);
             this.gbLevel.Name = "gbLevel";
             this.gbLevel.Size = new System.Drawing.Size(640, 496);
             this.gbLevel.TabIndex = 29;
@@ -889,7 +889,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Level2.Size = new System.Drawing.Size(184, 103);
             this.Level2.TabIndex = 1;
             this.Level2.TabStop = false;
-            this.Level2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.Level2.Click += new System.EventHandler(this.Level2_Click);
             // 
             // Level3
             // 
@@ -950,6 +950,76 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Level8.Size = new System.Drawing.Size(184, 103);
             this.Level8.TabIndex = 7;
             this.Level8.TabStop = false;
+            // 
+            // Level9
+            // 
+            this.Level9.BackColor = System.Drawing.Color.Black;
+            this.Level9.Image = ((System.Drawing.Image)(resources.GetObject("Level9.Image")));
+            this.Level9.Location = new System.Drawing.Point(383, 221);
+            this.Level9.Name = "Level9";
+            this.Level9.Size = new System.Drawing.Size(184, 103);
+            this.Level9.TabIndex = 8;
+            this.Level9.TabStop = false;
+            // 
+            // Level10
+            // 
+            this.Level10.BackColor = System.Drawing.Color.Black;
+            this.Level10.Image = ((System.Drawing.Image)(resources.GetObject("Level10.Image")));
+            this.Level10.Location = new System.Drawing.Point(3, 330);
+            this.Level10.Name = "Level10";
+            this.Level10.Size = new System.Drawing.Size(184, 103);
+            this.Level10.TabIndex = 9;
+            this.Level10.TabStop = false;
+            // 
+            // Level11
+            // 
+            this.Level11.BackColor = System.Drawing.Color.Black;
+            this.Level11.Image = ((System.Drawing.Image)(resources.GetObject("Level11.Image")));
+            this.Level11.Location = new System.Drawing.Point(193, 330);
+            this.Level11.Name = "Level11";
+            this.Level11.Size = new System.Drawing.Size(184, 103);
+            this.Level11.TabIndex = 10;
+            this.Level11.TabStop = false;
+            // 
+            // Level12
+            // 
+            this.Level12.BackColor = System.Drawing.Color.Black;
+            this.Level12.Image = ((System.Drawing.Image)(resources.GetObject("Level12.Image")));
+            this.Level12.Location = new System.Drawing.Point(383, 330);
+            this.Level12.Name = "Level12";
+            this.Level12.Size = new System.Drawing.Size(184, 103);
+            this.Level12.TabIndex = 11;
+            this.Level12.TabStop = false;
+            // 
+            // Level13
+            // 
+            this.Level13.BackColor = System.Drawing.Color.Black;
+            this.Level13.Image = ((System.Drawing.Image)(resources.GetObject("Level13.Image")));
+            this.Level13.Location = new System.Drawing.Point(3, 439);
+            this.Level13.Name = "Level13";
+            this.Level13.Size = new System.Drawing.Size(184, 103);
+            this.Level13.TabIndex = 12;
+            this.Level13.TabStop = false;
+            // 
+            // Level14
+            // 
+            this.Level14.BackColor = System.Drawing.Color.Black;
+            this.Level14.Image = ((System.Drawing.Image)(resources.GetObject("Level14.Image")));
+            this.Level14.Location = new System.Drawing.Point(193, 439);
+            this.Level14.Name = "Level14";
+            this.Level14.Size = new System.Drawing.Size(184, 103);
+            this.Level14.TabIndex = 13;
+            this.Level14.TabStop = false;
+            // 
+            // Level15
+            // 
+            this.Level15.BackColor = System.Drawing.Color.Black;
+            this.Level15.Image = ((System.Drawing.Image)(resources.GetObject("Level15.Image")));
+            this.Level15.Location = new System.Drawing.Point(383, 439);
+            this.Level15.Name = "Level15";
+            this.Level15.Size = new System.Drawing.Size(184, 103);
+            this.Level15.TabIndex = 14;
+            this.Level15.TabStop = false;
             // 
             // label20
             // 
@@ -1022,76 +1092,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.btnUser.TabIndex = 4;
             this.btnUser.TabStop = false;
             // 
-            // Level9
-            // 
-            this.Level9.BackColor = System.Drawing.Color.Black;
-            this.Level9.Image = ((System.Drawing.Image)(resources.GetObject("Level9.Image")));
-            this.Level9.Location = new System.Drawing.Point(383, 221);
-            this.Level9.Name = "Level9";
-            this.Level9.Size = new System.Drawing.Size(184, 103);
-            this.Level9.TabIndex = 8;
-            this.Level9.TabStop = false;
-            // 
-            // Level10
-            // 
-            this.Level10.BackColor = System.Drawing.Color.Black;
-            this.Level10.Image = ((System.Drawing.Image)(resources.GetObject("Level10.Image")));
-            this.Level10.Location = new System.Drawing.Point(3, 330);
-            this.Level10.Name = "Level10";
-            this.Level10.Size = new System.Drawing.Size(184, 103);
-            this.Level10.TabIndex = 9;
-            this.Level10.TabStop = false;
-            // 
-            // Level11
-            // 
-            this.Level11.BackColor = System.Drawing.Color.Black;
-            this.Level11.Image = ((System.Drawing.Image)(resources.GetObject("Level11.Image")));
-            this.Level11.Location = new System.Drawing.Point(193, 330);
-            this.Level11.Name = "Level11";
-            this.Level11.Size = new System.Drawing.Size(184, 103);
-            this.Level11.TabIndex = 10;
-            this.Level11.TabStop = false;
-            // 
-            // Level12
-            // 
-            this.Level12.BackColor = System.Drawing.Color.Black;
-            this.Level12.Image = ((System.Drawing.Image)(resources.GetObject("Level12.Image")));
-            this.Level12.Location = new System.Drawing.Point(383, 330);
-            this.Level12.Name = "Level12";
-            this.Level12.Size = new System.Drawing.Size(184, 103);
-            this.Level12.TabIndex = 11;
-            this.Level12.TabStop = false;
-            // 
-            // Level13
-            // 
-            this.Level13.BackColor = System.Drawing.Color.Black;
-            this.Level13.Image = ((System.Drawing.Image)(resources.GetObject("Level13.Image")));
-            this.Level13.Location = new System.Drawing.Point(3, 439);
-            this.Level13.Name = "Level13";
-            this.Level13.Size = new System.Drawing.Size(184, 103);
-            this.Level13.TabIndex = 12;
-            this.Level13.TabStop = false;
-            // 
-            // Level14
-            // 
-            this.Level14.BackColor = System.Drawing.Color.Black;
-            this.Level14.Image = ((System.Drawing.Image)(resources.GetObject("Level14.Image")));
-            this.Level14.Location = new System.Drawing.Point(193, 439);
-            this.Level14.Name = "Level14";
-            this.Level14.Size = new System.Drawing.Size(184, 103);
-            this.Level14.TabIndex = 13;
-            this.Level14.TabStop = false;
-            // 
-            // Level15
-            // 
-            this.Level15.BackColor = System.Drawing.Color.Black;
-            this.Level15.Image = ((System.Drawing.Image)(resources.GetObject("Level15.Image")));
-            this.Level15.Location = new System.Drawing.Point(383, 439);
-            this.Level15.Name = "Level15";
-            this.Level15.Size = new System.Drawing.Size(184, 103);
-            this.Level15.TabIndex = 14;
-            this.Level15.TabStop = false;
-            // 
             // User
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1116,6 +1116,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Name = "User";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User";
+            this.Load += new System.EventHandler(this.User_Load);
             this.gbRanked.ResumeLayout(false);
             this.gbRanked.PerformLayout();
             this.gbPoint.ResumeLayout(false);
@@ -1135,10 +1136,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             ((System.ComponentModel.ISupportInitialize)(this.Level6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRanked)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level11)).EndInit();
@@ -1146,6 +1143,10 @@ namespace PBL3_DanTaPhaiBietSuTa
             ((System.ComponentModel.ISupportInitialize)(this.Level13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Level15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFeedback)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRanked)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSetting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
