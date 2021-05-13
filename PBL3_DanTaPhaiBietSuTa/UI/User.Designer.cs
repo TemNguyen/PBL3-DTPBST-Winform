@@ -106,8 +106,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Level15 = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnSaveInfo = new PBL3_DanTaPhaiBietSuTa.CustomButton();
-            this.btnSendFb = new PBL3_DanTaPhaiBietSuTa.CustomButton();
             this.btnFeedback = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnRanked = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
             this.btnSetting = new PBL3_DanTaPhaiBietSuTa.OvalPictureBox();
@@ -795,7 +793,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.gbLevel.Controls.Add(this.flowLayoutPanel1);
             this.gbLevel.Controls.Add(this.label20);
             this.gbLevel.Controls.Add(this.label13);
-            this.gbLevel.Location = new System.Drawing.Point(203, 147);
+            this.gbLevel.Location = new System.Drawing.Point(900, 162);
             this.gbLevel.Name = "gbLevel";
             this.gbLevel.Size = new System.Drawing.Size(640, 496);
             this.gbLevel.TabIndex = 29;
@@ -1119,6 +1117,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             this.Name = "User";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User";
+            this.Load += new System.EventHandler(this.User_Load);
             this.gbRanked.ResumeLayout(false);
             this.gbRanked.PerformLayout();
             this.gbPoint.ResumeLayout(false);
