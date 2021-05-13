@@ -80,6 +80,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.btnNext.Size = new System.Drawing.Size(70, 70);
             this.btnNext.TabIndex = 1;
             this.btnNext.TabStop = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // ReplayNotification
             // 

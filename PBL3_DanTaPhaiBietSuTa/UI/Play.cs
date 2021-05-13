@@ -294,13 +294,15 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private bool IsSavePoint()
         {
-            if (numCorrect >= listTimeStop.Count / 2)
+            string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
+            GameProcess userProcess = new GameProcess();
+            userProcess.StageID = stageID;
+            userProcess.UserID = Convert.ToInt32(File.ReadLines(path).First());
+            userProcess.Point = point;
+            userProcess.IsPass = false;
+            if (numCorrect > listTimeStop.Count / 2)
             {
-                string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
-                GameProcess userProcess = new GameProcess();
-                userProcess.StageID = stageID;
-                userProcess.UserID = Convert.ToInt32(File.ReadLines(path).First());
-                userProcess.Point = point;
+                userProcess.IsPass = true;
                 BLL.Instance.UpdatePoint(userProcess);
                 return true;
             }
@@ -314,12 +316,12 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 IsSavePoint();
                 //Hiện UI chơi lại
                 ShowMessage("Chúc mừng bạn đã hoàn thành xong màn. \nSố điểm của bạn là: " + point);
-                if (numCorrect >= listTimeStop.Count / 2)
+                if (IsSavePoint())
                 {
                     ShowMessage("Chúc mừng bạn đã qua được màn!");
                 }
                 else
-                    ShowMessage("Bạn trả lời đúng " + numCorrect + "/" + listTimeStop.Count + ". Bạn không thể qua được màn này!");
+                    ShowMessage("Bạn trả lời đúng " + numCorrect + "/" + listTimeStop.Count + ". \nBạn không thể qua được màn này!");
                 ReplayNotification replay = new ReplayNotification();
                 replay.ShowDialog();
                 PlayAgain();

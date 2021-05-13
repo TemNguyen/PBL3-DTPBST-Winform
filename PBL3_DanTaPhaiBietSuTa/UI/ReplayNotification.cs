@@ -57,5 +57,12 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             Play.isPlayAgain = true;
             Dispose();
         }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            Play.stageID++;
+            Play.isPlayAgain = true;
+            Dispose();
+        }
     }
 }
