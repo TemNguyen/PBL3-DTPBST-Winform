@@ -314,21 +314,29 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             if (Video.playState == WMPLib.WMPPlayState.wmppsStopped)
             {
+                string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
+                int userID = Convert.ToInt32(File.ReadLines(path).First());
+                Standing userStand = BLL.Instance.GetStandingByUserID(userID);
                 videoTime.Stop();
-                IsSavePoint();
+                //IsSavePoint();
                 //Hiện UI chơi lại
                 ShowMessage("Chúc mừng bạn đã hoàn thành xong màn. \nSố điểm của bạn là: " + point);
                 if (IsSavePoint())
                 {
                     ShowMessage("Chúc mừng bạn đã qua được màn!");
-                    ReplayNotification.isPass = true;
                 }
                 else
                 {
                     ShowMessage("Bạn trả lời đúng " + numCorrect + "/" + listTimeStop.Count + ". \nBạn không thể qua được màn này!");
-                    ReplayNotification.isPass = false;
                 }  
                 ReplayNotification replay = new ReplayNotification();
+                //display next level button when user play old level.
+                if (stageID <= userStand.StageID + 1)
+                {
+                    ReplayNotification.isUnlockNextLevel = true;
+                }
+                else
+                    ReplayNotification.isUnlockNextLevel = false;
                 replay.ShowDialog();
                 PlayAgain();
                 return true;
@@ -358,7 +366,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             }    
             else
             {
-                SettingForm.isPlaySound = true;
+                HomePage.PlaySound();
                 this.Dispose();
                 thUser = new Thread(OpenUserForm);
                 thUser.SetApartmentState(ApartmentState.STA);

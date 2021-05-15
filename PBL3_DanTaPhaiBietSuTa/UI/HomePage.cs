@@ -16,8 +16,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
     public partial class HomePage : Form
     {
         Thread th;
-        private static bool sttSetting = false;
-        static SoundPlayer player = new SoundPlayer();
+        private static SoundPlayer player = new SoundPlayer();
+        bool sttSetting = false;
+
         public HomePage()
         {
             InitializeComponent();

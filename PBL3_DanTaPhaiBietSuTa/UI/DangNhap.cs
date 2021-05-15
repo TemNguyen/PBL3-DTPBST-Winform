@@ -120,10 +120,19 @@ namespace PBL3_DanTaPhaiBietSuTa
         private bool IsRememberUser()
         {
             string rememberUserPath = @Application.StartupPath + @"\Assets\SavedUser\rememberUser.txt";
+            int rememberUserID = 0;
             if (File.Exists(rememberUserPath))
             {
                 cbRemember.Checked = true;
-                int rememberUserID = Convert.ToInt32(File.ReadLines(rememberUserPath).First());
+                try
+                {
+                    rememberUserID = Convert.ToInt32(File.ReadLines(rememberUserPath).First());
+                }
+                catch(FormatException e)
+                {
+                    File.Delete(rememberUserPath);
+                    return false;
+                };
                 UserInfo rememberUser = BLL.Instance.GetUserInfoByUserID(rememberUserID);
                 txtAccount.Text = rememberUser.Username;
                 txtPass.Text = rememberUser.Password;

@@ -248,6 +248,7 @@ namespace PBL3_DanTaPhaiBietSuTa
                 foreach (var i in levels)
                 {
                     i.Image = Image.FromFile(picPath + i.Name + ".png");
+                    i.Cursor = Cursors.Hand;
                 }
             }
             catch(Exception e) { };
@@ -256,6 +257,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             {
                 levels[i].Image = Image.FromFile(picPath + "LockLevel.png");
                 levels[i].Enabled = false;
+                levels[i].Cursor = Cursors.Default;
             }
         }
         private bool IsValid()
@@ -366,7 +368,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             notification.Get(message);
             notification.ShowDialog();
         }
-
         private void User_Load(object sender, EventArgs e)
         {
             // Align the groubox in the middle of the screen
