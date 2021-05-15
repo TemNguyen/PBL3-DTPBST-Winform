@@ -315,11 +315,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.Controls.Add(this.txtQuestion);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Play";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Play";
+            this.Load += new System.EventHandler(this.Play_Load);
             this.gbVideo.ResumeLayout(false);
             this.gbVideo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

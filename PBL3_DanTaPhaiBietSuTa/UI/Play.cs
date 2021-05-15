@@ -20,7 +20,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         Thread thUser;
         Color cBtn = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
         List<int> listTimeStop = new List<int>();
-        static int stageID;
+        public static int stageID;
         Question selectedQuestion;
         int point = 0, questionID = 0, numCorrect = 0;
         int TVideo = 0, countDown = 300;
@@ -28,9 +28,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         public Play()
         {
             InitializeComponent();
-            stageID = 1;
             lbPoint.Text = point.ToString();
             lbTime.Text = "Time: " + (countDown / 10).ToString();
+            lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
             SetTimeStop();
             SetVideoStage();
             videoTime.Start();
@@ -57,9 +57,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private void btnSetting_Click(object sender, EventArgs e)
         {
-            if (DangNhap.settingForm == null)
-                DangNhap.settingForm = new SettingForm();
-            DangNhap.settingForm.ShowDialog();
+            SettingForm setting = new SettingForm();
+            setting.ShowDialog();
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
@@ -70,6 +69,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 switch(d)
                 {
                     case DialogResult.Yes:
+                        HomePage.PlaySound();
                         this.Dispose();
                         thUser = new Thread(OpenUserForm);
                         thUser.SetApartmentState(ApartmentState.STA);
@@ -81,11 +81,34 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             }
             else
             {
+                HomePage.PlaySound();
                 this.Dispose();
                 thUser = new Thread(OpenUserForm);
                 thUser.SetApartmentState(ApartmentState.STA);
                 thUser.Start();
             }    
+        }
+        private string CheckQuestion(string q)
+        {
+
+            int i;
+            string temp = q;
+            if (q.Length > 60)
+            {
+                temp = q.Substring(0, q.Length / 2);
+                for (i = q.Length / 2; i < q.Length; i++)
+                {
+                    if (q[i] == ' ')
+                    {
+                        temp += "\n";
+                        for (int j = 0; j < (i - q.Length / 2); j++) temp += " ";
+                        break;
+                    }
+                    else temp += q[i];
+                }
+                for (int j = i; j < q.Length; j++) temp += q[j];
+            }
+            return temp;
         }
         private void DisplayQuestion()
         {
@@ -100,16 +123,16 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             Random rd = new Random();
             int questionrd;
             questionrd = rd.Next(0, listAnswer.Count - 1);
-            btnA.Text = "A. " + listAnswer[questionrd];
+            btnA.Text = CheckQuestion("A. " + listAnswer[questionrd]);
             listAnswer.RemoveAt(questionrd);
             questionrd = rd.Next(0, listAnswer.Count - 1);
-            btnB.Text += "B. " + listAnswer[questionrd];
+            btnB.Text = CheckQuestion("B. " + listAnswer[questionrd]);
             listAnswer.RemoveAt(questionrd);
             questionrd = rd.Next(0, listAnswer.Count - 1);
-            btnC.Text = "C. " + listAnswer[questionrd];
+            btnC.Text = CheckQuestion("C. " + listAnswer[questionrd]);
             listAnswer.RemoveAt(questionrd);
             questionrd = rd.Next(0, listAnswer.Count - 1);
-            btnD.Text = "D. " + listAnswer[questionrd];
+            btnD.Text = CheckQuestion("D. " + listAnswer[questionrd]);
             listAnswer.RemoveAt(questionrd);
         }
         private void SelectAnswer(object sender, EventArgs e)
@@ -144,8 +167,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private void CaculationPoint(int timeUsed)
         {
-            //Caculation Point
-            //Display Point
             point += Convert.ToInt32((countDown*1.0/300) * 100);
             lbPoint.Text = point.ToString();
         }
@@ -265,17 +286,14 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 Video.Ctlcontrols.play();
             }
         }
-
         private void lbPoint_TextChanged(object sender, EventArgs e)
         {
             lbPoint.Left = pictureBox2.Location.X + ((pictureBox2.Size.Width - lbPoint.Size.Width) / 2);
         }
-
         private void lbTime_TextChanged(object sender, EventArgs e)
         {
             lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
         }
-
         private bool IsSavePoint()
         {
             string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
@@ -283,29 +301,52 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             userProcess.StageID = stageID;
             userProcess.UserID = Convert.ToInt32(File.ReadLines(path).First());
             userProcess.Point = point;
-            BLL.Instance.UpdatePoint(userProcess);
-            return true;
+            userProcess.IsPass = false;
+            if (numCorrect > listTimeStop.Count / 2)
+            {
+                userProcess.IsPass = true;
+                BLL.Instance.UpdatePoint(userProcess);
+                return true;
+            }
+            return false;
         }
         private bool IsFinish()
         {
             if (Video.playState == WMPLib.WMPPlayState.wmppsStopped)
             {
+                string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
+                int userID = Convert.ToInt32(File.ReadLines(path).First());
+                Standing userStand = BLL.Instance.GetStandingByUserID(userID);
                 videoTime.Stop();
-                IsSavePoint();
+                //IsSavePoint();
                 //Hiện UI chơi lại
                 ShowMessage("Chúc mừng bạn đã hoàn thành xong màn. \nSố điểm của bạn là: " + point);
-                if (numCorrect >= listTimeStop.Count / 2)
+                if (IsSavePoint())
                 {
                     ShowMessage("Chúc mừng bạn đã qua được màn!");
                 }
                 else
-                    ShowMessage("Cha mẹ thất vọng về em!");
+                {
+                    ShowMessage("Bạn trả lời đúng " + numCorrect + "/" + listTimeStop.Count + ". \nBạn không thể qua được màn này!");
+                }  
                 ReplayNotification replay = new ReplayNotification();
+                //display next level button when user play old level.
+                if (stageID <= userStand.StageID + 1)
+                {
+                    ReplayNotification.isUnlockNextLevel = true;
+                }
+                else
+                    ReplayNotification.isUnlockNextLevel = false;
                 replay.ShowDialog();
                 PlayAgain();
                 return true;
             }
             return false;
+        }
+        private void Play_Load(object sender, EventArgs e)
+        {
+            lbPoint.Left = pictureBox2.Location.X + ((pictureBox2.Size.Width - lbPoint.Size.Width) / 2);
+            lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
         }
         public void PlayAgain()
         {
@@ -325,6 +366,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             }    
             else
             {
+                HomePage.PlaySound();
                 this.Dispose();
                 thUser = new Thread(OpenUserForm);
                 thUser.SetApartmentState(ApartmentState.STA);

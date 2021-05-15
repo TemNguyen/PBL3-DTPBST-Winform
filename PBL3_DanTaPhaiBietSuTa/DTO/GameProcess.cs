@@ -19,6 +19,8 @@ namespace PBL3_DanTaPhaiBietSuTa.DTO
         public int Point { get; set; }
         [Required]
         public int UserID { get; set; }
+        [Required]
+        public bool IsPass { get; set; }
         
         [ForeignKey("UserID")]
         public virtual UserInfo UserInfo { get; set; }

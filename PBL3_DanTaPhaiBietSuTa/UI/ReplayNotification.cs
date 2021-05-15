@@ -16,12 +16,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         public delegate void MyDel(string message);
         MyDel Get;
         string message = "";
+        public static bool isUnlockNextLevel;
         private void getMessage(string _message)
         {
             message = _message;
         }
-        public delegate bool PlayAgain();
-        PlayAgain playAgain;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -44,6 +43,16 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             label1.Text = message;
             label1.Location = new Point((this.Size.Width - label1.Size.Width) / 2, 40);
+            if (isUnlockNextLevel)
+            {
+                btnNext.Image = Image.FromFile(@Application.StartupPath + @"\Assets\Image\next.png");
+            } 
+            else
+            {
+                btnNext.Image = Image.FromFile(@Application.StartupPath + @"\Assets\Image\notnext.png");
+                btnNext.Cursor = Cursors.Default;
+                btnNext.Enabled = false;
+            }
         }
 
         private void btnInfo_Click(object sender, EventArgs e)
@@ -54,6 +63,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 
         private void btnReplay_Click(object sender, EventArgs e)
         {
+            Play.isPlayAgain = true;
+            Dispose();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            Play.stageID++;
             Play.isPlayAgain = true;
             Dispose();
         }
