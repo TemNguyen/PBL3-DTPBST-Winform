@@ -16,7 +16,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         public delegate void MyDel(string message);
         MyDel Get;
         string message = "";
-        public static bool isPass;
+        public static bool isUnlockNextLevel;
         private void getMessage(string _message)
         {
             message = _message;
@@ -43,10 +43,14 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             label1.Text = message;
             label1.Location = new Point((this.Size.Width - label1.Size.Width) / 2, 40);
-            if (isPass) btnNext.Image = Image.FromFile(@Application.StartupPath + @"\Assets\Image\next.png");
+            if (isUnlockNextLevel)
+            {
+                btnNext.Image = Image.FromFile(@Application.StartupPath + @"\Assets\Image\next.png");
+            } 
             else
             {
                 btnNext.Image = Image.FromFile(@Application.StartupPath + @"\Assets\Image\notnext.png");
+                btnNext.Cursor = Cursors.Default;
                 btnNext.Enabled = false;
             }
         }

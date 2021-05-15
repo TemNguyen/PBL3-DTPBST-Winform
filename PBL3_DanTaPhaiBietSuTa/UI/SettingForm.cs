@@ -48,14 +48,12 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 HomePage.PlaySound();
                 btnSoundOff.Visible = false;
                 btnSoundOn.Visible = true;
-                isPlaySound = true;
             }  
             else
             {
                 HomePage.StopSound();
                 btnSoundOff.Visible = true;
                 btnSoundOn.Visible = false;
-                isPlaySound = false;
             }    
         }
     }
