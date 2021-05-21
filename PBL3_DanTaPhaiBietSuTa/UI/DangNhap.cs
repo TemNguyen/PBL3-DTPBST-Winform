@@ -17,21 +17,17 @@ namespace PBL3_DanTaPhaiBietSuTa
 {
     public partial class DangNhap : Form
     {
-        public static SettingForm settingForm;
         Thread th;
         public DangNhap()
         {
             InitializeComponent();
             IsRememberUser();
         }
-
         private void Setting_Click(object sender, EventArgs e)
         {
-            if (settingForm == null)
-                settingForm = new SettingForm();
-            settingForm.ShowDialog();
+            SettingForm setting = new SettingForm();
+            setting.ShowDialog();
         }
-
         private void txtLoginR_Click(object sender, EventArgs e)
         {
             txtAccountR.Text = "";
@@ -41,18 +37,15 @@ namespace PBL3_DanTaPhaiBietSuTa
             gbRegister.Visible = false;
             gbLogin.Visible = true;
         }
-
         private void btnRegister_Click(object sender, EventArgs e)
         {
             gbLogin.Visible = false;
             gbRegister.Visible = true;
         }
-
         private void OpenUserForm(object sender)
         {
             Application.Run(new User());
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string userName = txtAccount.Text;
@@ -61,11 +54,11 @@ namespace PBL3_DanTaPhaiBietSuTa
             {
                 if(cbRemember.Checked) //lưu userName và passWord vào file.
                 {
+                    UserInfo user = BLL.Instance.GetUserInforByUserName(userName);
                     string rememberUserPath = @Application.StartupPath + @"\Assets\SavedUser\rememberUser.txt";
                     using (StreamWriter sw = File.CreateText(rememberUserPath))
                     {
-                        sw.WriteLine(txtAccount.Text);
-                        sw.WriteLine(txtPass.Text);
+                        sw.WriteLine(user.UserID);
                     }
                 }
                 else
@@ -74,7 +67,7 @@ namespace PBL3_DanTaPhaiBietSuTa
                     File.Delete(rememberUserPath);
                 }
                 ShowMessage("Đăng nhập thành công!");
-                GetUserLogin(txtAccount.Text);
+                GetUserLogin(userName);
                 this.Dispose();
                 th = new Thread(OpenUserForm);
                 th.SetApartmentState(ApartmentState.STA);
@@ -89,7 +82,6 @@ namespace PBL3_DanTaPhaiBietSuTa
                 return;
             }    
         }
-
         private void btnRegisterR_Click(object sender, EventArgs e)
         {
             if (txtPassR.Text != txtRepassR.Text)
@@ -128,16 +120,25 @@ namespace PBL3_DanTaPhaiBietSuTa
         private bool IsRememberUser()
         {
             string rememberUserPath = @Application.StartupPath + @"\Assets\SavedUser\rememberUser.txt";
+            int rememberUserID = 0;
             if (File.Exists(rememberUserPath))
             {
                 cbRemember.Checked = true;
-                List<string> rememberUser = new List<string>(File.ReadAllLines(rememberUserPath));
-                txtAccount.Text = rememberUser[0];
-                txtPass.Text = rememberUser[1];
+                try
+                {
+                    rememberUserID = Convert.ToInt32(File.ReadLines(rememberUserPath).First());
+                }
+                catch(FormatException e)
+                {
+                    File.Delete(rememberUserPath);
+                    return false;
+                };
+                UserInfo rememberUser = BLL.Instance.GetUserInfoByUserID(rememberUserID);
+                txtAccount.Text = rememberUser.Username;
+                txtPass.Text = rememberUser.Password;
             }
             return true;
         }
-        //Kiểm tra đầu vào
         private bool IsValid()
         {
             List<char> list = new List<char>()
@@ -178,10 +179,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             using (StreamWriter sw = File.CreateText(userLogin))
             {
                 sw.WriteLine(user.UserID);
-                sw.WriteLine(user.Username);
-                sw.WriteLine(user.Password);
-                sw.WriteLine(user.Name);
-                sw.WriteLine(user.Email);
             }
         }
         private void txtAccount_TextChanged(object sender, EventArgs e)
@@ -194,7 +191,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             notification.Get(message);
             notification.ShowDialog();
         }
-
         private void DangNhap_Load(object sender, EventArgs e)
         {
             gbLogin.Location = new System.Drawing.Point((this.Size.Width - gbLogin.Size.Width) / 2, 

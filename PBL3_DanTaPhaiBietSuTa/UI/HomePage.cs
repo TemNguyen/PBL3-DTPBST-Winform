@@ -16,8 +16,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
     public partial class HomePage : Form
     {
         Thread th;
-        private static bool sttSetting = false;
-        static SoundPlayer player = new SoundPlayer();
+        private static SoundPlayer player = new SoundPlayer();
+        bool sttSetting = false;
+
         public HomePage()
         {
             InitializeComponent();
@@ -27,10 +28,12 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             player.SoundLocation = @Application.StartupPath + @"\Assets\Sound\Sound.wav";
             player.PlayLooping();
+            SettingForm.isPlaySound = true;
         }
         public static void StopSound()
         {
             player.Stop();
+            SettingForm.isPlaySound = false;
         }
 
         private void OpenLoginForm(object sender)

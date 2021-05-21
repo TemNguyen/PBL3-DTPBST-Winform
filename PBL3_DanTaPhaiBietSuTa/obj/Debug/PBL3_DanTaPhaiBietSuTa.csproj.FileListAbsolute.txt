@@ -118,7 +118,6 @@ D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_Dan
 D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._121111111.resources
 D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._1211111111.resources
 D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._12111111111.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csprojAssemblyReference.cache
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.long123.resources
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.longlong.resources
 D:\PBL3\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.longlonglong.resources
@@ -146,3 +145,5 @@ D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_Dan
 C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations._long.resources
 C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.Help.resources
 C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.longlong1.resources
+D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.longlong1.resources
+D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csprojAssemblyReference.cache

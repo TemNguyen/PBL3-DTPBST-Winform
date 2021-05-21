@@ -1,4 +1,5 @@
 using PBL3_DanTaPhaiBietSuTa.DTO;
+using PBL3_DanTaPhaiBietSuTa.Properties;
 using PBL3_DanTaPhaiBietSuTa.UI;
 using System;
 using System.Collections.Generic;
@@ -18,11 +19,10 @@ namespace PBL3_DanTaPhaiBietSuTa
     {
         Thread thLogout;
         Thread thPlay;
-        private static bool sttRanked = false;
-
         public User()
         {
             InitializeComponent();
+            DisplayLevel();
             ShowUserInfor();
             ShowBXH();
         }
@@ -30,12 +30,10 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             gbUser.Visible = true;
         }
-
         private void OpenLoginForm(object sender)
         {
             Application.Run(new DangNhap());
         }
-
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -66,8 +64,9 @@ namespace PBL3_DanTaPhaiBietSuTa
         private void btnSaveInfo_Click(object sender, EventArgs e)
         {
             string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
-            List<string> userInfor = new List<string>(File.ReadAllLines(path));
-            string oldPass = userInfor[2];
+            int userID = Convert.ToInt32(File.ReadLines(path).First());
+            UserInfo userInfor = BLL.Instance.GetUserInfoByUserID(userID);
+            string oldPass = userInfor.Password;
             if (IsValid() == false) return;
             if (checkBox1.Checked)
             {
@@ -76,31 +75,25 @@ namespace PBL3_DanTaPhaiBietSuTa
                     ShowMessage("Mật khẩu hiện tại không đúng!");
                     return;
                 }
+                else if (String.Compare(txtOldPass.Text, txtNewPass.Text) == 0)
+                {
+                    ShowMessage("Mật khẩu mới trùng với mật khẩu cũ!");
+                    return;
+                }    
                 else
                     oldPass = txtNewPass.Text;
             }
             UserInfo user = new UserInfo()
             {
-                UserID = Convert.ToInt32(userInfor[0]),
-                Username = userInfor[1],
+                UserID = Convert.ToInt32(userInfor.UserID),
+                Username = userInfor.Username,
                 Password = oldPass,
                 Name = txtName.Text,
                 Email = txtEmail.Text
             };
             if (BLL.Instance.UpdateUserInfor(user))
             {
-                //Hiện Form thông báo.
                 ShowMessage("Cập nhập thông tin thành công");
-                //Cập nhập lại txtAccount
-                string userLogin = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
-                using (StreamWriter sw = File.CreateText(userLogin))
-                {
-                    sw.WriteLine(user.UserID);
-                    sw.WriteLine(user.Username);
-                    sw.WriteLine(user.Password);
-                    sw.WriteLine(user.Name);
-                    sw.WriteLine(user.Email);
-                }
                 txtOldPass.Text = "";
                 txtNewPass.Text = "";
                 txtRePass.Text = "";
@@ -108,7 +101,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             }
             else
             {
-                //Hiện Form thông báo.
                 ShowMessage("Có lỗi xảy ra, vui lòng thử lại sau!");
             }
             ShowUserInfor();
@@ -168,19 +160,20 @@ namespace PBL3_DanTaPhaiBietSuTa
         private void ShowUserInfor()
         {
             string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
-            List<string> userInfor = new List<string>(File.ReadAllLines(path));
-            Standing userStand = BLL.Instance.GetStandingByUserID(Convert.ToInt32(userInfor[0]));
-            if (userInfor[3] != "") btnAccountInfo.Text = userInfor[3];
-            else btnAccountInfo.Text = userInfor[1];
-            lbAccount.Text = userInfor[1];
-            txtName.Text = userInfor[3];
-            txtEmail.Text = userInfor[4];
-            if (BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor[0])) == -1)
+            int userID = Convert.ToInt32(File.ReadLines(path).First());
+            UserInfo userInfor = BLL.Instance.GetUserInfoByUserID(userID);
+            Standing userStand = BLL.Instance.GetStandingByUserID(Convert.ToInt32(userInfor.UserID));
+            if (userInfor.Name != "") btnAccountInfo.Text = userInfor.Name;
+            else btnAccountInfo.Text = userInfor.Username;
+            lbAccount.Text = userInfor.Username;
+            txtName.Text = userInfor.Name;
+            txtEmail.Text = userInfor.Email;
+            if (BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor.UserID)) == -1)
             {
                 lbRanked.Text = "Chưa có xếp hạng!";
             }
             else
-                lbRanked.Text = BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor[0])).ToString();
+                lbRanked.Text = BLL.Instance.GetRankByUserID(Convert.ToInt32(userInfor.UserID)).ToString();
             lbPoint.Text = userStand.Point.ToString();
             if (checkBox1.Checked)
             {
@@ -195,37 +188,77 @@ namespace PBL3_DanTaPhaiBietSuTa
                 txtRePass.Enabled = false;
             }
         }
-
         private void OpenPlayForm(object sender)
         {
             Play play = new Play();
             Application.Run(play);
         }
-
         private void Level1_Click(object sender, EventArgs e)
         {
-            Play.stageID = 1;
-            HomePage.StopSound();
-            this.Dispose();
-            thPlay = new Thread(OpenPlayForm);
-            thPlay.SetApartmentState(ApartmentState.STA);
-            thPlay.Start();
+            ChooseLevel(1);
         }
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void Level2_Click(object sender, EventArgs e)
         {
-            Play.stageID = 2;
+            ChooseLevel(2);
+        }
+        private void Level3_Click(object sender, EventArgs e)
+        {
+            ChooseLevel(3);
+        }
+        private void Level4_Click(object sender, EventArgs e)
+        {
+            ChooseLevel(4);
+        }
+        private void Level5_Click(object sender, EventArgs e)
+        {
+            ChooseLevel(5);
+        }
+        private void ChooseLevel(int stageID)
+        {
+            Play.stageID = stageID;
             HomePage.StopSound();
             this.Dispose();
             thPlay = new Thread(OpenPlayForm);
             thPlay.SetApartmentState(ApartmentState.STA);
             thPlay.Start();
         }
-
         private void btnSetting_Click(object sender, EventArgs e)
         {
-            if (DangNhap.settingForm == null)
-                DangNhap.settingForm = new SettingForm();
-            DangNhap.settingForm.ShowDialog();
+            SettingForm setting = new SettingForm();
+            setting.ShowDialog();
+        }
+        private void DisplayLevel()
+        {
+            string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
+            string picPath = @Application.StartupPath + @"\Assets\Image\";
+            int userID = Convert.ToInt32(File.ReadLines(path).First());
+            Standing userStand = BLL.Instance.GetStandingByUserID(userID);
+            int currentStage = userStand.StageID + 1;
+            List<PictureBox> levels = new List<PictureBox>();
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                if (c is PictureBox)
+                {
+                    levels.Add((PictureBox)c);
+                }
+            }
+            try
+            {
+                //set default img
+                foreach (var i in levels)
+                {
+                    i.Image = Image.FromFile(picPath + i.Name + ".png");
+                    i.Cursor = Cursors.Hand;
+                }
+            }
+            catch(Exception e) { };
+            //set lock levels
+            for (int i = currentStage; i < levels.Count; i++)
+            {
+                levels[i].Image = Image.FromFile(picPath + "LockLevel.png");
+                levels[i].Enabled = false;
+                levels[i].Cursor = Cursors.Default;
+            }
         }
         private bool IsValid()
         {
@@ -334,6 +367,31 @@ namespace PBL3_DanTaPhaiBietSuTa
             Notification notification = new Notification();
             notification.Get(message);
             notification.ShowDialog();
+        }
+        private void User_Load(object sender, EventArgs e)
+        {
+            // Align the groubox in the middle of the screen
+            gbRanked.Location = new System.Drawing.Point((this.Size.Width - gbRanked.Size.Width) / 2,
+                (this.Size.Height - gbRanked.Size.Height) / 2);
+            gbFeedback.Location = new System.Drawing.Point((this.Size.Width - gbFeedback.Size.Width) / 2,
+                (this.Size.Height - gbFeedback.Size.Height) / 2);
+            gbUser.Location = new System.Drawing.Point((this.Size.Width - gbUser.Size.Width) / 2,
+                (this.Size.Height - gbUser.Size.Height) / 2);
+            gbLevel.Location = new System.Drawing.Point((this.Size.Width - gbLevel.Size.Width) / 2,
+                (this.Size.Height - gbLevel.Size.Height) / 2);
+
+            // Align the gbUser
+            label8.Location = new System.Drawing.Point((gbUser.Size.Width - label8.Size.Width) / 2, label8.Location.Y);
+            int PosRight = label7.Location.X + label7.Size.Width;
+            label14.Location = new System.Drawing.Point(PosRight - label14.Size.Width, label14.Location.Y);
+            label12.Location = new System.Drawing.Point(PosRight - label12.Size.Width, label12.Location.Y);
+            label17.Location = new System.Drawing.Point(PosRight - label17.Size.Width, label17.Location.Y);
+            label18.Location = new System.Drawing.Point(PosRight - label18.Size.Width, label18.Location.Y);
+            label15.Location = new System.Drawing.Point(PosRight - label15.Size.Width, label15.Location.Y);
+            label16.Location = new System.Drawing.Point(PosRight - label16.Size.Width, label16.Location.Y);
+            label19.Location = new System.Drawing.Point(PosRight - label19.Size.Width, label19.Location.Y);
+            btnSaveInfo.Location = new System.Drawing.Point((gbUser.Size.Width - btnSaveInfo.Size.Width) / 2,
+                btnSaveInfo.Location.Y);
         }
     }
 }

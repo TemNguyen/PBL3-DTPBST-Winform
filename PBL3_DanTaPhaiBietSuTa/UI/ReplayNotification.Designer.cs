@@ -52,6 +52,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // btnReplay
             // 
             this.btnReplay.BackColor = System.Drawing.Color.DarkGray;
+            this.btnReplay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReplay.Image = ((System.Drawing.Image)(resources.GetObject("btnReplay.Image")));
             this.btnReplay.Location = new System.Drawing.Point(229, 114);
             this.btnReplay.Name = "btnReplay";
@@ -63,6 +64,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // btnInfo
             // 
             this.btnInfo.BackColor = System.Drawing.Color.DarkGray;
+            this.btnInfo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnInfo.Image")));
             this.btnInfo.Location = new System.Drawing.Point(125, 114);
             this.btnInfo.Name = "btnInfo";
@@ -74,12 +76,14 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // btnNext
             // 
             this.btnNext.BackColor = System.Drawing.Color.DarkGray;
+            this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.Location = new System.Drawing.Point(334, 114);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(70, 70);
             this.btnNext.TabIndex = 1;
             this.btnNext.TabStop = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // ReplayNotification
             // 
