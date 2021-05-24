@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PBL3_DanTaPhaiBietSuTa
 {
-    public class DAL
+    public class DAL : InterfaceDAL
     {
         public static DAL Instance
         {
