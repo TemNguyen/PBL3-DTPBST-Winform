@@ -335,6 +335,42 @@ namespace PBL3_DanTaPhaiBietSuTa
                 
             }
             catch(ArgumentOutOfRangeException) { };
+            #region DesignRank
+            lb1Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X +
+                   (lbAccRanked.Size.Width - lb1Acc.Size.Width) / 2, 60);
+            lb1Level.Location = new System.Drawing.Point(lbLevelRanked.Location.X +
+                    (lbLevelRanked.Size.Width - lb1Level.Size.Width) / 2, 60);
+            lb1Point.Location = new System.Drawing.Point(lbPointRanked.Location.X +
+                    (lbPointRanked.Size.Width - lb1Point.Size.Width) / 2, 60);
+
+            lb2Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X +
+                    (lbAccRanked.Size.Width - lb2Acc.Size.Width) / 2, 112);
+            lb2Level.Location = new System.Drawing.Point(lbLevelRanked.Location.X +
+                    (lbLevelRanked.Size.Width - lb2Level.Size.Width) / 2, 112);
+            lb2Point.Location = new System.Drawing.Point(lbPointRanked.Location.X +
+                    (lbPointRanked.Size.Width - lb2Point.Size.Width) / 2, 112);
+
+            lb3Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X +
+                    (lbAccRanked.Size.Width - lb3Acc.Size.Width) / 2, 167);
+            lb3Level.Location = new System.Drawing.Point(lbLevelRanked.Location.X +
+                    (lbLevelRanked.Size.Width - lb3Level.Size.Width) / 2, 167);
+            lb3Point.Location = new System.Drawing.Point(lbPointRanked.Location.X +
+                    (lbPointRanked.Size.Width - lb3Point.Size.Width) / 2, 167);
+
+            lb4Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X +
+                    (lbAccRanked.Size.Width - lb4Acc.Size.Width) / 2, 217);
+            lb4Level.Location = new System.Drawing.Point(lbLevelRanked.Location.X +
+                    (lbLevelRanked.Size.Width - lb4Level.Size.Width) / 2, 217);
+            lb4Point.Location = new System.Drawing.Point(lbPointRanked.Location.X +
+                    (lbPointRanked.Size.Width - lb4Point.Size.Width) / 2, 217);
+
+            lb5Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X +
+                    (lbAccRanked.Size.Width - lb5Acc.Size.Width) / 2, 270);
+            lb5Level.Location = new System.Drawing.Point(lbLevelRanked.Location.X +
+                    (lbLevelRanked.Size.Width - lb5Level.Size.Width) / 2, 270);
+            lb5Point.Location = new System.Drawing.Point(lbPointRanked.Location.X +
+                    (lbPointRanked.Size.Width - lb5Point.Size.Width) / 2, 270);
+            #endregion
         }
         private string GetUserByUserID(int userID)
         {
