@@ -17,7 +17,7 @@ namespace PBL3_DanTaPhaiBietSuTa
 {
     public partial class DangNhap : Form
     {
-        Thread th;
+        Thread thread;
         public DangNhap()
         {
             InitializeComponent();
@@ -69,9 +69,9 @@ namespace PBL3_DanTaPhaiBietSuTa
                 ShowMessage("Đăng nhập thành công!");
                 GetUserLogin(userName);
                 this.Dispose();
-                th = new Thread(OpenUserForm);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
+                thread = new Thread(OpenUserForm);
+                thread.SetApartmentState(ApartmentState.STA);
+                thread.Start();
             }
             else
             {
@@ -101,7 +101,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             };
             if(BLL.Instance.AddNewUser(newUser))
             {
-                //Hiện thông báo đăng ký thành công
                 ShowMessage("Đăng ký thành công!");
                 txtAccountR.Text = "";
                 txtEmailR.Text = "";
@@ -112,7 +111,6 @@ namespace PBL3_DanTaPhaiBietSuTa
             }   
             else
             {
-                //Hiện thông báo đăng ký thất bại
                 ShowMessage("Tên tài khoản đã tồn tại!");
                 return;
             }    
@@ -128,7 +126,7 @@ namespace PBL3_DanTaPhaiBietSuTa
                 {
                     rememberUserID = Convert.ToInt32(File.ReadLines(rememberUserPath).First());
                 }
-                catch(FormatException e)
+                catch(FormatException)
                 {
                     File.Delete(rememberUserPath);
                     return false;
