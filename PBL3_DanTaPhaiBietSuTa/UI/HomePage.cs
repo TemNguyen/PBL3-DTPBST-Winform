@@ -15,8 +15,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 {
     public partial class HomePage : Form
     {
-        Thread th;
-        private static SoundPlayer player = new SoundPlayer();
+        Thread thread;
+        private static SoundPlayer sound = new SoundPlayer();
         bool sttSetting = false;
 
         public HomePage()
@@ -26,13 +26,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         public static void PlaySound()
         {
-            player.SoundLocation = @Application.StartupPath + @"\Assets\Sound\Sound.wav";
-            player.PlayLooping();
+            sound.SoundLocation = @Application.StartupPath + @"\Assets\Sound\Sound.wav";
+            sound.PlayLooping();
             SettingForm.isPlaySound = true;
         }
         public static void StopSound()
         {
-            player.Stop();
+            sound.Stop();
             SettingForm.isPlaySound = false;
         }
 
@@ -44,9 +44,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         private void btnPlayNow_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            th = new Thread(OpenLoginForm);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
+            thread = new Thread(OpenLoginForm);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
