@@ -31,7 +31,7 @@
                 },
                 new Video()
                 {
-                    VideoID = 3,VideoName = "Quang Trung Đại Phá Quân Thanh",VideoLink = "C:/1234.txt"
+                    VideoID = 3,VideoName = "Trận chiến trên sông Như Nguyệt",VideoLink = "C:/1234.txt"
                 },
                 new Video()
                 {
@@ -108,6 +108,7 @@
             
             
             context.Questions.AddOrUpdate(s => s.QuestionID,
+                //Màn 2
                 new Question
                 {
                     QuestionID = 1,
@@ -372,6 +373,7 @@
                     StageID = 2,
                     TimeStop = 3510
                 },
+                //Màn 1
                 new Question
                 {
                     QuestionID = 23,
@@ -623,8 +625,576 @@
                     Answer = "Sông Đáy",
                     StageID = 1,
                     TimeStop = 7130
+                },
+                //Màn 3
+                new Question
+                {
+                    QuestionID = 44,
+                    QuestionContent = "Cánh quân bộ của quân Tống tiến sang Ðại Việt do ai chỉ huy ?",
+                    KeyA = "Quách Quỳ, Triệu Tiết",
+                    KeyB = "Hòa Mâu, Ô Mã Nhi",
+                    KeyC = "Liễu Thăng, Triệu Tiết",
+                    KeyD = "Hầu Nhân Bảo, Vương Thông",
+                    Answer = "Quách Quỳ, Triệu Tiết",
+                    StageID = 3,
+                    TimeStop = 1290
+                },
+                new Question
+                {
+                    QuestionID = 45,
+                    QuestionContent = "Quân Tống cử bao nhiêu quân sang xâm lược nước ta ?",
+                    KeyA = "10 vạn quân, 20 vạn dân phu",
+                    KeyB = "20 vạn quân, 10 vạn dân phu",
+                    KeyC = "10 vạn quân, 10 vạn dân phu",
+                    KeyD = "10 vạn quân và không có dân phu",
+                    Answer = "10 vạn quân, 20 vạn dân phu",
+                    StageID = 3,
+                    TimeStop = 1290
+                },
+                new Question
+                {
+                    QuestionID = 46,
+                    QuestionContent = "Vị tuớng chỉ huy quân ta trong cuộc kháng chiến chống Tống lần này là ai ?",
+                    KeyA = "Lý Công Uẩn",
+                    KeyB = "Lý Thường Kiệt",
+                    KeyC = "Trần Thủ Độ",
+                    KeyD = "Trần Cảnh",
+                    Answer = "Lý Thường Kiệt",
+                    StageID = 3,
+                    TimeStop = 1290
+                },
+                new Question
+                {
+                    QuestionID = 47,
+                    QuestionContent = "Lý Thường Kiệt đánh vào Ung Châu với mục đích gì ?",
+                    KeyA = "Tiêu diệt Bộ chỉ huy của quân Tống",
+                    KeyB = "Ðánh vào nơi tập trung lực lượng của quân Tống",
+                    KeyC = "Đánh vào đồn quân Tống gần biên giới của Đại Việt",
+                    KeyD = "Ðánh vào kho luong thực và khí giới của quân Tống",
+                    Answer = "Ðánh vào kho luong thực và khí giới của quân Tống",
+                    StageID = 3,
+                    TimeStop = 1290
+                },
+                new Question
+                {
+                    QuestionID = 48,
+                    QuestionContent = "Sau khi rút quân về nuớc, Lý Thường Kiệt cho xây dựng hệ thống phòng ngự trên sông nào ?",
+                    KeyA = "Bạch Ðằng",
+                    KeyB = "Mã",
+                    KeyC = "Như Nguyệt",
+                    KeyD = "Thao",
+                    Answer = "Như Nguyệt",
+                    StageID = 3,
+                    TimeStop = 2610
+                },
+                new Question
+                {
+                    QuestionID = 49,
+                    QuestionContent = "Tuớng nào của nhà Tống đã hiến kế cho Quách Quỳ bắc cầu phao vuợt sông ?",
+                    KeyA = "Triệt Tiết",
+                    KeyB = "Vương Thông",
+                    KeyC = "Miêu Lý",
+                    KeyD = "Hoà Mâu",
+                    Answer = "Miêu Lý",
+                    StageID = 3,
+                    TimeStop = 2610
+                },
+                new Question
+                {
+                    QuestionID = 50,
+                    QuestionContent = "Vì sao Quách Quỳ đợi mãi mà thuỷ binh vẫn chưa tới ?",
+                    KeyA = "Thuỷ binh của Quách Quỳ di chuyển quá chậm",
+                    KeyB = "Thuỷ binh của Quách Quỳ bị quân nhà Lý chặn đánh nên chưa thể tới được",
+                    KeyC = "Thuỷ binh của Quách Quỳ gặp tai nạn trên đường hành quân",
+                    KeyD = "Tất cả đều sai",
+                    Answer = "Thuỷ binh của Quách Quỳ bị quân nhà Lý chặn đánh nên chưa thể tới được",
+                    StageID = 3,
+                    TimeStop = 2610
+                },
+                new Question
+                {
+                    QuestionID = 51,
+                    QuestionContent = "Lý Thường Kiệt đã cử tướng nào đi chặn đánh thuỷ binh nhà Tống ?",
+                    KeyA = "Lý Triện",
+                    KeyB = "Lý Kế Nguyên",
+                    KeyC = "Chiêu Văn",
+                    KeyD = "Hoằng Chân",
+                    Answer = "Lý Kế Nguyên",
+                    StageID = 3,
+                    TimeStop = 2610
+                },
+                new Question
+                {
+                    QuestionID = 52,
+                    QuestionContent = "Sau khi nhận tin thuỷ quân chưa thể tới kịp Quách Quỳ đã làm gì ?",
+                    KeyA = "Tiếp tục đợi thuỷ quân tới để cùng tiến công",
+                    KeyB = "Tiến hành đóng bè lớn vượt sông",
+                    KeyC = "Gọi viện trợ từ nhà Tống",
+                    KeyD = "Tất cả đều sai",
+                    Answer = "Tiến hành đóng bè lớn vượt sông",
+                    StageID = 3,
+                    TimeStop = 3470
+                },
+                new Question
+                {
+                    QuestionID = 53,
+                    QuestionContent = "Sức chứa của mỗi bè lớn là bao nhiêu ?",
+                    KeyA = "200 quân",
+                    KeyB = "500 quân",
+                    KeyC = "1000 quân",
+                    KeyD = "2000 quân",
+                    Answer = "500 quân",
+                    StageID = 3,
+                    TimeStop = 3470
+                },
+                new Question
+                {
+                    QuestionID = 54,
+                    QuestionContent = "Nguyên nhân nào khiến quân Tống thất bại ở cuộc tấn công lần thứ hai này ?",
+                    KeyA = "Quân Tống vừa sang sông phải tốn sức phá huỷ lớp hàng rào tre cho nhà Lý bố trí",
+                    KeyB = "Quân Tống phải chống lại các đợt phản công mãnh liệt của quân nhà Lý",
+                    KeyC = "Do sức chứa của các bè lớn quá ít nên quân tiếp viện không qua kịp",
+                    KeyD = "Tất cả đều đúng",
+                    Answer = "Tất cả đều đúng",
+                    StageID = 3,
+                    TimeStop = 3470
+                },
+                new Question
+                {
+                    QuestionID = 55,
+                    QuestionContent = "Quách Quỳ phải đối mặt những khó khăn nào trong tình thế hiện nay ?",
+                    KeyA = "Tiến công không được vì không có thuỷ quân để vượt sông",
+                    KeyB = "Lùi không được vì phải chịu khiển trách của vua Tống",
+                    KeyC = "Tình cảnh ba quân đang lâm vào dịch bệnh phương Nam",
+                    KeyD = "Tất cả đều đúng",
+                    Answer = "Tất cả đều đúng",
+                    StageID = 3,
+                    TimeStop = 3820
+                },
+                new Question
+                {
+                    QuestionID = 56,
+                    QuestionContent = "Lý Thường Kiệt đã cử tướng nào tập kích doanh trại quân Tống trong đêm ?",
+                    KeyA = "Hoằng Chân, Lý Kế Nguyên",
+                    KeyB = "Lý Triện, Nguyễn Xí",
+                    KeyC = "Nguyễn Xí, Chiêu Văn",
+                    KeyD = "Tất cả đều sai",
+                    Answer = "Tất cả đều sai",
+                    StageID = 3,
+                    TimeStop = 5400
+                },
+                new Question
+                {
+                    QuestionID = 57,
+                    QuestionContent = "Kết cục của Hoằng Chân và Chiêu Văn sau cuộc tấn công tấn công doanh trại quân Tống:",
+                    KeyA = "Hoằng Chân bị bắt sống còn Chiêu Văn hi sinh",
+                    KeyB = "Cả hai ông đều hi sinh",
+                    KeyC = "Cả hai ông may mắn thoát được và rút về doanh trại nhà Lý",
+                    KeyD = "Tất cả đều sai",
+                    Answer = "Cả hai ông đều hi sinh",
+                    StageID = 3,
+                    TimeStop = 5400
+                },
+                new Question
+                {
+                    QuestionID = 58,
+                    QuestionContent = "Lý Thường Kiệt đã dùng kế gì để đánh bại quân Tống ?",
+                    KeyA = "Tẩu vi thượng sách",
+                    KeyB = "Dương đông kích tây",
+                    KeyC = "Liên hoàn kế",
+                    KeyD = "Không thành kế",
+                    Answer = "Dương đông kích tây",
+                    StageID = 3,
+                    TimeStop = 6730
+                },
+                new Question
+                {
+                    QuestionID = 59,
+                    QuestionContent = "Vì sao Lý Thường Kiệt cử hai tướng Hoằng Chân và Chiêu Văn đi đánh Quách Quỳ ?",
+                    KeyA = "Nhằm mục đích tập kích bất ngờ gây khó khăn cho quân Tống",
+                    KeyB = "Nhằm thu hút lực lượng quân Tống để Lý Thường Kiệt rảnh tay đi đánh Triệu Tiết",
+                    KeyC = "Triệu Tiết sẽ cử quân viện trợ Quách Quỳ từ đó quân ở doanh trại Quách Quỳ càng thưa thớt",
+                    KeyD = "Cả B và C đúng",
+                    Answer = "Cả B và C đúng",
+                    StageID = 3,
+                    TimeStop = 6730
+                },
+                new Question
+                {
+                    QuestionID = 60,
+                    QuestionContent = "Khi hai tướng Hoằng Chân và Chiêu Văn đánh doanh trại Quách Quỳ, Lý Thường Kiệt đã làm gì ?",
+                    KeyA = "Đem quân viện trợ cho Hoằng Chân và Chiêu Văn",
+                    KeyB = "Đem quân sang tấn công doanh trại Triệu Tiết ở phía bắc sông Như Nguyệt",
+                    KeyC = "Không làm gì cả",
+                    KeyD = "Tất cả đều sai",
+                    Answer = "Đem quân sang tấn công doanh trại Triệu Tiết ở phía bắc sông Như Nguyệt",
+                    StageID = 3,
+                    TimeStop = 6730
+                },
+                new Question
+                {
+                    QuestionID = 61,
+                    QuestionContent = "Lý Thường Kiệt chủ động kết thúc chiến tranh bằng cách nào ?",
+                    KeyA = "Tổng tiến công, truy kích kẻ thù đến cùng",
+                    KeyB = "Thương lượng, đề nghị giảng hòa",
+                    KeyC = "Kí hòa ước, kết thúc chiến tranh",
+                    KeyD = "Đề nghị “giảng hòa” củng cố lực lượng, chờ thời cơ",
+                    Answer = "Thương lượng, đề nghị giảng hòa",
+                    StageID = 3,
+                    TimeStop = 7550
+                },
+                new Question
+                {
+                    QuestionID = 62,
+                    QuestionContent = "Tại sao Lý Thường Kiệt lại chủ động giảng hòa ?",
+                    KeyA = "Lý Thường Kiệt sợ mất lòng vua Tống",
+                    KeyB = "Để bảo toàn lực lượng và tài sản của nhân dân",
+                    KeyC = "Để đảm bảo mối quan hệ hòa hiếu giữa hai nước và là truyền thống nhân đạo của dân tộc",
+                    KeyD = "Lý Thường Kiệt muốn kết thúc chiến tranh nhanh chóng",
+                    Answer = "Để đảm bảo mối quan hệ hòa hiếu giữa hai nước và là truyền thống nhân đạo của dân tộc",
+                    StageID = 3,
+                    TimeStop = 7550
+                },
+                new Question
+                {
+                    QuestionID = 63,
+                    QuestionContent = "Tư tưởng xuyên suốt của Nhà Lý trong diễn biến cuộc kháng chiến chống Tống là gì ?",
+                    KeyA = "Nhân đạo",
+                    KeyB = "Nhân văn",
+                    KeyC = "Chủ động",
+                    KeyD = "Bị động",
+                    Answer = "Chủ động",
+                    StageID = 3,
+                    TimeStop = 7950
+                },
+                new Question
+                {
+                    QuestionID = 64,
+                    QuestionContent = "Tước vị cao nhất của Lý Thường Kiệt vào năm 1075 là gì ?",
+                    KeyA = "Vua",
+                    KeyB = "Thái úy",
+                    KeyC = "Thái sư",
+                    KeyD = "Tể tướng",
+                    Answer = "Thái úy",
+                    StageID = 3,
+                    TimeStop = 7950
+                },
+                new Question
+                {
+                    QuestionID = 65,
+                    QuestionContent = "Thiệt hại về người của Nhà Tống trong cuộc kháng chiến này là :",
+                    KeyA = "10 vạn quân, 20 vạn dân phu",
+                    KeyB = "10 vạn quân, 8 vạn dân phu",
+                    KeyC = "8 vạn quân, 8 vạn dân phu",
+                    KeyD = "8 vạn quân, 10 vạn dân phu",
+                    Answer = "8 vạn quân, 8 vạn dân phu",
+                    StageID = 3,
+                    TimeStop = 7950
+                },
+                //Màn 4
+                new Question
+                {
+                    QuestionID = 66,
+                    QuestionContent = "Quân Minh xâm lược nước ta vào thế kỉ nào ?",
+                    KeyA = "Thế kỷ XIV",
+                    KeyB = "Thế kỷ XV",
+                    KeyC = "Thế kỷ XVI",
+                    KeyD = "Thế kỷ XVII",
+                    Answer = "Thế kỷ XV",
+                    StageID = 4,
+                    TimeStop = 1250
+                },
+                new Question
+                {
+                    QuestionID = 67,
+                    QuestionContent = "Lê Lợi trước khi dựng cờ khởi nghĩa đã làm đến chức gì ?",
+                    KeyA = "Bình Ngô Tướng quân",
+                    KeyB = "Kim Ngô Tướng quân",
+                    KeyC = "Thổ quan Tuần kiểm",
+                    KeyD = "Không làm chức gì cả",
+                    Answer = "Kim Ngô Tướng quân",
+                    StageID = 4,
+                    TimeStop = 1250
+                },
+                new Question
+                {
+                    QuestionID = 68,
+                    QuestionContent = "Lê Lợi bắt đầu chiêu nạp anh hùng hào kiệt vào năm nào ?",
+                    KeyA = "1412",
+                    KeyB = "1413",
+                    KeyC = "1414",
+                    KeyD = "1415",
+                    Answer = "1414",
+                    StageID = 4,
+                    TimeStop = 1250
+                },
+                new Question
+                {
+                    QuestionID = 69,
+                    QuestionContent = "Hội thề Lũng Nhai diễn ra vào năm nào ?",
+                    KeyA = "1414",
+                    KeyB = "1416",
+                    KeyC = "1418",
+                    KeyD = "1420",
+                    Answer = "1416",
+                    StageID = 4,
+                    TimeStop = 2050
+                },
+                new Question
+                {
+                    QuestionID = 70,
+                    QuestionContent = "Hội thề Lũng Nhai có bao nhiêu người tham dự ?",
+                    KeyA = "16",
+                    KeyB = "17",
+                    KeyC = "18",
+                    KeyD = "19",
+                    Answer = "19",
+                    StageID = 4,
+                    TimeStop = 2050
+                },
+                new Question
+                {
+                    QuestionID = 71,
+                    QuestionContent = "Lê Lợi dựng cờ khởi nghĩa vào năm nào ?",
+                    KeyA = "1416",
+                    KeyB = "1417",
+                    KeyC = "1418",
+                    KeyD = "Tất cả đều sai",
+                    Answer = "1418",
+                    StageID = 4,
+                    TimeStop = 2050
+                },
+                new Question
+                {
+                    QuestionID = 72,
+                    QuestionContent = "Thành phần của nghĩa quân Lam Sơn ở những buổi đầu khởi nghĩa là:",
+                    KeyA = "100 thiết kỵ, 14 thớt voi, 2000 người",
+                    KeyB = "200 thiết kỵ, 10 thớt voi, 1000 người",
+                    KeyC = "200 thiết kỵ, 14 thớt voi, 2000 người",
+                    KeyD = "Tất cả đều sai",
+                    Answer = "200 thiết kỵ, 14 thớt voi, 2000 người",
+                    StageID = 4,
+                    TimeStop = 3240
+                },
+                new Question
+                {
+                    QuestionID = 73,
+                    QuestionContent = "Những ngày đầu khởi nghĩa, lực lượng nghĩa quân Lam Sơn như thế nào ?",
+                    KeyA = "Rất mạnh, quân sĩ đông, vũ khí đầy đủ",
+                    KeyB = "Còn yếu",
+                    KeyC = "Gặp nhiều khó khăn, gian nan",
+                    KeyD = "Cả B và C đúng",
+                    Answer = "Cả B và C đúng",
+                    StageID = 4,
+                    TimeStop = 3240
+                },
+                new Question
+                {
+                    QuestionID = 74,
+                    QuestionContent = "Trong lúc nguy khốn, Lê Lai đã làm gì để cứu Lê Lợi ?",
+                    KeyA = "Thay Lê Lợi lãnh đạo kháng chiến",
+                    KeyB = "Giúp Lê Lợi rút quân an toàn",
+                    KeyC = "Đóng giả Lê Lợi và hi sinh thay chủ tướng",
+                    KeyD = "Tất cả đều đúng",
+                    Answer = "Đóng giả Lê Lợi và hi sinh thay chủ tướng",
+                    StageID = 4,
+                    TimeStop = 3240
+                },
+                new Question
+                {
+                    QuestionID = 75,
+                    QuestionContent = "Khi quân Minh tấn công căn cứ Lam Sơn, trước thế mạnh của giặc nghĩa quân đã làm gì ?",
+                    KeyA = "Rút lên núi Chí Linh (Thanh Hóa)",
+                    KeyB = "Rút lên núi Núi Do (Thanh Hóa)",
+                    KeyC = "Rút vào Nghệ An",
+                    KeyD = "Không hề rút lui, cầm cự đến cùng",
+                    Answer = "Rút lên núi Chí Linh (Thanh Hóa)",
+                    StageID = 4,
+                    TimeStop = 3240
+                },
+                new Question
+                {
+                    QuestionID = 76,
+                    QuestionContent = "Trước tình hình quân Minh tấn công nghĩa quân, ai là người đã đề nghị tạm rời núi rừng Thanh Hóa, chuyển quân vào Nghệ An ?",
+                    KeyA = "Nguyễn Trãi",
+                    KeyB = "Lê Lợi",
+                    KeyC = "Nguyễn Chích",
+                    KeyD = "Trần Nguyên Hãn",
+                    Answer = "Nguyễn Chích",
+                    StageID = 4,
+                    TimeStop = 5230
+                },
+                new Question
+                {
+                    QuestionID = 77,
+                    QuestionContent = "Lê Lợi đã cử ai sang đánh thành Tây Đô ?",
+                    KeyA = "Lý Triện",
+                    KeyB = "Nguyễn Xí",
+                    KeyC = "Đinh Lễ",
+                    KeyD = "Lê Ngân",
+                    Answer = "Đinh Lễ",
+                    StageID = 4,
+                    TimeStop = 5230
+                },
+                new Question
+                {
+                    QuestionID = 78,
+                    QuestionContent = "Đến cuối năm 1425, nghĩa quân Lê Lợi đã làm chủ những vùng đất nào ?",
+                    KeyA = "Từ Nghệ An vào đến Thuận Hóa",
+                    KeyB = "Từ Thanh Hóa vào đến đèo Hải Vân",
+                    KeyC = "Từ Thanh Hóa vào đến Thuận Hoá",
+                    KeyD = "Từ Nghệ An vào đến Quảng Bình",
+                    Answer = "Từ Thanh Hóa vào đến Thuận Hoá",
+                    StageID = 4,
+                    TimeStop = 5230
+                },
+                new Question
+                {
+                    QuestionID = 79,
+                    QuestionContent = "Tháng 9 năm 1426, Lê Lợi và bộ chỉ huy quyết định mở cuộc tiến quân đến đâu ?",
+                    KeyA = "Vào Miền Trung",
+                    KeyB = "Vào Miền Nam",
+                    KeyC = "Ra Miền Bắc",
+                    KeyD = "Đánh thẳng ra Thăng Long",
+                    Answer = "Ra Miền Bắc",
+                    StageID = 4,
+                    TimeStop = 6320
+                },
+                new Question
+                {
+                    QuestionID = 80,
+                    QuestionContent = "Nhiệm vụ của các cánh quân ra đánh phía Bắc là gì ?",
+                    KeyA = "Giải phóng đất đai, giành thêm dân",
+                    KeyB = "Bao vây uy hiếp thành, chặn viện binh địch",
+                    KeyC = "Tiêu diệt sinh lực địch trong thành",
+                    KeyD = "A và B đúng",
+                    Answer = "A và B đúng",
+                    StageID = 4,
+                    TimeStop = 6320
+                },
+                new Question
+                {
+                    QuestionID = 81,
+                    QuestionContent = "Hướng tiến công của cánh quân do Đinh Lễ và Nguyễn Xí chỉ huy là:",
+                    KeyA = "Đánh phía Tây Bắc",
+                    KeyB = "Đánh phía Đông Bắc",
+                    KeyC = "Đánh thành Đông Quan",
+                    KeyD = "Đánh phía Đông Nam",
+                    Answer = "Đánh thành Đông Quan",
+                    StageID = 4,
+                    TimeStop = 6320
+                },
+                new Question
+                {
+                    QuestionID = 82,
+                    QuestionContent = "Tháng 11 năm 1426, 5 vạn viện binh của giặc do tướng nào chỉ huy kéo vào Đông Quan ?",
+                    KeyA = "Trương Phụ",
+                    KeyB = "Liễu Thăng",
+                    KeyC = "Mộc Thạnh",
+                    KeyD = "Vương Thông",
+                    Answer = "Vương Thông",
+                    StageID = 4,
+                    TimeStop = 7350
+                },
+                new Question
+                {
+                    QuestionID = 83,
+                    QuestionContent = "Vương Thông đã quyết định mở cuộc phản công đánh vào chủ lực của nghĩa quân Lam Sơn ở đâu ?",
+                    KeyA = "Cao Bộ (Chương Mi, Hà Tây)",
+                    KeyB = "Đông Quan",
+                    KeyC = "Đào Đặng (Hưng Yên)",
+                    KeyD = "Tất cả các vùng trên",
+                    Answer = "Cao Bộ (Chương Mi, Hà Tây)",
+                    StageID = 4,
+                    TimeStop = 7350
+                },
+                new Question
+                {
+                    QuestionID = 84,
+                    QuestionContent = "Chiến thắng nào của nghĩa quân đã làm cho 5 vạn quân Minh bị tử thương ?",
+                    KeyA = "Cao Bộ",
+                    KeyB = "Đông Quan",
+                    KeyC = "Chúc Động – Tốt Động",
+                    KeyD = "Chi Lăng – Xương Giang",
+                    Answer = "Chúc Động – Tốt Động",
+                    StageID = 4,
+                    TimeStop = 7350
+                },
+                new Question
+                {
+                    QuestionID = 85,
+                    QuestionContent = "Vào thời gian nào 15 vạn quân viện binh của Trung Quốc chia làm hai đạo kéo vào nước ta ?",
+                    KeyA = "Tháng 10 năm 1426",
+                    KeyB = "Tháng 10 năm 1427",
+                    KeyC = "Tháng 11 năm 1427",
+                    KeyD = "Tháng 12 năm 1427",
+                    Answer = "Tháng 10 năm 1427",
+                    StageID = 4,
+                    TimeStop = 8520
+                },
+                new Question
+                {
+                    QuestionID = 86,
+                    QuestionContent = "Khi Liễu Thăng hùng hổ dẫn quân ào ạt tiến vào biên giới nước ta, chúng đã bị nghĩa quân phục kích và giết ở đâu ?",
+                    KeyA = "Ở Nam Quan",
+                    KeyB = "Ở Đông Quan",
+                    KeyC = "Ở Vân Nam",
+                    KeyD = "Ở Chi Lăng",
+                    Answer = "Ở Chi Lăng",
+                    StageID = 4,
+                    TimeStop = 8520
+                },
+                new Question
+                {
+                    QuestionID = 87,
+                    QuestionContent = "Chiến thắng Xương Giang, nghĩa quân Lam Sơn đã tiêu diệt bao nhiêu tên địch ?",
+                    KeyA = "5 vạn",
+                    KeyB = "10 vạn",
+                    KeyC = "15 vạn",
+                    KeyD = "20 vạn",
+                    Answer = "5 vạn",
+                    StageID = 4,
+                    TimeStop = 8520
+                },
+                new Question
+                {
+                    QuestionID = 88,
+                    QuestionContent = "Sau thất bại ở Chi Lăng – Xương Giang, tình hình quân Minh ở Đông Quan như thế nào ?",
+                    KeyA = "Vô cùng khiếp đảm, vội vàng xin hòa và chấp nhận mở hội thề Đông Quan rút quân về nước",
+                    KeyB = "Bỏ vũ khí ra hàng",
+                    KeyC = "Liều chết phá vòng vây rút chạy về nước",
+                    KeyD = "Rơi vào thế bị động, liên lạc về nước cầu cứu viện binh",
+                    Answer = "Vô cùng khiếp đảm, vội vàng xin hòa và chấp nhận mở hội thề Đông Quan rút quân về nước",
+                    StageID = 4,
+                    TimeStop = 9280
+                },
+                new Question
+                {
+                    QuestionID = 89,
+                    QuestionContent = "Bình Ngô đại cáo được coi như bản tuyên ngôn độc lập thứ mấy của nước ta ?",
+                    KeyA = "Thứ nhất",
+                    KeyB = "Thứ hai",
+                    KeyC = "Thứ ba",
+                    KeyD = "Bình Ngô đại cáo không được coi như một bản tuyên ngôn độc lập",
+                    Answer = "Thứ hai",
+                    StageID = 4,
+                    TimeStop = 9280
+                },
+                new Question
+                {
+                    QuestionID = 90,
+                    QuestionContent = "Lê Lợi lên ngôi hoàng đế vào ngày tháng năm nào ?",
+                    KeyA = "Ngày 25/4/1428",
+                    KeyB = "Ngày 29/4/1428",
+                    KeyC = "Ngày 30/4/1428",
+                    KeyD = "Ngày 1/5/1428",
+                    Answer = "Ngày 29/4/1428",
+                    StageID = 4,
+                    TimeStop = 9280
                 }
-                
+
+
+
 
 
 
