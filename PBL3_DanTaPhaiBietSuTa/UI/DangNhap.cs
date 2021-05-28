@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace PBL3_DanTaPhaiBietSuTa
     public partial class DangNhap : Form
     {
         Thread thread;
+        readonly static string key = File.ReadLines(@Application.StartupPath + @"\Assets\key.mpv").First();
         public DangNhap()
         {
             InitializeComponent();
@@ -31,6 +33,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         private void txtLoginR_Click(object sender, EventArgs e)
         {
             txtAccountR.Text = "";
+            txtNameR.Text = "";
             txtEmailR.Text = "";
             txtPassR.Text = "";
             txtRepassR.Text = "";
@@ -49,7 +52,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string userName = txtAccount.Text;
-            string passWord = txtPass.Text;
+            string passWord = EncryptMD5(txtPass.Text);
             if(BLL.Instance.CheckLogin(userName, passWord))
             {
                 if(cbRemember.Checked) //lưu userName và passWord vào file.
@@ -96,7 +99,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             {
                 Name = txtNameR.Text,
                 Username = txtAccountR.Text,
-                Password = txtPassR.Text,
+                Password = EncryptMD5(txtPassR.Text),
                 Email = txtEmailR.Text,
             };
             if(BLL.Instance.AddNewUser(newUser))
@@ -133,7 +136,7 @@ namespace PBL3_DanTaPhaiBietSuTa
                 };
                 UserInfo rememberUser = BLL.Instance.GetUserInfoByUserID(rememberUserID);
                 txtAccount.Text = rememberUser.Username;
-                txtPass.Text = rememberUser.Password;
+                txtPass.Text = DecryptMD5(rememberUser.Password);
             }
             return true;
         }
@@ -182,6 +185,50 @@ namespace PBL3_DanTaPhaiBietSuTa
         private void txtAccount_TextChanged(object sender, EventArgs e)
         {
             if (txtAccount.Text == "") txtPass.Text = "";
+        }
+        private string EncryptMD5(string s)
+        {
+            using (var md5 = new MD5CryptoServiceProvider())
+            {
+                using (var tdes = new TripleDESCryptoServiceProvider())
+                {
+                    tdes.Key = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
+                    tdes.Mode = CipherMode.ECB;
+                    tdes.Padding = PaddingMode.PKCS7;
+
+                    using (var transform = tdes.CreateEncryptor())
+                    {
+                        byte[] textBytes = UTF8Encoding.UTF8.GetBytes(s);
+                        byte[] bytes = transform.TransformFinalBlock(textBytes, 0, textBytes.Length);
+                        return Convert.ToBase64String(bytes, 0, bytes.Length);
+                    }
+                }
+            }
+        }
+        private string DecryptMD5(string s)
+        {
+            using (var md5 = new MD5CryptoServiceProvider())
+            {
+                using (var tdes = new TripleDESCryptoServiceProvider())
+                {
+                    tdes.Key = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
+                    tdes.Mode = CipherMode.ECB;
+                    tdes.Padding = PaddingMode.PKCS7;
+
+                    using (var transform = tdes.CreateDecryptor())
+                    {
+                        try
+                        {
+                            byte[] cipherBytes = Convert.FromBase64String(s);
+                            byte[] bytes = transform.TransformFinalBlock(cipherBytes, 0, cipherBytes.Length);
+
+                            return UTF8Encoding.UTF8.GetString(bytes);
+                        }
+                        catch(CryptographicException) { };
+                        return "";
+                    }
+                }
+            }
         }
         private void ShowMessage(string message)
         {
