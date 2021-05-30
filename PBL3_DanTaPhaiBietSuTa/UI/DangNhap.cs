@@ -19,11 +19,13 @@ namespace PBL3_DanTaPhaiBietSuTa
     public partial class DangNhap : Form
     {
         Thread thread;
-        readonly static string key = File.ReadLines(@Application.StartupPath + @"\Assets\key.mpv").First();
+        private static string key;
         public DangNhap()
         {
+            SetKey();
             InitializeComponent();
             IsRememberUser();
+            
         }
         private void Setting_Click(object sender, EventArgs e)
         {
@@ -109,6 +111,8 @@ namespace PBL3_DanTaPhaiBietSuTa
                 txtEmailR.Text = "";
                 txtPassR.Text = "";
                 txtRepassR.Text = "";
+                txtAccount.Text = "";
+                txtPass.Text = "";
                 gbRegister.Visible = false;
                 gbLogin.Visible = true;
             }   
@@ -135,8 +139,11 @@ namespace PBL3_DanTaPhaiBietSuTa
                     return false;
                 };
                 UserInfo rememberUser = BLL.Instance.GetUserInfoByUserID(rememberUserID);
-                txtAccount.Text = rememberUser.Username;
-                txtPass.Text = DecryptMD5(rememberUser.Password);
+                if(rememberUser != null)
+                {
+                    txtAccount.Text = rememberUser.Username;
+                    txtPass.Text = DecryptMD5(rememberUser.Password);
+                }    
             }
             return true;
         }
@@ -241,7 +248,18 @@ namespace PBL3_DanTaPhaiBietSuTa
             gbLogin.Location = new System.Drawing.Point((this.Size.Width - gbLogin.Size.Width) / 2, 
                 (this.Size.Height - gbLogin.Size.Height) / 2);
             gbRegister.Location = new System.Drawing.Point((this.Size.Width - gbRegister.Size.Width) / 2,
-                (this.Size.Height - gbRegister.Size.Height) / 2);
+                (this.Size.Height - gbRegister.Size.Height) / 2);           
+        }
+        private static void SetKey()
+        {
+            if (File.Exists(@Application.StartupPath + @"\Assets\key.mpv"))
+            {
+                key = File.ReadLines(@Application.StartupPath + @"\Assets\key.mpv").First();
+            }
+            else
+            {
+                key = "";
+            }
         }
     }
 }
