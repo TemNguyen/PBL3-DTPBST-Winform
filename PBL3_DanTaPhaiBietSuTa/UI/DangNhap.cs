@@ -51,15 +51,19 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             Application.Run(new User());
         }
+        private void OpenAdminForm(object sender)
+        {
+            Application.Run(new AdminForm());
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string userName = txtAccount.Text;
             string passWord = EncryptMD5(txtPass.Text);
-            if(BLL.Instance.CheckLogin(userName, passWord))
+            UserInfo user = BLL.Instance.GetUserInforByUserName(userName);
+            if (BLL.Instance.CheckLogin(userName, passWord))
             {
-                if(cbRemember.Checked) //lưu userName và passWord vào file.
+                if (cbRemember.Checked) //lưu userName và passWord vào file.
                 {
-                    UserInfo user = BLL.Instance.GetUserInforByUserName(userName);
                     string rememberUserPath = @Application.StartupPath + @"\Assets\SavedUser\rememberUser.txt";
                     using (StreamWriter sw = File.CreateText(rememberUserPath))
                     {
@@ -74,9 +78,19 @@ namespace PBL3_DanTaPhaiBietSuTa
                 ShowMessage("Đăng nhập thành công!");
                 GetUserLogin(userName);
                 this.Dispose();
-                thread = new Thread(OpenUserForm);
-                thread.SetApartmentState(ApartmentState.STA);
-                thread.Start();
+                if (user.IsAdmin)
+                {
+                    HomePage.StopSound();
+                    thread = new Thread(OpenAdminForm);
+                    thread.SetApartmentState(ApartmentState.STA);
+                    thread.Start();
+                }
+                else
+                {
+                    thread = new Thread(OpenUserForm);
+                    thread.SetApartmentState(ApartmentState.STA);
+                    thread.Start();
+                }
             }
             else
             {
@@ -85,7 +99,7 @@ namespace PBL3_DanTaPhaiBietSuTa
                 txtAccount.Text = "";
                 txtPass.Text = "";
                 return;
-            }    
+            }
         }
         private void btnRegisterR_Click(object sender, EventArgs e)
         {
@@ -237,6 +251,25 @@ namespace PBL3_DanTaPhaiBietSuTa
                 }
             }
         }
+        private static void SetKey()
+        {
+            if (File.Exists(@Application.StartupPath + @"\Assets\key.mpv"))
+            {
+                try
+                {
+                    key = File.ReadAllLines(@Application.StartupPath + @"\Assets\key.mpv").First();
+                }
+                catch (Exception)
+                {
+                    File.Delete(@Application.StartupPath + @"\Assets\key.mpv");
+                    key = "";
+                }
+            }
+            else
+            {
+                key = "";
+            }
+        }
         private void ShowMessage(string message)
         {
             Notification notification = new Notification();
@@ -249,17 +282,6 @@ namespace PBL3_DanTaPhaiBietSuTa
                 (this.Size.Height - gbLogin.Size.Height) / 2);
             gbRegister.Location = new System.Drawing.Point((this.Size.Width - gbRegister.Size.Width) / 2,
                 (this.Size.Height - gbRegister.Size.Height) / 2);           
-        }
-        private static void SetKey()
-        {
-            if (File.Exists(@Application.StartupPath + @"\Assets\key.mpv"))
-            {
-                key = File.ReadLines(@Application.StartupPath + @"\Assets\key.mpv").First();
-            }
-            else
-            {
-                key = "";
-            }
         }
     }
 }
