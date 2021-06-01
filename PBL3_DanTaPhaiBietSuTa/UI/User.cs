@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -19,8 +20,10 @@ namespace PBL3_DanTaPhaiBietSuTa
     {
         Thread threadLogout;
         Thread threadPlay;
+        private static string key;
         public User()
         {
+            SetKey();
             InitializeComponent();
             DisplayLevel();
             ShowUserInfor();
@@ -66,7 +69,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
             int userID = Convert.ToInt32(File.ReadLines(path).First());
             UserInfo userInfor = BLL.Instance.GetUserInfoByUserID(userID);
-            string oldPass = userInfor.Password;
+            string oldPass = DecryptMD5(userInfor.Password);
             if (IsValid() == false) return;
             if (checkBox1.Checked)
             {
@@ -87,7 +90,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             {
                 UserID = Convert.ToInt32(userInfor.UserID),
                 Username = userInfor.Username,
-                Password = oldPass,
+                Password = EncryptMD5(oldPass),
                 Name = txtName.Text,
                 Email = txtEmail.Text
             };
@@ -382,6 +385,69 @@ namespace PBL3_DanTaPhaiBietSuTa
             Notification notification = new Notification();
             notification.Get(message);
             notification.ShowDialog();
+        }
+        private string EncryptMD5(string s)
+        {
+            using (var md5 = new MD5CryptoServiceProvider())
+            {
+                using (var tdes = new TripleDESCryptoServiceProvider())
+                {
+                    tdes.Key = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
+                    tdes.Mode = CipherMode.ECB;
+                    tdes.Padding = PaddingMode.PKCS7;
+
+                    using (var transform = tdes.CreateEncryptor())
+                    {
+                        byte[] textBytes = UTF8Encoding.UTF8.GetBytes(s);
+                        byte[] bytes = transform.TransformFinalBlock(textBytes, 0, textBytes.Length);
+                        return Convert.ToBase64String(bytes, 0, bytes.Length);
+                    }
+                }
+            }
+        }
+        private string DecryptMD5(string s)
+        {
+            using (var md5 = new MD5CryptoServiceProvider())
+            {
+                using (var tdes = new TripleDESCryptoServiceProvider())
+                {
+                    tdes.Key = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
+                    tdes.Mode = CipherMode.ECB;
+                    tdes.Padding = PaddingMode.PKCS7;
+
+                    using (var transform = tdes.CreateDecryptor())
+                    {
+                        try
+                        {
+                            byte[] cipherBytes = Convert.FromBase64String(s);
+                            byte[] bytes = transform.TransformFinalBlock(cipherBytes, 0, cipherBytes.Length);
+
+                            return UTF8Encoding.UTF8.GetString(bytes);
+                        }
+                        catch (CryptographicException) { };
+                        return "";
+                    }
+                }
+            }
+        }
+        private static void SetKey()
+        {
+            if (File.Exists(@Application.StartupPath + @"\Assets\key.mpv"))
+            {
+                try
+                {
+                    key = File.ReadAllLines(@Application.StartupPath + @"\Assets\key.mpv").First();
+                }
+                catch (Exception)
+                {
+                    File.Delete(@Application.StartupPath + @"\Assets\key.mpv");
+                    key = "";
+                }
+            }
+            else
+            {
+                key = "";
+            }
         }
         private void User_Load(object sender, EventArgs e)
         {

@@ -37,7 +37,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             return DAL.Instance.AddUser(user);
         }
-        public List<UserInfo> GetUserInfos()
+        public List<UserInfo> GetListUserInfor()
         {
             return DAL.Instance.GetListUserInfo();
         }
@@ -78,7 +78,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             int pos = 1;
             List<Standing> standings = SortListStandings();
-            foreach(var i in standings)
+            foreach (var i in standings)
             {
                 if (i.UserID == userID)
                     return pos;
@@ -93,6 +93,74 @@ namespace PBL3_DanTaPhaiBietSuTa
         public UserInfo GetUserInfoByUserID(int userID)
         {
             return DAL.Instance.GetUserInfoByUserID(userID);
+        }
+
+
+
+        //new function
+        public List<Question> GetAllQuestion()
+        {
+            DB db = new DB();
+            return db.Questions.Select(p => p).ToList();
+        }
+        public bool DeleteUser(int userID)
+        {
+            using (DB db = new DB())
+            {
+                var user = db.UserInfos.Find(userID);
+                if (user == null) return false;
+                else
+                {
+                    db.UserInfos.Remove(user);
+                    db.SaveChanges();
+                    return true;
+                }
+            }
+        }
+        public Question GetQuestionByQuestionID(int questionID)
+        {
+            Question question = new Question();
+            var listAllQuestion = GetAllQuestion();
+            foreach (var q in listAllQuestion)
+            {
+                if (q.QuestionID == questionID)
+                    question = q;
+            }
+            return question;
+        }
+        public bool DeleteQuestion(int questionID)
+        {
+            using (DB db = new DB())
+            {
+                var question = db.Questions.Find(questionID);
+                if (question == null) return false;
+                else
+                {
+                    db.Questions.Remove(question);
+                    db.SaveChanges();
+                    return true;
+                }
+            }
+        }
+        public bool UpdateQuestion(Question question)
+        {
+            using (DB db = new DB())
+            {
+                var q = db.Questions.Find(question.QuestionID);
+                if (q == null)
+                    return false;
+                else
+                {
+                    q.QuestionContent = question.QuestionContent;
+                    q.KeyA = question.KeyA;
+                    q.KeyB = question.KeyB;
+                    q.KeyC = question.KeyC;
+                    q.KeyD = question.KeyD;
+                    q.Answer = question.Answer;
+                    db.SaveChanges();
+                    return true;
+                }
+            }
         }
     }
 }

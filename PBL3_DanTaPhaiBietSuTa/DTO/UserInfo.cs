@@ -20,6 +20,7 @@ namespace PBL3_DanTaPhaiBietSuTa.DTO
         public string Name { get; set; }
         
         public string Email { get; set; }
+        public bool IsAdmin { get; set; }
         public override string ToString()
         {
             return Username;
