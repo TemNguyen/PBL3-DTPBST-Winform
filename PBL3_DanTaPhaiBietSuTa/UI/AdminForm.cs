@@ -24,13 +24,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         {
             SetKey();
             InitializeComponent();
+            CBBFilter();
             DisplayDashboard();
             DisplayUser();
             DisplayQuestion();
-            CBBFilter();
-            panel8.Visible = true;
-            panel9.Visible = false;
-            panel6.Visible = false;
         }
         private void DisplayDashboard()
         {
@@ -49,6 +46,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private void DisplayQuestion()
         {
+            comboBox1.SelectedIndex = 0;
             var listQuestion = BLL.Instance.GetAllQuestion();
             questionDGV.DataSource = listQuestion;
         }
@@ -67,37 +65,46 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private void menuPanel_Click(object sender, EventArgs e)
         {
-            var minSize = new Size(45, 827);
-            var maxSize = new Size(163, 827);
             if (isNavOpen)
             {
-                navBar.Size = minSize;
-                homePanel.Size = minSize;
-                userPanel.Size = minSize;
-                levelPanel.Size = minSize;
-                feedbackPanel.Size = minSize;
-                securityPanel.Size = minSize;
-                logoutPanel.Size = minSize;
+                panel6.Location = new System.Drawing.Point(50, -2);
+                panel8.Location = new System.Drawing.Point(50, -2);
+                panel9.Location = new System.Drawing.Point(50, -2);
+
+                this.Size = new Size(726, this.Height);
+
+                navBar.Size = new Size(45, navBar.Height);
+                homePanel.Size = new Size(45, homePanel.Height);
+                userPanel.Size = new Size(45, userPanel.Height);
+                levelPanel.Size = new Size(45, levelPanel.Height);
+                feedbackPanel.Size = new Size(45, feedbackPanel.Height);
+                securityPanel.Size = new Size(45, securityPanel.Height);
+                logoutPanel.Size = new Size(45, logoutPanel.Height);
                 isNavOpen = false;
             }
             else
             {
-                navBar.Size = maxSize;
-                homePanel.Size = maxSize;
-                userPanel.Size = maxSize;
-                levelPanel.Size = maxSize;
-                feedbackPanel.Size = maxSize;
-                securityPanel.Size = maxSize;
-                logoutPanel.Size = maxSize;
+                panel6.Location = new System.Drawing.Point(166, -2);
+                panel8.Location = new System.Drawing.Point(166, -2);
+                panel9.Location = new System.Drawing.Point(166, -2);
+
+                this.Size = new Size(842, this.Height);
+
+                navBar.Size = new Size(163, navBar.Height);
+                homePanel.Size = new Size(160, homePanel.Height);
+                userPanel.Size = new Size(160, userPanel.Height);
+                levelPanel.Size = new Size(160, levelPanel.Height);
+                feedbackPanel.Size = new Size(160, feedbackPanel.Height);
+                securityPanel.Size = new Size(160, securityPanel.Height);
+                logoutPanel.Size = new Size(160, logoutPanel.Height);
                 isNavOpen = true;
             }
-
         }
-        private void label4_Click(object sender, EventArgs e)
+        private void Feedbackbtn_Click(object sender, EventArgs e)
         {
             Process.Start(@Application.StartupPath + @"\Assets\FeedBack");
         }
-        private void label5_Click(object sender, EventArgs e)
+        private void MD5Keybtn_Click(object sender, EventArgs e)
         {
             panel6.Visible = true;
             panel8.Visible = false;
@@ -147,7 +154,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             }
             DisplayUser();
         }
-        private void label1_Click(object sender, EventArgs e)
+        private void Dashboardbtn_Click(object sender, EventArgs e)
         {
             panel8.Visible = true;
             panel9.Visible = false;
@@ -159,7 +166,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             panel8.Visible = false;
             panel9.Visible = false;
         }
-        private void label3_Click(object sender, EventArgs e)
+        private void Questionbtn_Click(object sender, EventArgs e)
         {
             panel9.Visible = true;
             panel8.Visible = false;
@@ -168,6 +175,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         private void logoutPanel_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            HomePage.PlaySound();
             threadLogout = new Thread(OpenLoginForm);
             threadLogout.SetApartmentState(ApartmentState.STA);
             threadLogout.Start();
@@ -688,6 +696,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             panel6.Location = new System.Drawing.Point(166, -2);
             panel8.Location = new System.Drawing.Point(166, -2);
             panel9.Location = new System.Drawing.Point(166, -2);
+
+            panel8.Visible = true;
+            panel9.Visible = false;
+            panel6.Visible = false;
         }
     }
 }
