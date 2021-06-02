@@ -63,6 +63,7 @@
       <DependentUpon>CustomButton.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\DAL.cs" />
+    <Compile Include="DAL\InterfaceDAL.cs" />
     <Compile Include="DTO\CreateDB.cs" />
     <Compile Include="DTO\DB.cs" />
     <Compile Include="DTO\GameProcess.cs" />
