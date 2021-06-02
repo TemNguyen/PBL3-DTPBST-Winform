@@ -84,13 +84,13 @@
                 {
                     UserID = 1,
                     Username = "gnol5498",Password = "123456",Name = "Lê Thanh Long",
-                    Email = "thanhlong9654147@gmail.com",
+                    Email = "thanhlong9654147@gmail.com",IsAdmin = true
                 },
                 new UserInfo
                 {
                     UserID = 2,
                     Username = "temnguyen",Password = "123456",Name = "Nguyễn Duy Thịnh",
-                    Email = "temnguyen@gmail.com"
+                    Email = "temnguyen@gmail.com",IsAdmin = true
                 }
             );
 
@@ -583,7 +583,7 @@
                     QuestionID = 40,
                     QuestionContent = "Cuộc kháng chiến chống quân xâm lược Hán (42 - 43) không mang ý nghĩa nào sau đây ?",
                     KeyA = "Củng cố vững mạnh chính quyền tự chủ của nhân dân ta",
-                    KeyB = "Khẳng định vai trò của người phụ nữa trong lịch sử dân tộc ta",
+                    KeyB = "Khẳng định vai trò của người phụ nữ trong lịch sử dân tộc ta",
                     KeyC = "Thể hiện tinh thần đoàn kết, ý chí chống giặc của nhân dân ta",
                     KeyD = "Để lại nhiều bại học kinh nghiệm quý báu",
                     Answer = "Củng cố vững mạnh chính quyền tự chủ của nhân dân ta",

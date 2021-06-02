@@ -22,5 +22,10 @@ namespace PBL3_DanTaPhaiBietSuTa
         Standing GetStandingByUserID(int UserID);
         List<Standing> GetListStanding();
         UserInfo GetUserInfoByUserID(int userID);
+        List<Question> GetAllQuestion();
+        bool DeleteUser(int userID);
+        Question GetQuestionByQuestionID(int questionID);
+        bool DeleteQuestion(int questionID);
+        bool UpdateQuestion(Question question);
     }
 }
