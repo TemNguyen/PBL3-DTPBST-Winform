@@ -159,6 +159,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.menuPanel.BackColor = System.Drawing.Color.DodgerBlue;
             this.menuPanel.Controls.Add(this.label7);
             this.menuPanel.Controls.Add(this.pictureBox1);
+            this.menuPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuPanel.Location = new System.Drawing.Point(0, 5);
             this.menuPanel.Margin = new System.Windows.Forms.Padding(2);
             this.menuPanel.Name = "menuPanel";
@@ -169,6 +170,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(51, 21);
@@ -183,6 +185,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(4, 12);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -199,10 +202,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.logoutPanel.Controls.Add(this.label6);
             this.logoutPanel.Controls.Add(this.logoutIcon);
+            this.logoutPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoutPanel.Location = new System.Drawing.Point(4, 551);
             this.logoutPanel.Margin = new System.Windows.Forms.Padding(2);
             this.logoutPanel.Name = "logoutPanel";
-            this.logoutPanel.Size = new System.Drawing.Size(137, 41);
+            this.logoutPanel.Size = new System.Drawing.Size(155, 41);
             this.logoutPanel.TabIndex = 1;
             this.logoutPanel.Click += new System.EventHandler(this.logoutPanel_Click);
             this.logoutPanel.MouseLeave += new System.EventHandler(this.LeaveBackground);
@@ -211,6 +215,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(44, 11);
@@ -225,6 +230,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             // logoutIcon
             // 
+            this.logoutIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoutIcon.Image = ((System.Drawing.Image)(resources.GetObject("logoutIcon.Image")));
             this.logoutIcon.Location = new System.Drawing.Point(2, 2);
             this.logoutIcon.Margin = new System.Windows.Forms.Padding(2);
@@ -241,18 +247,20 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.securityPanel.Controls.Add(this.label5);
             this.securityPanel.Controls.Add(this.securityIcon);
+            this.securityPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.securityPanel.Location = new System.Drawing.Point(-4, 321);
             this.securityPanel.Margin = new System.Windows.Forms.Padding(2);
             this.securityPanel.Name = "securityPanel";
             this.securityPanel.Size = new System.Drawing.Size(163, 41);
             this.securityPanel.TabIndex = 1;
-            this.securityPanel.Click += new System.EventHandler(this.label5_Click);
+            this.securityPanel.Click += new System.EventHandler(this.MD5Keybtn_Click);
             this.securityPanel.MouseLeave += new System.EventHandler(this.LeaveBackground);
             this.securityPanel.MouseHover += new System.EventHandler(this.HoverBackground);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(44, 11);
@@ -261,12 +269,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label5.Size = new System.Drawing.Size(72, 21);
             this.label5.TabIndex = 1;
             this.label5.Text = "Bảo mật";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.label5.Click += new System.EventHandler(this.MD5Keybtn_Click);
             this.label5.MouseLeave += new System.EventHandler(this.LabelLeaver);
             this.label5.MouseHover += new System.EventHandler(this.LabelHover);
             // 
             // securityIcon
             // 
+            this.securityIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.securityIcon.Image = ((System.Drawing.Image)(resources.GetObject("securityIcon.Image")));
             this.securityIcon.Location = new System.Drawing.Point(2, 2);
             this.securityIcon.Margin = new System.Windows.Forms.Padding(2);
@@ -275,7 +284,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.securityIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.securityIcon.TabIndex = 0;
             this.securityIcon.TabStop = false;
-            this.securityIcon.Click += new System.EventHandler(this.label5_Click);
+            this.securityIcon.Click += new System.EventHandler(this.MD5Keybtn_Click);
             this.securityIcon.MouseLeave += new System.EventHandler(this.PictureLeaver);
             this.securityIcon.MouseHover += new System.EventHandler(this.PictureHover);
             // 
@@ -283,18 +292,20 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.feedbackPanel.Controls.Add(this.label4);
             this.feedbackPanel.Controls.Add(this.feedbackIcon);
+            this.feedbackPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.feedbackPanel.Location = new System.Drawing.Point(-2, 261);
             this.feedbackPanel.Margin = new System.Windows.Forms.Padding(2);
             this.feedbackPanel.Name = "feedbackPanel";
             this.feedbackPanel.Size = new System.Drawing.Size(161, 41);
             this.feedbackPanel.TabIndex = 1;
-            this.feedbackPanel.Click += new System.EventHandler(this.label4_Click);
+            this.feedbackPanel.Click += new System.EventHandler(this.Feedbackbtn_Click);
             this.feedbackPanel.MouseLeave += new System.EventHandler(this.LeaveBackground);
             this.feedbackPanel.MouseHover += new System.EventHandler(this.HoverBackground);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(44, 11);
@@ -303,12 +314,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label4.Size = new System.Drawing.Size(85, 21);
             this.label4.TabIndex = 1;
             this.label4.Text = "FeedBack";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label4.Click += new System.EventHandler(this.Feedbackbtn_Click);
             this.label4.MouseLeave += new System.EventHandler(this.LabelLeaver);
             this.label4.MouseHover += new System.EventHandler(this.LabelHover);
             // 
             // feedbackIcon
             // 
+            this.feedbackIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.feedbackIcon.Image = ((System.Drawing.Image)(resources.GetObject("feedbackIcon.Image")));
             this.feedbackIcon.Location = new System.Drawing.Point(2, 2);
             this.feedbackIcon.Margin = new System.Windows.Forms.Padding(2);
@@ -317,7 +329,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.feedbackIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.feedbackIcon.TabIndex = 0;
             this.feedbackIcon.TabStop = false;
-            this.feedbackIcon.Click += new System.EventHandler(this.label4_Click);
+            this.feedbackIcon.Click += new System.EventHandler(this.Feedbackbtn_Click);
             this.feedbackIcon.MouseLeave += new System.EventHandler(this.PictureLeaver);
             this.feedbackIcon.MouseHover += new System.EventHandler(this.PictureHover);
             // 
@@ -325,18 +337,20 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.levelPanel.Controls.Add(this.label3);
             this.levelPanel.Controls.Add(this.levelIcon);
+            this.levelPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.levelPanel.Location = new System.Drawing.Point(-2, 204);
             this.levelPanel.Margin = new System.Windows.Forms.Padding(2);
             this.levelPanel.Name = "levelPanel";
             this.levelPanel.Size = new System.Drawing.Size(161, 41);
             this.levelPanel.TabIndex = 1;
-            this.levelPanel.Click += new System.EventHandler(this.label3_Click);
+            this.levelPanel.Click += new System.EventHandler(this.Questionbtn_Click);
             this.levelPanel.MouseLeave += new System.EventHandler(this.LeaveBackground);
             this.levelPanel.MouseHover += new System.EventHandler(this.HoverBackground);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(44, 11);
@@ -345,12 +359,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label3.Size = new System.Drawing.Size(73, 21);
             this.label3.TabIndex = 1;
             this.label3.Text = "Câu hỏi.";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.Click += new System.EventHandler(this.Questionbtn_Click);
             this.label3.MouseLeave += new System.EventHandler(this.LabelLeaver);
             this.label3.MouseHover += new System.EventHandler(this.LabelHover);
             // 
             // levelIcon
             // 
+            this.levelIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.levelIcon.Image = ((System.Drawing.Image)(resources.GetObject("levelIcon.Image")));
             this.levelIcon.Location = new System.Drawing.Point(2, 2);
             this.levelIcon.Margin = new System.Windows.Forms.Padding(2);
@@ -359,7 +374,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.levelIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.levelIcon.TabIndex = 0;
             this.levelIcon.TabStop = false;
-            this.levelIcon.Click += new System.EventHandler(this.label3_Click);
+            this.levelIcon.Click += new System.EventHandler(this.Questionbtn_Click);
             this.levelIcon.MouseLeave += new System.EventHandler(this.PictureLeaver);
             this.levelIcon.MouseHover += new System.EventHandler(this.PictureHover);
             // 
@@ -367,6 +382,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.userPanel.Controls.Add(this.label2);
             this.userPanel.Controls.Add(this.userIcon);
+            this.userPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.userPanel.Location = new System.Drawing.Point(-2, 147);
             this.userPanel.Margin = new System.Windows.Forms.Padding(2);
             this.userPanel.Name = "userPanel";
@@ -379,6 +395,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(44, 11);
@@ -393,6 +410,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             // userIcon
             // 
+            this.userIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.userIcon.Image = ((System.Drawing.Image)(resources.GetObject("userIcon.Image")));
             this.userIcon.Location = new System.Drawing.Point(2, 2);
             this.userIcon.Margin = new System.Windows.Forms.Padding(2);
@@ -409,18 +427,20 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.homePanel.Controls.Add(this.label1);
             this.homePanel.Controls.Add(this.homeIcon);
+            this.homePanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.homePanel.Location = new System.Drawing.Point(-4, 91);
             this.homePanel.Margin = new System.Windows.Forms.Padding(2);
             this.homePanel.Name = "homePanel";
             this.homePanel.Size = new System.Drawing.Size(163, 41);
             this.homePanel.TabIndex = 1;
-            this.homePanel.Click += new System.EventHandler(this.label1_Click);
+            this.homePanel.Click += new System.EventHandler(this.Dashboardbtn_Click);
             this.homePanel.MouseLeave += new System.EventHandler(this.LeaveBackground);
             this.homePanel.MouseHover += new System.EventHandler(this.HoverBackground);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(46, 11);
@@ -429,12 +449,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label1.Size = new System.Drawing.Size(94, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "DashBoard";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Click += new System.EventHandler(this.Dashboardbtn_Click);
             this.label1.MouseLeave += new System.EventHandler(this.LabelLeaver);
             this.label1.MouseHover += new System.EventHandler(this.LabelHover);
             // 
             // homeIcon
             // 
+            this.homeIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.homeIcon.Image = ((System.Drawing.Image)(resources.GetObject("homeIcon.Image")));
             this.homeIcon.Location = new System.Drawing.Point(5, 2);
             this.homeIcon.Margin = new System.Windows.Forms.Padding(2);
@@ -443,7 +464,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.homeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.homeIcon.TabIndex = 0;
             this.homeIcon.TabStop = false;
-            this.homeIcon.Click += new System.EventHandler(this.label1_Click);
+            this.homeIcon.Click += new System.EventHandler(this.Dashboardbtn_Click);
             this.homeIcon.MouseLeave += new System.EventHandler(this.PictureLeaver);
             this.homeIcon.MouseHover += new System.EventHandler(this.PictureHover);
             // 
@@ -484,7 +505,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.clearUserBtn.Location = new System.Drawing.Point(459, 246);
             this.clearUserBtn.Name = "clearUserBtn";
             this.clearUserBtn.Size = new System.Drawing.Size(99, 32);
-            this.clearUserBtn.TabIndex = 6;
+            this.clearUserBtn.TabIndex = 7;
             this.clearUserBtn.Text = "Clear";
             this.clearUserBtn.UseVisualStyleBackColor = true;
             this.clearUserBtn.Click += new System.EventHandler(this.clearUserBtn_Click);
@@ -496,8 +517,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.deleteUserBtn.Location = new System.Drawing.Point(288, 246);
             this.deleteUserBtn.Name = "deleteUserBtn";
             this.deleteUserBtn.Size = new System.Drawing.Size(99, 32);
-            this.deleteUserBtn.TabIndex = 5;
-            this.deleteUserBtn.Text = "Delete";
+            this.deleteUserBtn.TabIndex = 6;
+            this.deleteUserBtn.Text = "Xóa";
             this.deleteUserBtn.UseVisualStyleBackColor = true;
             this.deleteUserBtn.Click += new System.EventHandler(this.deleteUserBtn_Click);
             // 
@@ -508,8 +529,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.saveuserBtn.Location = new System.Drawing.Point(104, 246);
             this.saveuserBtn.Name = "saveuserBtn";
             this.saveuserBtn.Size = new System.Drawing.Size(99, 32);
-            this.saveuserBtn.TabIndex = 4;
-            this.saveuserBtn.Text = "Save";
+            this.saveuserBtn.TabIndex = 5;
+            this.saveuserBtn.Text = "Lưu";
             this.saveuserBtn.UseVisualStyleBackColor = true;
             this.saveuserBtn.Click += new System.EventHandler(this.saveuserBtn_Click);
             // 
@@ -519,9 +540,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.addUsercb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addUsercb.Location = new System.Drawing.Point(104, 167);
             this.addUsercb.Name = "addUsercb";
-            this.addUsercb.Size = new System.Drawing.Size(99, 25);
-            this.addUsercb.TabIndex = 3;
-            this.addUsercb.Text = "Add User?";
+            this.addUsercb.Size = new System.Drawing.Size(152, 25);
+            this.addUsercb.TabIndex = 4;
+            this.addUsercb.Text = "Thêm người chơi?";
             this.addUsercb.UseVisualStyleBackColor = true;
             this.addUsercb.CheckedChanged += new System.EventHandler(this.addUsercb_CheckedChanged);
             // 
@@ -539,42 +560,42 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(385, 76);
+            this.label15.Location = new System.Drawing.Point(381, 76);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(52, 21);
+            this.label15.Size = new System.Drawing.Size(56, 21);
             this.label15.TabIndex = 2;
-            this.label15.Text = "Name";
+            this.label15.Text = "Họ tên";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(6, 121);
+            this.label14.Location = new System.Drawing.Point(0, 122);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 21);
+            this.label14.Size = new System.Drawing.Size(75, 21);
             this.label14.TabIndex = 2;
-            this.label14.Text = "Password";
+            this.label14.Text = "Mật khẩu";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(1, 75);
+            this.label13.Location = new System.Drawing.Point(0, 75);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 21);
+            this.label13.Size = new System.Drawing.Size(75, 21);
             this.label13.TabIndex = 2;
-            this.label13.Text = "Username";
+            this.label13.Text = "Tài khoản";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(220, 11);
+            this.label10.Location = new System.Drawing.Point(218, 8);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(217, 32);
+            this.label10.Size = new System.Drawing.Size(236, 32);
             this.label10.TabIndex = 1;
-            this.label10.Text = "User Management";
+            this.label10.Text = "Quản Lý Người Chơi";
             // 
             // tbPass
             // 
@@ -627,7 +648,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.panel8.Controls.Add(this.panel12);
             this.panel8.Controls.Add(this.panel13);
             this.panel8.Controls.Add(this.panel14);
-            this.panel8.Location = new System.Drawing.Point(975, 746);
+            this.panel8.Location = new System.Drawing.Point(912, 452);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(663, 597);
             this.panel8.TabIndex = 2;
@@ -638,11 +659,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.panel11.Controls.Add(this.label22);
             this.panel11.Controls.Add(this.lbFeedback);
             this.panel11.Controls.Add(this.pictureBox6);
+            this.panel11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel11.ForeColor = System.Drawing.Color.Coral;
             this.panel11.Location = new System.Drawing.Point(403, 378);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(212, 169);
             this.panel11.TabIndex = 0;
+            this.panel11.Click += new System.EventHandler(this.Feedbackbtn_Click);
             // 
             // label22
             // 
@@ -654,6 +677,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label22.Size = new System.Drawing.Size(95, 25);
             this.label22.TabIndex = 2;
             this.label22.Text = "Feedback.";
+            this.label22.Click += new System.EventHandler(this.Feedbackbtn_Click);
             // 
             // lbFeedback
             // 
@@ -665,6 +689,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.lbFeedback.Size = new System.Drawing.Size(92, 37);
             this.lbFeedback.TabIndex = 1;
             this.lbFeedback.Text = "label8";
+            this.lbFeedback.Click += new System.EventHandler(this.Feedbackbtn_Click);
             // 
             // pictureBox6
             // 
@@ -675,6 +700,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.Feedbackbtn_Click);
             // 
             // panel12
             // 
@@ -682,11 +708,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.panel12.Controls.Add(this.label24);
             this.panel12.Controls.Add(this.lbQuestion);
             this.panel12.Controls.Add(this.pictureBox7);
+            this.panel12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel12.ForeColor = System.Drawing.Color.Coral;
             this.panel12.Location = new System.Drawing.Point(37, 378);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(212, 169);
             this.panel12.TabIndex = 0;
+            this.panel12.Click += new System.EventHandler(this.Questionbtn_Click);
             // 
             // label24
             // 
@@ -698,6 +726,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label24.Size = new System.Drawing.Size(81, 25);
             this.label24.TabIndex = 2;
             this.label24.Text = "Câu hỏi.";
+            this.label24.Click += new System.EventHandler(this.Questionbtn_Click);
             // 
             // lbQuestion
             // 
@@ -709,6 +738,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.lbQuestion.Size = new System.Drawing.Size(92, 37);
             this.lbQuestion.TabIndex = 1;
             this.lbQuestion.Text = "label8";
+            this.lbQuestion.Click += new System.EventHandler(this.Questionbtn_Click);
             // 
             // pictureBox7
             // 
@@ -719,6 +749,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.Questionbtn_Click);
             // 
             // panel13
             // 
@@ -726,11 +757,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.panel13.Controls.Add(this.label26);
             this.panel13.Controls.Add(this.lbUser);
             this.panel13.Controls.Add(this.pictureBox8);
+            this.panel13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel13.ForeColor = System.Drawing.Color.Coral;
             this.panel13.Location = new System.Drawing.Point(403, 48);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(212, 169);
             this.panel13.TabIndex = 0;
+            this.panel13.Click += new System.EventHandler(this.userIcon_Click);
             // 
             // label26
             // 
@@ -742,6 +775,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label26.Size = new System.Drawing.Size(109, 25);
             this.label26.TabIndex = 2;
             this.label26.Text = "Người chơi.";
+            this.label26.Click += new System.EventHandler(this.userIcon_Click);
             // 
             // lbUser
             // 
@@ -753,6 +787,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.lbUser.Size = new System.Drawing.Size(92, 37);
             this.lbUser.TabIndex = 1;
             this.lbUser.Text = "label8";
+            this.lbUser.Click += new System.EventHandler(this.userIcon_Click);
             // 
             // pictureBox8
             // 
@@ -763,17 +798,20 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.userIcon_Click);
             // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel14.Controls.Add(this.label28);
             this.panel14.Controls.Add(this.pictureBox9);
+            this.panel14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel14.ForeColor = System.Drawing.Color.Coral;
             this.panel14.Location = new System.Drawing.Point(37, 48);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(212, 169);
             this.panel14.TabIndex = 0;
+            this.panel14.Click += new System.EventHandler(this.Dashboardbtn_Click);
             // 
             // label28
             // 
@@ -785,6 +823,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label28.Size = new System.Drawing.Size(175, 25);
             this.label28.TabIndex = 2;
             this.label28.Text = "Chào mừng trở lại!";
+            this.label28.Click += new System.EventHandler(this.Dashboardbtn_Click);
             // 
             // pictureBox9
             // 
@@ -795,12 +834,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 0;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.Dashboardbtn_Click);
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.questionDGV);
-            this.panel9.Location = new System.Drawing.Point(-1, 670);
+            this.panel9.Location = new System.Drawing.Point(166, 689);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(663, 597);
             this.panel9.TabIndex = 2;
@@ -839,8 +879,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.refreshQuestionbtn.Location = new System.Drawing.Point(408, 252);
             this.refreshQuestionbtn.Name = "refreshQuestionbtn";
             this.refreshQuestionbtn.Size = new System.Drawing.Size(99, 32);
-            this.refreshQuestionbtn.TabIndex = 4;
-            this.refreshQuestionbtn.Text = "Refresh";
+            this.refreshQuestionbtn.TabIndex = 21;
+            this.refreshQuestionbtn.Text = "Làm mới";
             this.refreshQuestionbtn.UseVisualStyleBackColor = true;
             this.refreshQuestionbtn.Click += new System.EventHandler(this.refreshQuestionbtn_Click);
             // 
@@ -851,8 +891,8 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.deleteQuestionbtn.Location = new System.Drawing.Point(266, 252);
             this.deleteQuestionbtn.Name = "deleteQuestionbtn";
             this.deleteQuestionbtn.Size = new System.Drawing.Size(99, 32);
-            this.deleteQuestionbtn.TabIndex = 4;
-            this.deleteQuestionbtn.Text = "Delete";
+            this.deleteQuestionbtn.TabIndex = 20;
+            this.deleteQuestionbtn.Text = "Xóa";
             this.deleteQuestionbtn.UseVisualStyleBackColor = true;
             this.deleteQuestionbtn.Click += new System.EventHandler(this.deleteQuestionbtn_Click);
             // 
@@ -863,14 +903,15 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.saveQuestionbtn.Location = new System.Drawing.Point(118, 252);
             this.saveQuestionbtn.Name = "saveQuestionbtn";
             this.saveQuestionbtn.Size = new System.Drawing.Size(99, 32);
-            this.saveQuestionbtn.TabIndex = 4;
-            this.saveQuestionbtn.Text = "Save";
+            this.saveQuestionbtn.TabIndex = 19;
+            this.saveQuestionbtn.Text = "Lưu";
             this.saveQuestionbtn.UseVisualStyleBackColor = true;
             this.saveQuestionbtn.Click += new System.EventHandler(this.saveQuestionbtn_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 13;
             this.comboBox1.Location = new System.Drawing.Point(533, 287);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -898,7 +939,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.tbKeyD.Location = new System.Drawing.Point(45, 94);
             this.tbKeyD.Name = "tbKeyD";
             this.tbKeyD.Size = new System.Drawing.Size(529, 25);
-            this.tbKeyD.TabIndex = 1;
+            this.tbKeyD.TabIndex = 18;
             // 
             // tbKeyC
             // 
@@ -906,7 +947,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.tbKeyC.Location = new System.Drawing.Point(45, 64);
             this.tbKeyC.Name = "tbKeyC";
             this.tbKeyC.Size = new System.Drawing.Size(529, 25);
-            this.tbKeyC.TabIndex = 1;
+            this.tbKeyC.TabIndex = 16;
             // 
             // tbKeyB
             // 
@@ -914,7 +955,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.tbKeyB.Location = new System.Drawing.Point(45, 35);
             this.tbKeyB.Name = "tbKeyB";
             this.tbKeyB.Size = new System.Drawing.Size(529, 25);
-            this.tbKeyB.TabIndex = 1;
+            this.tbKeyB.TabIndex = 14;
             // 
             // tbKeyA
             // 
@@ -922,7 +963,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.tbKeyA.Location = new System.Drawing.Point(45, 4);
             this.tbKeyA.Name = "tbKeyA";
             this.tbKeyA.Size = new System.Drawing.Size(529, 25);
-            this.tbKeyA.TabIndex = 1;
+            this.tbKeyA.TabIndex = 12;
             // 
             // radioButton4
             // 
@@ -931,7 +972,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.radioButton4.Location = new System.Drawing.Point(3, 95);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(47, 29);
-            this.radioButton4.TabIndex = 0;
+            this.radioButton4.TabIndex = 17;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "D.";
             this.radioButton4.UseVisualStyleBackColor = true;
@@ -943,7 +984,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.radioButton3.Location = new System.Drawing.Point(3, 65);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(46, 29);
-            this.radioButton3.TabIndex = 0;
+            this.radioButton3.TabIndex = 15;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "C.";
             this.radioButton3.UseVisualStyleBackColor = true;
@@ -955,7 +996,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.radioButton2.Location = new System.Drawing.Point(3, 36);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(45, 29);
-            this.radioButton2.TabIndex = 0;
+            this.radioButton2.TabIndex = 13;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "B.";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -967,7 +1008,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.radioButton1.Location = new System.Drawing.Point(3, 5);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(46, 29);
-            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabIndex = 11;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "A.";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -979,7 +1020,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.tbQuestion.Multiline = true;
             this.tbQuestion.Name = "tbQuestion";
             this.tbQuestion.Size = new System.Drawing.Size(577, 51);
-            this.tbQuestion.TabIndex = 2;
+            this.tbQuestion.TabIndex = 10;
             this.tbQuestion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label21
@@ -987,11 +1028,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(220, 11);
+            this.label21.Location = new System.Drawing.Point(239, 8);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(266, 32);
+            this.label21.Size = new System.Drawing.Size(198, 32);
             this.label21.TabIndex = 1;
-            this.label21.Text = "Question Management";
+            this.label21.Text = "Quản Lý Câu Hỏi";
             // 
             // questionDGV
             // 
@@ -1013,7 +1054,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(826, 596);
+            this.ClientSize = new System.Drawing.Size(829, 597);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel8);
