@@ -17,7 +17,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GenData());
+            Application.Run(new AdminForm());
         }
     }
 }
