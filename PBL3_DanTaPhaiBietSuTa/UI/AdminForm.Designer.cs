@@ -146,11 +146,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.navBar.Controls.Add(this.levelPanel);
             this.navBar.Controls.Add(this.userPanel);
             this.navBar.Controls.Add(this.homePanel);
-            this.navBar.Location = new System.Drawing.Point(-2, -7);
-            this.navBar.Margin = new System.Windows.Forms.Padding(2);
+            this.navBar.Location = new System.Drawing.Point(-3, -9);
+            this.navBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.navBar.Name = "navBar";
-            this.navBar.Padding = new System.Windows.Forms.Padding(2);
-            this.navBar.Size = new System.Drawing.Size(163, 672);
+            this.navBar.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.navBar.Size = new System.Drawing.Size(217, 827);
             this.navBar.TabIndex = 0;
             this.navBar.TabStop = false;
             // 
@@ -160,10 +160,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.menuPanel.Controls.Add(this.label7);
             this.menuPanel.Controls.Add(this.pictureBox1);
             this.menuPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuPanel.Location = new System.Drawing.Point(0, 5);
-            this.menuPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.menuPanel.Location = new System.Drawing.Point(0, 6);
+            this.menuPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.menuPanel.Name = "menuPanel";
-            this.menuPanel.Size = new System.Drawing.Size(163, 62);
+            this.menuPanel.Size = new System.Drawing.Size(217, 76);
             this.menuPanel.TabIndex = 2;
             this.menuPanel.Click += new System.EventHandler(this.menuPanel_Click);
             // 
@@ -173,10 +173,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(51, 21);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(68, 26);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 21);
+            this.label7.Size = new System.Drawing.Size(68, 27);
             this.label7.TabIndex = 1;
             this.label7.Text = "Menu";
             this.label7.Click += new System.EventHandler(this.menuPanel_Click);
@@ -187,10 +186,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(4, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(5, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -203,10 +202,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.logoutPanel.Controls.Add(this.label6);
             this.logoutPanel.Controls.Add(this.logoutIcon);
             this.logoutPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutPanel.Location = new System.Drawing.Point(4, 551);
-            this.logoutPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.logoutPanel.Location = new System.Drawing.Point(5, 678);
+            this.logoutPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logoutPanel.Name = "logoutPanel";
-            this.logoutPanel.Size = new System.Drawing.Size(155, 41);
+            this.logoutPanel.Size = new System.Drawing.Size(207, 50);
             this.logoutPanel.TabIndex = 1;
             this.logoutPanel.Click += new System.EventHandler(this.logoutPanel_Click);
             this.logoutPanel.MouseLeave += new System.EventHandler(this.LeaveBackground);
@@ -218,10 +217,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(44, 11);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(59, 14);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 21);
+            this.label6.Size = new System.Drawing.Size(111, 27);
             this.label6.TabIndex = 1;
             this.label6.Text = "Đăng xuất";
             this.label6.Click += new System.EventHandler(this.logoutPanel_Click);
@@ -232,10 +230,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.logoutIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoutIcon.Image = ((System.Drawing.Image)(resources.GetObject("logoutIcon.Image")));
-            this.logoutIcon.Location = new System.Drawing.Point(2, 2);
-            this.logoutIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.logoutIcon.Location = new System.Drawing.Point(3, 2);
+            this.logoutIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logoutIcon.Name = "logoutIcon";
-            this.logoutIcon.Size = new System.Drawing.Size(36, 36);
+            this.logoutIcon.Size = new System.Drawing.Size(48, 44);
             this.logoutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logoutIcon.TabIndex = 0;
             this.logoutIcon.TabStop = false;
@@ -248,10 +246,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.securityPanel.Controls.Add(this.label5);
             this.securityPanel.Controls.Add(this.securityIcon);
             this.securityPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.securityPanel.Location = new System.Drawing.Point(-4, 321);
-            this.securityPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.securityPanel.Location = new System.Drawing.Point(-5, 395);
+            this.securityPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.securityPanel.Name = "securityPanel";
-            this.securityPanel.Size = new System.Drawing.Size(163, 41);
+            this.securityPanel.Size = new System.Drawing.Size(217, 50);
             this.securityPanel.TabIndex = 1;
             this.securityPanel.Click += new System.EventHandler(this.MD5Keybtn_Click);
             this.securityPanel.MouseLeave += new System.EventHandler(this.LeaveBackground);
@@ -263,10 +261,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(44, 11);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(59, 14);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 21);
+            this.label5.Size = new System.Drawing.Size(93, 27);
             this.label5.TabIndex = 1;
             this.label5.Text = "Bảo mật";
             this.label5.Click += new System.EventHandler(this.MD5Keybtn_Click);
@@ -277,10 +274,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.securityIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.securityIcon.Image = ((System.Drawing.Image)(resources.GetObject("securityIcon.Image")));
-            this.securityIcon.Location = new System.Drawing.Point(2, 2);
-            this.securityIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.securityIcon.Location = new System.Drawing.Point(3, 2);
+            this.securityIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.securityIcon.Name = "securityIcon";
-            this.securityIcon.Size = new System.Drawing.Size(36, 36);
+            this.securityIcon.Size = new System.Drawing.Size(48, 44);
             this.securityIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.securityIcon.TabIndex = 0;
             this.securityIcon.TabStop = false;
@@ -293,10 +290,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.feedbackPanel.Controls.Add(this.label4);
             this.feedbackPanel.Controls.Add(this.feedbackIcon);
             this.feedbackPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.feedbackPanel.Location = new System.Drawing.Point(-2, 261);
-            this.feedbackPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.feedbackPanel.Location = new System.Drawing.Point(-3, 321);
+            this.feedbackPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.feedbackPanel.Name = "feedbackPanel";
-            this.feedbackPanel.Size = new System.Drawing.Size(161, 41);
+            this.feedbackPanel.Size = new System.Drawing.Size(215, 50);
             this.feedbackPanel.TabIndex = 1;
             this.feedbackPanel.Click += new System.EventHandler(this.Feedbackbtn_Click);
             this.feedbackPanel.MouseLeave += new System.EventHandler(this.LeaveBackground);
@@ -308,10 +305,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(44, 11);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(59, 14);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 21);
+            this.label4.Size = new System.Drawing.Size(109, 27);
             this.label4.TabIndex = 1;
             this.label4.Text = "FeedBack";
             this.label4.Click += new System.EventHandler(this.Feedbackbtn_Click);
@@ -322,10 +318,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.feedbackIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.feedbackIcon.Image = ((System.Drawing.Image)(resources.GetObject("feedbackIcon.Image")));
-            this.feedbackIcon.Location = new System.Drawing.Point(2, 2);
-            this.feedbackIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.feedbackIcon.Location = new System.Drawing.Point(3, 2);
+            this.feedbackIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.feedbackIcon.Name = "feedbackIcon";
-            this.feedbackIcon.Size = new System.Drawing.Size(36, 36);
+            this.feedbackIcon.Size = new System.Drawing.Size(48, 44);
             this.feedbackIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.feedbackIcon.TabIndex = 0;
             this.feedbackIcon.TabStop = false;
@@ -338,10 +334,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.levelPanel.Controls.Add(this.label3);
             this.levelPanel.Controls.Add(this.levelIcon);
             this.levelPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.levelPanel.Location = new System.Drawing.Point(-2, 204);
-            this.levelPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.levelPanel.Location = new System.Drawing.Point(-3, 251);
+            this.levelPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.levelPanel.Name = "levelPanel";
-            this.levelPanel.Size = new System.Drawing.Size(161, 41);
+            this.levelPanel.Size = new System.Drawing.Size(215, 50);
             this.levelPanel.TabIndex = 1;
             this.levelPanel.Click += new System.EventHandler(this.Questionbtn_Click);
             this.levelPanel.MouseLeave += new System.EventHandler(this.LeaveBackground);
@@ -353,10 +349,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(44, 11);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(59, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 21);
+            this.label3.Size = new System.Drawing.Size(93, 27);
             this.label3.TabIndex = 1;
             this.label3.Text = "Câu hỏi.";
             this.label3.Click += new System.EventHandler(this.Questionbtn_Click);
@@ -367,10 +362,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.levelIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.levelIcon.Image = ((System.Drawing.Image)(resources.GetObject("levelIcon.Image")));
-            this.levelIcon.Location = new System.Drawing.Point(2, 2);
-            this.levelIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.levelIcon.Location = new System.Drawing.Point(3, 2);
+            this.levelIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.levelIcon.Name = "levelIcon";
-            this.levelIcon.Size = new System.Drawing.Size(36, 36);
+            this.levelIcon.Size = new System.Drawing.Size(48, 44);
             this.levelIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.levelIcon.TabIndex = 0;
             this.levelIcon.TabStop = false;
@@ -383,10 +378,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.userPanel.Controls.Add(this.label2);
             this.userPanel.Controls.Add(this.userIcon);
             this.userPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userPanel.Location = new System.Drawing.Point(-2, 147);
-            this.userPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.userPanel.Location = new System.Drawing.Point(-3, 181);
+            this.userPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userPanel.Name = "userPanel";
-            this.userPanel.Size = new System.Drawing.Size(161, 41);
+            this.userPanel.Size = new System.Drawing.Size(215, 50);
             this.userPanel.TabIndex = 1;
             this.userPanel.Click += new System.EventHandler(this.userIcon_Click);
             this.userPanel.MouseLeave += new System.EventHandler(this.LeaveBackground);
@@ -398,10 +393,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(44, 11);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(59, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 21);
+            this.label2.Size = new System.Drawing.Size(120, 27);
             this.label2.TabIndex = 1;
             this.label2.Text = "Người chơi";
             this.label2.Click += new System.EventHandler(this.userIcon_Click);
@@ -412,10 +406,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.userIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.userIcon.Image = ((System.Drawing.Image)(resources.GetObject("userIcon.Image")));
-            this.userIcon.Location = new System.Drawing.Point(2, 2);
-            this.userIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.userIcon.Location = new System.Drawing.Point(3, 2);
+            this.userIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userIcon.Name = "userIcon";
-            this.userIcon.Size = new System.Drawing.Size(36, 36);
+            this.userIcon.Size = new System.Drawing.Size(48, 44);
             this.userIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.userIcon.TabIndex = 0;
             this.userIcon.TabStop = false;
@@ -428,10 +422,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.homePanel.Controls.Add(this.label1);
             this.homePanel.Controls.Add(this.homeIcon);
             this.homePanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homePanel.Location = new System.Drawing.Point(-4, 91);
-            this.homePanel.Margin = new System.Windows.Forms.Padding(2);
+            this.homePanel.Location = new System.Drawing.Point(-5, 112);
+            this.homePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(163, 41);
+            this.homePanel.Size = new System.Drawing.Size(217, 50);
             this.homePanel.TabIndex = 1;
             this.homePanel.Click += new System.EventHandler(this.Dashboardbtn_Click);
             this.homePanel.MouseLeave += new System.EventHandler(this.LeaveBackground);
@@ -443,10 +437,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(46, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(61, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 21);
+            this.label1.Size = new System.Drawing.Size(120, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "DashBoard";
             this.label1.Click += new System.EventHandler(this.Dashboardbtn_Click);
@@ -457,10 +450,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.homeIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.homeIcon.Image = ((System.Drawing.Image)(resources.GetObject("homeIcon.Image")));
-            this.homeIcon.Location = new System.Drawing.Point(5, 2);
-            this.homeIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.homeIcon.Location = new System.Drawing.Point(7, 2);
+            this.homeIcon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homeIcon.Name = "homeIcon";
-            this.homeIcon.Size = new System.Drawing.Size(36, 36);
+            this.homeIcon.Size = new System.Drawing.Size(48, 44);
             this.homeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.homeIcon.TabIndex = 0;
             this.homeIcon.TabStop = false;
@@ -472,9 +465,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.UserDGV);
-            this.panel6.Location = new System.Drawing.Point(166, -2);
+            this.panel6.Location = new System.Drawing.Point(221, -2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(663, 597);
+            this.panel6.Size = new System.Drawing.Size(884, 735);
             this.panel6.TabIndex = 2;
             // 
             // panel7
@@ -493,18 +487,20 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.panel7.Controls.Add(this.tbEmail);
             this.panel7.Controls.Add(this.tbName);
             this.panel7.Controls.Add(this.tbUsername);
-            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Location = new System.Drawing.Point(4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(657, 311);
+            this.panel7.Size = new System.Drawing.Size(876, 383);
             this.panel7.TabIndex = 1;
             // 
             // clearUserBtn
             // 
             this.clearUserBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clearUserBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearUserBtn.Location = new System.Drawing.Point(459, 246);
+            this.clearUserBtn.Location = new System.Drawing.Point(612, 303);
+            this.clearUserBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clearUserBtn.Name = "clearUserBtn";
-            this.clearUserBtn.Size = new System.Drawing.Size(99, 32);
+            this.clearUserBtn.Size = new System.Drawing.Size(132, 39);
             this.clearUserBtn.TabIndex = 7;
             this.clearUserBtn.Text = "Clear";
             this.clearUserBtn.UseVisualStyleBackColor = true;
@@ -514,9 +510,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.deleteUserBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteUserBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteUserBtn.Location = new System.Drawing.Point(288, 246);
+            this.deleteUserBtn.Location = new System.Drawing.Point(384, 303);
+            this.deleteUserBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deleteUserBtn.Name = "deleteUserBtn";
-            this.deleteUserBtn.Size = new System.Drawing.Size(99, 32);
+            this.deleteUserBtn.Size = new System.Drawing.Size(132, 39);
             this.deleteUserBtn.TabIndex = 6;
             this.deleteUserBtn.Text = "Xóa";
             this.deleteUserBtn.UseVisualStyleBackColor = true;
@@ -526,9 +523,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.saveuserBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveuserBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveuserBtn.Location = new System.Drawing.Point(104, 246);
+            this.saveuserBtn.Location = new System.Drawing.Point(139, 303);
+            this.saveuserBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.saveuserBtn.Name = "saveuserBtn";
-            this.saveuserBtn.Size = new System.Drawing.Size(99, 32);
+            this.saveuserBtn.Size = new System.Drawing.Size(132, 39);
             this.saveuserBtn.TabIndex = 5;
             this.saveuserBtn.Text = "Lưu";
             this.saveuserBtn.UseVisualStyleBackColor = true;
@@ -538,9 +536,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.addUsercb.AutoSize = true;
             this.addUsercb.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addUsercb.Location = new System.Drawing.Point(104, 167);
+            this.addUsercb.Location = new System.Drawing.Point(139, 206);
+            this.addUsercb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addUsercb.Name = "addUsercb";
-            this.addUsercb.Size = new System.Drawing.Size(152, 25);
+            this.addUsercb.Size = new System.Drawing.Size(190, 32);
             this.addUsercb.TabIndex = 4;
             this.addUsercb.Text = "Thêm người chơi?";
             this.addUsercb.UseVisualStyleBackColor = true;
@@ -550,9 +549,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(389, 122);
+            this.label16.Location = new System.Drawing.Point(519, 150);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(48, 21);
+            this.label16.Size = new System.Drawing.Size(59, 28);
             this.label16.TabIndex = 2;
             this.label16.Text = "Email";
             // 
@@ -560,9 +560,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(381, 76);
+            this.label15.Location = new System.Drawing.Point(508, 94);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 21);
+            this.label15.Size = new System.Drawing.Size(71, 28);
             this.label15.TabIndex = 2;
             this.label15.Text = "Họ tên";
             // 
@@ -570,9 +571,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(0, 122);
+            this.label14.Location = new System.Drawing.Point(0, 150);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(75, 21);
+            this.label14.Size = new System.Drawing.Size(94, 28);
             this.label14.TabIndex = 2;
             this.label14.Text = "Mật khẩu";
             // 
@@ -580,9 +582,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(0, 75);
+            this.label13.Location = new System.Drawing.Point(0, 92);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(75, 21);
+            this.label13.Size = new System.Drawing.Size(94, 28);
             this.label13.TabIndex = 2;
             this.label13.Text = "Tài khoản";
             // 
@@ -591,39 +594,44 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(218, 8);
+            this.label10.Location = new System.Drawing.Point(291, 10);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(236, 32);
+            this.label10.Size = new System.Drawing.Size(294, 41);
             this.label10.TabIndex = 1;
             this.label10.Text = "Quản Lý Người Chơi";
             // 
             // tbPass
             // 
-            this.tbPass.Location = new System.Drawing.Point(104, 124);
+            this.tbPass.Location = new System.Drawing.Point(139, 153);
+            this.tbPass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPass.Name = "tbPass";
-            this.tbPass.Size = new System.Drawing.Size(147, 20);
+            this.tbPass.Size = new System.Drawing.Size(195, 22);
             this.tbPass.TabIndex = 1;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(459, 125);
+            this.tbEmail.Location = new System.Drawing.Point(612, 154);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(147, 20);
+            this.tbEmail.Size = new System.Drawing.Size(195, 22);
             this.tbEmail.TabIndex = 3;
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(459, 79);
+            this.tbName.Location = new System.Drawing.Point(612, 97);
+            this.tbName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(147, 20);
+            this.tbName.Size = new System.Drawing.Size(195, 22);
             this.tbName.TabIndex = 2;
             // 
             // tbUsername
             // 
             this.tbUsername.Enabled = false;
-            this.tbUsername.Location = new System.Drawing.Point(104, 78);
+            this.tbUsername.Location = new System.Drawing.Point(139, 96);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(147, 20);
+            this.tbUsername.Size = new System.Drawing.Size(195, 22);
             this.tbUsername.TabIndex = 0;
             // 
             // UserDGV
@@ -633,11 +641,13 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.UserDGV.AllowUserToResizeColumns = false;
             this.UserDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.UserDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UserDGV.Location = new System.Drawing.Point(3, 320);
+            this.UserDGV.Location = new System.Drawing.Point(4, 394);
+            this.UserDGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UserDGV.Name = "UserDGV";
             this.UserDGV.ReadOnly = true;
+            this.UserDGV.RowHeadersWidth = 51;
             this.UserDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.UserDGV.Size = new System.Drawing.Size(657, 277);
+            this.UserDGV.Size = new System.Drawing.Size(876, 341);
             this.UserDGV.TabIndex = 0;
             this.UserDGV.SelectionChanged += new System.EventHandler(this.UserDGV_SelectionChanged);
             // 
@@ -648,9 +658,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.panel8.Controls.Add(this.panel12);
             this.panel8.Controls.Add(this.panel13);
             this.panel8.Controls.Add(this.panel14);
-            this.panel8.Location = new System.Drawing.Point(912, 452);
+            this.panel8.Location = new System.Drawing.Point(1216, 556);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(663, 597);
+            this.panel8.Size = new System.Drawing.Size(884, 735);
             this.panel8.TabIndex = 2;
             // 
             // panel11
@@ -661,9 +672,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.panel11.Controls.Add(this.pictureBox6);
             this.panel11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel11.ForeColor = System.Drawing.Color.Coral;
-            this.panel11.Location = new System.Drawing.Point(403, 378);
+            this.panel11.Location = new System.Drawing.Point(537, 465);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(212, 169);
+            this.panel11.Size = new System.Drawing.Size(283, 208);
             this.panel11.TabIndex = 0;
             this.panel11.Click += new System.EventHandler(this.Feedbackbtn_Click);
             // 
@@ -672,9 +684,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(18, 53);
+            this.label22.Location = new System.Drawing.Point(24, 65);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(95, 25);
+            this.label22.Size = new System.Drawing.Size(121, 32);
             this.label22.TabIndex = 2;
             this.label22.Text = "Feedback.";
             this.label22.Click += new System.EventHandler(this.Feedbackbtn_Click);
@@ -684,9 +697,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.lbFeedback.AutoSize = true;
             this.lbFeedback.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFeedback.ForeColor = System.Drawing.Color.White;
-            this.lbFeedback.Location = new System.Drawing.Point(16, 16);
+            this.lbFeedback.Location = new System.Drawing.Point(21, 20);
+            this.lbFeedback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbFeedback.Name = "lbFeedback";
-            this.lbFeedback.Size = new System.Drawing.Size(92, 37);
+            this.lbFeedback.Size = new System.Drawing.Size(114, 46);
             this.lbFeedback.TabIndex = 1;
             this.lbFeedback.Text = "label8";
             this.lbFeedback.Click += new System.EventHandler(this.Feedbackbtn_Click);
@@ -694,9 +708,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(116, 81);
+            this.pictureBox6.Location = new System.Drawing.Point(155, 100);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(96, 88);
+            this.pictureBox6.Size = new System.Drawing.Size(128, 108);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
@@ -710,9 +725,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.panel12.Controls.Add(this.pictureBox7);
             this.panel12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel12.ForeColor = System.Drawing.Color.Coral;
-            this.panel12.Location = new System.Drawing.Point(37, 378);
+            this.panel12.Location = new System.Drawing.Point(49, 465);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(212, 169);
+            this.panel12.Size = new System.Drawing.Size(283, 208);
             this.panel12.TabIndex = 0;
             this.panel12.Click += new System.EventHandler(this.Questionbtn_Click);
             // 
@@ -721,9 +737,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(17, 53);
+            this.label24.Location = new System.Drawing.Point(23, 65);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(81, 25);
+            this.label24.Size = new System.Drawing.Size(102, 32);
             this.label24.TabIndex = 2;
             this.label24.Text = "Câu hỏi.";
             this.label24.Click += new System.EventHandler(this.Questionbtn_Click);
@@ -733,9 +750,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.lbQuestion.AutoSize = true;
             this.lbQuestion.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbQuestion.ForeColor = System.Drawing.Color.White;
-            this.lbQuestion.Location = new System.Drawing.Point(15, 16);
+            this.lbQuestion.Location = new System.Drawing.Point(20, 20);
+            this.lbQuestion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbQuestion.Name = "lbQuestion";
-            this.lbQuestion.Size = new System.Drawing.Size(92, 37);
+            this.lbQuestion.Size = new System.Drawing.Size(114, 46);
             this.lbQuestion.TabIndex = 1;
             this.lbQuestion.Text = "label8";
             this.lbQuestion.Click += new System.EventHandler(this.Questionbtn_Click);
@@ -743,9 +761,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(116, 81);
+            this.pictureBox7.Location = new System.Drawing.Point(155, 100);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(96, 88);
+            this.pictureBox7.Size = new System.Drawing.Size(128, 108);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
@@ -759,9 +778,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.panel13.Controls.Add(this.pictureBox8);
             this.panel13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel13.ForeColor = System.Drawing.Color.Coral;
-            this.panel13.Location = new System.Drawing.Point(403, 48);
+            this.panel13.Location = new System.Drawing.Point(537, 59);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(212, 169);
+            this.panel13.Size = new System.Drawing.Size(283, 208);
             this.panel13.TabIndex = 0;
             this.panel13.Click += new System.EventHandler(this.userIcon_Click);
             // 
@@ -770,9 +790,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(18, 53);
+            this.label26.Location = new System.Drawing.Point(24, 65);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(109, 25);
+            this.label26.Size = new System.Drawing.Size(138, 32);
             this.label26.TabIndex = 2;
             this.label26.Text = "Người chơi.";
             this.label26.Click += new System.EventHandler(this.userIcon_Click);
@@ -782,9 +803,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.lbUser.AutoSize = true;
             this.lbUser.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUser.ForeColor = System.Drawing.Color.White;
-            this.lbUser.Location = new System.Drawing.Point(16, 16);
+            this.lbUser.Location = new System.Drawing.Point(21, 20);
+            this.lbUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(92, 37);
+            this.lbUser.Size = new System.Drawing.Size(114, 46);
             this.lbUser.TabIndex = 1;
             this.lbUser.Text = "label8";
             this.lbUser.Click += new System.EventHandler(this.userIcon_Click);
@@ -792,9 +814,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(116, 81);
+            this.pictureBox8.Location = new System.Drawing.Point(155, 100);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(96, 88);
+            this.pictureBox8.Size = new System.Drawing.Size(128, 108);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
@@ -807,9 +830,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.panel14.Controls.Add(this.pictureBox9);
             this.panel14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel14.ForeColor = System.Drawing.Color.Coral;
-            this.panel14.Location = new System.Drawing.Point(37, 48);
+            this.panel14.Location = new System.Drawing.Point(49, 59);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(212, 169);
+            this.panel14.Size = new System.Drawing.Size(283, 208);
             this.panel14.TabIndex = 0;
             this.panel14.Click += new System.EventHandler(this.Dashboardbtn_Click);
             // 
@@ -818,9 +842,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.White;
-            this.label28.Location = new System.Drawing.Point(17, 28);
+            this.label28.Location = new System.Drawing.Point(23, 34);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(175, 25);
+            this.label28.Size = new System.Drawing.Size(223, 32);
             this.label28.TabIndex = 2;
             this.label28.Text = "Chào mừng trở lại!";
             this.label28.Click += new System.EventHandler(this.Dashboardbtn_Click);
@@ -828,9 +853,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(116, 81);
+            this.pictureBox9.Location = new System.Drawing.Point(155, 100);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(96, 88);
+            this.pictureBox9.Size = new System.Drawing.Size(128, 108);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 0;
             this.pictureBox9.TabStop = false;
@@ -840,9 +866,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.questionDGV);
-            this.panel9.Location = new System.Drawing.Point(166, 689);
+            this.panel9.Location = new System.Drawing.Point(221, 848);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(663, 597);
+            this.panel9.Size = new System.Drawing.Size(884, 735);
             this.panel9.TabIndex = 2;
             // 
             // panel10
@@ -856,9 +883,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.panel10.Controls.Add(this.panel1);
             this.panel10.Controls.Add(this.tbQuestion);
             this.panel10.Controls.Add(this.label21);
-            this.panel10.Location = new System.Drawing.Point(3, 3);
+            this.panel10.Location = new System.Drawing.Point(4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(657, 311);
+            this.panel10.Size = new System.Drawing.Size(876, 383);
             this.panel10.TabIndex = 1;
             // 
             // label8
@@ -866,9 +894,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(482, 287);
+            this.label8.Location = new System.Drawing.Point(643, 353);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 21);
+            this.label8.Size = new System.Drawing.Size(55, 28);
             this.label8.TabIndex = 5;
             this.label8.Text = "Level";
             // 
@@ -876,9 +905,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.refreshQuestionbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshQuestionbtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshQuestionbtn.Location = new System.Drawing.Point(408, 252);
+            this.refreshQuestionbtn.Location = new System.Drawing.Point(544, 310);
+            this.refreshQuestionbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.refreshQuestionbtn.Name = "refreshQuestionbtn";
-            this.refreshQuestionbtn.Size = new System.Drawing.Size(99, 32);
+            this.refreshQuestionbtn.Size = new System.Drawing.Size(132, 39);
             this.refreshQuestionbtn.TabIndex = 21;
             this.refreshQuestionbtn.Text = "Làm mới";
             this.refreshQuestionbtn.UseVisualStyleBackColor = true;
@@ -888,9 +918,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.deleteQuestionbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteQuestionbtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteQuestionbtn.Location = new System.Drawing.Point(266, 252);
+            this.deleteQuestionbtn.Location = new System.Drawing.Point(355, 310);
+            this.deleteQuestionbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deleteQuestionbtn.Name = "deleteQuestionbtn";
-            this.deleteQuestionbtn.Size = new System.Drawing.Size(99, 32);
+            this.deleteQuestionbtn.Size = new System.Drawing.Size(132, 39);
             this.deleteQuestionbtn.TabIndex = 20;
             this.deleteQuestionbtn.Text = "Xóa";
             this.deleteQuestionbtn.UseVisualStyleBackColor = true;
@@ -900,9 +931,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.saveQuestionbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveQuestionbtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveQuestionbtn.Location = new System.Drawing.Point(118, 252);
+            this.saveQuestionbtn.Location = new System.Drawing.Point(157, 310);
+            this.saveQuestionbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.saveQuestionbtn.Name = "saveQuestionbtn";
-            this.saveQuestionbtn.Size = new System.Drawing.Size(99, 32);
+            this.saveQuestionbtn.Size = new System.Drawing.Size(132, 39);
             this.saveQuestionbtn.TabIndex = 19;
             this.saveQuestionbtn.Text = "Lưu";
             this.saveQuestionbtn.UseVisualStyleBackColor = true;
@@ -911,10 +943,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 13;
-            this.comboBox1.Location = new System.Drawing.Point(533, 287);
+            this.comboBox1.ItemHeight = 16;
+            this.comboBox1.Location = new System.Drawing.Point(711, 353);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(160, 24);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -928,50 +961,56 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Location = new System.Drawing.Point(44, 95);
+            this.panel1.Location = new System.Drawing.Point(59, 117);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(577, 123);
+            this.panel1.Size = new System.Drawing.Size(769, 151);
             this.panel1.TabIndex = 3;
             // 
             // tbKeyD
             // 
             this.tbKeyD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbKeyD.Location = new System.Drawing.Point(45, 94);
+            this.tbKeyD.Location = new System.Drawing.Point(60, 116);
+            this.tbKeyD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbKeyD.Name = "tbKeyD";
-            this.tbKeyD.Size = new System.Drawing.Size(529, 25);
+            this.tbKeyD.Size = new System.Drawing.Size(704, 29);
             this.tbKeyD.TabIndex = 18;
             // 
             // tbKeyC
             // 
             this.tbKeyC.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbKeyC.Location = new System.Drawing.Point(45, 64);
+            this.tbKeyC.Location = new System.Drawing.Point(60, 79);
+            this.tbKeyC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbKeyC.Name = "tbKeyC";
-            this.tbKeyC.Size = new System.Drawing.Size(529, 25);
+            this.tbKeyC.Size = new System.Drawing.Size(704, 29);
             this.tbKeyC.TabIndex = 16;
             // 
             // tbKeyB
             // 
             this.tbKeyB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbKeyB.Location = new System.Drawing.Point(45, 35);
+            this.tbKeyB.Location = new System.Drawing.Point(60, 43);
+            this.tbKeyB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbKeyB.Name = "tbKeyB";
-            this.tbKeyB.Size = new System.Drawing.Size(529, 25);
+            this.tbKeyB.Size = new System.Drawing.Size(704, 29);
             this.tbKeyB.TabIndex = 14;
             // 
             // tbKeyA
             // 
             this.tbKeyA.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbKeyA.Location = new System.Drawing.Point(45, 4);
+            this.tbKeyA.Location = new System.Drawing.Point(60, 5);
+            this.tbKeyA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbKeyA.Name = "tbKeyA";
-            this.tbKeyA.Size = new System.Drawing.Size(529, 25);
+            this.tbKeyA.Size = new System.Drawing.Size(704, 29);
             this.tbKeyA.TabIndex = 12;
             // 
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(3, 95);
+            this.radioButton4.Location = new System.Drawing.Point(4, 117);
+            this.radioButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(47, 29);
+            this.radioButton4.Size = new System.Drawing.Size(58, 36);
             this.radioButton4.TabIndex = 17;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "D.";
@@ -981,9 +1020,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(3, 65);
+            this.radioButton3.Location = new System.Drawing.Point(4, 80);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(46, 29);
+            this.radioButton3.Size = new System.Drawing.Size(56, 36);
             this.radioButton3.TabIndex = 15;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "C.";
@@ -993,9 +1033,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(3, 36);
+            this.radioButton2.Location = new System.Drawing.Point(4, 44);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(45, 29);
+            this.radioButton2.Size = new System.Drawing.Size(55, 36);
             this.radioButton2.TabIndex = 13;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "B.";
@@ -1005,9 +1046,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(3, 5);
+            this.radioButton1.Location = new System.Drawing.Point(4, 6);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(46, 29);
+            this.radioButton1.Size = new System.Drawing.Size(56, 36);
             this.radioButton1.TabIndex = 11;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "A.";
@@ -1016,10 +1058,11 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             // tbQuestion
             // 
             this.tbQuestion.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbQuestion.Location = new System.Drawing.Point(44, 43);
+            this.tbQuestion.Location = new System.Drawing.Point(59, 53);
+            this.tbQuestion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbQuestion.Multiline = true;
             this.tbQuestion.Name = "tbQuestion";
-            this.tbQuestion.Size = new System.Drawing.Size(577, 51);
+            this.tbQuestion.Size = new System.Drawing.Size(768, 62);
             this.tbQuestion.TabIndex = 10;
             this.tbQuestion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1028,9 +1071,10 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(239, 8);
+            this.label21.Location = new System.Drawing.Point(319, 10);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(198, 32);
+            this.label21.Size = new System.Drawing.Size(247, 41);
             this.label21.TabIndex = 1;
             this.label21.Text = "Quản Lý Câu Hỏi";
             // 
@@ -1041,25 +1085,29 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             this.questionDGV.AllowUserToResizeColumns = false;
             this.questionDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.questionDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.questionDGV.Location = new System.Drawing.Point(3, 320);
+            this.questionDGV.Location = new System.Drawing.Point(4, 394);
+            this.questionDGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.questionDGV.Name = "questionDGV";
             this.questionDGV.ReadOnly = true;
+            this.questionDGV.RowHeadersWidth = 51;
             this.questionDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.questionDGV.Size = new System.Drawing.Size(657, 277);
+            this.questionDGV.Size = new System.Drawing.Size(876, 341);
             this.questionDGV.TabIndex = 0;
             this.questionDGV.SelectionChanged += new System.EventHandler(this.questionDGV_SelectionChanged);
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(829, 597);
+            this.ClientSize = new System.Drawing.Size(1105, 735);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.navBar);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
