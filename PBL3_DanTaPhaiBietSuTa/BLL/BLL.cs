@@ -94,73 +94,25 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             return DAL.Instance.GetUserInfoByUserID(userID);
         }
-
-
-
-        //new function
         public List<Question> GetAllQuestion()
         {
-            DB db = new DB();
-            return db.Questions.Select(p => p).ToList();
+            return DAL.Instance.GetAllQuestion();
         }
         public bool DeleteUser(int userID)
         {
-            using (DB db = new DB())
-            {
-                var user = db.UserInfos.Find(userID);
-                if (user == null) return false;
-                else
-                {
-                    db.UserInfos.Remove(user);
-                    db.SaveChanges();
-                    return true;
-                }
-            }
+            return DAL.Instance.DeleteUser(userID);
         }
         public Question GetQuestionByQuestionID(int questionID)
         {
-            Question question = new Question();
-            var listAllQuestion = GetAllQuestion();
-            foreach (var q in listAllQuestion)
-            {
-                if (q.QuestionID == questionID)
-                    question = q;
-            }
-            return question;
+            return DAL.Instance.GetQuestionByQuestionID(questionID);
         }
         public bool DeleteQuestion(int questionID)
         {
-            using (DB db = new DB())
-            {
-                var question = db.Questions.Find(questionID);
-                if (question == null) return false;
-                else
-                {
-                    db.Questions.Remove(question);
-                    db.SaveChanges();
-                    return true;
-                }
-            }
+            return DAL.Instance.DeleteQuestion(questionID);
         }
         public bool UpdateQuestion(Question question)
         {
-            using (DB db = new DB())
-            {
-                var q = db.Questions.Find(question.QuestionID);
-                if (q == null)
-                    return false;
-                else
-                {
-                    q.QuestionContent = question.QuestionContent;
-                    q.KeyA = question.KeyA;
-                    q.KeyB = question.KeyB;
-                    q.KeyC = question.KeyC;
-                    q.KeyD = question.KeyD;
-                    q.Answer = question.Answer;
-                    db.SaveChanges();
-                    return true;
-                }
-            }
+            return DAL.Instance.UpdateQuestion(question);
         }
     }
 }

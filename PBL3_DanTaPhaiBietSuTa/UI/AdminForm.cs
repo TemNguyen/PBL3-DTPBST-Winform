@@ -357,23 +357,23 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                     DisplayQuestion();
                     break;
                 case 1:
-                    listQuestion = BLL.Instance.GetQuestionsByStage(1);
+                    listQuestion = BLL.Instance.GetQuestionsByStage(1).OrderBy(p => p.TimeStop).ToList();
                     questionDGV.DataSource = listQuestion;
                     break;
                 case 2:
-                    listQuestion = BLL.Instance.GetQuestionsByStage(2);
+                    listQuestion = BLL.Instance.GetQuestionsByStage(2).OrderBy(p => p.TimeStop).ToList();
                     questionDGV.DataSource = listQuestion;
                     break;
                 case 3:
-                    listQuestion = BLL.Instance.GetQuestionsByStage(3);
+                    listQuestion = BLL.Instance.GetQuestionsByStage(3).OrderBy(p => p.TimeStop).ToList();
                     questionDGV.DataSource = listQuestion;
                     break;
                 case 4:
-                    listQuestion = BLL.Instance.GetQuestionsByStage(4);
+                    listQuestion = BLL.Instance.GetQuestionsByStage(4).OrderBy(p => p.TimeStop).ToList();
                     questionDGV.DataSource = listQuestion;
                     break;
                 case 5:
-                    listQuestion = BLL.Instance.GetQuestionsByStage(5);
+                    listQuestion = BLL.Instance.GetQuestionsByStage(5).OrderBy(p => p.TimeStop).ToList();
                     questionDGV.DataSource = listQuestion;
                     break;
                 default:
