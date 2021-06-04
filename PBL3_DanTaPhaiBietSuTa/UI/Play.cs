@@ -18,7 +18,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
     {
         public static bool isPlayAgain;
         Thread threadUser;
-        Color cBtn = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+        Color colorBtn = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
 
         List<int> listTimeStop = new List<int>();
         public static int stageID;
@@ -207,7 +207,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 if (showAnswer % 3 == 2)
                     changeBtnColor(btnA, Color.Pink);
                 if (showAnswer % 3 == 0)
-                    changeBtnColor(btnA, cBtn);
+                    changeBtnColor(btnA, colorBtn);
             }
             if (String.Compare(btnB.Text.Remove(0, 3), selectedQuestion.Answer) == 0)
             {
@@ -216,7 +216,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 if (showAnswer % 3 == 2)
                     changeBtnColor(btnB, Color.Pink);
                 if (showAnswer % 3 == 0)
-                    changeBtnColor(btnB, cBtn);
+                    changeBtnColor(btnB, colorBtn);
             }
             if (String.Compare(btnC.Text.Remove(0, 3), selectedQuestion.Answer) == 0)
             {
@@ -225,7 +225,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 if (showAnswer % 3 == 2)
                     changeBtnColor(btnC, Color.Pink);
                 if (showAnswer % 3 == 0)
-                    changeBtnColor(btnC, cBtn);
+                    changeBtnColor(btnC, colorBtn);
             }
             if (String.Compare(btnD.Text.Remove(0, 3), selectedQuestion.Answer) == 0)
             {
@@ -234,7 +234,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 if (showAnswer % 3 == 2)
                     changeBtnColor(btnD, Color.Pink);
                 if (showAnswer % 3 == 0)
-                    changeBtnColor(btnD, cBtn);
+                    changeBtnColor(btnD, colorBtn);
             }
             if (showAnswer < 0)
             {
@@ -318,11 +318,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             }
             return false;
         }
-        private void Play_Load(object sender, EventArgs e)
-        {
-            lbPoint.Left = pictureBox2.Location.X + ((pictureBox2.Size.Width - lbPoint.Size.Width) / 2);
-            lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
-        }
         public void PlayAgain()
         {
             if(isPlayAgain)
@@ -381,6 +376,22 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             Notification notification = new Notification();
             notification.Get(message);
             notification.ShowDialog();
+        }
+        private void Play_Load(object sender, EventArgs e)
+        {
+            var video = BLL.Instance.GetVideo(stageID);
+            if (!File.Exists(@Application.StartupPath + @"\Assets\Video\" + video.VideoID + ".mp4"))
+            {
+                ShowMessage("Không tìm thấy nội dung màn chơi!");
+                this.Dispose();
+                HomePage.PlaySound();
+                threadUser = new Thread(OpenUserForm);
+                threadUser.SetApartmentState(ApartmentState.STA);
+                threadUser.Start();
+            }    
+
+            lbPoint.Left = pictureBox2.Location.X + ((pictureBox2.Size.Width - lbPoint.Size.Width) / 2);
+            lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
         }
         private void OpenUserForm(object sender)
         {

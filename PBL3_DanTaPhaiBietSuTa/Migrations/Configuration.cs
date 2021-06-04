@@ -84,13 +84,13 @@
                 {
                     UserID = 1,
                     Username = "gnol5498",Password = "123456",Name = "Lê Thanh Long",
-                    Email = "thanhlong9654147@gmail.com",
+                    Email = "thanhlong9654147@gmail.com",IsAdmin = true
                 },
                 new UserInfo
                 {
                     UserID = 2,
                     Username = "temnguyen",Password = "123456",Name = "Nguyễn Duy Thịnh",
-                    Email = "temnguyen@gmail.com"
+                    Email = "temnguyen@gmail.com",IsAdmin = true
                 }
             );
 
@@ -583,7 +583,7 @@
                     QuestionID = 40,
                     QuestionContent = "Cuộc kháng chiến chống quân xâm lược Hán (42 - 43) không mang ý nghĩa nào sau đây ?",
                     KeyA = "Củng cố vững mạnh chính quyền tự chủ của nhân dân ta",
-                    KeyB = "Khẳng định vai trò của người phụ nữa trong lịch sử dân tộc ta",
+                    KeyB = "Khẳng định vai trò của người phụ nữ trong lịch sử dân tộc ta",
                     KeyC = "Thể hiện tinh thần đoàn kết, ý chí chống giặc của nhân dân ta",
                     KeyD = "Để lại nhiều bại học kinh nghiệm quý báu",
                     Answer = "Củng cố vững mạnh chính quyền tự chủ của nhân dân ta",
@@ -1191,7 +1191,188 @@
                     Answer = "Ngày 29/4/1428",
                     StageID = 4,
                     TimeStop = 9280
+                },
+                new Question
+                {
+                    QuestionID = 91,
+                    QuestionContent = "Nhà Thanh cử Tôn Sĩ Nghị đem 29 vạn quân xâm lược nước ta vào năm nào ?",
+                    KeyA = "Cuối năm 1788",
+                    KeyB = "Đầu năm 1788",
+                    KeyC = "Giữa năm 1789",
+                    KeyD = "Đầu năm 1789",
+                    Answer = "Cuối năm 1788",
+                    StageID = 5,
+                    TimeStop = 870
+                },
+                new Question
+                {
+                    QuestionID = 92,
+                    QuestionContent = "Cuối năm 1788,nhà Thanh cử ai thống lĩnh 29 vạn quân xâm lược nước ta ?",
+                    KeyA = "Sầm Nghi Đống",
+                    KeyB = "Tôn Sĩ Nghị",
+                    KeyC = "Hứa Thế Hanh",
+                    KeyD = "Càn Long",
+                    Answer = "Tôn Sĩ Nghị",
+                    StageID = 5,
+                    TimeStop = 870
+                },
+                new Question
+                {
+                    QuestionID = 93,
+                    QuestionContent = "'Nước Nam từ khi có đế có vương đến nay,chưa bao giờ ông vua nào luồn cúi đê hèn như vậy'.Câu nói trên muốn nhắc đến vị vua nào ?",
+                    KeyA = "Lê Chiêu Thống",
+                    KeyB = "Nguyễn Ánh",
+                    KeyC = "Trịnh Sâm",
+                    KeyD = "Lê Chiêu Tông",
+                    Answer = "Lê Chiêu Thống",
+                    StageID = 5,
+                    TimeStop = 870
+                },
+                new Question
+                {
+                    QuestionID = 94,
+                    QuestionContent = "Vì sao vua Quang Trung quyết định tiêu diệt quân Thanh vào dịp tết Kỉ Dậu ?",
+                    KeyA = "Thời điểm tinh thần binh sĩ lên cao",
+                    KeyB = "Thời điểm quân địch lơ là",
+                    KeyC = "Thời điểm nhân dân Thăng Long đang ăn tết, dễ tập hợp lực lượng",
+                    KeyD = "Thời điểm Nguyễn Ánh chưa tấn công được vào Gia Định",
+                    Answer = "Thời điểm quân địch lơ là",
+                    StageID = 5,
+                    TimeStop = 2460
+                },
+                new Question
+                {
+                    QuestionID = 95,
+                    QuestionContent = "Trận đánh đầu tiên của quân Tây Sơn khi tiến ra Thăng Long diễn ra ở đâu ?",
+                    KeyA = "Đồn Hà Hồi",
+                    KeyB = "Đồn Khương Thượng",
+                    KeyC = "Đồn Gián Khẩu",
+                    KeyD = "Đồn Ngọc Hồi",
+                    Answer = "Đồn Gián Khẩu",
+                    StageID = 5,
+                    TimeStop = 2460
+                },
+                new Question
+                {
+                    QuestionID = 96,
+                    QuestionContent = "Quân Tây Sơn xuất quân ra Thăng Long vào ngày nào ?",
+                    KeyA = "Ngày 29 tháng Chạp năm Mậu Thân",
+                    KeyB = "Ngày 30 tháng Chạp năm Mậu Thân",
+                    KeyC = "Ngày mùng 1 Tết Kỉ Dậu",
+                    KeyD = "Ngày mùng 2 Tết Kỉ Dậu",
+                    Answer = "Ngày 30 tháng Chạp năm Mậu Thân",
+                    StageID = 5,
+                    TimeStop = 2460
+                },
+                new Question
+                {
+                    QuestionID = 97,
+                    QuestionContent = "Quân Tây Sơn chia thành mấy đạo quân tiến công ra Thăng Long ?",
+                    KeyA = "3 đạo",
+                    KeyB = "4 đạo",
+                    KeyC = "5 đạo",
+                    KeyD = "6 đạo",
+                    Answer = "5 đạo",
+                    StageID = 5,
+                    TimeStop = 2460
+                },
+                new Question
+                {
+                    QuestionID = 98,
+                    QuestionContent = "Quân Tây Sơn đã tiêu diệt những đồn nào trước khi đánh chiếm đồn Hà Hồi ?",
+                    KeyA = "Khương Thượng, Nhật Tảo, Gián Khẩu",
+                    KeyB = "Gián Khẩu, Nhật Tảo, Nguyệt Quyết",
+                    KeyC = "Ngọc Hồi, Khương Thượng, Nhật Tảo",
+                    KeyD = "Tất cả đều sai",
+                    Answer = "Gián Khẩu, Nhật Tảo, Nguyệt Quyết",
+                    StageID = 5,
+                    TimeStop = 3940
+                },
+                new Question
+                {
+                    QuestionID = 99,
+                    QuestionContent = "Quân Tây Sơn tiến đánh đồn Hà Hồi vào thời gian nào ?",
+                    KeyA = "Sáng mùng 3 Tết Kỉ Dậu",
+                    KeyB = "Chiều mùng 3 Tết Kỉ Dậu",
+                    KeyC = "Đêm mùng 3 Tết Kỉ Dậu",
+                    KeyD = "Đêm mùng 4 Tết Kỉ Dậu",
+                    Answer = "Đêm mùng 3 Tết Kỉ Dậu",
+                    StageID = 5,
+                    TimeStop = 3940
+                },
+                new Question
+                {
+                    QuestionID = 100,
+                    QuestionContent = "Tướng nào của giặc phải khiếp sợ, thắt cổ tự tử sau khi thất bại ở đồn Khương Thượng ?",
+                    KeyA = "Sầm Nghi Đống",
+                    KeyB = "Hứa Thế Hanh",
+                    KeyC = "Tôn Sĩ Nghị",
+                    KeyD = "Càn Long",
+                    Answer = "Sầm Nghi Đống",
+                    StageID = 5,
+                    TimeStop = 5270
+                },
+                new Question
+                {
+                    QuestionID = 101,
+                    QuestionContent = "Đạo quân tiến đánh đồn Khương Thượng do ai chỉ huy ?",
+                    KeyA = "Đô đốc Tuyết",
+                    KeyB = "Đô đốc Long",
+                    KeyC = "Đô đốc Bảo",
+                    KeyD = "Đô đốc Lộc",
+                    Answer = "Đô đốc Long",
+                    StageID = 5,
+                    TimeStop = 5270
+                },
+                new Question
+                {
+                    QuestionID = 102,
+                    QuestionContent = "Sau khi nghe tin đồn Khương Thượng bị phá, Tôn Sĩ Nghị đã làm gì ?",
+                    KeyA = "Đưa quân sang viện trợ",
+                    KeyB = "Trốn về nước",
+                    KeyC = "Gửi thư xin hàng",
+                    KeyD = "Xin viện trợ từ nhà Thanh",
+                    Answer = "Trốn về nước",
+                    StageID = 5,
+                    TimeStop = 6400
+                },
+                new Question
+                {
+                    QuestionID = 103,
+                    QuestionContent = "Vua Quang Trung tiến quân vào Thăng Long ngày tháng năm nào ?",
+                    KeyA = "Sáng mùng 5 tết Kỉ Dậu năm 1789",
+                    KeyB = "Trưa mùng 5 tết Kỉ Dậu năm 1789",
+                    KeyC = "Chiều mùng 5 tết Kỉ Dậu năm 1789",
+                    KeyD = "Tối mùng 5 tết Kỉ Dậu năm 1789",
+                    Answer = "Sáng mùng 5 tết Kỉ Dậu năm 1789",
+                    StageID = 5,
+                    TimeStop = 8430
+                },
+                new Question
+                {
+                    QuestionID = 104,
+                    QuestionContent = "Chiến thuật chính Quang Trung sử dụng trong trận Ngọc Hồi - Đống Đa là gì?",
+                    KeyA = "đánh lâu dài",
+                    KeyB = "tận dụng thời cơ thuận lợi đánh nhanh thắng nhanh",
+                    KeyC = "thanh dã",
+                    KeyD = "tiên phát chế nhân",
+                    Answer = "tận dụng thời cơ thuận lợi đánh nhanh thắng nhanh",
+                    StageID = 5,
+                    TimeStop = 8430
+                },
+                new Question
+                {
+                    QuestionID = 105,
+                    QuestionContent = "Nguyên nhân thắng lợi của phong trào Tây Sơn là gì ?",
+                    KeyA = "Tinh thần chiến đấu dũng cảm của nghĩa quân và sự ủng hộ mạnh mẽ của nhân dân",
+                    KeyB = "Sự lãnh đạo tài tính của bộ chỉ huy, đứng đầu là Quang Trung",
+                    KeyC = "Ý chí đấu tranh chống áp bức bóc lột và tinh thần yêu nước cao cả của nhân dân",
+                    KeyD = "Tất cả câu trên đúng",
+                    Answer = "Tất cả câu trên đúng",
+                    StageID = 5,
+                    TimeStop = 8430
                 }
+
 
 
 
