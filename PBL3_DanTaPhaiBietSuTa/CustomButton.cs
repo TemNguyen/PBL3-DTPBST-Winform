@@ -13,7 +13,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         private Color _textColor = Color.Black;
         private Color _onHoverTextColor = Color.Gray;
 
-        private bool _isHovering;
+        private bool _isHovering = false;
         private int _borderThickness = 6;
         private int _borderThicknessByTwo = 3;
 

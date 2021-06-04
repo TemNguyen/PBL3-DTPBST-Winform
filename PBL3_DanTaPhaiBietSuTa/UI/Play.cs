@@ -17,8 +17,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
     public partial class Play : Form
     {
         public static bool isPlayAgain;
-        Thread thUser;
-        Color cBtn = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+        Thread threadUser;
+        Color colorBtn = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
+
         List<int> listTimeStop = new List<int>();
         public static int stageID;
         Question selectedQuestion;
@@ -51,7 +52,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             {
                 list.Add(i.TimeStop);
             }
-            HashSet<int> setListTimeStop = new HashSet<int>(list);
+            HashSet<int> setListTimeStop = new HashSet<int>(list);  //Tạo list không lặp phần tử
             listTimeStop.AddRange(setListTimeStop);
             listTimeStop.Sort();
         }
@@ -71,9 +72,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                     case DialogResult.Yes:
                         HomePage.PlaySound();
                         this.Dispose();
-                        thUser = new Thread(OpenUserForm);
-                        thUser.SetApartmentState(ApartmentState.STA);
-                        thUser.Start();
+                        threadUser = new Thread(OpenUserForm);
+                        threadUser.SetApartmentState(ApartmentState.STA);
+                        threadUser.Start();
                         break;
                     case DialogResult.No:
                         return;
@@ -83,38 +84,16 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             {
                 HomePage.PlaySound();
                 this.Dispose();
-                thUser = new Thread(OpenUserForm);
-                thUser.SetApartmentState(ApartmentState.STA);
-                thUser.Start();
+                threadUser = new Thread(OpenUserForm);
+                threadUser.SetApartmentState(ApartmentState.STA);
+                threadUser.Start();
             }    
-        }
-        private string CheckQuestion(string q)
-        {
-
-            int i;
-            string temp = q;
-            if (q.Length > 60)
-            {
-                temp = q.Substring(0, q.Length / 2);
-                for (i = q.Length / 2; i < q.Length; i++)
-                {
-                    if (q[i] == ' ')
-                    {
-                        temp += "\n";
-                        for (int j = 0; j < (i - q.Length / 2); j++) temp += " ";
-                        break;
-                    }
-                    else temp += q[i];
-                }
-                for (int j = i; j < q.Length; j++) temp += q[j];
-            }
-            return temp;
         }
         private void DisplayQuestion()
         {
             selectedQuestion = BLL.Instance.GetRandomQuestionByTimeStop(stageID, listTimeStop[questionID]);
             //Display question
-            txtQuestion.Text = selectedQuestion.QuestionContent;
+            txtQuestion.Text = DisplayText(selectedQuestion.QuestionContent);
             List<string> listAnswer = new List<string>();
             listAnswer.Add(selectedQuestion.KeyA);
             listAnswer.Add(selectedQuestion.KeyB);
@@ -123,16 +102,16 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             Random rd = new Random();
             int questionrd;
             questionrd = rd.Next(0, listAnswer.Count - 1);
-            btnA.Text = CheckQuestion("A. " + listAnswer[questionrd]);
+            btnA.Text = DisplayText("A. " + listAnswer[questionrd]);
             listAnswer.RemoveAt(questionrd);
             questionrd = rd.Next(0, listAnswer.Count - 1);
-            btnB.Text = CheckQuestion("B. " + listAnswer[questionrd]);
+            btnB.Text = DisplayText("B. " + listAnswer[questionrd]);
             listAnswer.RemoveAt(questionrd);
             questionrd = rd.Next(0, listAnswer.Count - 1);
-            btnC.Text = CheckQuestion("C. " + listAnswer[questionrd]);
+            btnC.Text = DisplayText("C. " + listAnswer[questionrd]);
             listAnswer.RemoveAt(questionrd);
             questionrd = rd.Next(0, listAnswer.Count - 1);
-            btnD.Text = CheckQuestion("D. " + listAnswer[questionrd]);
+            btnD.Text = DisplayText("D. " + listAnswer[questionrd]);
             listAnswer.RemoveAt(questionrd);
         }
         private void SelectAnswer(object sender, EventArgs e)
@@ -195,10 +174,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                     questionTime.Start();
                 }
             }
-            catch (Exception)
-            {
-
-            };
+            catch (ArgumentOutOfRangeException) { };
             IsFinish();
         }
         private void questionTime_Tick(object sender, EventArgs e)
@@ -214,7 +190,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                     countDown--;
                 }
             }
-            catch (Exception) { };
+            catch (ArgumentOutOfRangeException) { };
             lbTime.Text = "Time: " + (countDown / 10).ToString();
             if (countDown == 0)
             {
@@ -231,7 +207,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 if (showAnswer % 3 == 2)
                     changeBtnColor(btnA, Color.Pink);
                 if (showAnswer % 3 == 0)
-                    changeBtnColor(btnA, cBtn);
+                    changeBtnColor(btnA, colorBtn);
             }
             if (String.Compare(btnB.Text.Remove(0, 3), selectedQuestion.Answer) == 0)
             {
@@ -240,7 +216,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 if (showAnswer % 3 == 2)
                     changeBtnColor(btnB, Color.Pink);
                 if (showAnswer % 3 == 0)
-                    changeBtnColor(btnB, cBtn);
+                    changeBtnColor(btnB, colorBtn);
             }
             if (String.Compare(btnC.Text.Remove(0, 3), selectedQuestion.Answer) == 0)
             {
@@ -249,7 +225,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 if (showAnswer % 3 == 2)
                     changeBtnColor(btnC, Color.Pink);
                 if (showAnswer % 3 == 0)
-                    changeBtnColor(btnC, cBtn);
+                    changeBtnColor(btnC, colorBtn);
             }
             if (String.Compare(btnD.Text.Remove(0, 3), selectedQuestion.Answer) == 0)
             {
@@ -258,13 +234,12 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 if (showAnswer % 3 == 2)
                     changeBtnColor(btnD, Color.Pink);
                 if (showAnswer % 3 == 0)
-                    changeBtnColor(btnD, cBtn);
+                    changeBtnColor(btnD, colorBtn);
             }
             if (showAnswer < 0)
             {
                 showAnswer = 10;
                 changeColor.Stop();
-                //Delay t(s)
                 nextQuestionTime.Start();
             }
         }
@@ -343,11 +318,6 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             }
             return false;
         }
-        private void Play_Load(object sender, EventArgs e)
-        {
-            lbPoint.Left = pictureBox2.Location.X + ((pictureBox2.Size.Width - lbPoint.Size.Width) / 2);
-            lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
-        }
         public void PlayAgain()
         {
             if(isPlayAgain)
@@ -368,10 +338,32 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             {
                 HomePage.PlaySound();
                 this.Dispose();
-                thUser = new Thread(OpenUserForm);
-                thUser.SetApartmentState(ApartmentState.STA);
-                thUser.Start();
+                threadUser = new Thread(OpenUserForm);
+                threadUser.SetApartmentState(ApartmentState.STA);
+                threadUser.Start();
             }    
+        }
+        private string DisplayText(string s)
+        {
+
+            int i;
+            string text = s;
+            if (s.Length > 60)
+            {
+                text = s.Substring(0, s.Length / 2);
+                for (i = s.Length / 2; i < s.Length; i++)
+                {
+                    if (s[i] == ' ')
+                    {
+                        text += "\n";
+                        for (int j = 0; j < (i - s.Length / 2); j++) text += " ";
+                        break;
+                    }
+                    else text += s[i];
+                }
+                for (int j = i; j < s.Length; j++) text += s[j];
+            }
+            return text;
         }
         private void changeBtnColor(CustomButton btn, Color c)
         {
@@ -384,6 +376,22 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             Notification notification = new Notification();
             notification.Get(message);
             notification.ShowDialog();
+        }
+        private void Play_Load(object sender, EventArgs e)
+        {
+            var video = BLL.Instance.GetVideo(stageID);
+            if (!File.Exists(@Application.StartupPath + @"\Assets\Video\" + video.VideoID + ".mp4"))
+            {
+                ShowMessage("Không tìm thấy nội dung màn chơi!");
+                this.Dispose();
+                HomePage.PlaySound();
+                threadUser = new Thread(OpenUserForm);
+                threadUser.SetApartmentState(ApartmentState.STA);
+                threadUser.Start();
+            }    
+
+            lbPoint.Left = pictureBox2.Location.X + ((pictureBox2.Size.Width - lbPoint.Size.Width) / 2);
+            lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
         }
         private void OpenUserForm(object sender)
         {

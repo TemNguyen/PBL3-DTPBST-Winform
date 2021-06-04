@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -17,11 +18,14 @@ namespace PBL3_DanTaPhaiBietSuTa
 {
     public partial class DangNhap : Form
     {
-        Thread th;
+        Thread thread;
+        private static string key;
         public DangNhap()
         {
+            SetKey();
             InitializeComponent();
             IsRememberUser();
+            
         }
         private void Setting_Click(object sender, EventArgs e)
         {
@@ -31,6 +35,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         private void txtLoginR_Click(object sender, EventArgs e)
         {
             txtAccountR.Text = "";
+            txtNameR.Text = "";
             txtEmailR.Text = "";
             txtPassR.Text = "";
             txtRepassR.Text = "";
@@ -46,15 +51,19 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             Application.Run(new User());
         }
+        private void OpenAdminForm(object sender)
+        {
+            Application.Run(new AdminForm());
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string userName = txtAccount.Text;
-            string passWord = txtPass.Text;
-            if(BLL.Instance.CheckLogin(userName, passWord))
+            string passWord = EncryptMD5(txtPass.Text);
+            UserInfo user = BLL.Instance.GetUserInforByUserName(userName);
+            if (BLL.Instance.CheckLogin(userName, passWord))
             {
-                if(cbRemember.Checked) //lưu userName và passWord vào file.
+                if (cbRemember.Checked) //lưu userName và passWord vào file.
                 {
-                    UserInfo user = BLL.Instance.GetUserInforByUserName(userName);
                     string rememberUserPath = @Application.StartupPath + @"\Assets\SavedUser\rememberUser.txt";
                     using (StreamWriter sw = File.CreateText(rememberUserPath))
                     {
@@ -69,9 +78,19 @@ namespace PBL3_DanTaPhaiBietSuTa
                 ShowMessage("Đăng nhập thành công!");
                 GetUserLogin(userName);
                 this.Dispose();
-                th = new Thread(OpenUserForm);
-                th.SetApartmentState(ApartmentState.STA);
-                th.Start();
+                if (user.IsAdmin)
+                {
+                    HomePage.StopSound();
+                    thread = new Thread(OpenAdminForm);
+                    thread.SetApartmentState(ApartmentState.STA);
+                    thread.Start();
+                }
+                else
+                {
+                    thread = new Thread(OpenUserForm);
+                    thread.SetApartmentState(ApartmentState.STA);
+                    thread.Start();
+                }
             }
             else
             {
@@ -80,7 +99,7 @@ namespace PBL3_DanTaPhaiBietSuTa
                 txtAccount.Text = "";
                 txtPass.Text = "";
                 return;
-            }    
+            }
         }
         private void btnRegisterR_Click(object sender, EventArgs e)
         {
@@ -96,23 +115,23 @@ namespace PBL3_DanTaPhaiBietSuTa
             {
                 Name = txtNameR.Text,
                 Username = txtAccountR.Text,
-                Password = txtPassR.Text,
+                Password = EncryptMD5(txtPassR.Text),
                 Email = txtEmailR.Text,
             };
             if(BLL.Instance.AddNewUser(newUser))
             {
-                //Hiện thông báo đăng ký thành công
                 ShowMessage("Đăng ký thành công!");
                 txtAccountR.Text = "";
                 txtEmailR.Text = "";
                 txtPassR.Text = "";
                 txtRepassR.Text = "";
+                txtAccount.Text = "";
+                txtPass.Text = "";
                 gbRegister.Visible = false;
                 gbLogin.Visible = true;
             }   
             else
             {
-                //Hiện thông báo đăng ký thất bại
                 ShowMessage("Tên tài khoản đã tồn tại!");
                 return;
             }    
@@ -128,14 +147,17 @@ namespace PBL3_DanTaPhaiBietSuTa
                 {
                     rememberUserID = Convert.ToInt32(File.ReadLines(rememberUserPath).First());
                 }
-                catch(FormatException e)
+                catch(FormatException)
                 {
                     File.Delete(rememberUserPath);
                     return false;
                 };
                 UserInfo rememberUser = BLL.Instance.GetUserInfoByUserID(rememberUserID);
-                txtAccount.Text = rememberUser.Username;
-                txtPass.Text = rememberUser.Password;
+                if(rememberUser != null)
+                {
+                    txtAccount.Text = rememberUser.Username;
+                    txtPass.Text = DecryptMD5(rememberUser.Password);
+                }    
             }
             return true;
         }
@@ -185,6 +207,69 @@ namespace PBL3_DanTaPhaiBietSuTa
         {
             if (txtAccount.Text == "") txtPass.Text = "";
         }
+        private string EncryptMD5(string s)
+        {
+            using (var md5 = new MD5CryptoServiceProvider())
+            {
+                using (var tdes = new TripleDESCryptoServiceProvider())
+                {
+                    tdes.Key = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
+                    tdes.Mode = CipherMode.ECB;
+                    tdes.Padding = PaddingMode.PKCS7;
+
+                    using (var transform = tdes.CreateEncryptor())
+                    {
+                        byte[] textBytes = UTF8Encoding.UTF8.GetBytes(s);
+                        byte[] bytes = transform.TransformFinalBlock(textBytes, 0, textBytes.Length);
+                        return Convert.ToBase64String(bytes, 0, bytes.Length);
+                    }
+                }
+            }
+        }
+        private string DecryptMD5(string s)
+        {
+            using (var md5 = new MD5CryptoServiceProvider())
+            {
+                using (var tdes = new TripleDESCryptoServiceProvider())
+                {
+                    tdes.Key = md5.ComputeHash(UTF8Encoding.UTF8.GetBytes(key));
+                    tdes.Mode = CipherMode.ECB;
+                    tdes.Padding = PaddingMode.PKCS7;
+
+                    using (var transform = tdes.CreateDecryptor())
+                    {
+                        try
+                        {
+                            byte[] cipherBytes = Convert.FromBase64String(s);
+                            byte[] bytes = transform.TransformFinalBlock(cipherBytes, 0, cipherBytes.Length);
+
+                            return UTF8Encoding.UTF8.GetString(bytes);
+                        }
+                        catch(CryptographicException) { };
+                        return "";
+                    }
+                }
+            }
+        }
+        private static void SetKey()
+        {
+            if (File.Exists(@Application.StartupPath + @"\Assets\key.mpv"))
+            {
+                try
+                {
+                    key = File.ReadAllLines(@Application.StartupPath + @"\Assets\key.mpv").First();
+                }
+                catch (Exception)
+                {
+                    File.Delete(@Application.StartupPath + @"\Assets\key.mpv");
+                    key = "";
+                }
+            }
+            else
+            {
+                key = "";
+            }
+        }
         private void ShowMessage(string message)
         {
             Notification notification = new Notification();
@@ -196,7 +281,7 @@ namespace PBL3_DanTaPhaiBietSuTa
             gbLogin.Location = new System.Drawing.Point((this.Size.Width - gbLogin.Size.Width) / 2, 
                 (this.Size.Height - gbLogin.Size.Height) / 2);
             gbRegister.Location = new System.Drawing.Point((this.Size.Width - gbRegister.Size.Width) / 2,
-                (this.Size.Height - gbRegister.Size.Height) / 2);
+                (this.Size.Height - gbRegister.Size.Height) / 2);           
         }
     }
 }
