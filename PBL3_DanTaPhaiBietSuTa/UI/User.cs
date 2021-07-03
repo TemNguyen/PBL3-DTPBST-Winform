@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
@@ -145,11 +146,31 @@ namespace PBL3_DanTaPhaiBietSuTa
             else
             {
                 DateTime d = DateTime.Now;
-                string path = @Application.StartupPath + @"\Assets\FeedBack\" + d.ToString("dddd, dd MMMM yyyy HH-mm-ss") + ".txt";
-                using (StreamWriter sw = File.CreateText(path))
+                try
                 {
-                    sw.WriteLine(btnAccountInfo.Text + "   " + d.ToString());
-                    sw.Write(txtFeedback.Text);
+                    MailMessage mail = new MailMessage();
+                    SmtpClient smtpClient = new SmtpClient("smtp.gmail.com");
+
+                    mail.From = new MailAddress("dantaphaibietsuta.pbl2021@gmail.com");
+                    mail.To.Add("temthinh30012001@gmail.com");
+                    mail.Subject = "Phản hồi của người chơi " + btnAccountInfo.Text + " về game Dân Ta Phải Biết Sử Ta."; 
+                    mail.Body = txtFeedback.Text;
+
+                    smtpClient.Port = 587;
+                    smtpClient.Credentials = new System.Net.NetworkCredential("dantaphaibietsuta.pbl2021@gmail.com", "@Aa123456789");
+                    smtpClient.EnableSsl = true;
+
+                    smtpClient.Send(mail);
+                }
+                catch (Exception)
+                {
+                    string path = @Application.StartupPath + @"\Assets\FeedBack\" + d.ToString("dddd, dd MMMM yyyy HH-mm-ss") + ".txt";
+                    using (StreamWriter sw = File.CreateText(path))
+                    {
+                        sw.WriteLine(btnAccountInfo.Text + "   " + d.ToString());
+                        sw.Write(txtFeedback.Text);
+                    }
+
                 }
                 ShowMessage("Cảm ơn bạn đã gửi FeedBack!");
             }
