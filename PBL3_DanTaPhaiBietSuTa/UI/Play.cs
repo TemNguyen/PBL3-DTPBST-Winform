@@ -16,26 +16,52 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 {
     public partial class Play : Form
     {
+        public delegate void getStageID(int stageID);
+        public getStageID Sender;
+        static int stageID;
+        void getData(int ID)
+        {
+            stageID = ID;
+        }
+
         public static bool isPlayAgain;
+        public static bool isNextLevel;
         Thread threadUser;
         Color colorBtn = Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
 
         List<int> listTimeStop = new List<int>();
-        public static int stageID;
+        //public static int stageID;
         Question selectedQuestion;
         int point = 0, questionID = 0, numCorrect = 0;
         int TVideo = 0, countDown = 300;
         int delay = 10, showAnswer = 10;
         public Play()
         {
+            Sender = new getStageID(getData);
             InitializeComponent();
             lbPoint.Text = point.ToString();
             lbTime.Text = "Time: " + (countDown / 10).ToString();
             lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
-            SetTimeStop();
-            SetVideoStage();
             videoTime.Start();
             ResetQuestion();
+        }
+        private void Play_Load(object sender, EventArgs e)
+        {
+            SetTimeStop();
+            SetVideoStage();
+            var video = BLL.Instance.GetVideo(stageID);
+            if (!File.Exists(@Application.StartupPath + @"\Assets\Video\" + video.VideoID + ".mp4"))
+            {
+                ShowMessage("Không tìm thấy nội dung màn chơi!");
+                this.Dispose();
+                HomePage.PlaySound();
+                threadUser = new Thread(OpenUserForm);
+                threadUser.SetApartmentState(ApartmentState.STA);
+                threadUser.Start();
+            }
+
+            lbPoint.Left = pictureBox2.Location.X + ((pictureBox2.Size.Width - lbPoint.Size.Width) / 2);
+            lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
         }
         private void SetVideoStage()
         {
@@ -67,7 +93,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             {
                 //Hiện thông báo kh lưu proccess
                 DialogResult d = MessageBox.Show("Tiến trình hiện tại sẽ không được lưu, Tiêp tục?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                switch(d)
+                switch (d)
                 {
                     case DialogResult.Yes:
                         HomePage.PlaySound();
@@ -78,7 +104,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                         break;
                     case DialogResult.No:
                         return;
-                }    
+                }
             }
             else
             {
@@ -87,7 +113,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 threadUser = new Thread(OpenUserForm);
                 threadUser.SetApartmentState(ApartmentState.STA);
                 threadUser.Start();
-            }    
+            }
         }
         private void DisplayQuestion()
         {
@@ -146,7 +172,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private void CaculationPoint(int timeUsed)
         {
-            point += Convert.ToInt32((countDown*1.0/300) * 100);
+            point += Convert.ToInt32((countDown * 1.0 / 300) * 100);
             lbPoint.Text = point.ToString();
         }
         private void ResetQuestion()
@@ -287,6 +313,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         private bool IsFinish()
         {
+            int runningLevel = stageID;
             if (Video.playState == WMPLib.WMPPlayState.wmppsStopped)
             {
                 string path = @Application.StartupPath + @"\Assets\SavedUser\Account.txt";
@@ -303,8 +330,9 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 else
                 {
                     ShowMessage("Bạn trả lời đúng " + numCorrect + "/" + listTimeStop.Count + ". \nBạn không thể qua được màn này!");
-                }  
+                }
                 ReplayNotification replay = new ReplayNotification();
+                replay.Sender(stageID);
                 //display next level button when user play old level.
                 if (stageID <= userStand.StageID + 1)
                 {
@@ -313,6 +341,12 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 else
                     ReplayNotification.isUnlockNextLevel = false;
                 replay.ShowDialog();
+                if (isNextLevel)
+                {
+                    this.Dispose();
+                    return true;
+                }
+
                 PlayAgain();
                 return true;
             }
@@ -320,7 +354,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         }
         public void PlayAgain()
         {
-            if(isPlayAgain)
+            if (isPlayAgain)
             {
                 List<int> listTimeStop = new List<int>();
                 point = 0;
@@ -333,7 +367,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 SetVideoStage();
                 videoTime.Start();
                 ResetQuestion();
-            }    
+            }
             else
             {
                 HomePage.PlaySound();
@@ -341,7 +375,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
                 threadUser = new Thread(OpenUserForm);
                 threadUser.SetApartmentState(ApartmentState.STA);
                 threadUser.Start();
-            }    
+            }
         }
         private string DisplayText(string s)
         {
@@ -377,22 +411,7 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
             notification.Get(message);
             notification.ShowDialog();
         }
-        private void Play_Load(object sender, EventArgs e)
-        {
-            var video = BLL.Instance.GetVideo(stageID);
-            if (!File.Exists(@Application.StartupPath + @"\Assets\Video\" + video.VideoID + ".mp4"))
-            {
-                ShowMessage("Không tìm thấy nội dung màn chơi!");
-                this.Dispose();
-                HomePage.PlaySound();
-                threadUser = new Thread(OpenUserForm);
-                threadUser.SetApartmentState(ApartmentState.STA);
-                threadUser.Start();
-            }    
 
-            lbPoint.Left = pictureBox2.Location.X + ((pictureBox2.Size.Width - lbPoint.Size.Width) / 2);
-            lbTime.Left = (pictureBox1.Size.Width - lbTime.Size.Width) / 2;
-        }
         private void OpenUserForm(object sender)
         {
             Application.Run(new User());

@@ -21,7 +21,9 @@ namespace PBL3_DanTaPhaiBietSuTa
     {
         Thread threadLogout;
         Thread threadPlay;
+        int stageID;
         private static string key;
+
         public User()
         {
             SetKey();
@@ -83,7 +85,7 @@ namespace PBL3_DanTaPhaiBietSuTa
                 {
                     ShowMessage("Mật khẩu mới trùng với mật khẩu cũ!");
                     return;
-                }    
+                }
                 else
                     oldPass = txtNewPass.Text;
             }
@@ -152,8 +154,8 @@ namespace PBL3_DanTaPhaiBietSuTa
                     SmtpClient smtpClient = new SmtpClient("smtp.gmail.com");
 
                     mail.From = new MailAddress("dantaphaibietsuta.pbl2021@gmail.com");
-                    mail.To.Add("temthinh30012001@gmail.com");
-                    mail.Subject = "Phản hồi của người chơi " + btnAccountInfo.Text + " về game Dân Ta Phải Biết Sử Ta."; 
+                    mail.To.Add("dantaphaibietsuta.pbl2021+sub@gmail.com");
+                    mail.Subject = "Phản hồi của người chơi " + btnAccountInfo.Text + " về game Dân Ta Phải Biết Sử Ta.";
                     mail.Body = txtFeedback.Text;
 
                     smtpClient.Port = 587;
@@ -188,9 +190,9 @@ namespace PBL3_DanTaPhaiBietSuTa
             UserInfo userInfor = BLL.Instance.GetUserInfoByUserID(userID);
             Standing userStand = BLL.Instance.GetStandingByUserID(Convert.ToInt32(userInfor.UserID));
 
-            if (userInfor.Name != "") 
+            if (userInfor.Name != "")
                 btnAccountInfo.Text = userInfor.Name;
-            else 
+            else
                 btnAccountInfo.Text = userInfor.Username;
 
             lbAccount.Text = userInfor.Username;
@@ -218,6 +220,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         private void OpenPlayForm(object sender)
         {
             Play play = new Play();
+            play.Sender(this.stageID);
             Application.Run(play);
         }
         private void Level1_Click(object sender, EventArgs e)
@@ -242,7 +245,7 @@ namespace PBL3_DanTaPhaiBietSuTa
         }
         private void ChooseLevel(int stageID)
         {
-            Play.stageID = stageID;
+            this.stageID = stageID;
             HomePage.StopSound();
             this.Dispose();
             threadPlay = new Thread(OpenPlayForm);
@@ -277,7 +280,7 @@ namespace PBL3_DanTaPhaiBietSuTa
                     i.Image = Image.FromFile(picPath + i.Name + ".png");
                     i.Cursor = Cursors.Hand;
                 }
-                catch(FileNotFoundException) { };
+                catch (FileNotFoundException) { };
             }
             //set lock levels
             for (int i = currentStage; i < levels.Count; i++)
@@ -344,11 +347,11 @@ namespace PBL3_DanTaPhaiBietSuTa
                 lb2Acc.Text = GetUserByUserID(standings[1].UserID);
                 lb2Level.Text = standings[1].StageID.ToString();
                 lb2Point.Text = standings[1].Point.ToString();
-                
+
                 lb3Acc.Text = GetUserByUserID(standings[2].UserID);
                 lb3Level.Text = standings[2].StageID.ToString();
                 lb3Point.Text = standings[2].Point.ToString();
-                
+
                 lb4Acc.Text = GetUserByUserID(standings[3].UserID);
                 lb4Level.Text = standings[3].StageID.ToString();
                 lb4Point.Text = standings[3].Point.ToString();
@@ -356,9 +359,9 @@ namespace PBL3_DanTaPhaiBietSuTa
                 lb5Acc.Text = GetUserByUserID(standings[4].UserID);
                 lb5Level.Text = standings[4].StageID.ToString();
                 lb5Point.Text = standings[4].Point.ToString();
-                
+
             }
-            catch(ArgumentOutOfRangeException) { };
+            catch (ArgumentOutOfRangeException) { };
             #region DesignRank
             lb1Acc.Location = new System.Drawing.Point(lbAccRanked.Location.X +
                    (lbAccRanked.Size.Width - lb1Acc.Size.Width) / 2, 60);
