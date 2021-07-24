@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,13 +14,14 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
 {
     public partial class ReplayNotification : Form
     {
-        public delegate void MyDel(string message);
-        MyDel Get;
-        string message = "";
+        public delegate void GetStageID(int ID);
+        public GetStageID Sender;
         public static bool isUnlockNextLevel;
-        private void getMessage(string _message)
+        static int stageID;
+        Thread thread;
+        private void getStageID(int ID)
         {
-            message = _message;
+            stageID = ID;
         }
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -35,18 +37,17 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         public ReplayNotification()
         {
             InitializeComponent();
-            Get = new MyDel(getMessage);
+            Sender = new GetStageID(getStageID);
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
         private void ReplayNotification_Load(object sender, EventArgs e)
         {
-            label1.Text = message;
-            label1.Location = new Point((this.Size.Width - label1.Size.Width) / 2, 40);
+            label1.Text = "";
             if (isUnlockNextLevel)
             {
                 btnNext.Image = Image.FromFile(@Application.StartupPath + @"\Assets\Image\next.png");
-            } 
+            }
             else
             {
                 btnNext.Image = Image.FromFile(@Application.StartupPath + @"\Assets\Image\notnext.png");
@@ -58,20 +59,33 @@ namespace PBL3_DanTaPhaiBietSuTa.UI
         private void btnInfo_Click(object sender, EventArgs e)
         {
             Play.isPlayAgain = false;
-            Dispose();
+            this.Dispose();
         }
 
         private void btnReplay_Click(object sender, EventArgs e)
         {
             Play.isPlayAgain = true;
-            Dispose();
+            this.Dispose();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            Play.stageID++;
-            Play.isPlayAgain = true;
-            Dispose();
+            stageID++;
+            Play.isNextLevel = true;
+            DisposeForm();
+        }
+        private void OpenPlayForm(object sender)
+        {
+            Play play = new Play();
+            play.Sender(stageID);
+            Application.Run(play);
+        }
+        private void DisposeForm()
+        {
+            this.Dispose();
+            thread = new Thread(OpenPlayForm);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
     }
 }

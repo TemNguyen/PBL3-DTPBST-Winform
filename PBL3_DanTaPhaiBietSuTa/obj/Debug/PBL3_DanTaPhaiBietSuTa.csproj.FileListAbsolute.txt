@@ -146,8 +146,8 @@ C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debu
 C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.Help.resources
 C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.longlong1.resources
 D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.longlong1.resources
-D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csprojAssemblyReference.cache
 D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.AdminForm.resources
 D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.AddIsAdmin.resources
 C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.Migrations.AddIsAdmin.resources
 C:\Users\Admin\Desktop\PBL12\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.UI.AdminForm.resources
+D:\Code\C#\Winform\PBL3-DTPBST-Winform\PBL3_DanTaPhaiBietSuTa\obj\Debug\PBL3_DanTaPhaiBietSuTa.csprojAssemblyReference.cache

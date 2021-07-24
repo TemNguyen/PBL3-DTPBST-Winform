@@ -83,14 +83,25 @@
                 new UserInfo
                 {
                     UserID = 1,
-                    Username = "gnol5498",Password = "123456",Name = "Lê Thanh Long",
-                    Email = "thanhlong9654147@gmail.com",IsAdmin = true
+                    Username = "gnol5498",Password = "m5q2tCZVIF0=",
+                    Name = "Lê Thanh Long",
+                    Email = "thanhlong9654147@gmail.com",IsAdmin = false
                 },
                 new UserInfo
                 {
                     UserID = 2,
-                    Username = "temnguyen",Password = "123456",Name = "Nguyễn Duy Thịnh",
-                    Email = "temnguyen@gmail.com",IsAdmin = true
+                    Username = "temnguyen",Password = "m5q2tCZVIF0=",
+                    Name = "Nguyễn Duy Thịnh",
+                    Email = "temnguyen@gmail.com",IsAdmin = false
+                },
+                new UserInfo
+                {
+                    UserID = 3,
+                    Username = "admin",
+                    Password = "x0bBO6fivzY=",
+                    Name = "Nguyễn Duy Thịnh",
+                    Email = "temnguyen@gmail.com",
+                    IsAdmin = true
                 }
             );
 
